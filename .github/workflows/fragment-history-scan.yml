@@ -1,0 +1,131 @@
+name: Fragment Comparable Sales Scan
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/fragment-history-scan.yml"
+      - "fragment-history-trigger.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fragment-history-scan
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        run: python -m pip install requests beautifulsoup4
+      - name: Crawl candidate detail and history
+        run: |
+          mkdir -p crawl-results
+          python - <<'PY'
+          import json,re,time,urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+
+          groups={
+            'agent':['agentbox','agentops','agentlink','agenttell','agentsmith','agentik'],
+            'hotel':['hotelhq','hotel5s','hotelmx','hotelth','hotelsd'],
+            'token':['tokenaudit','tokenphase','tokenwhere','tokendacha','token_lost'],
+            'jobs':['jobsai','jobs0','jobs1','jobspt','entry_level_jobs'],
+            'seo':['seopro','seojc','seomb','seolarp'],
+            'mint':['mintwallet','mintdb','mintze','mintxp','mintgifton'],
+            'buy':['buyetf','buy289','buypepe','buyzz','buyik'],
+            'ai':['aijou','aibed','aiduo','aiyin','aiins','aidoc'],
+          }
+          H={
+            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36',
+            'Accept-Language':'en-US,en;q=0.9',
+            'Accept':'text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8'
+          }
+          s=requests.Session(); s.headers.update(H)
+
+          def clean_lines(html):
+            soup=BeautifulSoup(html,'html.parser')
+            return soup,[re.sub(r'\s+',' ',x.strip()) for x in soup.get_text('\n').splitlines() if x.strip()]
+
+          def discover(username):
+            q='https://fragment.com/?query='+urllib.parse.quote(username)
+            r=s.get(q,timeout=25)
+            soup,lines=clean_lines(r.text)
+            hrefs=[]
+            for a in soup.find_all('a',href=True):
+              href=a.get('href','')
+              txt=re.sub(r'\s+',' ',a.get_text(' ',strip=True))
+              if username.lower() in (href+' '+txt).lower(): hrefs.append(href)
+            # Prefer canonical username detail path.
+            detail=None
+            for href in hrefs:
+              if '/username/' in href:
+                detail=urllib.parse.urljoin('https://fragment.com',href); break
+            if not detail:
+              detail='https://fragment.com/username/'+username
+            return q,r.status_code,detail,lines[:120]
+
+          history_words=('history','sold','sale','bid','auction','price','owner','buyer','seller','ton','gram','minimum','available','unavailable','resale','ends','close','listed','offer')
+          records=[]
+          for group,names in groups.items():
+            for username in names:
+              rec={'group':group,'username':username}
+              try:
+                q,qstatus,detail,qhead=discover(username)
+                rec.update(query_url=q,query_status=qstatus,detail_url=detail)
+                r=s.get(detail,timeout=30,allow_redirects=True)
+                soup,lines=clean_lines(r.text)
+                rec['detail_status']=r.status_code; rec['final_url']=r.url; rec['title']=soup.title.get_text(' ',strip=True) if soup.title else None
+                rec['lines_head']=lines[:90]
+                # Keep history/market-related lines plus nearby context.
+                keep=[]; seen=set()
+                for i,line in enumerate(lines):
+                  low=line.lower()
+                  if any(w in low for w in history_words):
+                    for j in range(max(0,i-2),min(len(lines),i+4)):
+                      k=(j,lines[j])
+                      if k not in seen:
+                        seen.add(k); keep.append({'i':j,'text':lines[j]})
+                rec['market_lines']=keep[:260]
+                # Extract hrefs that look like transaction/history/bid links.
+                links=[]
+                for a in soup.find_all('a',href=True):
+                  href=a.get('href',''); txt=re.sub(r'\s+',' ',a.get_text(' ',strip=True))
+                  low=(href+' '+txt).lower()
+                  if any(w in low for w in ['history','bid','auction','tonviewer','tonscan','explorer','transaction']):
+                    links.append({'text':txt[:120],'href':urllib.parse.urljoin(r.url,href)})
+                rec['history_links']=links[:80]
+                # Common TON/GRAM/USD numbers as raw evidence; don't infer semantics here.
+                money=[]
+                for i,line in enumerate(lines):
+                  if re.search(r'(?:TON|GRAM|\$|~\s*\$)',line,re.I) or re.fullmatch(r'[\d,.\s]+',line):
+                    if re.search(r'\d',line): money.append({'i':i,'text':line})
+                rec['money_lines']=money[:180]
+              except Exception as e:
+                rec['error']=repr(e)
+              records.append(rec)
+              time.sleep(.4)
+
+          cap=time.time()
+          Path('crawl-results/fragment-history.json').write_text(json.dumps({'captured_at':cap,'records':records},ensure_ascii=False,indent=2))
+          # Compact human-readable extraction for connector consumption.
+          out=[f'CAPTURED_AT={cap}']
+          for r in records:
+            out.append(f"\n## {r['group']} / @{r['username']} | detail={r.get('detail_status')} | {r.get('final_url','')}")
+            for x in (r.get('market_lines') or [])[:45]: out.append(x['text'])
+          Path('crawl-results/fragment-history-summary.txt').write_text('\n'.join(out)+'\n',encoding='utf-8')
+          PY
+      - name: Commit results
+        run: |
+          git config user.name "runner-4-bot"
+          git config user.email "runner-4-bot@users.noreply.github.com"
+          git add crawl-results/fragment-history.json crawl-results/fragment-history-summary.txt
+          git commit -m "Update Fragment comparable sales scan" || exit 0
+          git pull --rebase origin main || true
+          git push
