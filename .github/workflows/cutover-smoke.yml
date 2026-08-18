@@ -4,9 +4,12 @@ on:
   push:
     paths:
       - .github/workflows/cutover-smoke.yml
+  pull_request:
+    paths:
+      - smoke-trigger.txt
 
 permissions:
-  contents: write
+  contents: read
   actions: read
 
 jobs:
@@ -61,35 +64,3 @@ jobs:
           path: qa
           retention-days: 1
           if-no-files-found: error
-
-  report:
-    if: always()
-    needs: [ingest, render, qa]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - name: Write one-time smoke marker
-        env:
-          INGEST_RESULT: ${{ needs.ingest.result }}
-          RENDER_RESULT: ${{ needs.render.result }}
-          QA_RESULT: ${{ needs.qa.result }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          python - <<'PY'
-          import json, os
-          d = {
-            "run_id": os.environ["RUN_ID"],
-            "ingest": os.environ["INGEST_RESULT"],
-            "render": os.environ["RENDER_RESULT"],
-            "qa": os.environ["QA_RESULT"],
-          }
-          d["pass"] = all(d[x] == "success" for x in ("ingest", "render", "qa"))
-          open("cutover-smoke-status.json", "w").write(json.dumps(d, indent=2) + "\n")
-          PY
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add cutover-smoke-status.json
-          git commit -m "Record runner-4 cutover smoke result" || true
-          git push
