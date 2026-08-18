@@ -1,0 +1,41 @@
+CAPTURED_AT=1787085164.1243224
+ai | 11 | @aijou=77 On auction ; @aibed=333 For sale ; @aiduo=599 For sale ; @aiyin=699 For sale ; @aiins=888 For sale ; @aidoc=990 For sale
+agent | 13 | @agenttell=50 For sale ; @agentbox=127 For sale ; @agentsmith=135 On auction ; @agentops=178 For sale ; @agentlink=182 For sale ; @agentik=201 On auction
+bot | 31 | @botae=50 On auction ; @botbv=50 On auction ; @botbx=50 On auction ; @botcj=50 On auction ; @botdh=50 On auction ; @botdw=50 On auction
+app | 9 | @appxdr=7 For sale ; @appaji=186 For sale ; @applew=267 On auction ; @appmkt=675 For sale ; @app999=1000 For sale ; @appdao=1999 For sale
+web | 11 | @webef=99 On auction ; @webus=144 On auction ; @webftp=192 On auction ; @u_web=195 For sale ; @webww=200 For sale ; @webah=333 For sale
+cloud | 43 | @chart_cloud=10 For sale ; @port_cloud=11 For sale ; @cut_cloud=15 For sale ; @cloud_copy=20 For sale ; @cloudywithachanceofmeatballs=50 For sale ; @cloudcake=86 On auction
+data | 23 | @dataslord=13 On auction ; @datasghost=14 On auction ; @datairanian=15 On auction ; @global_datasets=15 On auction ; @dataanalysor=19 On auction ; @datatransmission=80 On auction
+api | 89 | @apiater=10 For sale ; @api37=10 Available ; @api3d=10 Available ; @api3f=10 Available ; @api3g=10 Available ; @api3h=10 Available
+pay | 2 | @paymm=999 For sale ; @payd=95000 On auction
+shop | 13 | @shop_pull=7 For sale ; @shop_wet=14 For sale ; @shopiton=33 For sale ; @shophie=95 On auction ; @shopchief=97 For sale ; @dxb_shop=99 On auction
+store | 57 | @storetoncoins=7 For sale ; @storejob=11 On auction ; @subseller_store=11 On auction ; @storeae=11 Available ; @dolcegabbana_store=15 For sale ; @storekg=15 Available
+buy | 9 | @buyik=11 On auction ; @buypepe=80 On auction ; @buy289=88 For sale ; @buyetf=100 On auction ; @buyung=178 On auction ; @buyzz=200 For sale
+sale | 10 | @uzbek_saler=11 On auction ; @salemode=15 For sale ; @sale1=159 For sale ; @saleemkhan=186 For sale ; @usdt_sale=399 For sale ; @salesleader=399 For sale
+deal | 36 | @dealnfts=2 On auction ; @copy_deal=9 For sale ; @deal_cost=9 For sale ; @deal_land=9 For sale ; @dealfull=10 For sale ; @dealpast=10 For sale
+travel | 85 | @tailand_travel=7 For sale ; @travelston=10 For sale ; @travel_g=10 Available ; @travelmx=10 Available ; @travelnw=10 Available ; @traveloy=10 Available
+hotel | 79 | @new_yorker_hotel=7 For sale ; @hotel5s=10 Available ; @hotelhq=10 Available ; @hotelmx=10 Available ; @hotelsd=19 Available ; @hotelth=20 Available
+flight | 177 | @flightge=10 Available ; @flighton=10 Available ; @flightth=10 Available ; @ai_flight=10 Available ; @ll_flight=10 Available ; @air_flight=11 On auction
+jobs | 132 | @entry_level_jobs=7 On auction ; @jobs_0=15 Available ; @jobsai=50 Available ; @jobspt=104 Available ; @jobs0=122 Available ; @jobs1=122 Available
+work | 9 | @worker_n=11 On auction ; @workflag=100 For sale ; @workpilot=135 On auction ; @workcore=204 On auction ; @workme=372 For sale ; @workassist=1499 For sale
+hire | 182 | @hirealt=10 Available ; @hirehere=10 Available ; @hirebee=30 Available ; @hire9=50 Available ; @big_hire=90 Available ; @hire_24=99 Available
+crypto | 0 | 
+wallet | 11 | @wallet0n=15 For sale ; @wallet73=73 For sale ; @walletsy=100 For sale ; @wallet4=104 For sale ; @wallet86=286 For sale ; @walletij=333 For sale
+token | 18 | @token_nsd=7 For sale ; @token_lost=9 For sale ; @tokendacha=11 On auction ; @tokenaudit=12 On auction ; @tokenphase=12 On auction ; @tokenwhere=13 On auction
+trade | 21 | @tradersliv=11 On auction ; @trademaoyi=23 For sale ; @trade_mine=45 For sale ; @traderauto=89 On auction ; @tradetopic=94 For sale ; @trademega=98 For sale
+finance | 121 | @financelearn=9 On auction ; @financeluxury=9 On auction ; @financea4=10 Available ; @financeti=10 Available ; @financedcontrol=11 On auction ; @finance_o=50 Available
+bank | 30 | @bank9c=4 On auction ; @bank6h=7 For sale ; @bank6k=7 For sale ; @bank6q=7 For sale ; @bank6w=7 For sale ; @bank6y=7 For sale
+loan | 159 | @loanmom=10 Available ; @loanist=16 Available ; @loanxy=25 Available ; @loanorg=25 Available ; @wb_loan=25 Available ; @loanout=30 Available
+cash | 8 | @cashberu=19 On auction ; @cash11=115 On auction ; @cashomat=888 For sale ; @cash999=999 For sale ; @bigg_cash=1999 For sale ; @cashopia=2000 For sale
+vpn | 12 | @tv_vpn=11 On auction ; @vpnsapk=11 On auction ; @vpn_milf=25 For sale ; @vpnlead=99 For sale ; @vpnfor=104 For sale ; @vpn_girl=180 For sale
+host | 120 | @hostknot=8 For sale ; @host26=10 Available ; @hostrz=10 Available ; @hostingd=11 On auction ; @hostw3=25 Available ; @hostse=35 Available
+game | 11 | @wet_game=12 For sale ; @cut_game=20 For sale ; @games01=51 On auction ; @gamerr=84 On auction ; @game4263=88 For sale ; @game_win=94 For sale
+video | 11 | @hot_videox=114 For sale ; @video=125 Unavailable ; @hot_video2=125 On auction ; @videos_181=125 On auction ; @xxx_video0=125 On auction ; @hot_videos1=125 On auction
+music | 53 | @rock_and_roll_music=7 For sale ; @music4e=15 Available ; @musicnerd=80 On auction ; @musicd5=100 Available ; @musicf6=100 Available ; @musicg0=100 Available
+news | 24 | @news_fon=13 On auction ; @news_kg=40 For sale ; @newskg=50 For sale ; @zk_news=104 For sale ; @newstock=130 On auction ; @newsky=213 On auction
+ads | 42 | @not_just_ads=13 For sale ; @adswc=20 Available ; @adslu=100 Available ; @adsuq=100 Available ; @adsho=114 For sale ; @ads44=122 Available
+seo | 4 | @seolarp=11 On auction ; @seojc=128 On auction ; @seopro=148 For sale ; @seomb=168 For sale
+mail | 132 | @j_mail=10 Available ; @mailie=10 Available ; @maillette=18 On auction ; @mailw3=55 Available ; @mailaoban=70 For sale ; @mailaoda=80 For sale
+chat | 10 | @chatot=11 On auction ; @chatgptl=120 On auction ; @chatgiga=150 For sale ; @chattu=216 For sale ; @chatvip=288 For sale ; @chatxai=515 For sale
+gift | 10 | @gift7d=7 For sale ; @gift7e=7 For sale ; @gift9k=7 For sale ; @giftgot=111 On auction ; @giftvibe=250 For sale ; @giftbro=300 For sale
+mint | 86 | @mintgifton=7 For sale ; @mintdb=10 Available ; @mintze=10 Available ; @mintwallet=11 On auction ; @dr_mint=19 For sale ; @mintxp=42 Available
