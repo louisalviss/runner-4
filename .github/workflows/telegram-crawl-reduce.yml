@@ -1,0 +1,65 @@
+name: Telegram Crawl Reduce
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/telegram-crawl-reduce.yml"
+      - "reduce-trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  reduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reduce crawl payload
+        run: |
+          python - <<'PY'
+          import json,re,time
+          from pathlib import Path
+          src=Path('crawl-results/http.json')
+          data=json.loads(src.read_text())
+          out={'source_captured_at':data.get('captured_at'),'reduced_at':time.time(),'endpoints':[]}
+          interesting={'name','title','username','domain','price','amount','sale','auction','market','address','nft','collection','status','currency','value','full_price','sale_contract','is_on_sale','on_sale'}
+          def walk(x,path='',acc=None):
+            if acc is None: acc=[]
+            if len(acc)>=300: return acc
+            if isinstance(x,dict):
+              keys=set(map(str,x.keys()))
+              if keys & interesting:
+                d={}
+                for k,v in x.items():
+                  if str(k) in interesting and isinstance(v,(str,int,float,bool,type(None))):
+                    d[str(k)]=v
+                if d: acc.append({'path':path,'fields':d})
+              for k,v in x.items(): walk(v,f'{path}/{k}',acc)
+            elif isinstance(x,list):
+              for i,v in enumerate(x[:1500]): walk(v,f'{path}/{i}',acc)
+            return acc
+          for r in data.get('results',[]):
+            e={k:r.get(k) for k in ['url','status','final_url','content_type','length','title','error'] if k in r}
+            e['username_count']=len(r.get('usernames') or [])
+            e['usernames_sample']=(r.get('usernames') or [])[:120]
+            txt=r.get('text_head') or ''
+            e['text_head_clean']=re.sub(r'\s+',' ',txt)[:1200]
+            if 'json' in r:
+              j=r['json']
+              e['json_type']=type(j).__name__
+              if isinstance(j,dict): e['json_top_keys']=list(j.keys())[:80]
+              elif isinstance(j,list): e['json_len']=len(j)
+              e['interesting_records']=walk(j)[:300]
+            out['endpoints'].append(e)
+          Path('crawl-results/http-summary.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit summary
+        run: |
+          git config user.name "runner-4-bot"
+          git config user.email "runner-4-bot@users.noreply.github.com"
+          git add crawl-results/http-summary.json
+          git commit -m "Add Telegram crawl compact summary" || exit 0
+          git push
