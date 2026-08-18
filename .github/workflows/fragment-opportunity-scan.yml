@@ -1,0 +1,81 @@
+name: Fragment Opportunity Scan
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/fragment-opportunity-scan.yml"
+      - "fragment-opportunity-trigger.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fragment-opportunity-scan
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        run: python -m pip install requests beautifulsoup4
+      - name: Scan commercial keyword auctions
+        run: |
+          mkdir -p crawl-results
+          python - <<'PY'
+          import json,re,time,urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+
+          terms=['ai','agent','bot','app','web','cloud','data','api','pay','shop','store','buy','sale','deal','travel','hotel','flight','jobs','work','hire','crypto','wallet','token','trade','finance','bank','loan','cash','vpn','host','game','video','music','news','ads','seo','mail','chat','gift','mint']
+          H={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36','Accept-Language':'en-US,en;q=0.9'}
+          s=requests.Session(); s.headers.update(H)
+          output=[]
+          for term in terms:
+            url='https://fragment.com/?query='+urllib.parse.quote(term)
+            rec={'term':term,'url':url}
+            try:
+              r=s.get(url,timeout=25)
+              rec['status']=r.status_code; rec['length']=len(r.content)
+              soup=BeautifulSoup(r.text,'html.parser')
+              lines=[re.sub(r'\s+',' ',x.strip()) for x in soup.get_text('\n').splitlines() if x.strip()]
+              items=[]
+              for i,line in enumerate(lines):
+                if re.fullmatch(r'@[A-Za-z0-9_]{4,32}',line):
+                  ctx=lines[i:i+13]
+                  nums=[]
+                  for x in ctx[1:]:
+                    y=x.replace(',','').replace(' ','')
+                    if re.fullmatch(r'\d+(?:\.\d+)?',y):
+                      try: nums.append(float(y))
+                      except: pass
+                  items.append({'username':line[1:],'context':ctx,'numbers':nums[:4]})
+              rec['items']=items
+              controls=[]
+              for a in soup.find_all('a',href=True):
+                txt=re.sub(r'\s+',' ',a.get_text(' ',strip=True))
+                href=a.get('href')
+                if 'price' in txt.lower() or 'sort' in (href or '').lower() or 'filter' in (href or '').lower():
+                  controls.append({'text':txt[:100],'href':href})
+              for sel in soup.find_all('select'):
+                controls.append({'select_name':sel.get('name'),'options':[{'text':o.get_text(' ',strip=True),'value':o.get('value')} for o in sel.find_all('option')]})
+              rec['controls']=controls[:30]
+            except Exception as e:
+              rec['error']=repr(e)
+            output.append(rec)
+            time.sleep(.35)
+          Path('crawl-results/fragment-opportunities.json').write_text(json.dumps({'captured_at':time.time(),'terms':len(terms),'results':output},ensure_ascii=False,indent=2))
+          PY
+      - name: Commit result
+        run: |
+          git config user.name "runner-4-bot"
+          git config user.email "runner-4-bot@users.noreply.github.com"
+          git add crawl-results/fragment-opportunities.json
+          git commit -m "Update Fragment opportunity scan" || exit 0
+          git pull --rebase origin main || true
+          git push
