@@ -23,7 +23,7 @@ jobs:
           import json,time
           from pathlib import Path
           d=json.loads(Path('crawl-results/fragment-opportunities.json').read_text())
-          per=[]; glob=[]
+          per=[]; glob=[]; lines=[]
           for r in d['results']:
             arr=[]
             for it in r.get('items',[]):
@@ -32,16 +32,19 @@ jobs:
               x={'term':r['term'],'username':it['username'],'price':nums[0],'status':it.get('context',[None,None])[1] if len(it.get('context',[]))>1 else None}
               arr.append(x); glob.append(x)
             arr.sort(key=lambda z:z['price'])
-            per.append({'term':r['term'],'count':len(arr),'cheapest':arr[:6]})
+            cheap=arr[:6]
+            per.append({'term':r['term'],'count':len(arr),'cheapest':cheap})
+            lines.append(r['term']+' | '+str(len(arr))+' | '+' ; '.join('@%s=%g %s'%(x['username'],x['price'],x['status']) for x in cheap))
           glob.sort(key=lambda z:z['price'])
           out={'captured_at':d.get('captured_at'),'reduced_at':time.time(),'per_term':per,'global_cheapest':glob[:160]}
           Path('crawl-results/fragment-shortlist.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          Path('crawl-results/fragment-shortlist.txt').write_text('CAPTURED_AT='+str(d.get('captured_at'))+'\n'+'\n'.join(lines)+'\n',encoding='utf-8')
           PY
       - name: Commit shortlist
         run: |
           git config user.name "runner-4-bot"
           git config user.email "runner-4-bot@users.noreply.github.com"
-          git add crawl-results/fragment-shortlist.json
+          git add crawl-results/fragment-shortlist.json crawl-results/fragment-shortlist.txt
           git commit -m "Add Fragment opportunity shortlist" || exit 0
           git pull --rebase origin main || true
           git push
