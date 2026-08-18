@@ -1,0 +1,45 @@
+{
+  "job": "naruto-xonada-v20",
+  "source": {
+    "kind": "youtube-public",
+    "url": "https://www.youtube.com/watch?v=T2mqnUrQCzA",
+    "note": "Source URL recovered from runner-3 history. V20 itself was rendered from the cached vertical Naruto source while GitHub Actions was queued."
+  },
+  "music": {
+    "track": "MONTAGEM XONADA",
+    "bpm": 172,
+    "source_note": "Official preview audio; local V20 reused the clean music-only audio already present in the V8 artifact."
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "iphone_safe_width": 886,
+    "native_vertical": true
+  },
+  "duration_beats": 24,
+  "duration_seconds": 8.372093,
+  "source_safe_window": "0.35-4.55s of cached vertical source; excluded credit at the beginning and game logo at the end",
+  "sequence": [
+    {"start":4.00,"end":4.20,"beats":0.5,"style":"hit"},
+    {"start":2.38,"end":2.55,"beats":0.5,"style":"hit"},
+    {"start":1.55,"end":1.72,"beats":0.5,"style":"hit"},
+    {"start":3.85,"end":4.05,"beats":0.5,"style":"hit"},
+    {"start":0.35,"end":0.95,"beats":2,"style":"normal"},
+    {"start":0.95,"end":1.50,"beats":2,"style":"normal"},
+    {"start":1.50,"end":2.05,"beats":2,"style":"warm"},
+    {"start":2.05,"end":2.48,"beats":2,"style":"cool"},
+    {"start":2.70,"end":3.15,"beats":2,"style":"speed"},
+    {"start":3.15,"end":3.55,"beats":2,"style":"speed"},
+    {"start":3.55,"end":4.10,"beats":2,"style":"impact"},
+    {"start":4.10,"end":4.55,"beats":2,"style":"impact"},
+    {"start":1.45,"end":1.85,"beats":2,"style":"callback"},
+    {"start":3.55,"end":4.20,"beats":2,"style":"impact"},
+    {"start":0.35,"end":0.75,"beats":2,"style":"loop"}
+  ],
+  "qa": {
+    "master_contact": true,
+    "iphone_19_5_center_cover": true,
+    "credit_or_logo_frames": false,
+    "critical_subject_safe": true
+  }
+}
