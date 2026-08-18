@@ -1,0 +1,2575 @@
+{
+  "captured_at": 1787085164.1243224,
+  "reduced_at": 1787085205.3297932,
+  "per_term": [
+    {
+      "term": "ai",
+      "count": 11,
+      "cheapest": [
+        {
+          "term": "ai",
+          "username": "aijou",
+          "price": 77.0,
+          "status": "On auction"
+        },
+        {
+          "term": "ai",
+          "username": "aibed",
+          "price": 333.0,
+          "status": "For sale"
+        },
+        {
+          "term": "ai",
+          "username": "aiduo",
+          "price": 599.0,
+          "status": "For sale"
+        },
+        {
+          "term": "ai",
+          "username": "aiyin",
+          "price": 699.0,
+          "status": "For sale"
+        },
+        {
+          "term": "ai",
+          "username": "aiins",
+          "price": 888.0,
+          "status": "For sale"
+        },
+        {
+          "term": "ai",
+          "username": "aidoc",
+          "price": 990.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "agent",
+      "count": 13,
+      "cheapest": [
+        {
+          "term": "agent",
+          "username": "agenttell",
+          "price": 50.0,
+          "status": "For sale"
+        },
+        {
+          "term": "agent",
+          "username": "agentbox",
+          "price": 127.0,
+          "status": "For sale"
+        },
+        {
+          "term": "agent",
+          "username": "agentsmith",
+          "price": 135.0,
+          "status": "On auction"
+        },
+        {
+          "term": "agent",
+          "username": "agentops",
+          "price": 178.0,
+          "status": "For sale"
+        },
+        {
+          "term": "agent",
+          "username": "agentlink",
+          "price": 182.0,
+          "status": "For sale"
+        },
+        {
+          "term": "agent",
+          "username": "agentik",
+          "price": 201.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "bot",
+      "count": 31,
+      "cheapest": [
+        {
+          "term": "bot",
+          "username": "botae",
+          "price": 50.0,
+          "status": "On auction"
+        },
+        {
+          "term": "bot",
+          "username": "botbv",
+          "price": 50.0,
+          "status": "On auction"
+        },
+        {
+          "term": "bot",
+          "username": "botbx",
+          "price": 50.0,
+          "status": "On auction"
+        },
+        {
+          "term": "bot",
+          "username": "botcj",
+          "price": 50.0,
+          "status": "On auction"
+        },
+        {
+          "term": "bot",
+          "username": "botdh",
+          "price": 50.0,
+          "status": "On auction"
+        },
+        {
+          "term": "bot",
+          "username": "botdw",
+          "price": 50.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "app",
+      "count": 9,
+      "cheapest": [
+        {
+          "term": "app",
+          "username": "appxdr",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "app",
+          "username": "appaji",
+          "price": 186.0,
+          "status": "For sale"
+        },
+        {
+          "term": "app",
+          "username": "applew",
+          "price": 267.0,
+          "status": "On auction"
+        },
+        {
+          "term": "app",
+          "username": "appmkt",
+          "price": 675.0,
+          "status": "For sale"
+        },
+        {
+          "term": "app",
+          "username": "app999",
+          "price": 1000.0,
+          "status": "For sale"
+        },
+        {
+          "term": "app",
+          "username": "appdao",
+          "price": 1999.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "web",
+      "count": 11,
+      "cheapest": [
+        {
+          "term": "web",
+          "username": "webef",
+          "price": 99.0,
+          "status": "On auction"
+        },
+        {
+          "term": "web",
+          "username": "webus",
+          "price": 144.0,
+          "status": "On auction"
+        },
+        {
+          "term": "web",
+          "username": "webftp",
+          "price": 192.0,
+          "status": "On auction"
+        },
+        {
+          "term": "web",
+          "username": "u_web",
+          "price": 195.0,
+          "status": "For sale"
+        },
+        {
+          "term": "web",
+          "username": "webww",
+          "price": 200.0,
+          "status": "For sale"
+        },
+        {
+          "term": "web",
+          "username": "webah",
+          "price": 333.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "cloud",
+      "count": 43,
+      "cheapest": [
+        {
+          "term": "cloud",
+          "username": "chart_cloud",
+          "price": 10.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cloud",
+          "username": "port_cloud",
+          "price": 11.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cloud",
+          "username": "cut_cloud",
+          "price": 15.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cloud",
+          "username": "cloud_copy",
+          "price": 20.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cloud",
+          "username": "cloudywithachanceofmeatballs",
+          "price": 50.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cloud",
+          "username": "cloudcake",
+          "price": 86.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "data",
+      "count": 23,
+      "cheapest": [
+        {
+          "term": "data",
+          "username": "dataslord",
+          "price": 13.0,
+          "status": "On auction"
+        },
+        {
+          "term": "data",
+          "username": "datasghost",
+          "price": 14.0,
+          "status": "On auction"
+        },
+        {
+          "term": "data",
+          "username": "datairanian",
+          "price": 15.0,
+          "status": "On auction"
+        },
+        {
+          "term": "data",
+          "username": "global_datasets",
+          "price": 15.0,
+          "status": "On auction"
+        },
+        {
+          "term": "data",
+          "username": "dataanalysor",
+          "price": 19.0,
+          "status": "On auction"
+        },
+        {
+          "term": "data",
+          "username": "datatransmission",
+          "price": 80.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "api",
+      "count": 89,
+      "cheapest": [
+        {
+          "term": "api",
+          "username": "apiater",
+          "price": 10.0,
+          "status": "For sale"
+        },
+        {
+          "term": "api",
+          "username": "api37",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "api",
+          "username": "api3d",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "api",
+          "username": "api3f",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "api",
+          "username": "api3g",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "api",
+          "username": "api3h",
+          "price": 10.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "pay",
+      "count": 2,
+      "cheapest": [
+        {
+          "term": "pay",
+          "username": "paymm",
+          "price": 999.0,
+          "status": "For sale"
+        },
+        {
+          "term": "pay",
+          "username": "payd",
+          "price": 95000.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "shop",
+      "count": 13,
+      "cheapest": [
+        {
+          "term": "shop",
+          "username": "shop_pull",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "shop",
+          "username": "shop_wet",
+          "price": 14.0,
+          "status": "For sale"
+        },
+        {
+          "term": "shop",
+          "username": "shopiton",
+          "price": 33.0,
+          "status": "For sale"
+        },
+        {
+          "term": "shop",
+          "username": "shophie",
+          "price": 95.0,
+          "status": "On auction"
+        },
+        {
+          "term": "shop",
+          "username": "shopchief",
+          "price": 97.0,
+          "status": "For sale"
+        },
+        {
+          "term": "shop",
+          "username": "dxb_shop",
+          "price": 99.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "store",
+      "count": 57,
+      "cheapest": [
+        {
+          "term": "store",
+          "username": "storetoncoins",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "store",
+          "username": "storejob",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "store",
+          "username": "subseller_store",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "store",
+          "username": "storeae",
+          "price": 11.0,
+          "status": "Available"
+        },
+        {
+          "term": "store",
+          "username": "dolcegabbana_store",
+          "price": 15.0,
+          "status": "For sale"
+        },
+        {
+          "term": "store",
+          "username": "storekg",
+          "price": 15.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "buy",
+      "count": 9,
+      "cheapest": [
+        {
+          "term": "buy",
+          "username": "buyik",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "buy",
+          "username": "buypepe",
+          "price": 80.0,
+          "status": "On auction"
+        },
+        {
+          "term": "buy",
+          "username": "buy289",
+          "price": 88.0,
+          "status": "For sale"
+        },
+        {
+          "term": "buy",
+          "username": "buyetf",
+          "price": 100.0,
+          "status": "On auction"
+        },
+        {
+          "term": "buy",
+          "username": "buyung",
+          "price": 178.0,
+          "status": "On auction"
+        },
+        {
+          "term": "buy",
+          "username": "buyzz",
+          "price": 200.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "sale",
+      "count": 10,
+      "cheapest": [
+        {
+          "term": "sale",
+          "username": "uzbek_saler",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "sale",
+          "username": "salemode",
+          "price": 15.0,
+          "status": "For sale"
+        },
+        {
+          "term": "sale",
+          "username": "sale1",
+          "price": 159.0,
+          "status": "For sale"
+        },
+        {
+          "term": "sale",
+          "username": "saleemkhan",
+          "price": 186.0,
+          "status": "For sale"
+        },
+        {
+          "term": "sale",
+          "username": "usdt_sale",
+          "price": 399.0,
+          "status": "For sale"
+        },
+        {
+          "term": "sale",
+          "username": "salesleader",
+          "price": 399.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "deal",
+      "count": 36,
+      "cheapest": [
+        {
+          "term": "deal",
+          "username": "dealnfts",
+          "price": 2.0,
+          "status": "On auction"
+        },
+        {
+          "term": "deal",
+          "username": "copy_deal",
+          "price": 9.0,
+          "status": "For sale"
+        },
+        {
+          "term": "deal",
+          "username": "deal_cost",
+          "price": 9.0,
+          "status": "For sale"
+        },
+        {
+          "term": "deal",
+          "username": "deal_land",
+          "price": 9.0,
+          "status": "For sale"
+        },
+        {
+          "term": "deal",
+          "username": "dealfull",
+          "price": 10.0,
+          "status": "For sale"
+        },
+        {
+          "term": "deal",
+          "username": "dealpast",
+          "price": 10.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "travel",
+      "count": 85,
+      "cheapest": [
+        {
+          "term": "travel",
+          "username": "tailand_travel",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "travel",
+          "username": "travelston",
+          "price": 10.0,
+          "status": "For sale"
+        },
+        {
+          "term": "travel",
+          "username": "travel_g",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "travel",
+          "username": "travelmx",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "travel",
+          "username": "travelnw",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "travel",
+          "username": "traveloy",
+          "price": 10.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "hotel",
+      "count": 79,
+      "cheapest": [
+        {
+          "term": "hotel",
+          "username": "new_yorker_hotel",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "hotel",
+          "username": "hotel5s",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "hotel",
+          "username": "hotelhq",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "hotel",
+          "username": "hotelmx",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "hotel",
+          "username": "hotelsd",
+          "price": 19.0,
+          "status": "Available"
+        },
+        {
+          "term": "hotel",
+          "username": "hotelth",
+          "price": 20.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "flight",
+      "count": 177,
+      "cheapest": [
+        {
+          "term": "flight",
+          "username": "flightge",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "flight",
+          "username": "flighton",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "flight",
+          "username": "flightth",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "flight",
+          "username": "ai_flight",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "flight",
+          "username": "ll_flight",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "flight",
+          "username": "air_flight",
+          "price": 11.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "jobs",
+      "count": 132,
+      "cheapest": [
+        {
+          "term": "jobs",
+          "username": "entry_level_jobs",
+          "price": 7.0,
+          "status": "On auction"
+        },
+        {
+          "term": "jobs",
+          "username": "jobs_0",
+          "price": 15.0,
+          "status": "Available"
+        },
+        {
+          "term": "jobs",
+          "username": "jobsai",
+          "price": 50.0,
+          "status": "Available"
+        },
+        {
+          "term": "jobs",
+          "username": "jobspt",
+          "price": 104.0,
+          "status": "Available"
+        },
+        {
+          "term": "jobs",
+          "username": "jobs0",
+          "price": 122.0,
+          "status": "Available"
+        },
+        {
+          "term": "jobs",
+          "username": "jobs1",
+          "price": 122.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "work",
+      "count": 9,
+      "cheapest": [
+        {
+          "term": "work",
+          "username": "worker_n",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "work",
+          "username": "workflag",
+          "price": 100.0,
+          "status": "For sale"
+        },
+        {
+          "term": "work",
+          "username": "workpilot",
+          "price": 135.0,
+          "status": "On auction"
+        },
+        {
+          "term": "work",
+          "username": "workcore",
+          "price": 204.0,
+          "status": "On auction"
+        },
+        {
+          "term": "work",
+          "username": "workme",
+          "price": 372.0,
+          "status": "For sale"
+        },
+        {
+          "term": "work",
+          "username": "workassist",
+          "price": 1499.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "hire",
+      "count": 182,
+      "cheapest": [
+        {
+          "term": "hire",
+          "username": "hirealt",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "hire",
+          "username": "hirehere",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "hire",
+          "username": "hirebee",
+          "price": 30.0,
+          "status": "Available"
+        },
+        {
+          "term": "hire",
+          "username": "hire9",
+          "price": 50.0,
+          "status": "Available"
+        },
+        {
+          "term": "hire",
+          "username": "big_hire",
+          "price": 90.0,
+          "status": "Available"
+        },
+        {
+          "term": "hire",
+          "username": "hire_24",
+          "price": 99.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "crypto",
+      "count": 0,
+      "cheapest": []
+    },
+    {
+      "term": "wallet",
+      "count": 11,
+      "cheapest": [
+        {
+          "term": "wallet",
+          "username": "wallet0n",
+          "price": 15.0,
+          "status": "For sale"
+        },
+        {
+          "term": "wallet",
+          "username": "wallet73",
+          "price": 73.0,
+          "status": "For sale"
+        },
+        {
+          "term": "wallet",
+          "username": "walletsy",
+          "price": 100.0,
+          "status": "For sale"
+        },
+        {
+          "term": "wallet",
+          "username": "wallet4",
+          "price": 104.0,
+          "status": "For sale"
+        },
+        {
+          "term": "wallet",
+          "username": "wallet86",
+          "price": 286.0,
+          "status": "For sale"
+        },
+        {
+          "term": "wallet",
+          "username": "walletij",
+          "price": 333.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "token",
+      "count": 18,
+      "cheapest": [
+        {
+          "term": "token",
+          "username": "token_nsd",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "token",
+          "username": "token_lost",
+          "price": 9.0,
+          "status": "For sale"
+        },
+        {
+          "term": "token",
+          "username": "tokendacha",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "token",
+          "username": "tokenaudit",
+          "price": 12.0,
+          "status": "On auction"
+        },
+        {
+          "term": "token",
+          "username": "tokenphase",
+          "price": 12.0,
+          "status": "On auction"
+        },
+        {
+          "term": "token",
+          "username": "tokenwhere",
+          "price": 13.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "trade",
+      "count": 21,
+      "cheapest": [
+        {
+          "term": "trade",
+          "username": "tradersliv",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "trade",
+          "username": "trademaoyi",
+          "price": 23.0,
+          "status": "For sale"
+        },
+        {
+          "term": "trade",
+          "username": "trade_mine",
+          "price": 45.0,
+          "status": "For sale"
+        },
+        {
+          "term": "trade",
+          "username": "traderauto",
+          "price": 89.0,
+          "status": "On auction"
+        },
+        {
+          "term": "trade",
+          "username": "tradetopic",
+          "price": 94.0,
+          "status": "For sale"
+        },
+        {
+          "term": "trade",
+          "username": "trademega",
+          "price": 98.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "finance",
+      "count": 121,
+      "cheapest": [
+        {
+          "term": "finance",
+          "username": "financelearn",
+          "price": 9.0,
+          "status": "On auction"
+        },
+        {
+          "term": "finance",
+          "username": "financeluxury",
+          "price": 9.0,
+          "status": "On auction"
+        },
+        {
+          "term": "finance",
+          "username": "financea4",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "finance",
+          "username": "financeti",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "finance",
+          "username": "financedcontrol",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "finance",
+          "username": "finance_o",
+          "price": 50.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "bank",
+      "count": 30,
+      "cheapest": [
+        {
+          "term": "bank",
+          "username": "bank9c",
+          "price": 4.0,
+          "status": "On auction"
+        },
+        {
+          "term": "bank",
+          "username": "bank6h",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "bank",
+          "username": "bank6k",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "bank",
+          "username": "bank6q",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "bank",
+          "username": "bank6w",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "bank",
+          "username": "bank6y",
+          "price": 7.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "loan",
+      "count": 159,
+      "cheapest": [
+        {
+          "term": "loan",
+          "username": "loanmom",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "loan",
+          "username": "loanist",
+          "price": 16.0,
+          "status": "Available"
+        },
+        {
+          "term": "loan",
+          "username": "loanxy",
+          "price": 25.0,
+          "status": "Available"
+        },
+        {
+          "term": "loan",
+          "username": "loanorg",
+          "price": 25.0,
+          "status": "Available"
+        },
+        {
+          "term": "loan",
+          "username": "wb_loan",
+          "price": 25.0,
+          "status": "Available"
+        },
+        {
+          "term": "loan",
+          "username": "loanout",
+          "price": 30.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "cash",
+      "count": 8,
+      "cheapest": [
+        {
+          "term": "cash",
+          "username": "cashberu",
+          "price": 19.0,
+          "status": "On auction"
+        },
+        {
+          "term": "cash",
+          "username": "cash11",
+          "price": 115.0,
+          "status": "On auction"
+        },
+        {
+          "term": "cash",
+          "username": "cashomat",
+          "price": 888.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cash",
+          "username": "cash999",
+          "price": 999.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cash",
+          "username": "bigg_cash",
+          "price": 1999.0,
+          "status": "For sale"
+        },
+        {
+          "term": "cash",
+          "username": "cashopia",
+          "price": 2000.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "vpn",
+      "count": 12,
+      "cheapest": [
+        {
+          "term": "vpn",
+          "username": "tv_vpn",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "vpn",
+          "username": "vpnsapk",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "vpn",
+          "username": "vpn_milf",
+          "price": 25.0,
+          "status": "For sale"
+        },
+        {
+          "term": "vpn",
+          "username": "vpnlead",
+          "price": 99.0,
+          "status": "For sale"
+        },
+        {
+          "term": "vpn",
+          "username": "vpnfor",
+          "price": 104.0,
+          "status": "For sale"
+        },
+        {
+          "term": "vpn",
+          "username": "vpn_girl",
+          "price": 180.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "host",
+      "count": 120,
+      "cheapest": [
+        {
+          "term": "host",
+          "username": "hostknot",
+          "price": 8.0,
+          "status": "For sale"
+        },
+        {
+          "term": "host",
+          "username": "host26",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "host",
+          "username": "hostrz",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "host",
+          "username": "hostingd",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "host",
+          "username": "hostw3",
+          "price": 25.0,
+          "status": "Available"
+        },
+        {
+          "term": "host",
+          "username": "hostse",
+          "price": 35.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "game",
+      "count": 11,
+      "cheapest": [
+        {
+          "term": "game",
+          "username": "wet_game",
+          "price": 12.0,
+          "status": "For sale"
+        },
+        {
+          "term": "game",
+          "username": "cut_game",
+          "price": 20.0,
+          "status": "For sale"
+        },
+        {
+          "term": "game",
+          "username": "games01",
+          "price": 51.0,
+          "status": "On auction"
+        },
+        {
+          "term": "game",
+          "username": "gamerr",
+          "price": 84.0,
+          "status": "On auction"
+        },
+        {
+          "term": "game",
+          "username": "game4263",
+          "price": 88.0,
+          "status": "For sale"
+        },
+        {
+          "term": "game",
+          "username": "game_win",
+          "price": 94.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "video",
+      "count": 11,
+      "cheapest": [
+        {
+          "term": "video",
+          "username": "hot_videox",
+          "price": 114.0,
+          "status": "For sale"
+        },
+        {
+          "term": "video",
+          "username": "video",
+          "price": 125.0,
+          "status": "Unavailable"
+        },
+        {
+          "term": "video",
+          "username": "hot_video2",
+          "price": 125.0,
+          "status": "On auction"
+        },
+        {
+          "term": "video",
+          "username": "videos_181",
+          "price": 125.0,
+          "status": "On auction"
+        },
+        {
+          "term": "video",
+          "username": "xxx_video0",
+          "price": 125.0,
+          "status": "On auction"
+        },
+        {
+          "term": "video",
+          "username": "hot_videos1",
+          "price": 125.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "music",
+      "count": 53,
+      "cheapest": [
+        {
+          "term": "music",
+          "username": "rock_and_roll_music",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "music",
+          "username": "music4e",
+          "price": 15.0,
+          "status": "Available"
+        },
+        {
+          "term": "music",
+          "username": "musicnerd",
+          "price": 80.0,
+          "status": "On auction"
+        },
+        {
+          "term": "music",
+          "username": "musicd5",
+          "price": 100.0,
+          "status": "Available"
+        },
+        {
+          "term": "music",
+          "username": "musicf6",
+          "price": 100.0,
+          "status": "Available"
+        },
+        {
+          "term": "music",
+          "username": "musicg0",
+          "price": 100.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "news",
+      "count": 24,
+      "cheapest": [
+        {
+          "term": "news",
+          "username": "news_fon",
+          "price": 13.0,
+          "status": "On auction"
+        },
+        {
+          "term": "news",
+          "username": "news_kg",
+          "price": 40.0,
+          "status": "For sale"
+        },
+        {
+          "term": "news",
+          "username": "newskg",
+          "price": 50.0,
+          "status": "For sale"
+        },
+        {
+          "term": "news",
+          "username": "zk_news",
+          "price": 104.0,
+          "status": "For sale"
+        },
+        {
+          "term": "news",
+          "username": "newstock",
+          "price": 130.0,
+          "status": "On auction"
+        },
+        {
+          "term": "news",
+          "username": "newsky",
+          "price": 213.0,
+          "status": "On auction"
+        }
+      ]
+    },
+    {
+      "term": "ads",
+      "count": 42,
+      "cheapest": [
+        {
+          "term": "ads",
+          "username": "not_just_ads",
+          "price": 13.0,
+          "status": "For sale"
+        },
+        {
+          "term": "ads",
+          "username": "adswc",
+          "price": 20.0,
+          "status": "Available"
+        },
+        {
+          "term": "ads",
+          "username": "adslu",
+          "price": 100.0,
+          "status": "Available"
+        },
+        {
+          "term": "ads",
+          "username": "adsuq",
+          "price": 100.0,
+          "status": "Available"
+        },
+        {
+          "term": "ads",
+          "username": "adsho",
+          "price": 114.0,
+          "status": "For sale"
+        },
+        {
+          "term": "ads",
+          "username": "ads44",
+          "price": 122.0,
+          "status": "Available"
+        }
+      ]
+    },
+    {
+      "term": "seo",
+      "count": 4,
+      "cheapest": [
+        {
+          "term": "seo",
+          "username": "seolarp",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "seo",
+          "username": "seojc",
+          "price": 128.0,
+          "status": "On auction"
+        },
+        {
+          "term": "seo",
+          "username": "seopro",
+          "price": 148.0,
+          "status": "For sale"
+        },
+        {
+          "term": "seo",
+          "username": "seomb",
+          "price": 168.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "mail",
+      "count": 132,
+      "cheapest": [
+        {
+          "term": "mail",
+          "username": "j_mail",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "mail",
+          "username": "mailie",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "mail",
+          "username": "maillette",
+          "price": 18.0,
+          "status": "On auction"
+        },
+        {
+          "term": "mail",
+          "username": "mailw3",
+          "price": 55.0,
+          "status": "Available"
+        },
+        {
+          "term": "mail",
+          "username": "mailaoban",
+          "price": 70.0,
+          "status": "For sale"
+        },
+        {
+          "term": "mail",
+          "username": "mailaoda",
+          "price": 80.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "chat",
+      "count": 10,
+      "cheapest": [
+        {
+          "term": "chat",
+          "username": "chatot",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "chat",
+          "username": "chatgptl",
+          "price": 120.0,
+          "status": "On auction"
+        },
+        {
+          "term": "chat",
+          "username": "chatgiga",
+          "price": 150.0,
+          "status": "For sale"
+        },
+        {
+          "term": "chat",
+          "username": "chattu",
+          "price": 216.0,
+          "status": "For sale"
+        },
+        {
+          "term": "chat",
+          "username": "chatvip",
+          "price": 288.0,
+          "status": "For sale"
+        },
+        {
+          "term": "chat",
+          "username": "chatxai",
+          "price": 515.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "gift",
+      "count": 10,
+      "cheapest": [
+        {
+          "term": "gift",
+          "username": "gift7d",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "gift",
+          "username": "gift7e",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "gift",
+          "username": "gift9k",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "gift",
+          "username": "giftgot",
+          "price": 111.0,
+          "status": "On auction"
+        },
+        {
+          "term": "gift",
+          "username": "giftvibe",
+          "price": 250.0,
+          "status": "For sale"
+        },
+        {
+          "term": "gift",
+          "username": "giftbro",
+          "price": 300.0,
+          "status": "For sale"
+        }
+      ]
+    },
+    {
+      "term": "mint",
+      "count": 86,
+      "cheapest": [
+        {
+          "term": "mint",
+          "username": "mintgifton",
+          "price": 7.0,
+          "status": "For sale"
+        },
+        {
+          "term": "mint",
+          "username": "mintdb",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "mint",
+          "username": "mintze",
+          "price": 10.0,
+          "status": "Available"
+        },
+        {
+          "term": "mint",
+          "username": "mintwallet",
+          "price": 11.0,
+          "status": "On auction"
+        },
+        {
+          "term": "mint",
+          "username": "dr_mint",
+          "price": 19.0,
+          "status": "For sale"
+        },
+        {
+          "term": "mint",
+          "username": "mintxp",
+          "price": 42.0,
+          "status": "Available"
+        }
+      ]
+    }
+  ],
+  "global_cheapest": [
+    {
+      "term": "deal",
+      "username": "dealnfts",
+      "price": 2.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "bank9c",
+      "price": 4.0,
+      "status": "On auction"
+    },
+    {
+      "term": "app",
+      "username": "appxdr",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "shop",
+      "username": "shop_pull",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "store",
+      "username": "storetoncoins",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "travel",
+      "username": "tailand_travel",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "hotel",
+      "username": "new_yorker_hotel",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "jobs",
+      "username": "entry_level_jobs",
+      "price": 7.0,
+      "status": "On auction"
+    },
+    {
+      "term": "token",
+      "username": "token_nsd",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank6h",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank6k",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank6q",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank6w",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank6y",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank7j",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank7w",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank8q",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank8w",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank9b",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank9q",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank9t",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank9u",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank88e",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "bank",
+      "username": "bank88i",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "music",
+      "username": "rock_and_roll_music",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "gift",
+      "username": "gift7d",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "gift",
+      "username": "gift7e",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "gift",
+      "username": "gift9k",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "mint",
+      "username": "mintgifton",
+      "price": 7.0,
+      "status": "For sale"
+    },
+    {
+      "term": "host",
+      "username": "hostknot",
+      "price": 8.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "copy_deal",
+      "price": 9.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_cost",
+      "price": 9.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_land",
+      "price": 9.0,
+      "status": "For sale"
+    },
+    {
+      "term": "token",
+      "username": "token_lost",
+      "price": 9.0,
+      "status": "For sale"
+    },
+    {
+      "term": "finance",
+      "username": "financelearn",
+      "price": 9.0,
+      "status": "On auction"
+    },
+    {
+      "term": "finance",
+      "username": "financeluxury",
+      "price": 9.0,
+      "status": "On auction"
+    },
+    {
+      "term": "cloud",
+      "username": "chart_cloud",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "api",
+      "username": "apiater",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "api",
+      "username": "api37",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3d",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3f",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3g",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3h",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3i",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3j",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3k",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3o",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3q",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3r",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3s",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3u",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3w",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3x",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api3y",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "api71",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "apisl",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "apivs",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "apiwa",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "apiwb",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "api",
+      "username": "apizv",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "deal",
+      "username": "dealfull",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "dealpast",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "club_deal",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "port_deal",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "travel",
+      "username": "travelston",
+      "price": 10.0,
+      "status": "For sale"
+    },
+    {
+      "term": "travel",
+      "username": "travel_g",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "travel",
+      "username": "travelmx",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "travel",
+      "username": "travelnw",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "travel",
+      "username": "traveloy",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "hotel",
+      "username": "hotel5s",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "hotel",
+      "username": "hotelhq",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "hotel",
+      "username": "hotelmx",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "flight",
+      "username": "flightge",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "flight",
+      "username": "flighton",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "flight",
+      "username": "flightth",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "flight",
+      "username": "ai_flight",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "flight",
+      "username": "ll_flight",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "hire",
+      "username": "hirealt",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "hire",
+      "username": "hirehere",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "finance",
+      "username": "financea4",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "finance",
+      "username": "financeti",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "loan",
+      "username": "loanmom",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "host",
+      "username": "host26",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "host",
+      "username": "hostrz",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "mail",
+      "username": "j_mail",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "mail",
+      "username": "mailie",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "mint",
+      "username": "mintdb",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "mint",
+      "username": "mintze",
+      "price": 10.0,
+      "status": "Available"
+    },
+    {
+      "term": "cloud",
+      "username": "port_cloud",
+      "price": 11.0,
+      "status": "For sale"
+    },
+    {
+      "term": "api",
+      "username": "pubg_api",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "api",
+      "username": "apiaopiao",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "api",
+      "username": "apimidasbuy",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "api",
+      "username": "midasbuy_api_bot",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "api",
+      "username": "midasbuy_api_pubg",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "store",
+      "username": "storejob",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "store",
+      "username": "subseller_store",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "store",
+      "username": "storeae",
+      "price": 11.0,
+      "status": "Available"
+    },
+    {
+      "term": "buy",
+      "username": "buyik",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "sale",
+      "username": "uzbek_saler",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "deal",
+      "username": "dealvips",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "deal",
+      "username": "dealress",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "deal",
+      "username": "case_deal",
+      "price": 11.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_rent",
+      "price": 11.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "dealgamer",
+      "price": 11.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "race_deal",
+      "price": 11.0,
+      "status": "For sale"
+    },
+    {
+      "term": "travel",
+      "username": "travels4",
+      "price": 11.0,
+      "status": "Available"
+    },
+    {
+      "term": "flight",
+      "username": "air_flight",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "work",
+      "username": "worker_n",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "token",
+      "username": "tokendacha",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "trade",
+      "username": "tradersliv",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "finance",
+      "username": "financedcontrol",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "bank7c",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "bank7n",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "bank7z",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "banksk",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "bankyl",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "bank",
+      "username": "bankhao",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "vpn",
+      "username": "tv_vpn",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "vpn",
+      "username": "vpnsapk",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "host",
+      "username": "hostingd",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "seo",
+      "username": "seolarp",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "chat",
+      "username": "chatot",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "mint",
+      "username": "mintwallet",
+      "price": 11.0,
+      "status": "On auction"
+    },
+    {
+      "term": "token",
+      "username": "tokenaudit",
+      "price": 12.0,
+      "status": "On auction"
+    },
+    {
+      "term": "token",
+      "username": "tokenphase",
+      "price": 12.0,
+      "status": "On auction"
+    },
+    {
+      "term": "game",
+      "username": "wet_game",
+      "price": 12.0,
+      "status": "For sale"
+    },
+    {
+      "term": "data",
+      "username": "dataslord",
+      "price": 13.0,
+      "status": "On auction"
+    },
+    {
+      "term": "travel",
+      "username": "travelboi",
+      "price": 13.0,
+      "status": "On auction"
+    },
+    {
+      "term": "token",
+      "username": "tokenwhere",
+      "price": 13.0,
+      "status": "On auction"
+    },
+    {
+      "term": "news",
+      "username": "news_fon",
+      "price": 13.0,
+      "status": "On auction"
+    },
+    {
+      "term": "ads",
+      "username": "not_just_ads",
+      "price": 13.0,
+      "status": "For sale"
+    },
+    {
+      "term": "data",
+      "username": "datasghost",
+      "price": 14.0,
+      "status": "On auction"
+    },
+    {
+      "term": "shop",
+      "username": "shop_wet",
+      "price": 14.0,
+      "status": "For sale"
+    },
+    {
+      "term": "cloud",
+      "username": "cut_cloud",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "data",
+      "username": "datairanian",
+      "price": 15.0,
+      "status": "On auction"
+    },
+    {
+      "term": "data",
+      "username": "global_datasets",
+      "price": 15.0,
+      "status": "On auction"
+    },
+    {
+      "term": "store",
+      "username": "dolcegabbana_store",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "store",
+      "username": "storekg",
+      "price": 15.0,
+      "status": "Available"
+    },
+    {
+      "term": "sale",
+      "username": "salemode",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_tag",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "jet_deal",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_back",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_sort",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_unit",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "rent_deal",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "room_deal",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "jobs",
+      "username": "jobs_0",
+      "price": 15.0,
+      "status": "Available"
+    },
+    {
+      "term": "wallet",
+      "username": "wallet0n",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "token",
+      "username": "token_rent",
+      "price": 15.0,
+      "status": "For sale"
+    },
+    {
+      "term": "music",
+      "username": "music4e",
+      "price": 15.0,
+      "status": "Available"
+    },
+    {
+      "term": "deal",
+      "username": "deal_jet",
+      "price": 16.0,
+      "status": "For sale"
+    },
+    {
+      "term": "deal",
+      "username": "deal_case",
+      "price": 16.0,
+      "status": "For sale"
+    },
+    {
+      "term": "loan",
+      "username": "loanist",
+      "price": 16.0,
+      "status": "Available"
+    },
+    {
+      "term": "mail",
+      "username": "maillette",
+      "price": 18.0,
+      "status": "On auction"
+    },
+    {
+      "term": "data",
+      "username": "dataanalysor",
+      "price": 19.0,
+      "status": "On auction"
+    },
+    {
+      "term": "hotel",
+      "username": "hotelsd",
+      "price": 19.0,
+      "status": "Available"
+    },
+    {
+      "term": "token",
+      "username": "nfts_tokens",
+      "price": 19.0,
+      "status": "For sale"
+    },
+    {
+      "term": "cash",
+      "username": "cashberu",
+      "price": 19.0,
+      "status": "On auction"
+    },
+    {
+      "term": "mint",
+      "username": "dr_mint",
+      "price": 19.0,
+      "status": "For sale"
+    },
+    {
+      "term": "cloud",
+      "username": "cloud_copy",
+      "price": 20.0,
+      "status": "For sale"
+    }
+  ]
+}
