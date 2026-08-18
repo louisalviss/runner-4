@@ -1,0 +1,16 @@
+work/
+out/
+qa/
+*.mp4
+*.m4a
+*.mp3
+*.wav
+*.gif
+*.webm
+*.mov
+*.mkv
+*.zip
+__pycache__/
+*.pyc
+.env
+.env.*
