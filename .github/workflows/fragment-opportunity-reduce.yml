@@ -1,0 +1,47 @@
+name: Fragment Opportunity Reduce
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/fragment-opportunity-reduce.yml"
+      - "fragment-reduce-trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  reduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build shortlist
+        run: |
+          python - <<'PY'
+          import json,time
+          from pathlib import Path
+          d=json.loads(Path('crawl-results/fragment-opportunities.json').read_text())
+          per=[]; glob=[]
+          for r in d['results']:
+            arr=[]
+            for it in r.get('items',[]):
+              nums=it.get('numbers') or []
+              if not nums: continue
+              x={'term':r['term'],'username':it['username'],'price':nums[0],'status':it.get('context',[None,None])[1] if len(it.get('context',[]))>1 else None}
+              arr.append(x); glob.append(x)
+            arr.sort(key=lambda z:z['price'])
+            per.append({'term':r['term'],'count':len(arr),'cheapest':arr[:6]})
+          glob.sort(key=lambda z:z['price'])
+          out={'captured_at':d.get('captured_at'),'reduced_at':time.time(),'per_term':per,'global_cheapest':glob[:160]}
+          Path('crawl-results/fragment-shortlist.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit shortlist
+        run: |
+          git config user.name "runner-4-bot"
+          git config user.email "runner-4-bot@users.noreply.github.com"
+          git add crawl-results/fragment-shortlist.json
+          git commit -m "Add Fragment opportunity shortlist" || exit 0
+          git pull --rebase origin main || true
+          git push
