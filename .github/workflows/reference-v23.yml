@@ -1,0 +1,130 @@
+name: Reference V23
+
+on:
+  pull_request:
+    paths:
+      - trigger/reference-v23.txt
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Reze x LUNACY reference edit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import html, json, math, os, pathlib, re, subprocess, urllib.parse, urllib.request
+
+          ROOT=pathlib.Path.cwd(); W=ROOT/'work'; W.mkdir(exist_ok=True)
+          UA={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36'}
+          pages={
+            'reze':'https://tenor.com/view/blushing-reze-chainsaw-man---the-movie-reze-arc-feeling-happy-delighted-gif-11744087022567648846',
+            'threat':'https://tenor.com/view/incoming-attack-chainsaw-man---the-movie-reze-arc-explosive-attack-kaboom-massive-explosion-gif-6324665452427745309',
+            'chainsaw':'https://tenor.com/view/roar-chainsaw-man-chainsaw-man---the-movie-reze-arc-monster-scream-sony-pictures-gif-5329216668127084356',
+            'payoff':'https://tenor.com/view/massive-explosion-chainsaw-man---the-movie-reze-arc-kaboom-big-explosion-mushroom-cloud-gif-8760439085191691220',
+          }
+          def get(url):
+            return urllib.request.urlopen(urllib.request.Request(url,headers=UA),timeout=45).read()
+          def run(cmd):
+            print('+',' '.join(map(str,cmd)),flush=True); subprocess.run([str(x) for x in cmd],check=True)
+          def media_url(page):
+            txt=get(page).decode('utf-8','ignore')
+            txt=html.unescape(txt).replace('\\u0026','&').replace('\\/','/')
+            urls=[]
+            for pat in [r'https://media\.tenor\.com/[^"\'<> ]+?\.mp4[^"\'<> ]*',r'https://media1?\.tenor\.com/[^"\'<> ]+?\.gif[^"\'<> ]*']:
+              urls += re.findall(pat,txt)
+            urls=list(dict.fromkeys(urls))
+            if not urls: raise RuntimeError('No media on '+page)
+            return next((u for u in urls if '.mp4' in u),urls[0])
+
+          norm={}; manifest={}
+          for sid,page in pages.items():
+            u=media_url(page); ext='.mp4' if '.mp4' in u else '.gif'; raw=W/f'{sid}{ext}'
+            raw.write_bytes(get(u)); manifest[sid]={'page':page,'media':u,'bytes':raw.stat().st_size}
+            out=W/f'{sid}.mp4'
+            run(['ffmpeg','-hide_banner','-loglevel','error','-y','-stream_loop','3','-i',raw,'-t','5.0',
+                 '-vf','fps=30,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,format=yuv420p',
+                 '-an','-c:v','libx264','-preset','veryfast','-crf','17',out])
+            norm[sid]=out
+
+          # Resolve current LUNACY JUMPSTYLE preview from Apple's public search endpoint.
+          q=urllib.parse.urlencode({'term':'LUNACY JUMPSTYLE Atic 74blade BXRNCLUEL Elysian','entity':'song','limit':50,'country':'US'})
+          data=json.loads(get('https://itunes.apple.com/search?'+q))
+          hit=None
+          for x in data.get('results',[]):
+            n=(x.get('trackName') or '').strip().lower(); a=(x.get('artistName') or '').lower()
+            if n=='lunacy jumpstyle' and x.get('previewUrl') and ('atic' in a or '74blade' in a): hit=x; break
+          if not hit: raise RuntimeError('LUNACY preview not found')
+          music=W/'lunacy.m4a'; music.write_bytes(get(hit['previewUrl']))
+
+          # Find the strongest 9s preview window (onsets + RMS) so the edit lands on the actual drop.
+          raw=W/'music.raw'
+          run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',music,'-ac','1','-ar','22050','-f','s16le',raw])
+          import array
+          aa=array.array('h'); aa.frombytes(raw.read_bytes()); x=[v/32768.0 for v in aa]; sr=22050
+          hop=220; win=1024; E=[]
+          for i in range(0,max(0,len(x)-win),hop):
+            seg=x[i:i+win]; E.append(math.sqrt(sum(v*v for v in seg)/len(seg)+1e-9))
+          loge=[math.log(v+1e-7) for v in E]; onset=[0.0]+[max(0.0,loge[i]-loge[i-1]) for i in range(1,len(loge))]
+          times=[i*hop/sr for i in range(len(E))]; total_audio=len(x)/sr; D=9.0
+          best=(-1.0,0.0)
+          for st_i in range(0,len(E),4):
+            st=times[st_i]
+            if st+D>total_audio-.03: break
+            en=st+D; ids=[i for i,t in enumerate(times) if st<=t<en]
+            if not ids: continue
+            score=sum(onset[i] for i in ids)+4.0*sum(E[i] for i in ids)/len(ids)
+            if score>best[0]: best=(score,st)
+          music_start=best[1]
+
+          # Four blocks only: identity -> threat -> response -> payoff.
+          blocks=[('reze',0.05,1.55,1.45),('threat',0.10,2.55,1.95),('chainsaw',0.05,3.05,2.75),('payoff',0.05,2.95,2.85)]
+          clips=[]; edit=[]; t=0.0
+          for i,(sid,ss,se,od) in enumerate(blocks):
+            sd=se-ss; fac=od/sd; out=W/f'c{i}.mp4'
+            # Clean center-crop, no blurred frame. Mild punch only on block transition.
+            vf=(f"crop=405:720:(iw-405)/2:0,scale=1080:1920,"
+                f"eq=contrast=1.12:saturation=1.16:gamma=0.98,"
+                f"setpts=(PTS-STARTPTS)*{fac:.8f},fps=30,format=yuv420p")
+            if i in (1,2): vf += ",unsharp=5:5:0.45:5:5:0"
+            run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',str(ss),'-i',norm[sid],'-t',str(sd),'-an','-vf',vf,
+                 '-t',str(od),'-c:v','libx264','-preset','veryfast','-crf','17','-profile:v','high','-pix_fmt','yuv420p',out])
+            clips.append(out); edit.append({'source':sid,'out':[t,t+od]}); t+=od
+          concat=W/'concat.txt'; concat.write_text('\n'.join(f"file '{p.as_posix()}'" for p in clips)+'\n')
+          visual=W/'visual.mp4'; run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',concat,'-c','copy',visual])
+
+          # Two restrained accents only: one dark anticipation pulse before response, one white hit into payoff.
+          accented=W/'accented.mp4'
+          run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',visual,'-vf',
+               "eq=brightness='if(between(t,3.31,3.39),-0.18,if(between(t,6.10,6.18),0.22,0))':eval=frame,setsar=1",
+               '-an','-c:v','libx264','-preset','veryfast','-crf','17','-profile:v','high','-pix_fmt','yuv420p',accented])
+
+          final=ROOT/'chainsaw_reze_lunacy_v23.mp4'
+          run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',accented,'-ss',f'{music_start:.3f}','-i',music,'-t','9.0',
+               '-map','0:v:0','-map','1:a:0','-c:v','copy','-af','volume=1.0,bass=g=2:f=90,alimiter=limit=.94',
+               '-c:a','aac','-b:a','192k','-ar','48000','-ac','2','-movflags','+faststart',final])
+
+          # QA master + iPhone center-cover.
+          run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',final,'-vf','fps=1,scale=180:-2,tile=5x2:padding=3:margin=3','-frames:v','1',ROOT/'v23_master.jpg'])
+          run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',final,'-vf','crop=886:1920:97:0,fps=1,scale=180:-2,tile=5x2:padding=3:margin=3','-frames:v','1',ROOT/'v23_iphone.jpg'])
+          (ROOT/'v23_manifest.json').write_text(json.dumps({'music':{'track':hit.get('trackName'),'artist':hit.get('artistName'),'start':music_start},'sources':manifest,'edit':edit,'duration':9.0},indent=2))
+          PY
+
+      - name: Upload V23
+        uses: actions/upload-artifact@v4
+        with:
+          name: chainsaw-reze-lunacy-v23
+          path: |
+            chainsaw_reze_lunacy_v23.mp4
+            v23_master.jpg
+            v23_iphone.jpg
+            v23_manifest.json
+          retention-days: 3
+          if-no-files-found: error
