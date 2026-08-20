@@ -53,43 +53,97 @@ jobs:
           dl 8983989 assets/reddit-v10/corridor.mp4
           dl 12929231 assets/reddit-v10/river.mp4
 
-      - name: Capture actual Reddit screenshots
+      - name: Capture validated archived Reddit screenshots
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
+          import json
+          import urllib.parse
+          import urllib.request
           from pathlib import Path
           from playwright.sync_api import sync_playwright
 
           out=Path('assets/reddit-v10'); out.mkdir(parents=True,exist_ok=True)
-          urls={
-            'post1.png':'https://old.reddit.com/r/IAmA/comments/9ke63/i_did_heroin_yesterday_i_am_not_a_drug_user_and/',
-            'post2.png':'https://old.reddit.com/r/IAmA/comments/9ohdc/2_weeks_ago_i_tried_heroin_once_for_fun_and_made/',
-            'profile.png':'https://old.reddit.com/user/SpontaneousH/submitted/',
+
+          targets={
+            'post1.png':{
+              'url':'https://www.reddit.com/r/IAmA/comments/9ke63/i_did_heroin_yesterday_i_am_not_a_drug_user_and/',
+              'timestamp':'20090915',
+              'need':['heroin','spontaneous'],
+            },
+            'post2.png':{
+              'url':'https://www.reddit.com/r/IAmA/comments/9ohdc/2_weeks_ago_i_tried_heroin_once_for_fun_and_made/',
+              'timestamp':'20090928',
+              'need':['heroin','first time'],
+            },
+            'profile.png':{
+              'url':'https://www.reddit.com/user/SpontaneousH/submitted/',
+              'timestamp':'20210926',
+              'need':['spontaneoush'],
+            },
           }
+
+          def availability(url,timestamp):
+            q=urllib.parse.urlencode({'url':url,'timestamp':timestamp})
+            api='https://archive.org/wayback/available?'+q
+            req=urllib.request.Request(api,headers={'User-Agent':'Mozilla/5.0'})
+            with urllib.request.urlopen(req,timeout=30) as r:
+              data=json.load(r)
+            snap=data.get('archived_snapshots',{}).get('closest')
+            if not snap or not snap.get('available'):
+              return None
+            return snap['url'].replace('http://web.archive.org/','https://web.archive.org/')
+
           with sync_playwright() as p:
             browser=p.chromium.launch(headless=True)
-            ctx=browser.new_context(viewport={'width':1280,'height':1000},device_scale_factor=1,user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/125 Safari/537.36')
+            ctx=browser.new_context(
+              viewport={'width':1280,'height':1100},
+              device_scale_factor=1,
+              user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/125 Safari/537.36'
+            )
             page=ctx.new_page()
-            for name,url in urls.items():
-              page.goto(url,wait_until='domcontentloaded',timeout=90000)
-              page.wait_for_timeout(2500)
+            resolved={}
+            for name,cfg in targets.items():
+              snap=availability(cfg['url'],cfg['timestamp'])
+              if not snap:
+                raise RuntimeError(f'No Wayback snapshot for {name}: {cfg["url"]}')
+              print(name,'=>',snap)
+              page.goto(snap,wait_until='domcontentloaded',timeout=90000)
+              page.wait_for_timeout(3500)
               body=page.locator('body').inner_text(timeout=15000)
-              if len(body)<400:
-                raise RuntimeError(f'Reddit capture too small for {name}: {len(body)} chars; title={page.title()}')
+              low=body.lower()
+              if 'blocked' == page.title().strip().lower():
+                raise RuntimeError(f'Blocked capture for {name}')
+              missing=[term for term in cfg['need'] if term not in low]
+              if missing:
+                raise RuntimeError(f'Archive validation failed for {name}: missing={missing}; title={page.title()!r}; body_head={body[:400]!r}')
               page.screenshot(path=str(out/name),full_page=False)
-              print(name,page.title(),len(body))
-            # Actual comments from the original thread: same page, scrolled below post.
-            page.goto(urls['post1.png'],wait_until='domcontentloaded',timeout=90000)
-            page.wait_for_timeout(2000)
-            page.evaluate('window.scrollTo(0, 900)')
-            page.wait_for_timeout(1200)
+              resolved[name]=snap
+
+            # Comments are an actual viewport from the archived first thread, not a recreation.
+            page.goto(resolved['post1.png'],wait_until='domcontentloaded',timeout=90000)
+            page.wait_for_timeout(2500)
+            body=page.locator('body').inner_text(timeout=15000)
+            low=body.lower()
+            # Find a known warning/self-control discussion area where possible.
+            for needle in ['self control','addict','comments']:
+              loc=page.get_by_text(needle,exact=False)
+              try:
+                if loc.count()>0:
+                  loc.first.scroll_into_view_if_needed(timeout=5000)
+                  page.wait_for_timeout(700)
+                  break
+              except Exception:
+                pass
             page.screenshot(path=str(out/'comments.png'),full_page=False)
             browser.close()
+
           for name in ['post1.png','post2.png','profile.png','comments.png']:
-            p=out/name
-            if not p.exists() or p.stat().st_size<20000:
-              raise RuntimeError(f'bad reddit screenshot: {p}')
+            fp=out/name
+            if not fp.exists() or fp.stat().st_size<25000:
+              raise RuntimeError(f'bad archived Reddit screenshot: {fp}')
+          print('Validated archived Reddit screenshots captured successfully.')
           PY
 
       - name: Render documentary
@@ -110,7 +164,9 @@ jobs:
           assert q['real_footage_seconds_approx']>=18,q
           assert q['blur_background'] is False,q
           assert q['vignette'] is False,q
+          assert q['glow_layer'] is False,q
           assert q['ai_generated_people'] is False,q
+          assert q['av_duration_delta'] <= 0.35,q
           print(json.dumps(q,ensure_ascii=False,indent=2))
           PY
           ffprobe -v error -show_entries format=duration -show_entries stream=codec_name,width,height -of json output/reddit-heroin-v10/final.mp4
