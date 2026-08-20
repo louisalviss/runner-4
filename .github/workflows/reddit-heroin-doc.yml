@@ -94,7 +94,11 @@ jobs:
           PY
 
       - name: Render 9:16 documentary
-        run: python scripts/render_reddit_doc.py jobs/reddit-heroin-doc output/reddit-heroin-doc
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i 's/RATE = "+6%"/RATE = "+30%"/' scripts/render_reddit_doc.py
+          python scripts/render_reddit_doc.py jobs/reddit-heroin-doc output/reddit-heroin-doc
 
       - name: Independent media QA
         shell: bash
