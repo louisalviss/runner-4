@@ -1,0 +1,94 @@
+name: Reddit Heroin Documentary
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'jobs/reddit-heroin-doc/**'
+      - 'scripts/render_reddit_doc.py'
+      - '.github/workflows/reddit-heroin-doc.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reddit-heroin-documentary
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install media dependencies
+        run: |
+          python -m pip install -q pillow edge-tts playwright
+          python -m playwright install --with-deps chromium
+          command -v ffmpeg
+          command -v ffprobe
+
+      - name: Capture Reddit archive source
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          url = 'https://www.rareddit.com/r/IAmA/comments/9ke63/i_did_heroin_yesterday_i_am_not_a_drug_user_and/'
+          out = Path('jobs/reddit-heroin-doc/source.png')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          with sync_playwright() as p:
+              browser = p.chromium.launch(headless=True)
+              page = browser.new_page(viewport={'width': 1280, 'height': 1100}, device_scale_factor=1)
+              page.set_extra_http_headers({'Accept-Language': 'en-US,en;q=0.9'})
+              page.goto(url, wait_until='domcontentloaded', timeout=90000)
+              page.wait_for_timeout(3000)
+              title = page.title().lower()
+              body = page.locator('body').inner_text(timeout=10000).lower()
+              if 'i did heroin yesterday' not in body:
+                  raise RuntimeError(f'archive validation failed; title={title!r}')
+              page.screenshot(path=str(out), full_page=False)
+              browser.close()
+          print(f'captured {out} ({out.stat().st_size} bytes)')
+          PY
+
+      - name: Render 9:16 documentary
+        run: python scripts/render_reddit_doc.py jobs/reddit-heroin-doc output/reddit-heroin-doc
+
+      - name: Independent media QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s output/reddit-heroin-doc/final.mp4
+          test -s output/reddit-heroin-doc/qa.json
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate -of json output/reddit-heroin-doc/final.mp4
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,sample_rate,channels -of json output/reddit-heroin-doc/final.mp4
+          python - <<'PY'
+          import json
+          q=json.load(open('output/reddit-heroin-doc/qa.json'))
+          assert q['duration_pass'], q
+          assert q['resolution']==[1080,1920], q
+          assert q['source_screenshot_present'], q
+          print(json.dumps(q, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Publish render to repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add jobs/reddit-heroin-doc/source.png output/reddit-heroin-doc/final.mp4 output/reddit-heroin-doc/qa.json
+          if git diff --cached --quiet; then
+            echo 'No render changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Render Reddit heroin documentary'
+          git push
