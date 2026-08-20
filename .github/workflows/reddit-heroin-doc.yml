@@ -98,6 +98,7 @@ jobs:
         run: |
           set -euo pipefail
           sed -i 's/RATE = "+6%"/RATE = "+30%"/' scripts/render_reddit_doc.py
+          sed -i 's/FontSize=42/FontSize=16/' scripts/render_reddit_doc.py
           python scripts/render_reddit_doc.py jobs/reddit-heroin-doc output/reddit-heroin-doc
 
       - name: Independent media QA
