@@ -1,0 +1,130 @@
+name: Reddit Heroin Documentary V10 Real Footage
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/render_reddit_v10.py'
+      - '.github/workflows/reddit-heroin-v10.yml'
+      - 'jobs/reddit-heroin-v10/**'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install -q pillow edge-tts playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Download real Pexels footage
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/reddit-v10
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/125 Safari/537.36'
+          dl(){
+            local id="$1" out="$2"
+            echo "Downloading Pexels video $id -> $out"
+            curl -L --fail --retry 4 --retry-delay 2 -A "$UA" "https://www.pexels.com/download/video/${id}/" -o "$out"
+            test -s "$out"
+            ffprobe -v error -show_entries stream=width,height -of default=nw=1 "$out" | head
+          }
+          dl 19332990 assets/reddit-v10/nyc.mp4
+          dl 7272375 assets/reddit-v10/laptop.mp4
+          dl 9902310 assets/reddit-v10/pills.mp4
+          dl 5203510 assets/reddit-v10/hospital.mp4
+          dl 8983989 assets/reddit-v10/corridor.mp4
+          dl 12929231 assets/reddit-v10/river.mp4
+
+      - name: Capture actual Reddit screenshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          out=Path('assets/reddit-v10'); out.mkdir(parents=True,exist_ok=True)
+          urls={
+            'post1.png':'https://old.reddit.com/r/IAmA/comments/9ke63/i_did_heroin_yesterday_i_am_not_a_drug_user_and/',
+            'post2.png':'https://old.reddit.com/r/IAmA/comments/9ohdc/2_weeks_ago_i_tried_heroin_once_for_fun_and_made/',
+            'profile.png':'https://old.reddit.com/user/SpontaneousH/submitted/',
+          }
+          with sync_playwright() as p:
+            browser=p.chromium.launch(headless=True)
+            ctx=browser.new_context(viewport={'width':1280,'height':1000},device_scale_factor=1,user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/125 Safari/537.36')
+            page=ctx.new_page()
+            for name,url in urls.items():
+              page.goto(url,wait_until='domcontentloaded',timeout=90000)
+              page.wait_for_timeout(2500)
+              body=page.locator('body').inner_text(timeout=15000)
+              if len(body)<400:
+                raise RuntimeError(f'Reddit capture too small for {name}: {len(body)} chars; title={page.title()}')
+              page.screenshot(path=str(out/name),full_page=False)
+              print(name,page.title(),len(body))
+            # Actual comments from the original thread: same page, scrolled below post.
+            page.goto(urls['post1.png'],wait_until='domcontentloaded',timeout=90000)
+            page.wait_for_timeout(2000)
+            page.evaluate('window.scrollTo(0, 900)')
+            page.wait_for_timeout(1200)
+            page.screenshot(path=str(out/'comments.png'),full_page=False)
+            browser.close()
+          for name in ['post1.png','post2.png','profile.png','comments.png']:
+            p=out/name
+            if not p.exists() or p.stat().st_size<20000:
+              raise RuntimeError(f'bad reddit screenshot: {p}')
+          PY
+
+      - name: Render documentary
+        run: python scripts/render_reddit_v10.py output/reddit-heroin-v10
+
+      - name: QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s output/reddit-heroin-v10/final.mp4
+          test -s output/reddit-heroin-v10/qa-contact.jpg
+          test -s output/reddit-heroin-v10/qa.json
+          python - <<'PY'
+          import json
+          q=json.load(open('output/reddit-heroin-v10/qa.json'))
+          assert q['resolution']==[1080,1920],q
+          assert q['real_footage_segments']>=6,q
+          assert q['real_footage_seconds_approx']>=18,q
+          assert q['blur_background'] is False,q
+          assert q['vignette'] is False,q
+          assert q['ai_generated_people'] is False,q
+          print(json.dumps(q,ensure_ascii=False,indent=2))
+          PY
+          ffprobe -v error -show_entries format=duration -show_entries stream=codec_name,width,height -of json output/reddit-heroin-v10/final.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reddit-heroin-v10-${{ github.run_id }}
+          path: |
+            output/reddit-heroin-v10/final.mp4
+            output/reddit-heroin-v10/qa-contact.jpg
+            output/reddit-heroin-v10/qa.json
+            assets/reddit-v10/post1.png
+            assets/reddit-v10/post2.png
+            assets/reddit-v10/comments.png
+            assets/reddit-v10/profile.png
+          retention-days: 3
+          if-no-files-found: error
