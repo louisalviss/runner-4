@@ -35,15 +35,22 @@ jobs:
           python-version: '3.12'
 
       - name: Install media dependencies
+        shell: bash
         run: |
+          set -euo pipefail
           python -m pip install -q pillow edge-tts playwright
+          if ! command -v ffmpeg >/dev/null 2>&1 || ! command -v ffprobe >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
           python -m playwright install --with-deps chromium
-          command -v ffmpeg
-          command -v ffprobe
+          ffmpeg -version | head -1
+          ffprobe -version | head -1
 
       - name: Capture Reddit archive source
         shell: bash
         run: |
+          set -euo pipefail
           python - <<'PY'
           from pathlib import Path
           from playwright.sync_api import sync_playwright
@@ -62,6 +69,8 @@ jobs:
                   raise RuntimeError(f'archive validation failed; title={page.title()!r}')
               page.screenshot(path=str(out), full_page=False)
               browser.close()
+          if not out.exists() or out.stat().st_size < 10000:
+              raise RuntimeError('source screenshot missing or too small')
           print(f'captured {out} ({out.stat().st_size} bytes)')
           PY
 
