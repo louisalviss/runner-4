@@ -1,0 +1,46 @@
+name: Reddit Heroin Documentary V5 Investigation
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/render_reddit_doc_v5.py'
+      - 'jobs/reddit-heroin-v5/**'
+      - '.github/workflows/reddit-heroin-v5.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install -q pillow edge-tts
+      - run: python scripts/render_reddit_doc_v5.py output/reddit-heroin-v5
+      - name: QA
+        run: |
+          python - <<'PY'
+          import json
+          q=json.load(open('output/reddit-heroin-v5/qa.json'))
+          assert q['shots'] >= 25
+          assert q['generic_broll'] == 0
+          assert q['repeated_shots'] == 0
+          assert q['resolution'] == [1080,1920]
+          assert 45 <= q['duration'] <= 55, q
+          print(q)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reddit-heroin-v5-${{ github.run_id }}
+          path: |
+            output/reddit-heroin-v5/final.mp4
+            output/reddit-heroin-v5/qa.json
+            output/reddit-heroin-v5/qa-contact.jpg
+          retention-days: 3
