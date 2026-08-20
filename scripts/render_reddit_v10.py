@@ -91,6 +91,8 @@ def make_still_clip(src:pathlib.Path,dur:float,out:pathlib.Path):
          '-vf',f'scale={W}:{H},fps={FPS},format=yuv420p','-an','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','18','-video_track_timescale','90000',str(out)])
 
 def make_video_clip(src:pathlib.Path,dur:float,out:pathlib.Path,start:float,label:str='',caption:str=''):
+    # Full-bleed REAL footage. Loop input if source is shorter than requested segment.
+    # No blur, vignette, glow, or duplicated background layer.
     vf=(f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
         f"fps={FPS},eq=contrast=1.02:saturation=0.95")
     if label:
@@ -100,7 +102,7 @@ def make_video_clip(src:pathlib.Path,dur:float,out:pathlib.Path,start:float,labe
         safe=caption.replace("'","’").replace(':','\\:')
         vf += f",drawbox=x=45:y=1600:w=990:h=130:color=black@0.72:t=fill,drawtext=fontfile={BOLD}:text='{safe}':fontcolor=white:fontsize=34:x=72:y=1638"
     vf += ',format=yuv420p'
-    run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',f'{start:.2f}','-i',str(src),'-t',f'{dur:.3f}',
+    run(['ffmpeg','-hide_banner','-loglevel','error','-y','-stream_loop','-1','-i',str(src),'-ss',f'{start:.2f}','-t',f'{dur:.3f}',
          '-vf',vf,'-an','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','18','-video_track_timescale','90000',str(out)])
 
 def main():
@@ -113,27 +115,27 @@ def main():
         p=assets/name
         if not p.exists(): raise FileNotFoundError(p)
     voice=work/'voice.mp3'; asyncio.run(synth(voice)); D=probe(voice); scale=D/BASE_D
-    compose_screenshot(assets/'post1.png','ACTUAL REDDIT POST',stills/'post1.jpg')
-    compose_screenshot(assets/'comments.png','ACTUAL REDDIT COMMENTS',stills/'comments.jpg')
-    compose_screenshot(assets/'profile.png','ACTUAL USER PROFILE',stills/'profile.jpg')
-    compose_screenshot(assets/'post2.png','ACTUAL REDDIT UPDATE',stills/'post2.jpg')
+    compose_screenshot(assets/'post1.png','ARCHIVED REDDIT POST',stills/'post1.jpg')
+    compose_screenshot(assets/'comments.png','ARCHIVED REDDIT COMMENTS',stills/'comments.jpg')
+    compose_screenshot(assets/'profile.png','ARCHIVED REDDIT PROFILE',stills/'profile.jpg')
+    compose_screenshot(assets/'post2.png','ARCHIVED REDDIT UPDATE',stills/'post2.jpg')
     compose_timeline(stills/'timeline.jpg')
     compose_compare(assets/'post1.png',assets/'post2.png',stills/'compare.jpg')
     plan=[
       (0.00,2.50,'still','post1.jpg',0,'',''),
-      (2.50,5.40,'video','nyc.mp4',1.0,'NEW YORK • 2009',''),
+      (2.50,5.40,'video','nyc.mp4',1.0,'REAL FOOTAGE • NEW YORK 2009',''),
       (5.40,8.10,'still','profile.jpg',0,'',''),
       (8.10,10.70,'video','laptop.mp4',1.5,'REAL FOOTAGE','Late-night browsing'),
       (10.70,13.50,'still','comments.jpg',0,'',''),
-      (13.50,15.10,'video','laptop.mp4',5.0,'','“Tôi vẫn kiểm soát được.”'),
+      (13.50,15.10,'video','laptop.mp4',5.0,'REAL FOOTAGE','“Tôi vẫn kiểm soát được.”'),
       (15.10,17.95,'still','timeline.jpg',0,'',''),
       (17.95,21.50,'still','post2.jpg',0,'',''),
       (21.50,24.50,'video','laptop.mp4',8.0,'REAL FOOTAGE','Cùng tài khoản quay lại'),
-      (24.50,28.60,'video','pills.mp4',0.0,'TREATMENT','Suboxone • withdrawal'),
-      (28.60,32.10,'video','hospital.mp4',0.5,'2010','Overdose • hospital'),
-      (32.10,36.00,'video','corridor.mp4',0.5,'REHAB','Bắt đầu lại'),
+      (24.50,28.60,'video','pills.mp4',0.0,'REAL FOOTAGE • TREATMENT','Suboxone • withdrawal'),
+      (28.60,32.10,'video','hospital.mp4',0.0,'REAL FOOTAGE • 2010','Overdose • hospital'),
+      (32.10,36.00,'video','corridor.mp4',0.0,'REAL FOOTAGE • REHAB','Bắt đầu lại'),
       (36.00,40.20,'still','profile.jpg',0,'',''),
-      (40.20,44.30,'video','river.mp4',0.0,'RECOVERY','2017 → 2021'),
+      (40.20,44.30,'video','river.mp4',0.0,'REAL FOOTAGE • RECOVERY','2017 → 2021'),
       (44.30,BASE_D,'still','compare.jpg',0,'',''),
     ]
     outputs=[]
@@ -162,7 +164,7 @@ def main():
     sheet=Image.new('RGB',(1080,1920),(18,19,22))
     for j,im in enumerate(thumbs): sheet.paste(im,((j%4)*270,(j//4)*480))
     sheet.save(out/'qa-contact.jpg',quality=94)
-    qa={'version':'V10.1 real footage synced','duration':D,'final_duration':FD,'resolution':[W,H],'real_footage_segments':6,'real_footage_seconds_approx':round(sum((e-s)*scale for s,e,t,*_ in plan if t=='video'),2),'reddit_screenshots':['post1','comments','profile','post2'],'graphics':['timeline','comparison'],'blur_background':False,'vignette':False,'ai_generated_people':False,'av_duration_delta':round(abs(FD-D),3)}
+    qa={'version':'V10.2 real footage synced','duration':D,'final_duration':FD,'resolution':[W,H],'real_footage_segments':8,'real_footage_seconds_approx':round(sum((e-s)*scale for s,e,t,*_ in plan if t=='video'),2),'reddit_screenshots':['post1','comments','profile','post2'],'graphics':['timeline','comparison'],'blur_background':False,'vignette':False,'glow_layer':False,'ai_generated_people':False,'av_duration_delta':round(abs(FD-D),3)}
     (out/'qa.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(qa,ensure_ascii=False,indent=2))
 
