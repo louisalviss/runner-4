@@ -88,12 +88,11 @@ async def synth(path:pathlib.Path):
 
 def make_still_clip(src:pathlib.Path,dur:float,out:pathlib.Path):
     run(['ffmpeg','-hide_banner','-loglevel','error','-y','-loop','1','-i',str(src),'-t',f'{dur:.3f}',
-         '-vf',f'scale={W}:{H},format=yuv420p','-an','-c:v','libx264','-preset','veryfast','-crf','18',str(out)])
+         '-vf',f'scale={W}:{H},fps={FPS},format=yuv420p','-an','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','18','-video_track_timescale','90000',str(out)])
 
 def make_video_clip(src:pathlib.Path,dur:float,out:pathlib.Path,start:float,label:str='',caption:str=''):
-    # Full-bleed real footage. No blur, no vignette, no glow, no duplicated background.
     vf=(f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
-        "eq=contrast=1.02:saturation=0.95")
+        f"fps={FPS},eq=contrast=1.02:saturation=0.95")
     if label:
         safe=label.replace("'","’").replace(':','\\:')
         vf += f",drawbox=x=45:y=70:w=680:h=74:color=black@0.72:t=fill,drawtext=fontfile={BOLD}:text='{safe}':fontcolor=white:fontsize=31:x=72:y=90"
@@ -102,7 +101,7 @@ def make_video_clip(src:pathlib.Path,dur:float,out:pathlib.Path,start:float,labe
         vf += f",drawbox=x=45:y=1600:w=990:h=130:color=black@0.72:t=fill,drawtext=fontfile={BOLD}:text='{safe}':fontcolor=white:fontsize=34:x=72:y=1638"
     vf += ',format=yuv420p'
     run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',f'{start:.2f}','-i',str(src),'-t',f'{dur:.3f}',
-         '-vf',vf,'-an','-c:v','libx264','-preset','veryfast','-crf','18',str(out)])
+         '-vf',vf,'-an','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','18','-video_track_timescale','90000',str(out)])
 
 def main():
     if len(sys.argv)<2: raise SystemExit('usage: render_reddit_v10.py OUTDIR')
@@ -114,14 +113,12 @@ def main():
         p=assets/name
         if not p.exists(): raise FileNotFoundError(p)
     voice=work/'voice.mp3'; asyncio.run(synth(voice)); D=probe(voice); scale=D/BASE_D
-    # Derived stills use only flat graphics + actual screenshots.
     compose_screenshot(assets/'post1.png','ACTUAL REDDIT POST',stills/'post1.jpg')
     compose_screenshot(assets/'comments.png','ACTUAL REDDIT COMMENTS',stills/'comments.jpg')
     compose_screenshot(assets/'profile.png','ACTUAL USER PROFILE',stills/'profile.jpg')
     compose_screenshot(assets/'post2.png','ACTUAL REDDIT UPDATE',stills/'post2.jpg')
     compose_timeline(stills/'timeline.jpg')
     compose_compare(assets/'post1.png',assets/'post2.png',stills/'compare.jpg')
-    # Baseline semantic timeline. Scaled to actual TTS duration.
     plan=[
       (0.00,2.50,'still','post1.jpg',0,'',''),
       (2.50,5.40,'video','nyc.mp4',1.0,'NEW YORK • 2009',''),
@@ -144,13 +141,19 @@ def main():
         dur=(e-s)*scale; target=clips/f'c{i:02d}.mp4'
         if typ=='still': make_still_clip(stills/name,dur,target)
         else: make_video_clip(assets/name,dur,target,start,label,caption)
+        cd=probe(target)
+        if abs(cd-dur)>0.18: raise RuntimeError(f'clip duration mismatch {target}: wanted {dur:.3f}, got {cd:.3f}')
         outputs.append(target)
     lst=work/'concat.txt'; lst.write_text('\n'.join("file '"+str(p.resolve())+"'" for p in outputs)+'\n')
-    visual=work/'visual.mp4'; run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',str(lst),'-c','copy',str(visual)])
+    visual=work/'visual.mp4'
+    run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',str(lst),'-an','-vf',f'fps={FPS},format=yuv420p','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','18','-video_track_timescale','90000',str(visual)])
+    VD=probe(visual)
+    if abs(VD-D)>0.35: raise RuntimeError(f'visual/audio duration mismatch: visual={VD:.3f}, audio={D:.3f}')
     final=out/'final.mp4'
     run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(visual),'-i',str(voice),'-map','0:v','-map','1:a',
-         '-c:v','libx264','-preset','medium','-crf','18','-c:a','aac','-b:a','192k','-shortest','-movflags','+faststart',str(final)])
-    # QA contact sheet at semantic beats
+         '-c:v','copy','-c:a','aac','-b:a','192k','-shortest','-movflags','+faststart',str(final)])
+    FD=probe(final)
+    if abs(FD-D)>0.35: raise RuntimeError(f'final duration mismatch: final={FD:.3f}, audio={D:.3f}')
     times=[1,3.5,6.5,9.2,11.8,14.3,16.5,19.5,22.8,26.2,30.0,34.0,38.0,42.2,46.0]
     thumbs=[]
     for j,t in enumerate(times):
@@ -159,7 +162,7 @@ def main():
     sheet=Image.new('RGB',(1080,1920),(18,19,22))
     for j,im in enumerate(thumbs): sheet.paste(im,((j%4)*270,(j//4)*480))
     sheet.save(out/'qa-contact.jpg',quality=94)
-    qa={'version':'V10 real footage','duration':D,'resolution':[W,H],'real_footage_segments':6,'real_footage_seconds_approx':round(sum((e-s)*scale for s,e,t,*_ in plan if t=='video'),2),'reddit_screenshots':['post1','comments','profile','post2'],'graphics':['timeline','comparison'],'blur_background':False,'vignette':False,'ai_generated_people':False}
+    qa={'version':'V10.1 real footage synced','duration':D,'final_duration':FD,'resolution':[W,H],'real_footage_segments':6,'real_footage_seconds_approx':round(sum((e-s)*scale for s,e,t,*_ in plan if t=='video'),2),'reddit_screenshots':['post1','comments','profile','post2'],'graphics':['timeline','comparison'],'blur_background':False,'vignette':False,'ai_generated_people':False,'av_duration_delta':round(abs(FD-D),3)}
     (out/'qa.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(qa,ensure_ascii=False,indent=2))
 
