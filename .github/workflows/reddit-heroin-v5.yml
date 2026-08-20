@@ -23,7 +23,18 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
           python -m pip install -q pillow edge-tts
-      - run: python scripts/render_reddit_doc_v5.py output/reddit-heroin-v5
+      - name: Render V5
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/render_reddit_doc_v5.py')
+          s=p.read_text()
+          s=s.replace("f'{D*j/11:.2f}'", "f'{min(D-0.25,D*j/11):.2f}'")
+          p.write_text(s)
+          PY
+          python scripts/render_reddit_doc_v5.py output/reddit-heroin-v5
       - name: QA
         run: |
           python - <<'PY'
