@@ -1,13 +1,17 @@
 name: CloakBrowser Benchmark
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'jobs/cloakbrowser-benchmark/**'
   pull_request:
     branches: [main]
     paths:
       - 'jobs/cloakbrowser-benchmark/**'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   benchmark:
@@ -35,8 +39,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p results/cloakbrowser
           xvfb-run -a python - <<'PY'
           import json, time, traceback
+          from pathlib import Path
           from playwright.sync_api import sync_playwright
           from cloakbrowser import launch
 
@@ -88,23 +94,45 @@ jobs:
               out['total_seconds'] = round(time.perf_counter()-t_all, 3)
               return out
 
-          result = []
+          result = {'generated_at': time.time(), 'engines': []}
           try:
               with sync_playwright() as pw:
                   b = pw.chromium.launch(headless=False)
-                  result.append(run_engine(b, 'stock-playwright'))
+                  result['engines'].append(run_engine(b, 'stock-playwright'))
                   b.close()
           except Exception as e:
-              result.append({'engine':'stock-playwright','fatal':f'{type(e).__name__}: {e}','trace':traceback.format_exc()[-2000:]})
+              result['engines'].append({'engine':'stock-playwright','fatal':f'{type(e).__name__}: {e}','trace':traceback.format_exc()[-2000:]})
 
           try:
               b = launch(browser_version='146.0.7680.177.5', headless=False, humanize=True)
-              result.append(run_engine(b, 'cloakbrowser'))
+              result['engines'].append(run_engine(b, 'cloakbrowser'))
               b.close()
           except Exception as e:
-              result.append({'engine':'cloakbrowser','fatal':f'{type(e).__name__}: {e}','trace':traceback.format_exc()[-2000:]})
+              result['engines'].append({'engine':'cloakbrowser','fatal':f'{type(e).__name__}: {e}','trace':traceback.format_exc()[-2000:]})
 
+          Path('results/cloakbrowser/latest.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
           print('CLOAK_BENCHMARK_RESULT_START')
           print(json.dumps(result, ensure_ascii=False, indent=2))
           print('CLOAK_BENCHMARK_RESULT_END')
           PY
+
+      - name: Persist result
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/cloakbrowser/latest.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Store CloakBrowser benchmark result [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cloakbrowser-benchmark-${{ github.run_id }}
+          path: results/cloakbrowser/latest.json
+          if-no-files-found: warn
+          retention-days: 3
