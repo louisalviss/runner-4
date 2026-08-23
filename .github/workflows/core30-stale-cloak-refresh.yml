@@ -1,0 +1,131 @@
+name: Core30 Stale Cloak Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/core30-stale-cloak-refresh.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install CloakBrowser
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Refresh stale Core30 routes with Cloak
+        shell: bash
+        run: |
+          cat > /tmp/probe.py <<'PY'
+          import json,re,time
+          from urllib.parse import urljoin,urlparse
+          from pathlib import Path
+          from cloakbrowser import launch
+
+          TARGETS = [
+            {'name':'SideProjectors','home':'https://www.sideprojectors.com','old':'https://www.sideprojectors.com/submit'},
+            {'name':'AlternativeTo','home':'https://alternativeto.net','old':'https://alternativeto.net/submit'},
+            {'name':'Dev Hunt','home':'https://devhunt.org','old':'https://devhunt.org/submit'},
+            {'name':'G2','home':'https://www.g2.com','old':'https://www.g2.com/submit'},
+            {'name':'SaaS Worthy','home':'https://www.saasworthy.com','old':'https://www.saasworthy.com/submit'},
+            {'name':'Uneed','home':'https://www.uneed.best','old':'https://www.uneed.best/submit'},
+            {'name':'TrustMRR','home':'https://trustmrr.com/startup/startup-directory','old':'https://trustmrr.com/submit'},
+            {'name':'Peerlist','home':'https://peerlist.io','old':'https://peerlist.io/submit'},
+          ]
+          KEY_RE = re.compile(r'(submit|add[- _]?((a|your) )?(tool|product|startup|listing)|get[- _]?listed|list[- _]?(your|a)|vendor|claim|create[- _]?(product|company|profile)|new[- _]?product|launch)',re.I)
+          LOGIN_RE = re.compile(r'(log[ -]?in|sign[ -]?in|auth|account required|create an account|continue with google|continue with github)',re.I)
+          CHALLENGES=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity','blocked by network security')
+          browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+
+          def visit(url, settle=1200):
+            p=browser.new_page(viewport={'width':1365,'height':768})
+            try:
+              resp=p.goto(url,wait_until='domcontentloaded',timeout=18000); p.wait_for_timeout(settle)
+              text=p.locator('body').inner_text(timeout=6000)
+              status=resp.status if resp else 0; title=p.title(); final=p.url
+              low=(title+' '+text[:10000]).lower(); ch=next((x for x in CHALLENGES if x in low),None)
+              links=[]
+              try:
+                for a in p.locator('a').all():
+                  href=a.get_attribute('href') or ''; label=(a.inner_text(timeout=800) or '').strip()
+                  if href and KEY_RE.search(label+' '+href):
+                    links.append({'url':urljoin(final,href),'text':label[:120]})
+              except Exception: pass
+              forms=0
+              try: forms=p.locator('form').count()
+              except Exception: pass
+              return {'url':url,'http':status,'final':final,'title':title[:180],'chars':len(text),'challenge':ch,'ok':bool(status and 200<=status<400 and not ch),'login_signal':bool(LOGIN_RE.search(low)),'forms':forms,'links':links[:30],'error':''}
+            except Exception as e:
+              return {'url':url,'http':0,'final':'','title':'','chars':0,'challenge':None,'ok':False,'login_signal':False,'forms':0,'links':[],'error':type(e).__name__+': '+str(e)[:240]}
+            finally:
+              p.close()
+
+          out=[]
+          try:
+            for t in TARGETS:
+              rec={'name':t['name'],'home':t['home'],'old':t['old']}
+              home=visit(t['home']); old=visit(t['old'])
+              candidates=[]; seen=set()
+              for src in (home,old):
+                for x in src['links']:
+                  u=x['url'].split('#')[0]
+                  if u not in seen and urlparse(u).scheme in ('http','https'):
+                    seen.add(u); candidates.append({'url':u,'text':x['text']})
+              # Favor same-domain and strongest action keywords.
+              host=urlparse(t['home']).netloc.lower().removeprefix('www.')
+              def score(x):
+                uh=urlparse(x['url']).netloc.lower().removeprefix('www.')
+                s=4 if uh==host or uh.endswith('.'+host) else 0
+                q=(x['text']+' '+x['url']).lower()
+                for k,w in [('submit',5),('get-listed',5),('get listed',5),('vendor',4),('add-',4),('add ',4),('create',3),('claim',3),('product',2),('startup',2)]:
+                  if k in q:s+=w
+                return -s
+              candidates=sorted(candidates,key=score)[:8]
+              probes=[]
+              for x in candidates:
+                v=visit(x['url'],900); v['anchor_text']=x['text']; probes.append(v)
+              viable=[x for x in probes if x['ok']]
+              if old['ok'] and (old['forms'] or KEY_RE.search(old['title']+' '+old['final'])):
+                classification='AUTH_REQUIRED' if old['login_signal'] else 'OPEN'; best=old['final']
+              elif viable:
+                bestv=viable[0]; classification='AUTH_REQUIRED' if bestv['login_signal'] and not bestv['forms'] else 'OPEN'; best=bestv['final']
+              elif home['ok']:
+                classification='STALE'; best=''
+              elif home['challenge'] or old['challenge']:
+                classification='BLOCKED'; best=''
+              else:
+                classification='UNRESOLVED'; best=''
+              rec.update({'classification':classification,'best_route':best,'homepage_probe':home,'old_route_probe':old,'candidate_probes':probes})
+              out.append(rec)
+          finally:
+            browser.close()
+          Path('results/full-sheet-audit/core30-stale-cloak-refresh.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          print(json.dumps([{'name':x['name'],'classification':x['classification'],'best_route':x['best_route']} for x in out],ensure_ascii=False,indent=2))
+          PY
+          mkdir -p results/full-sheet-audit
+          xvfb-run -a python3 /tmp/probe.py
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/core30-stale-cloak-refresh.json
+          git commit -m 'Store Core30 stale Cloak refresh [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
