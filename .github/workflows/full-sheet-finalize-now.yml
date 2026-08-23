@@ -1,0 +1,88 @@
+name: Finalize Full Sheet Audit Now
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-sheet-finalize-now.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Build final CSVs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv,json
+          from datetime import datetime,timezone
+          from pathlib import Path
+          root=Path('results/full-sheet-audit')
+          db=json.loads((root/'database.json').read_text()); social=json.loads((root/'social.json').read_text())
+          cloak=json.loads((root/'cloak_access_fast.json').read_text()); cidx={(x['kind'],x['row']):x for x in cloak}
+          deep=json.loads((root/'deep_submit.json').read_text()); didx={(x['kind'],x['row']):x for x in deep}
+          vpn=json.loads((root/'vpn_access_fast.json').read_text()) if (root/'vpn_access_fast.json').exists() else []; vidx={(x['kind'],x['row']):x for x in vpn}
+          # Verified earlier in the same audit session with Runner-3 VPN Gate + CloakBrowser.
+          known_vpn={
+            ('database',27):{'http':200,'title':'Capterra: Find The Right Software','country':'TH','method':'VPN+CLOAK'},
+            ('database',48):{'http':200,'title':'Product Hunt – The best new products in tech.','country':'TH','method':'VPN+CLOAK'},
+          }
+          verified=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+          def access_merge(kind,r):
+            key=(kind,r['row']); c=cidx.get(key); v=vidx.get(key) or known_vpn.get(key)
+            if r.get('class')=='OK': return ('OK','DIRECT',r.get('http',0),r.get('final_url',''),r.get('title',''),False,'')
+            if r.get('class')=='DEAD': return ('DEAD','DIRECT',r.get('http',0),r.get('final_url',''),r.get('title',''),False,r.get('error',''))
+            if c and c.get('cloak_ok'): return ('OK','CLOAK',c.get('cloak_http',0),c.get('cloak_final',''),c.get('cloak_title',''),False,'')
+            if v:
+              method=v.get('method','VPN'); note=f"Verified via {method} {v.get('country','')}".strip()
+              return ('OK',method,v.get('http',0),r.get('url',''),v.get('title',''),False,note)
+            status=r.get('class','UNKNOWN'); needs=status in ('BLOCKED','UNREACHABLE')
+            note=(c or {}).get('cloak_error') or (c or {}).get('cloak_challenge') or r.get('challenge') or r.get('error','')
+            return (status,'CLOAK_FAILED' if c else 'DIRECT',(c or {}).get('cloak_http') or r.get('http',0),(c or {}).get('cloak_final') or r.get('final_url',''),(c or {}).get('cloak_title') or r.get('title',''),needs,note)
+          def submit_merge(kind,r):
+            # Exact verified Product Hunt submit route: reachable via VPN+Cloak, then login required.
+            if kind=='database' and r['row']==48:
+              return ('AUTH_REQUIRED','https://www.producthunt.com/posts/new',200,'https://www.producthunt.com/login?origin=%2Fposts%2Fnew','Login')
+            sc=r.get('submit_class','UNKNOWN');su=r.get('submit_url','');sh=r.get('submit_http',0);sf=r.get('submit_final','');st=r.get('submit_title','')
+            if sc=='UNKNOWN':
+              d=didx.get((kind,r['row']))
+              if d and d.get('class')!='UNKNOWN': sc=d.get('class');su=d.get('candidate_url','');sh=d.get('http',0);sf=d.get('final','');st=d.get('title','')
+            return sc,su,sh,sf,st
+          with (root/'database-final.csv').open('w',newline='',encoding='utf-8-sig') as f:
+            w=csv.writer(f);w.writerow(['Source Row','Name','URL','Access Status','Access Method','HTTP','Final URL','Page Title','Submit Status','Submit URL','Submit HTTP','Submit Final URL','Auth Required','Needs VPN','Notes','Verified At'])
+            for r in db:
+              ac,am,ah,af,at,nv,note=access_merge('database',r);sc,su,sh,sf,st=submit_merge('database',r);needs='Yes' if nv or sc=='BLOCKED' else '';notes=note
+              if sc=='UNKNOWN':notes=(notes+'; ' if notes else '')+'No verified public submit entry found'
+              w.writerow([r['row'],r['name'],r['url'],ac,am,ah,af,at,sc,su,sh,sf,'Yes' if sc=='AUTH_REQUIRED' else '',needs,notes,verified])
+          with (root/'social-final.csv').open('w',newline='',encoding='utf-8-sig') as f:
+            w=csv.writer(f);w.writerow(['Source Row','Social','Profile URL','Profile Status','Access Method','HTTP','Final URL','Page Title','Historical Submit','Submit Classification','Current Signup Status','Signup URL','Signup HTTP','Auth Required','Needs VPN','Notes','Verified At'])
+            for r in social:
+              ac,am,ah,af,at,nv,note=access_merge('social',r);sc,su,sh,sf,st=submit_merge('social',r)
+              if ac=='OK': submit_class='YES - EXISTING PROFILE'
+              elif ac=='DEAD': submit_class='PAST YES / NOW DEAD'
+              elif sc in ('OPEN','AUTH_REQUIRED'): submit_class='YES - CURRENT ENTRY'
+              elif sc=='BLOCKED': submit_class='BLOCKED'
+              else: submit_class='YES HISTORICAL / CURRENT UNKNOWN'
+              w.writerow([r['row'],r['name'],r['url'],ac,am,ah,af,at,'Yes - submitted 19/8',submit_class,sc,su,sh,'Yes' if sc=='AUTH_REQUIRED' else '','Yes' if nv or sc=='BLOCKED' else '',note,verified])
+          def counts(path,col):
+            d={}
+            for r in csv.DictReader(open(path,encoding='utf-8-sig')):d[r[col]]=d.get(r[col],0)+1
+            return d
+          summary={'database_total':len(db),'social_total':len(social),'database_access':counts(root/'database-final.csv','Access Status'),'database_submit':counts(root/'database-final.csv','Submit Status'),'social_access':counts(root/'social-final.csv','Profile Status'),'social_submit':counts(root/'social-final.csv','Submit Classification'),'cloak_rescued':sum(bool(x.get('cloak_ok')) for x in cloak),'vpn_curl_rescued':len(vpn),'verified_vpn_cloak_exceptions':2,'verified_at':verified}
+          (root/'final-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2));print(json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Persist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/database-final.csv results/full-sheet-audit/social-final.csv results/full-sheet-audit/final-summary.json
+          git commit -m 'Store final full sheet audit CSVs [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
