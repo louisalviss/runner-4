@@ -1,0 +1,89 @@
+name: Full Sheet Cloak Retry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-sheet-cloak-retry.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Cache CloakBrowser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install CloakBrowser
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Retry failed access through Cloak
+        shell: bash
+        run: |
+          xvfb-run -a python3 - <<'PY'
+          import json,re,time
+          from pathlib import Path
+          from urllib.parse import urlparse
+          from cloakbrowser import launch
+          targets=[]
+          for kind in ('database','social'):
+            p=Path(f'results/full-sheet-audit/{kind}.json')
+            rows=json.loads(p.read_text())
+            for r in rows:
+              if r.get('class') in ('BLOCKED','UNREACHABLE','SERVER_ERROR') and str(r.get('url','')).startswith('https://'):
+                targets.append({'kind':kind,'row':r['row'],'name':r['name'],'url':r['url'],'direct_class':r.get('class'),'direct_http':r.get('http',0)})
+          print('targets',len(targets),flush=True)
+          browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+          out=[]
+          challenge_terms=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity','blocked by network security')
+          try:
+            for n,t in enumerate(targets,1):
+              rec=dict(t); page=None; t0=time.time()
+              try:
+                page=browser.new_page(viewport={'width':1365,'height':768})
+                resp=page.goto(t['url'],wait_until='domcontentloaded',timeout=25000)
+                page.wait_for_timeout(1400)
+                text=page.locator('body').inner_text(timeout=8000)
+                status=resp.status if resp else 0
+                title=page.title()
+                low=(title+' '+text[:6000]).lower()
+                challenge=next((x for x in challenge_terms if x in low),None)
+                ok=bool(status and 200<=status<400 and not challenge)
+                rec.update({'cloak_ok':ok,'cloak_http':status,'cloak_final':page.url,'cloak_title':title[:200],'cloak_chars':len(text),'cloak_challenge':challenge,'cloak_error':''})
+              except Exception as e:
+                rec.update({'cloak_ok':False,'cloak_http':0,'cloak_final':'','cloak_title':'','cloak_chars':0,'cloak_challenge':None,'cloak_error':type(e).__name__+': '+str(e)[:220]})
+              finally:
+                if page:
+                  try: page.close()
+                  except: pass
+              rec['seconds']=round(time.time()-t0,3); out.append(rec)
+              if n%10==0: print(n,'/',len(targets),flush=True)
+          finally:
+            browser.close()
+          Path('results/full-sheet-audit/cloak_access.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          print('cloak_ok',sum(x.get('cloak_ok') for x in out),'of',len(out))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/cloak_access.json
+          git commit -m 'Store full sheet Cloak retry [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
