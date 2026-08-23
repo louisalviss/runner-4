@@ -1,5 +1,6 @@
 {
   "target": "https://www.scrapingcourse.com/cloudflare-challenge",
   "wrapper": "0.5.8",
-  "purpose": "Find a genuine fallback case: stock Playwright blocked by Cloudflare while Cloak 151 may pass"
+  "attempt": 2,
+  "purpose": "Hardened A/B: capture stock block and Cloak pass/block/browser-close independently"
 }
