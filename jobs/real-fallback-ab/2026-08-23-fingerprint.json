@@ -1,0 +1,5 @@
+{
+  "target": "https://demo.fingerprint.com/web-scraping",
+  "purpose": "Compare stock Playwright vs pinned CloakBrowser v146 on a public bot-detection scraping demo",
+  "created_at": "2026-08-23T08:46:00+07:00"
+}
