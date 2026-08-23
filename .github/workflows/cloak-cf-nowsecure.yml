@@ -1,0 +1,96 @@
+name: Cloak Cloudflare NowSecure A/B
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'jobs/cloak-cf-nowsecure/*.json'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      TARGET: 'https://nowsecure.nl/'
+      CLOAKBROWSER_LICENSE_KEY: ${{ secrets.CLOAKBROWSER_LICENSE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install browsers
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install -q 'cloakbrowser==0.5.8'
+          python -m playwright install-deps chromium
+          python -m playwright install chromium
+          if [ -n "${CLOAKBROWSER_LICENSE_KEY:-}" ]; then echo 'CLOAK_KEY_PRESENT=true'; else echo 'CLOAK_KEY_PRESENT=false'; fi
+          python -m cloakbrowser install
+          python -m cloakbrowser info || true
+
+      - name: Run stock vs Cloak on Cloudflare target
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/cf_ab.py <<'PY'
+          import json, os, time
+          from playwright.sync_api import sync_playwright
+          from cloakbrowser import launch
+
+          target = os.environ['TARGET']
+          out = {'target': target, 'key_present': bool(os.environ.get('CLOAKBROWSER_LICENSE_KEY')), 'runs': []}
+
+          def observe(name, page, response, elapsed):
+              try:
+                  body = page.locator('body').inner_text(timeout=10000)
+              except Exception as e:
+                  body = f'BODY_ERROR: {e}'
+              low = body.lower()
+              title = page.title()
+              cookies = page.context.cookies()
+              names = sorted({c.get('name','') for c in cookies})
+              out['runs'].append({
+                  'engine': name,
+                  'status': response.status if response else None,
+                  'final_url': page.url,
+                  'title': title,
+                  'elapsed_s': round(elapsed, 3),
+                  'body_excerpt': body[:3000],
+                  'html_len': len(page.content()),
+                  'cookie_names': names,
+                  'cf_clearance': 'cf_clearance' in names,
+                  'challenge_markers': {
+                      'just_a_moment': 'just a moment' in title.lower() or 'just a moment' in low,
+                      'verify_human': 'verify you are human' in low,
+                      'checking_browser': 'checking your browser' in low,
+                      'challenge_platform': 'challenge-platform' in page.content().lower(),
+                  },
+                  'nowsecure_content': 'nowsecure' in low and 'by nodriver' in low,
+                  'fingerprint': page.evaluate('''() => ({webdriver:navigator.webdriver, ua:navigator.userAgent, platform:navigator.platform})''')
+              })
+
+          with sync_playwright() as pw:
+              b = pw.chromium.launch(headless=False)
+              p = b.new_page(viewport={'width':1365,'height':768})
+              t0=time.time(); r=p.goto(target, wait_until='domcontentloaded', timeout=60000)
+              time.sleep(15)
+              observe('stock_playwright', p, r, time.time()-t0)
+              b.close()
+
+          b = launch(headless=False, humanize=True)
+          p = b.new_page()
+          t0=time.time(); r=p.goto(target, wait_until='domcontentloaded', timeout=60000)
+          time.sleep(15)
+          observe('cloak_151_latest', p, r, time.time()-t0)
+          b.close()
+
+          print('RESULT_JSON_START')
+          print(json.dumps(out, ensure_ascii=False, indent=2))
+          print('RESULT_JSON_END')
+          PY
+          xvfb-run -a python /tmp/cf_ab.py
