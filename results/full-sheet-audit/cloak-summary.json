@@ -1,0 +1,15 @@
+{
+  "total": 39,
+  "rescued": 5,
+  "failed": 34,
+  "database": {
+    "total": 10,
+    "rescued": 1,
+    "failed": 9
+  },
+  "social": {
+    "total": 29,
+    "rescued": 4,
+    "failed": 25
+  }
+}
