@@ -1,0 +1,36 @@
+{
+  "database": {
+    "total": 250,
+    "access": {
+      "UNREACHABLE": 46,
+      "OK": 187,
+      "SERVER_ERROR": 5,
+      "BLOCKED": 10,
+      "DEAD": 2
+    },
+    "submit": {
+      "UNKNOWN": 137,
+      "OPEN": 86,
+      "BLOCKED": 3,
+      "AUTH_REQUIRED": 23,
+      "STALE": 1
+    }
+  },
+  "social": {
+    "total": 210,
+    "access": {
+      "OK": 175,
+      "BLOCKED": 29,
+      "DEAD": 3,
+      "UNREACHABLE": 2,
+      "SERVER_ERROR": 1
+    },
+    "submit": {
+      "AUTH_REQUIRED": 74,
+      "UNKNOWN": 110,
+      "OPEN": 15,
+      "BLOCKED": 9,
+      "STALE": 2
+    }
+  }
+}

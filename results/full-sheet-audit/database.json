@@ -1,0 +1,6200 @@
+[
+  {
+    "url": "https://betafy.co",
+    "http": 0,
+    "final_url": "https://betafy.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error timed out>",
+    "elapsed_s": 15.235,
+    "row": 2,
+    "name": "Betafy",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.crunchbase.com",
+    "http": 200,
+    "final_url": "https://www.crunchbase.com",
+    "title": "Crunchbase | Private Company Data & Predictive Intelligence",
+    "chars": 115392,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.285,
+    "row": 3,
+    "name": "CrunchBase",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://earlytools.com",
+    "http": 200,
+    "final_url": "https://earlytools.com",
+    "title": "",
+    "chars": 114,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.409,
+    "row": 4,
+    "name": "EarlyTools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.futuretools.io",
+    "http": 200,
+    "final_url": "https://futuretools.io/",
+    "title": "Future Tools - The Pulse of AI",
+    "chars": 438187,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.169,
+    "row": 5,
+    "name": "Future Tools",
+    "candidates": [
+      {
+        "url": "https://futuretools.io/submit-a-tool",
+        "anchor": "Submit a Tool",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://futuretools.io/submit-a-tool",
+    "submit_http": 200,
+    "submit_final": "https://futuretools.io/submit-a-tool",
+    "submit_title": "Future Tools - Submit a Tool"
+  },
+  {
+    "url": "https://launchbase.app",
+    "http": 500,
+    "final_url": "https://launchbase.app",
+    "title": "500 Server Error",
+    "chars": 682,
+    "class": "SERVER_ERROR",
+    "challenge": null,
+    "error": "HTTP 500",
+    "elapsed_s": 1.23,
+    "row": 6,
+    "name": "LaunchBase",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://nextpedia.io",
+    "http": 200,
+    "final_url": "https://nextpedia.io",
+    "title": "NextPedia - The Best & Largest AI Tools Directory",
+    "chars": 268956,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.493,
+    "row": 7,
+    "name": "Nextpedia",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://pitchground.com",
+    "http": 200,
+    "final_url": "https://seoengine.ai/",
+    "title": "",
+    "chars": 4728,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.732,
+    "row": 8,
+    "name": "PitchGround",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.saashub.com",
+    "http": 200,
+    "final_url": "https://www.saashub.com",
+    "title": "SaaSHub - Software Alternatives, Accelerators & Startups",
+    "chars": 213464,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.438,
+    "row": 9,
+    "name": "SaaSHub",
+    "candidates": [
+      {
+        "url": "https://www.saashub.com/services/submit",
+        "anchor": "Submit Product",
+        "score": 29
+      },
+      {
+        "url": "https://www.saashub.com/submit/list",
+        "anchor": "Submit List",
+        "score": 19
+      },
+      {
+        "url": "https://www.saashub.com/submit",
+        "anchor": "SaaSHub Submit",
+        "score": 19
+      },
+      {
+        "url": "https://www.saashub.com/yourls",
+        "anchor": "YOURLS \n Link Management / URL Shortener \n \n YOURLS is a website that contains all the tools you need to create and laun",
+        "score": 15
+      },
+      {
+        "url": "https://www.saashub.com/choresplit-alternatives",
+        "anchor": "ChoreSplit \n \n AI photo verification + gamification + real rewards. Kids submit...",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.saashub.com/services/submit",
+    "submit_http": 200,
+    "submit_final": "https://www.saashub.com/services/submit",
+    "submit_title": "Submit a Product - SaaSHub"
+  },
+  {
+    "url": "https://saaslist.co",
+    "http": 0,
+    "final_url": "https://saaslist.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.274,
+    "row": 10,
+    "name": "SaaSList",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.sideprojectors.com",
+    "http": 200,
+    "final_url": "https://www.sideprojectors.com",
+    "title": "Sell, buy, show off your side projects - SideProjectors | Marketplace to buy and sell side projects.",
+    "chars": 81229,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.729,
+    "row": 11,
+    "name": "SideProjectors",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://stackshare.io",
+    "http": 429,
+    "final_url": "https://stackshare.io",
+    "title": "Vercel Security Checkpoint",
+    "chars": 31043,
+    "class": "BLOCKED",
+    "challenge": null,
+    "error": "HTTP 429",
+    "elapsed_s": 0.542,
+    "row": 12,
+    "name": "StackShare",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupresources.io",
+    "http": 202,
+    "final_url": "https://startupresources.io",
+    "title": "",
+    "chars": 526,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.405,
+    "row": 13,
+    "name": "Startup Resources",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupbase.io",
+    "http": 200,
+    "final_url": "https://startupbase.io",
+    "title": "StartupBase - Launch and discover new products every day",
+    "chars": 216180,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.862,
+    "row": 14,
+    "name": "StartupBase",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolboard.io",
+    "http": 500,
+    "final_url": "https://toolboardcanvas.com/",
+    "title": "WordPress › Error",
+    "chars": 2704,
+    "class": "SERVER_ERROR",
+    "challenge": null,
+    "error": "HTTP 500",
+    "elapsed_s": 1.523,
+    "row": 15,
+    "name": "ToolBoard",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.aicyclopedia.com",
+    "http": 200,
+    "final_url": "https://aicyclopedia.com/",
+    "title": "Home - AICYCLOPEDIA | The latest AI News, Tools, & Learning",
+    "chars": 499971,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.536,
+    "row": 16,
+    "name": "AI Cyclopedia",
+    "candidates": [
+      {
+        "url": "https://aicyclopedia.com/submit-your-ai-tool/",
+        "anchor": "Submit A Tool",
+        "score": 19
+      }
+    ],
+    "submit_class": "BLOCKED",
+    "submit_url": "https://aicyclopedia.com/submit-your-ai-tool/",
+    "submit_http": 403,
+    "submit_final": "https://aicyclopedia.com/submit-your-ai-tool/",
+    "submit_title": "403 Forbidden"
+  },
+  {
+    "url": "https://www.ai-database.org",
+    "http": 200,
+    "final_url": "https://ai-database.org/",
+    "title": "AI Database | Find The Best AI Tools & Software",
+    "chars": 139532,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.482,
+    "row": 17,
+    "name": "AI Database",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://aiscout.net",
+    "http": 520,
+    "final_url": "https://aiscout.net",
+    "title": "ERROR 520",
+    "chars": 23722,
+    "class": "SERVER_ERROR",
+    "challenge": null,
+    "error": "HTTP 520",
+    "elapsed_s": 14.383,
+    "row": 18,
+    "name": "AI Scout",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://aitooldirectory.com",
+    "http": 200,
+    "final_url": "https://aitooldirectory.com",
+    "title": "Best AI Tools Directory & AI Tools List - AI Tools Directory",
+    "chars": 37840,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.441,
+    "row": 19,
+    "name": "AI Tool Directory",
+    "candidates": [
+      {
+        "url": "https://aitooldirectory.com/login?redirect=/submit",
+        "anchor": "Free Submit Tool",
+        "score": 29
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://aitooldirectory.com/login?redirect=/submit",
+    "submit_http": 200,
+    "submit_final": "https://aitooldirectory.com/login?redirect=/submit",
+    "submit_title": "Best AI Tools Directory & AI Tools List - AI Tools Directory"
+  },
+  {
+    "url": "https://aivalley.ai",
+    "http": 200,
+    "final_url": "https://aivalley.ai",
+    "title": "AI Valley | Discover The Newest AI Tools And Prompts For Any Use In Seconds",
+    "chars": 185412,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.726,
+    "row": 20,
+    "name": "AI Valley",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://allthings-ai.com",
+    "http": 200,
+    "final_url": "https://allthings-ai.com",
+    "title": "AI Tools Directory",
+    "chars": 26061,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.907,
+    "row": 21,
+    "name": "All Things AI",
+    "candidates": [
+      {
+        "url": "https://allthings-ai.com/submit",
+        "anchor": "Submit Tool",
+        "score": 29
+      }
+    ],
+    "submit_class": "STALE",
+    "submit_url": "https://allthings-ai.com/submit",
+    "submit_http": 404,
+    "submit_final": "https://allthings-ai.com/submit",
+    "submit_title": "404 Not Found"
+  },
+  {
+    "url": "https://alternativeto.net",
+    "http": 200,
+    "final_url": "https://alternativeto.net",
+    "title": "AlternativeTo - Crowdsourced software recommendations | AlternativeTo",
+    "chars": 499689,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.534,
+    "row": 22,
+    "name": "AlternativeTo",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://wellfound.com",
+    "http": 200,
+    "final_url": "https://wellfound.com",
+    "title": "Startup Jobs & AI Recruiting Platform | Wellfound",
+    "chars": 120827,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.324,
+    "row": 23,
+    "name": "AngelList / Wellfound",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://appstacks.club",
+    "http": 200,
+    "final_url": "https://appstacks.club",
+    "title": "Discover stories and stacks behind your favorite apps",
+    "chars": 213189,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.34,
+    "row": 24,
+    "name": "App Stacks",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://appsumo.com",
+    "http": 200,
+    "final_url": "https://appsumo.com",
+    "title": "AppSumo - Discover products. Stay weird. | AppSumo",
+    "chars": 195255,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.732,
+    "row": 25,
+    "name": "AppSumo (if eligible later)",
+    "candidates": [
+      {
+        "url": "https://sell.appsumo.com/",
+        "anchor": "List your own product",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://sell.appsumo.com/",
+    "submit_http": 200,
+    "submit_final": "https://sell.appsumo.com/",
+    "submit_title": "Launch your SaaS with AppSumo"
+  },
+  {
+    "url": "https://betalist.com",
+    "http": 200,
+    "final_url": "https://betalist.com",
+    "title": "Discover and get early access to tomorrow's startups | BetaList",
+    "chars": 225458,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.555,
+    "row": 26,
+    "name": "BetaList",
+    "candidates": [
+      {
+        "url": "https://betalist.com/submit",
+        "anchor": "Submit startup",
+        "score": 29
+      },
+      {
+        "url": "https://betalist.com/sign_in",
+        "anchor": "Submit Startup",
+        "score": 25
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://betalist.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://betalist.com/sign_in",
+    "submit_title": "Discover and get early access to tomorrow's startups | BetaList"
+  },
+  {
+    "url": "https://www.capterra.com",
+    "http": 403,
+    "final_url": "https://www.capterra.com",
+    "title": "Just a moment...",
+    "chars": 5641,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.209,
+    "row": 27,
+    "name": "Capterra (if SaaS mature)",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://ctrlalt.cc",
+    "http": 202,
+    "final_url": "https://ctrlalt.cc",
+    "title": "",
+    "chars": 167,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.438,
+    "row": 28,
+    "name": "CtrlAltCC",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://dang.ai",
+    "http": 200,
+    "final_url": "https://dang.ai",
+    "title": "AI Tools Directory | Dang.ai",
+    "chars": 154525,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.23,
+    "row": 29,
+    "name": "Dang AI",
+    "candidates": [
+      {
+        "url": "https://dang.ai/pricing",
+        "anchor": "Submit a tool",
+        "score": 15
+      },
+      {
+        "url": "https://dang.ai/login?next=%2Fpricing",
+        "anchor": "Submit",
+        "score": 15
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://dang.ai/pricing",
+    "submit_http": 200,
+    "submit_final": "https://dang.ai/login?next=%2Fpricing",
+    "submit_title": "Sign in | Dang.ai"
+  },
+  {
+    "url": "https://devhunt.org",
+    "http": 200,
+    "final_url": "https://devhunt.org",
+    "title": "Dev Hunt – The best new Dev Tools every day.",
+    "chars": 17214,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.304,
+    "row": 30,
+    "name": "Dev Hunt",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://devpages.io",
+    "http": 200,
+    "final_url": "https://devpages.io",
+    "title": "DevPages - The Ultimate Developer Tools Directory 2026",
+    "chars": 499716,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.555,
+    "row": 31,
+    "name": "DevPages",
+    "candidates": [
+      {
+        "url": "https://devpages.io/submit-a-tool",
+        "anchor": "Submit Tool",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://devpages.io/submit-a-tool",
+    "submit_http": 200,
+    "submit_final": "https://devpages.io/submit-a-tool",
+    "submit_title": "Submit a Tool | DevPages"
+  },
+  {
+    "url": "https://www.futurepedia.io",
+    "http": 200,
+    "final_url": "https://www.futurepedia.io",
+    "title": "Find The Best AI Tools & Software, Futurepedia.io",
+    "chars": 499969,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.084,
+    "row": 32,
+    "name": "Futurepedia (if AI startup)",
+    "candidates": [
+      {
+        "url": "https://www.futurepedia.io/submit-tool",
+        "anchor": "Submit a Tool",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.futurepedia.io/submit-tool",
+    "submit_http": 200,
+    "submit_final": "https://www.futurepedia.io/submit-tool",
+    "submit_title": "Submit Your Company, Software or AI Tool to Futurepedia"
+  },
+  {
+    "url": "https://www.g2.com",
+    "http": 403,
+    "final_url": "https://www.g2.com",
+    "title": "g2.com",
+    "chars": 1704,
+    "class": "BLOCKED",
+    "challenge": null,
+    "error": "HTTP 403",
+    "elapsed_s": 0.101,
+    "row": 33,
+    "name": "G2 (later stage)",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://github.com",
+    "http": 200,
+    "final_url": "https://github.com",
+    "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+    "chars": 499932,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.297,
+    "row": 34,
+    "name": "GitHub (awesome lists)",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.thegrowthlist.co",
+    "http": 200,
+    "final_url": "https://www.thegrowthlist.co",
+    "title": "Practical online business ideas you can use today",
+    "chars": 499901,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.405,
+    "row": 35,
+    "name": "GrowthList",
+    "candidates": [
+      {
+        "url": "https://www.thegrowthlist.co/tactics/launch-on-product-hunt",
+        "anchor": "Featured On  Product Hunt  1045 1047 Launch On Product Hunt Launch your product on Product Hunt to find early adopters V",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.thegrowthlist.co/tactics/launch-on-product-hunt",
+    "submit_http": 200,
+    "submit_final": "https://www.thegrowthlist.co/tactics/launch-on-product-hunt",
+    "submit_title": "Launch On Product Hunt - Growth tactic for your business"
+  },
+  {
+    "url": "https://news.ycombinator.com/show",
+    "http": 200,
+    "final_url": "https://news.ycombinator.com/show",
+    "title": "Show | Hacker News",
+    "chars": 33329,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.445,
+    "row": 36,
+    "name": "Hacker News (Show HN)",
+    "candidates": [
+      {
+        "url": "https://news.ycombinator.com/submit",
+        "anchor": "submit",
+        "score": 19
+      }
+    ],
+    "submit_class": "BLOCKED",
+    "submit_url": "https://news.ycombinator.com/submit",
+    "submit_http": 429,
+    "submit_final": "https://news.ycombinator.com/submit",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.indiehackers.com",
+    "http": 200,
+    "final_url": "https://www.indiehackers.com",
+    "title": "Indie Hackers: Work Together to Build Profitable Online Businesses",
+    "chars": 318026,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.343,
+    "row": 37,
+    "name": "Indie Hackers",
+    "candidates": [
+      {
+        "url": "https://www.indiehackers.com/products/new",
+        "anchor": "Add Yours",
+        "score": 15
+      },
+      {
+        "url": "https://www.indiehackers.com/post/tech/building-for-himself-and-growing-his-portfolio-to-10k-mo-1r8AaZOjxXZSB5MMAhG5",
+        "anchor": "Building for himself and growing his portfolio to \n $10k+/mo \n   \n       IH+ Subscribers Only \n     \n     \n     \n     \n ",
+        "score": 15
+      },
+      {
+        "url": "https://www.indiehackers.com/new-post",
+        "anchor": "Submit a Post to Indie Hackers",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.indiehackers.com/products/new",
+    "submit_http": 200,
+    "submit_final": "https://www.indiehackers.com/products/new",
+    "submit_title": ""
+  },
+  {
+    "url": "https://indiepa.ge",
+    "http": 200,
+    "final_url": "https://indiepa.ge",
+    "title": "Showcase All Your Startups on a Single Page | Indie Page",
+    "chars": 103141,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.488,
+    "row": 38,
+    "name": "Indie Page",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.launchdir.com",
+    "http": 200,
+    "final_url": "https://launchdir.com/",
+    "title": "LaunchDir - Discover & Launch Amazing Products Every Week",
+    "chars": 131220,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 3.847,
+    "row": 39,
+    "name": "Launch Dir",
+    "candidates": [
+      {
+        "url": "https://launchdir.com/dashboard/launches/new/",
+        "anchor": "Submit a Launch",
+        "score": 19
+      },
+      {
+        "url": "https://launchdir.com/pricing/",
+        "anchor": "Limited time:  Launch your product for FREE",
+        "score": 15
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://launchdir.com/dashboard/launches/new/",
+    "submit_http": 200,
+    "submit_final": "https://launchdir.com/login/?callbackUrl=%2Fdashboard%2Flaunches%2Fnew%2F",
+    "submit_title": "Log In | LaunchDir | LaunchDir"
+  },
+  {
+    "url": "https://launchspace.io",
+    "http": 200,
+    "final_url": "https://launchspace.io",
+    "title": "Sumo303 Serunya Bermain Game Online dengan Suasana yang Lebih Fresh",
+    "chars": 499461,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.737,
+    "row": 40,
+    "name": "Launch Space",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.launchingnext.com",
+    "http": 200,
+    "final_url": "https://www.launchingnext.com",
+    "title": "Launching Next | New startups, startup ideas, great business ideas",
+    "chars": 33914,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.195,
+    "row": 41,
+    "name": "Launching Next",
+    "candidates": [
+      {
+        "url": "https://www.launchingnext.com/submit/",
+        "anchor": "Submit Startup",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.launchingnext.com/submit/",
+    "submit_http": 200,
+    "submit_final": "https://www.launchingnext.com/submit/",
+    "submit_title": "Submit Your Project | Launching Next"
+  },
+  {
+    "url": "https://www.launching.io",
+    "http": 200,
+    "final_url": "https://www.launchingnext.com/",
+    "title": "Launching Next | New startups, startup ideas, great business ideas",
+    "chars": 33914,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.392,
+    "row": 42,
+    "name": "Launching.io",
+    "candidates": [
+      {
+        "url": "https://www.launchingnext.com/submit/",
+        "anchor": "Submit Startup",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.launchingnext.com/submit/",
+    "submit_http": 200,
+    "submit_final": "https://www.launchingnext.com/submit/",
+    "submit_title": "Submit Your Project | Launching Next"
+  },
+  {
+    "url": "https://getmakerlog.com",
+    "http": 200,
+    "final_url": "https://ambitiousfounder.com/",
+    "title": "Ambitious Founder",
+    "chars": 13943,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.711,
+    "row": 43,
+    "name": "Makerlog (Projects section)",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.makerpad.co",
+    "http": 200,
+    "final_url": "https://www.makerpad.co",
+    "title": "MakerPad — Build AI companies that run themselves | MakerPad",
+    "chars": 36246,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.393,
+    "row": 44,
+    "name": "Makerpad Directory",
+    "candidates": [
+      {
+        "url": "https://www.makerpad.co/companies/create",
+        "anchor": "Launch your company\n                     →",
+        "score": 15
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://www.makerpad.co/companies/create",
+    "submit_http": 200,
+    "submit_final": "https://accounts.google.com/v3/signin/identifier?opparams=%253F&dsh=S-231584370%3A1787488676408098&client_id=9454709833-5p8uiejveqdiqiv18k8t53u22n9hfqsr.apps.googleusercontent.com&o2v=1&redirect_uri=https%3A%2F%2Fwww.makerpad.co%2Fauth%2Fgoogle%2Fcallback&response_type=code&scope=openid+profile+email&service=lso&state=JQS2enJ34KoVLXM7VBKm02ftYyfw5oe4hbTpiZhX&flowName=GeneralOAuthFlow&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fv3%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hANkAZe0C7UcXBg1Rau6DaLPHHqX1dlqFQjEL20NBo0i168U9ovVV5WwVUyAfD2x4ZsStFt4IpO_Im63HDggR72Eg_W9-4c0gXlNyPgHKGgeNCYxb2JlSvL3srHWLGixYqmd6T-UpDUXdJXIYQj9aC2skpZUT72wLAxoBVx_HhWGdwEzA8I3kAa0x9Fngn1-aG7qRoSaMRJ13VdnVsjFgYG-VYOpZuJW8d61KSL8XiejW0aA6ewlDJGkS33IWT8pQ-PBA3HP5F1BtfFCbxwmh9qopt3hh1ONyWueooy4Z-AylB6xxATYnrTI9c5VV3F-_RgeeUwifzTUrG8PVwr0Y4m2Nje82O0IISgbIDzZUSxeZnOrhPBuL4rkxvG_pfbyJynlHtBoK0I_EjRu_Y3eUg235sHmuC-ivvx0EOo99Niq_xRcAJev826JQC2s1w-OKXH-9WY7DxbgTnJpQzKEwwGffkuNUA%26flowName%3DGeneralOAuthFlow%26as%3DS-231584370%253A1787488676408098%26client_id%3D9454709833-5p8uiejveqdiqiv18k8t53u22n9hfqsr.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fv3%252Fconsent%23&app_domain=https%3A%2F%2Fwww.makerpad.co&rart=ANgoxce7GUoamHiQQoZIzhU3PzIe7MSvovDOB9_beXrdkT-KF0IaqEU2g4gbEeW6cUbe5nJLVeseRljEwIF6MbIyOywO_9DB2jb8KBF934uYAGpm2fxOeq0",
+    "submit_title": ""
+  },
+  {
+    "url": "https://microlaunch.net",
+    "http": 200,
+    "final_url": "https://microlaunch.net",
+    "title": "World-class Tech Products on Microlaunch",
+    "chars": 499959,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.453,
+    "row": 45,
+    "name": "MicroLaunch",
+    "candidates": [
+      {
+        "url": "https://microlaunch.net/deals/submitator",
+        "anchor": "Submitator",
+        "score": 19
+      },
+      {
+        "url": "https://microlaunch.net/premium",
+        "anchor": "Add Your Deal 💎",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://microlaunch.net/deals/submitator",
+    "submit_http": 200,
+    "submit_final": "https://microlaunch.net/deals/submitator",
+    "submit_title": "Submitator Exclusive Deals on Microlaunch"
+  },
+  {
+    "url": "https://nocodelist.co",
+    "http": 200,
+    "final_url": "https://nocodelist.co",
+    "title": "NoCodeList",
+    "chars": 17634,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.396,
+    "row": 46,
+    "name": "No Code List",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://pitchwall.co",
+    "http": 200,
+    "final_url": "https://pitchwall.co",
+    "title": "PitchWall - Discover New AI Products Every Day",
+    "chars": 143603,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.14,
+    "row": 47,
+    "name": "PitchWall",
+    "candidates": [
+      {
+        "url": "https://pitchwall.co/submit",
+        "anchor": "Submit Product",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://pitchwall.co/submit",
+    "submit_http": 200,
+    "submit_final": "https://pitchwall.co/submit",
+    "submit_title": "PitchWall - Submit Product"
+  },
+  {
+    "url": "https://www.producthunt.com",
+    "http": 403,
+    "final_url": "https://www.producthunt.com",
+    "title": "Just a moment...",
+    "chars": 5687,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.191,
+    "row": 48,
+    "name": "Product Hunt",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasaitools.com",
+    "http": 200,
+    "final_url": "https://saasaitools.com",
+    "title": "SaaS AI Tools | Directory of Generative AI Tools",
+    "chars": 387477,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.637,
+    "row": 49,
+    "name": "SaaS AI Tools",
+    "candidates": [
+      {
+        "url": "https://saasaitools.com/submit/",
+        "anchor": "+ Submit",
+        "score": 19
+      },
+      {
+        "url": "https://saasaitools.com/join/",
+        "anchor": "Submit your AI tool for FREE",
+        "score": 19
+      },
+      {
+        "url": "https://saasaitools.com/select-listing-type/",
+        "anchor": "+ Submit",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://saasaitools.com/submit/",
+    "submit_http": 200,
+    "submit_final": "https://saasaitools.com/join/",
+    "submit_title": "Join | SaaS AI Tools"
+  },
+  {
+    "url": "https://saasdiscovery.com",
+    "http": 200,
+    "final_url": "https://saasdiscovery.com",
+    "title": "SaaS Discovery – Discover Best Software for Your Business",
+    "chars": 71614,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.131,
+    "row": 50,
+    "name": "SaaS Discovery",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saas-genius.com",
+    "http": 0,
+    "final_url": "https://saas-genius.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.09,
+    "row": 51,
+    "name": "SaaS Genius",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.saasworthy.com",
+    "http": 200,
+    "final_url": "https://www.saasworthy.com",
+    "title": "SaaSworthy | Top Business Software and Reviews",
+    "chars": 368200,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.169,
+    "row": 52,
+    "name": "SaaS Worthy",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://sideprojectideas.com",
+    "http": 200,
+    "final_url": "https://sideprojectideas.com",
+    "title": "Create Next App",
+    "chars": 40997,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.434,
+    "row": 53,
+    "name": "Side Project Ideas",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupbuffer.com",
+    "http": 403,
+    "final_url": "https://startupbuffer.com",
+    "title": "Just a moment...",
+    "chars": 5664,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.233,
+    "row": 54,
+    "name": "Startup Buffer",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupcollections.com",
+    "http": 200,
+    "final_url": "https://startupcollections.com",
+    "title": "Startup Collections - Resources and Tools for Starters",
+    "chars": 137345,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.092,
+    "row": 55,
+    "name": "Startup Collections",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupfa.me",
+    "http": 200,
+    "final_url": "https://startupfa.me",
+    "title": "Startup Fame - Discover Awesome Startups | Startup Fame",
+    "chars": 380559,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.585,
+    "row": 56,
+    "name": "Startup Fame",
+    "candidates": [
+      {
+        "url": "https://startupfa.me/s/submitsaas",
+        "anchor": "SubmitSaaS Submit your SaaS to 100+ Directories",
+        "score": 19
+      },
+      {
+        "url": "https://startupfa.me/s/submitator",
+        "anchor": "Submitator Choose where to submit. 100+ directories, from $29",
+        "score": 19
+      },
+      {
+        "url": "https://startupfa.me/login",
+        "anchor": "Submit your startup",
+        "score": 15
+      },
+      {
+        "url": "https://submitsaas.com/?utm_source=startupfa.me&utm_medium=referral&utm_campaign=highlight",
+        "anchor": "submitsaas.com",
+        "score": 14
+      },
+      {
+        "url": "https://submitator.com/?utm_source=startupfa.me&utm_medium=referral&utm_campaign=spotlight",
+        "anchor": "submitator.com",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://startupfa.me/s/submitsaas",
+    "submit_http": 200,
+    "submit_final": "https://startupfa.me/s/submitsaas",
+    "submit_title": "SubmitSaaS — review, pricing & alternatives | Startup Fame"
+  },
+  {
+    "url": "https://www.startupinspire.com",
+    "http": 200,
+    "final_url": "https://www.startupinspire.com",
+    "title": "Startup inspiration - Submit and promote your Startup like a Pro | Inspiration gallery for startups",
+    "chars": 17764,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.712,
+    "row": 57,
+    "name": "Startup Inspire",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupstash.com",
+    "http": 200,
+    "final_url": "https://startupstash.com",
+    "title": "Startup Stash - A Curated Directory of Tools and Resources for Your Startup",
+    "chars": 451892,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.332,
+    "row": 58,
+    "name": "Startup Stash",
+    "candidates": [
+      {
+        "url": "https://startupstash.com/add-listing/",
+        "anchor": "Get listed",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://startupstash.com/add-listing/",
+    "submit_http": 200,
+    "submit_final": "https://startupstash.com/add-listing/",
+    "submit_title": "Add a Listing - Startup Stash"
+  },
+  {
+    "url": "https://tinyalternatives.com",
+    "http": 200,
+    "final_url": "https://tinyalternatives.com",
+    "title": "ReflexClick – Train Your Reflexes and Click Speed",
+    "chars": 136513,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.821,
+    "row": 59,
+    "name": "Tiny Alternatives",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.tinystartups.com",
+    "http": 200,
+    "final_url": "https://www.tinystartups.com",
+    "title": "Tiny Startups — Pay-What-You-Want Startup Launch Platform & Product Hunt Alternative",
+    "chars": 133675,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.304,
+    "row": 60,
+    "name": "Tiny Startups",
+    "candidates": [
+      {
+        "url": "https://www.tinystartups.com/submit-tool",
+        "anchor": "List a Tool — $49",
+        "score": 19
+      },
+      {
+        "url": "https://www.tinystartups.com/submit-deal",
+        "anchor": "Submit a Deal — $49",
+        "score": 19
+      },
+      {
+        "url": "https://www.tinystartups.com/submit",
+        "anchor": "Submit a Startup — Free",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.tinystartups.com/submit-tool",
+    "submit_http": 200,
+    "submit_final": "https://www.tinystartups.com/submit-tool",
+    "submit_title": "List Your Tool — Permanent Directory Listing for $49 | Tiny Startups"
+  },
+  {
+    "url": "https://www.toolify.ai",
+    "http": 200,
+    "final_url": "https://www.toolify.ai",
+    "title": "Best AI Tools Directory & AI Tools List - Toolify",
+    "chars": 499695,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.71,
+    "row": 61,
+    "name": "Toolify",
+    "candidates": [
+      {
+        "url": "https://www.toolify.ai/submit-gpt",
+        "anchor": "Submit GPT",
+        "score": 19
+      },
+      {
+        "url": "https://www.toolify.ai/submit",
+        "anchor": "Submit",
+        "score": 19
+      }
+    ],
+    "submit_class": "BLOCKED",
+    "submit_url": "https://www.toolify.ai/submit-gpt",
+    "submit_http": 403,
+    "submit_final": "https://www.toolify.ai/submit-gpt",
+    "submit_title": "Just a moment..."
+  },
+  {
+    "url": "https://topai.tools",
+    "http": 403,
+    "final_url": "https://topai.tools",
+    "title": "Just a moment...",
+    "chars": 5662,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.276,
+    "row": 62,
+    "name": "TopAI.tools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.trustpilot.com",
+    "http": 403,
+    "final_url": "https://www.trustpilot.com",
+    "title": "Verifying Connection",
+    "chars": 991,
+    "class": "BLOCKED",
+    "challenge": "verifying connection",
+    "error": "HTTP 403",
+    "elapsed_s": 0.204,
+    "row": 63,
+    "name": "Trustpilot (for credibility)",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.uneed.best",
+    "http": 200,
+    "final_url": "https://www.uneed.best",
+    "title": "Uneed - Launch. Get seen. Grow. | Uneed",
+    "chars": 499990,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.215,
+    "row": 64,
+    "name": "Uneed",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://acidtools.com",
+    "http": 200,
+    "final_url": "https://acidtools.com",
+    "title": "Practical AI Tools for Automation, Writing, and Design - Acid Tools (2026)",
+    "chars": 201679,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.319,
+    "row": 65,
+    "name": "Acid Tools",
+    "candidates": [
+      {
+        "url": "https://acidtools.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://acidtools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://acidtools.com/get-started",
+    "submit_title": "Get Started - Acid Tools"
+  },
+  {
+    "url": "https://www.activesearchresults.com",
+    "http": 200,
+    "final_url": "https://www.activesearchresults.com",
+    "title": "Active Search Results Search Engine",
+    "chars": 10739,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.345,
+    "row": 66,
+    "name": "Active Search Results",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.addonbiz.com",
+    "http": 200,
+    "final_url": "https://www.addonbiz.com",
+    "title": "AddonBiz Local Business Directory, Add Your Business Free",
+    "chars": 197914,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.303,
+    "row": 67,
+    "name": "Addon Biz",
+    "candidates": [
+      {
+        "url": "https://www.addonbiz.com/add-your-listing/",
+        "anchor": "Add Your Listing",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.addonbiz.com/add-your-listing/",
+    "submit_http": 200,
+    "submit_final": "https://www.addonbiz.com/add-your-listing/",
+    "submit_title": "Add Your Listing - Addonbiz"
+  },
+  {
+    "url": "https://aitechviral.com",
+    "http": 200,
+    "final_url": "https://aitechviral.com",
+    "title": "Trending AI Tools, New Releases, and Fast-Moving Products - AI Tech Viral (2026)",
+    "chars": 113257,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.18,
+    "row": 68,
+    "name": "AI Tech Viral",
+    "candidates": [
+      {
+        "url": "https://aitechviral.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://aitechviral.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://aitechviral.com/get-started",
+    "submit_title": "Get Started - AI Tech Viral"
+  },
+  {
+    "url": "https://aitoolzs.com",
+    "http": 200,
+    "final_url": "https://aitoolzs.com",
+    "title": "Compare AI Tools for Writing, Coding, Design, and Automation - AI Toolz (2026)",
+    "chars": 167201,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.267,
+    "row": 69,
+    "name": "AI Toolz",
+    "candidates": [
+      {
+        "url": "https://aitoolzs.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://aitoolzs.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://aitoolzs.com/get-started",
+    "submit_title": "Get Started - AI Toolz"
+  },
+  {
+    "url": "https://aixcollection.com",
+    "http": 200,
+    "final_url": "https://aixcollection.com",
+    "title": "Advanced AI Tools and AI Products for Specialized Use Cases - AI X Collection (2026)",
+    "chars": 113081,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.221,
+    "row": 70,
+    "name": "AI X Collection",
+    "candidates": [
+      {
+        "url": "https://aixcollection.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://aixcollection.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://aixcollection.com/get-started",
+    "submit_title": "Get Started - AI X Collection"
+  },
+  {
+    "url": "https://aifindr.com",
+    "http": 404,
+    "final_url": "https://aifindr.com",
+    "title": "Site Not Found | Framer",
+    "chars": 7232,
+    "class": "DEAD",
+    "challenge": null,
+    "error": "HTTP 404",
+    "elapsed_s": 0.148,
+    "row": 71,
+    "name": "AIFindr",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://aigc160.com",
+    "http": 200,
+    "final_url": "https://aigc160.com",
+    "title": "AI Content Tools for Writing, Images, Video, and Creative Work - AIGC 160 (2026)",
+    "chars": 168077,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.221,
+    "row": 72,
+    "name": "AIGC 160",
+    "candidates": [
+      {
+        "url": "https://aigc160.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://aigc160.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://aigc160.com/get-started",
+    "submit_title": "Get Started - AIGC 160"
+  },
+  {
+    "url": "https://alternativetools.io",
+    "http": 0,
+    "final_url": "https://alternativetools.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 4.088,
+    "row": 73,
+    "name": "Alternative Tools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://appalist.com",
+    "http": 200,
+    "final_url": "https://appalist.com",
+    "title": "AI Apps for Everyday Work, Marketing, and Productivity - Appa List (2026)",
+    "chars": 146372,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.228,
+    "row": 74,
+    "name": "AppaList",
+    "candidates": [
+      {
+        "url": "https://appalist.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://appalist.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://appalist.com/get-started",
+    "submit_title": "Get Started - Appa List"
+  },
+  {
+    "url": "https://applaunchpad.io",
+    "http": 200,
+    "final_url": "https://myinqplex.com/",
+    "title": "Hubet Myinqplex | Trang HUBET.COM Chính Thức, HU BET Tặng 888K",
+    "chars": 88119,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.285,
+    "row": 75,
+    "name": "AppLaunchpad",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://appsytools.com",
+    "http": 200,
+    "final_url": "https://appsytools.com",
+    "title": "Software Tools for Work, Design, Marketing, and Development - Appsy Tools (2026)",
+    "chars": 145342,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.303,
+    "row": 76,
+    "name": "Appsy Tools",
+    "candidates": [
+      {
+        "url": "https://appsytools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://appsytools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://appsytools.com/get-started",
+    "submit_title": "Get Started - Appsy Tools"
+  },
+  {
+    "url": "https://appvault.io",
+    "http": 200,
+    "final_url": "https://appvault.io/en/",
+    "title": "AppVault | Automate workflows across the systems you already use",
+    "chars": 50032,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.46,
+    "row": 77,
+    "name": "AppVault",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://ashlist.com",
+    "http": 200,
+    "final_url": "https://ashlist.com",
+    "title": "Curated Software Products to Compare by Category and Fit - Ash List (2026)",
+    "chars": 182604,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.214,
+    "row": 78,
+    "name": "Ash List",
+    "candidates": [
+      {
+        "url": "https://ashlist.com/get-started",
+        "anchor": "Submit Product",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://ashlist.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://ashlist.com/get-started",
+    "submit_title": "Get Started - Ash List"
+  },
+  {
+    "url": "https://beamtools.com",
+    "http": 200,
+    "final_url": "https://beamtools.com",
+    "title": "Software Tools for Team Workflows and Everyday Execution - Beam Tools (2026)",
+    "chars": 146660,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.237,
+    "row": 79,
+    "name": "Beam Tools",
+    "candidates": [
+      {
+        "url": "https://beamtools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://beamtools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://beamtools.com/get-started",
+    "submit_title": "Get Started - Beam Tools"
+  },
+  {
+    "url": "https://news.bensbites.com",
+    "http": 200,
+    "final_url": "https://www.bensbites.com/",
+    "title": "Ben's Bites | Substack",
+    "chars": 80614,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.483,
+    "row": 80,
+    "name": "Ben's Bites",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://besttoolvault.com",
+    "http": 200,
+    "final_url": "https://besttoolvault.com",
+    "title": "Curated Software Tools Worth Keeping in Your Stack - Best Tool Vault (2026)",
+    "chars": 183079,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.278,
+    "row": 81,
+    "name": "Best Tool Vault",
+    "candidates": [
+      {
+        "url": "https://besttoolvault.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://besttoolvault.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://besttoolvault.com/get-started",
+    "submit_title": "Get Started - Best Tool Vault"
+  },
+  {
+    "url": "https://bestofai.com",
+    "http": 200,
+    "final_url": "https://bestofai.com",
+    "title": "The best ai tools & applications online | BestofAI",
+    "chars": 499886,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.064,
+    "row": 82,
+    "name": "BestofAI",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://bowora.com",
+    "http": 200,
+    "final_url": "https://bowora.com",
+    "title": "Bowora | Get Funded or Acquired - Startup Launch Pad",
+    "chars": 237889,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.756,
+    "row": 83,
+    "name": "Bowora",
+    "candidates": [
+      {
+        "url": "https://bowora.com/submitmap.com",
+        "anchor": "",
+        "score": 19
+      },
+      {
+        "url": "https://bowora.com/dashboard/startups?new=true",
+        "anchor": "🚀 List your startup",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://bowora.com/submitmap.com",
+    "submit_http": 200,
+    "submit_final": "https://bowora.com/submitmap.com",
+    "submit_title": "SubmitMap — Where to submit your product, and ex... | Bowora"
+  },
+  {
+    "url": "https://www.brownbook.net",
+    "http": 200,
+    "final_url": "https://www.brownbook.net",
+    "title": "Brownbook - The Global Business Listing Database. Free business listings for SEO and search engine marketing",
+    "chars": 427370,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.195,
+    "row": 84,
+    "name": "Brownbook",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://buildlog.to",
+    "http": 0,
+    "final_url": "https://buildlog.to",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.051,
+    "row": 85,
+    "name": "BuildLog",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://builtbyme.io",
+    "http": 200,
+    "final_url": "https://builtbyme.io",
+    "title": "BuiltByMe - Discover Products Built by Indie Makers",
+    "chars": 499667,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.705,
+    "row": 86,
+    "name": "BuiltByMe",
+    "candidates": [
+      {
+        "url": "https://builtbyme.io/submit",
+        "anchor": "Submit a Product",
+        "score": 19
+      },
+      {
+        "url": "https://submitwell.com/?utm_source=builtbyme&utm_medium=referral",
+        "anchor": "Submitwell We Do the Submitting You Do the Scaling.",
+        "score": 14
+      },
+      {
+        "url": "https://claude.ai/new?q=I'm%20an%20indie%20maker%20deciding%20where%20to%20submit%20my%20product.%20Tell%20me%20about%20BuiltByMe%20(builtbyme.io)%20%E2%80%94%20a%20curated%20directory%20for%20indie%20makers.%20What%20does%20a%20free%20listing%20get%20me%20vs%20the%20%249%20Launch%20plan%20(dofollow%20backlink%20from%20a%20DR%2056%20domain%20%2B%20current-week%20listing)%3F%20How%20does%20the%20weekly%20upvote%20competition%20work%20and%20what%20does%20the%20winner%20get%3F%20Is%20it%20worth%20it%20for%20a%20solo%20founder%3F%20Check%20https%3A%2F%2Fbuiltbyme.io%2Fllms.txt%20for%20current%20details.",
+        "anchor": "Ask Claude",
+        "score": 14
+      },
+      {
+        "url": "https://chatgpt.com/?q=I'm%20an%20indie%20maker%20deciding%20where%20to%20submit%20my%20product.%20Tell%20me%20about%20BuiltByMe%20(builtbyme.io)%20%E2%80%94%20a%20curated%20directory%20for%20indie%20makers.%20What%20does%20a%20free%20listing%20get%20me%20vs%20the%20%249%20Launch%20plan%20(dofollow%20backlink%20from%20a%20DR%2056%20domain%20%2B%20current-week%20listing)%3F%20How%20does%20the%20weekly%20upvote%20competition%20work%20and%20what%20does%20the%20winner%20get%3F%20Is%20it%20worth%20it%20for%20a%20solo%20founder%3F%20Check%20https%3A%2F%2Fbuiltbyme.io%2Fllms.txt%20for%20current%20details.&hints=search",
+        "anchor": "Ask ChatGPT",
+        "score": 14
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://builtbyme.io/submit",
+    "submit_http": 200,
+    "submit_final": "https://builtbyme.io/login",
+    "submit_title": "Login to BuiltByMe | BuiltByMe"
+  },
+  {
+    "url": "https://builtwithtools.com",
+    "http": 200,
+    "final_url": "https://builtwithtools.com",
+    "title": "Built With Tools - Built with Confidence",
+    "chars": 95605,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.395,
+    "row": 87,
+    "name": "BuiltWithTools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://businesshunt.co",
+    "http": 200,
+    "final_url": "https://businesshunt.co",
+    "title": "BusinessHunt",
+    "chars": 13166,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.274,
+    "row": 88,
+    "name": "BusinessHunt",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.callupcontact.com",
+    "http": 0,
+    "final_url": "https://www.callupcontact.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1000)>",
+    "elapsed_s": 0.225,
+    "row": 89,
+    "name": "Callupcontact",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://curateclick.com",
+    "http": 200,
+    "final_url": "https://curateclick.com",
+    "title": "Discover the latest and most popular Products - CurateClick",
+    "chars": 475231,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.537,
+    "row": 90,
+    "name": "CurateClick",
+    "candidates": [
+      {
+        "url": "https://curateclick.com/submit",
+        "anchor": "Submission Form",
+        "score": 19
+      },
+      {
+        "url": "https://curateclick.com/pricing",
+        "anchor": "Submit your product",
+        "score": 15
+      },
+      {
+        "url": "https://submitmysaas.com",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitaitools.org",
+        "anchor": "",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://curateclick.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://curateclick.com/submit",
+    "submit_title": "CurateClick - Discover Amazing Developer Tools & Products"
+  },
+  {
+    "url": "https://dailylaunch.io",
+    "http": 0,
+    "final_url": "https://dailylaunch.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.452,
+    "row": 91,
+    "name": "DailyLaunch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://deeplaunch.io",
+    "http": 200,
+    "final_url": "https://deeplaunch.io",
+    "title": "DeepLaunch.io - The Ultimate Directory for Online Tools and Resources",
+    "chars": 477928,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.557,
+    "row": 92,
+    "name": "DeepLaunch.io",
+    "candidates": [
+      {
+        "url": "https://deeplaunch.io/submit",
+        "anchor": "Submit",
+        "score": 19
+      },
+      {
+        "url": "https://deeplaunch.io/product/submitmap",
+        "anchor": "View  SubmitMap  details",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://deeplaunch.io/submit",
+    "submit_http": 200,
+    "submit_final": "https://deeplaunch.io/submit",
+    "submit_title": "Submit Your AI Tool | DeepLaunch.io"
+  },
+  {
+    "url": "https://devhub.best",
+    "http": 200,
+    "final_url": "https://devhub.best",
+    "title": "DevHub - DevHub is a platform to discover and upvote the best tech products. Find top products launching daily.",
+    "chars": 499596,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.487,
+    "row": 93,
+    "name": "DevHub",
+    "candidates": [
+      {
+        "url": "https://devhub.best/projects/submit",
+        "anchor": "Submit Project",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://devhub.best/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://devhub.best/sign-in?redirect=/projects/submit",
+    "submit_title": "DevHub - DevHub is a platform to discover and upvote the best tech products. Find top products launching daily."
+  },
+  {
+    "url": "https://devlaunch.io",
+    "http": 0,
+    "final_url": "https://devlaunch.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error timed out>",
+    "elapsed_s": 15.169,
+    "row": 94,
+    "name": "DevLaunch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://drchecker.org",
+    "http": 200,
+    "final_url": "https://drchecker.org",
+    "title": "DR Checker - Free Website Domain Rating Checker",
+    "chars": 66139,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.488,
+    "row": 95,
+    "name": "DR Checker",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://ff2050.com",
+    "http": 200,
+    "final_url": "https://ff2050.com",
+    "title": "Ff2050 Zone – Reviews, how-tos and hardware picks for players.",
+    "chars": 57406,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.197,
+    "row": 96,
+    "name": "FF2050.AI",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://firsto.co",
+    "http": 200,
+    "final_url": "https://firsto.co",
+    "title": "Firsto – Fair Product Launch Platform Where Every Launch Gets Seen",
+    "chars": 433197,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.442,
+    "row": 97,
+    "name": "Firsto",
+    "candidates": [
+      {
+        "url": "https://firsto.co/projects/submit",
+        "anchor": "Submit a Project",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://firsto.co/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://firsto.co/sign-in?redirect=/projects/submit",
+    "submit_title": "Firsto – Fair Product Launch Platform Where Every Launch Gets Seen"
+  },
+  {
+    "url": "https://foundr.tools",
+    "http": 0,
+    "final_url": "https://foundr.tools",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.213,
+    "row": 98,
+    "name": "Foundr Tools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://freshstartups.io",
+    "http": 0,
+    "final_url": "https://freshstartups.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 5.963,
+    "row": 99,
+    "name": "FreshStartups",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://getworm.com",
+    "http": 200,
+    "final_url": "https://getworm.com",
+    "title": "Get Worm",
+    "chars": 2653,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.14,
+    "row": 100,
+    "name": "GetWorm",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://goodaitools.com",
+    "http": 200,
+    "final_url": "https://goodaitools.com",
+    "title": "Discover the Best AI Tools to Boost Your Productivity. - Good AI Tools (2026)",
+    "chars": 169582,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.197,
+    "row": 101,
+    "name": "Good AI Tools",
+    "candidates": [
+      {
+        "url": "https://goodaitools.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://goodaitools.com/ai/buildrship",
+        "anchor": "BuildrShip-xyz Discover the curated launch platform for buildrs who ship. Launch products, collect feedback, and reach e",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://goodaitools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://goodaitools.com/get-started",
+    "submit_title": "Get Started - Good AI Tools"
+  },
+  {
+    "url": "https://huntfortools.com",
+    "http": 200,
+    "final_url": "https://huntfortools.com",
+    "title": "Find Software Tools by Category, Workflow, and Fit - Hunt for Tools (2026)",
+    "chars": 144653,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.211,
+    "row": 102,
+    "name": "Hunt for Tools",
+    "candidates": [
+      {
+        "url": "https://huntfortools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://huntfortools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://huntfortools.com/get-started",
+    "submit_title": "Get Started - Hunt for Tools"
+  },
+  {
+    "url": "https://ideakiln.com",
+    "http": 200,
+    "final_url": "https://ideakiln.com",
+    "title": "IdeaKiln: Ship it forward",
+    "chars": 354903,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.163,
+    "row": 103,
+    "name": "Idea Kiln",
+    "candidates": [
+      {
+        "url": "https://ideakiln.com/dashboard/submit-idea",
+        "anchor": "Submit idea",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://ideakiln.com/dashboard/submit-idea",
+    "submit_http": 200,
+    "submit_final": "https://ideakiln.com/dashboard/submit-idea",
+    "submit_title": "IdeaKiln: Ship it forward"
+  },
+  {
+    "url": "https://indiefounder.co",
+    "http": 0,
+    "final_url": "https://indiefounder.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error timed out>",
+    "elapsed_s": 15.069,
+    "row": 104,
+    "name": "IndieFounder",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://indielaunch.co",
+    "http": 200,
+    "final_url": "https://indielaunch.ai/",
+    "title": "Indielaunch - The Complete Startup Ecosystem Platform",
+    "chars": 56963,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.509,
+    "row": 105,
+    "name": "IndieLaunch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://indiemade.co",
+    "http": 0,
+    "final_url": "https://indiemade.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.047,
+    "row": 106,
+    "name": "IndieMade",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://indiepages.com",
+    "http": 0,
+    "final_url": "https://indiepages.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)>",
+    "elapsed_s": 0.294,
+    "row": 107,
+    "name": "IndiePages",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://indiestack.co",
+    "http": 200,
+    "final_url": "https://indiestack.co",
+    "title": "IndieStack — The Builder's Control Room",
+    "chars": 1779,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.545,
+    "row": 108,
+    "name": "IndieStack",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.indietool.io",
+    "http": 200,
+    "final_url": "https://www.indietool.io",
+    "title": "IndieTool - Launch Your Startup, Get Traffic & Backlinks",
+    "chars": 499659,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.714,
+    "row": 109,
+    "name": "Indietool",
+    "candidates": [
+      {
+        "url": "https://www.indietool.io/user/signup",
+        "anchor": "Add Your Startup & Sell Links",
+        "score": 19
+      },
+      {
+        "url": "https://www.indietool.io/indietool/submitmap-com",
+        "anchor": "# 27 SubmitMap Where to submit your product, and exactly how ◇ Marketing ◇ by  Yaro DR  0 Message 5 clicks",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://www.indietool.io/user/signup",
+    "submit_http": 200,
+    "submit_final": "https://www.indietool.io/user/signup",
+    "submit_title": "Indietool"
+  },
+  {
+    "url": "https://indietools.app",
+    "http": 200,
+    "final_url": "https://www.indietools.app/",
+    "title": "IndieTools | Discover amazing products built by indie makers",
+    "chars": 499918,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.668,
+    "row": 110,
+    "name": "IndieTools",
+    "candidates": [
+      {
+        "url": "https://www.indietools.app/signin?callbackUrl=/dashboard/products/new",
+        "anchor": "Submit product Submit",
+        "score": 25
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://www.indietools.app/signin?callbackUrl=/dashboard/products/new",
+    "submit_http": 200,
+    "submit_final": "https://www.indietools.app/signin?callbackUrl=/dashboard/products/new",
+    "submit_title": "IndieTools | Discover amazing products built by indie makers"
+  },
+  {
+    "url": "https://www.kj123.cn",
+    "http": 200,
+    "final_url": "https://goodpics.net/go/2986727",
+    "title": "...",
+    "chars": 92419,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 5.252,
+    "row": 111,
+    "name": "kj123.cn",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://latestaiupdates.com",
+    "http": 200,
+    "final_url": "https://latestaiupdates.com",
+    "title": "Latest AI Tools, Product Launches, and New Releases - Latest AI Updates (2026)",
+    "chars": 112264,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.154,
+    "row": 112,
+    "name": "Latest AI Updates",
+    "candidates": [
+      {
+        "url": "https://latestaiupdates.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://latestaiupdates.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://latestaiupdates.com/get-started",
+    "submit_title": "Get Started - Latest AI Updates"
+  },
+  {
+    "url": "https://trylaunch.ai",
+    "http": 200,
+    "final_url": "https://trylaunch.ai",
+    "title": "Launch — Where Vibe Coders Get Discovered",
+    "chars": 3495,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.537,
+    "row": 113,
+    "name": "Launch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.launch-list.org",
+    "http": 200,
+    "final_url": "https://www.launch-list.org",
+    "title": "Launch List - Launch Your Product on Product Hunt and 100+ websites",
+    "chars": 380493,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.503,
+    "row": 114,
+    "name": "Launch List",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchscroll.com",
+    "http": 200,
+    "final_url": "https://launchscroll.com",
+    "title": "New Software Launches to Scroll, Compare, and Track - Launch Scroll (2026)",
+    "chars": 113564,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.123,
+    "row": 115,
+    "name": "Launch Scroll",
+    "candidates": [
+      {
+        "url": "https://launchscroll.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://launchscroll.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://launchscroll.com/get-started",
+    "submit_title": "Get Started - Launch Scroll"
+  },
+  {
+    "url": "https://www.launchvault.dev",
+    "http": 200,
+    "final_url": "https://www.launchvault.dev",
+    "title": "Launch Vault - The Product Launch Platform for Startups | Product Hunt Alternative",
+    "chars": 263227,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.228,
+    "row": 116,
+    "name": "Launch Vault",
+    "candidates": [
+      {
+        "url": "https://www.launchvault.dev/projects/submit",
+        "anchor": "Submit Your Product Now",
+        "score": 19
+      },
+      {
+        "url": "https://submitsaas.com/?ref=launch-vault",
+        "anchor": "SubmitSaaS Auto-Submit Your SaaS to 100+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://www.launchvault.dev/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://www.launchvault.dev/sign-in?redirect=/projects/submit",
+    "submit_title": "Launch Vault - Discover the Best Tech Products"
+  },
+  {
+    "url": "https://launchday.app",
+    "http": 0,
+    "final_url": "https://launchday.app",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>",
+    "elapsed_s": 0.365,
+    "row": 117,
+    "name": "LaunchDay",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launcherlist.com",
+    "http": 0,
+    "final_url": "https://launcherlist.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.072,
+    "row": 118,
+    "name": "LauncherList",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchingnow.co",
+    "http": 0,
+    "final_url": "https://launchingnow.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.044,
+    "row": 119,
+    "name": "Launching Now",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchitx.com",
+    "http": 200,
+    "final_url": "https://launchitx.com",
+    "title": "Startup Launch Platform for Indie Makers | LaunchitX",
+    "chars": 405864,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 5.357,
+    "row": 120,
+    "name": "LaunchitX",
+    "candidates": [
+      {
+        "url": "https://launchitx.com/projects/submit",
+        "anchor": "Launch Your Product",
+        "score": 29
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://launchitx.com/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://launchitx.com/auth/login?callbackUrl=%2Fprojects%2Fsubmit",
+    "submit_title": "Login | LaunchitX - Startup Directory & Launch Platform"
+  },
+  {
+    "url": "https://launchpad.so",
+    "http": 200,
+    "final_url": "https://launchpad.so",
+    "title": "launchpad.so for sale | Spaceship.com",
+    "chars": 23120,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.483,
+    "row": 121,
+    "name": "Launchpad.so",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchpool.co",
+    "http": 200,
+    "final_url": "https://launchpool.co",
+    "title": "",
+    "chars": 114,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.192,
+    "row": 122,
+    "name": "LaunchPool",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchstarter.io",
+    "http": 0,
+    "final_url": "https://launchstarter.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 3.21,
+    "row": 123,
+    "name": "LaunchStarter",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchtab.com",
+    "http": 403,
+    "final_url": "https://www.atom.com/name/LaunchTab",
+    "title": "Just a moment...",
+    "chars": 5786,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.174,
+    "row": 124,
+    "name": "LaunchTab",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchweekly.com",
+    "http": 0,
+    "final_url": "https://launchweekly.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+    "elapsed_s": 4.294,
+    "row": 125,
+    "name": "LaunchWeekly",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://launchzone.io",
+    "http": 0,
+    "final_url": "https://launchzone.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 4.506,
+    "row": 126,
+    "name": "LaunchZone",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://listyourproduct.com",
+    "http": 200,
+    "final_url": "https://listyourproduct.com",
+    "title": "ListYourProduct – AI-Powered Product Listings for Amazon & Meesho",
+    "chars": 3332,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.22,
+    "row": 127,
+    "name": "ListYourProduct",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://make.rs",
+    "http": 200,
+    "final_url": "https://make.rs",
+    "title": "Make.rs",
+    "chars": 5196,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.231,
+    "row": 128,
+    "name": "Make.rs",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://makerdirectory.io",
+    "http": 0,
+    "final_url": "https://makerdirectory.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 3.309,
+    "row": 129,
+    "name": "Maker Directory",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://makerboard.co",
+    "http": 0,
+    "final_url": "https://makerboard.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.044,
+    "row": 130,
+    "name": "MakerBoard",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://makerlist.io",
+    "http": 200,
+    "final_url": "https://makerlist.io",
+    "title": "Makerlist.io",
+    "chars": 49001,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.587,
+    "row": 131,
+    "name": "Makerlist.io",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://aisite.medsci.cn",
+    "http": 202,
+    "final_url": "https://aisite.medsci.cn",
+    "title": "",
+    "chars": 209,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.078,
+    "row": 132,
+    "name": "MedSci AI",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://mylaunchstash.com",
+    "http": 200,
+    "final_url": "https://mylaunchstash.com",
+    "title": "New Product Launches Worth Saving, Tracking, and Comparing - My Launch Stash (2026)",
+    "chars": 113591,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.182,
+    "row": 133,
+    "name": "My Launch Stash",
+    "candidates": [
+      {
+        "url": "https://mylaunchstash.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://mylaunchstash.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://mylaunchstash.com/get-started",
+    "submit_title": "Get Started - My Launch Stash"
+  },
+  {
+    "url": "https://mystarttools.com",
+    "http": 200,
+    "final_url": "https://mystarttools.com",
+    "title": "Starter Tools for Founders, Small Teams, and Early Workflows - My Start Tools (2026)",
+    "chars": 111879,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.133,
+    "row": 134,
+    "name": "My Start Tools",
+    "candidates": [
+      {
+        "url": "https://mystarttools.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://mystarttools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://mystarttools.com/get-started",
+    "submit_title": "Get Started - My Start Tools"
+  },
+  {
+    "url": "https://navfolders.com",
+    "http": 200,
+    "final_url": "https://navfolders.com",
+    "title": "NavFolders",
+    "chars": 425611,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.635,
+    "row": 135,
+    "name": "NavFolders",
+    "candidates": [
+      {
+        "url": "https://navfolders.com/submit",
+        "anchor": "Submit",
+        "score": 19
+      },
+      {
+        "url": "https://navfolders.com/item/fastlaunch",
+        "anchor": "Fastlaunch Details FastLaunch is the ultimate platform to launch your new products and discover the next big thing in te",
+        "score": 19
+      },
+      {
+        "url": "https://superlaunchlist.com/",
+        "anchor": "Submit your product to SuperLaunch List",
+        "score": 14
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://navfolders.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://navfolders.com/auth/login?callbackUrl=%2Fsubmit",
+    "submit_title": "Login - NavFolders"
+  },
+  {
+    "url": "https://navs.site",
+    "http": 200,
+    "final_url": "https://navs.site",
+    "title": "Navs Site | Discover AI tools that fit your work",
+    "chars": 499710,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.519,
+    "row": 136,
+    "name": "Navs Site",
+    "candidates": [
+      {
+        "url": "https://navs.site/website/submitbear",
+        "anchor": "SubmitBear",
+        "score": 19
+      },
+      {
+        "url": "https://navs.site/submit",
+        "anchor": "Submit a tool",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://navs.site/website/submitbear",
+    "submit_http": 200,
+    "submit_final": "https://navs.site/website/submitbear",
+    "submit_title": "SubmitBear | AI Tool Directory"
+  },
+  {
+    "url": "https://newstartups.io",
+    "http": 0,
+    "final_url": "https://newstartups.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 7.035,
+    "row": 137,
+    "name": "New Startups",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://newtools.co",
+    "http": 200,
+    "final_url": "https://newtools.co",
+    "title": "",
+    "chars": 114,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.172,
+    "row": 138,
+    "name": "NewTools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.nxgntools.com",
+    "http": 200,
+    "final_url": "https://www.nxgntools.com",
+    "title": "Launch Your Startup Tool & Get DR Backlinks | NxGn Tools",
+    "chars": 189440,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.506,
+    "row": 139,
+    "name": "NextGen Tools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://openlaunch.ai",
+    "http": 200,
+    "final_url": "https://openlaunch.ai",
+    "title": "Open Launch - Alternatives to Product Hunt",
+    "chars": 414606,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.394,
+    "row": 140,
+    "name": "Open Launch",
+    "candidates": [
+      {
+        "url": "https://openlaunch.ai/projects/submit",
+        "anchor": "Submit Project",
+        "score": 19
+      },
+      {
+        "url": "https://openlaunch.ai/pricing",
+        "anchor": "Launch platform for your products Submit, get a badge & backlink",
+        "score": 15
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://openlaunch.ai/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://openlaunch.ai/sign-in?redirect=/projects/submit",
+    "submit_title": "Account | Open Launch"
+  },
+  {
+    "url": "https://openhunts.com",
+    "http": 200,
+    "final_url": "https://openhunts.com",
+    "title": "OpenHunts: Product Launch & Discovery Platform for Makers",
+    "chars": 499831,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.464,
+    "row": 141,
+    "name": "OpenHunts",
+    "candidates": [
+      {
+        "url": "https://openhunts.com/projects/submit",
+        "anchor": "Submit Project",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://openhunts.com/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://openhunts.com/sign-in?redirect=/projects/submit",
+    "submit_title": "Sign in | OpenHunts"
+  },
+  {
+    "url": "https://peerpush.net",
+    "http": 200,
+    "final_url": "https://peerpush.com/",
+    "title": "PeerPush - Get Found by People and AI",
+    "chars": 499563,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.644,
+    "row": 142,
+    "name": "PeerPush",
+    "candidates": [
+      {
+        "url": "https://peerpush.com/submit",
+        "anchor": "Add your product",
+        "score": 29
+      },
+      {
+        "url": "https://peerpush.com/submit?option=sponsored",
+        "anchor": "Advertise here Promote your product",
+        "score": 19
+      },
+      {
+        "url": "https://startupsubmit.app/?utm_source=peerpush&ref=peerpush",
+        "anchor": "StartupSubmit Best Directory Submissions & Reddit Marketing Services",
+        "score": 14
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://peerpush.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://peerpush.com/auth/login?redirectTo=%2Fsubmit",
+    "submit_title": "Login | PeerPush"
+  },
+  {
+    "url": "https://pitchwalker.com",
+    "http": 0,
+    "final_url": "https://pitchwalker.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.102,
+    "row": 143,
+    "name": "PitchWalker",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://poweruptools.com",
+    "http": 200,
+    "final_url": "https://poweruptools.com",
+    "title": "AI Tools That Improve Productivity, Output, and Daily Work - Power Up Tools (2026)",
+    "chars": 146655,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.153,
+    "row": 144,
+    "name": "Power Up Tools",
+    "candidates": [
+      {
+        "url": "https://poweruptools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://poweruptools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://poweruptools.com/get-started",
+    "submit_title": "Get Started - Power Up Tools"
+  },
+  {
+    "url": "https://productlaunchdir.com",
+    "http": 0,
+    "final_url": "https://productlaunchdir.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.129,
+    "row": 145,
+    "name": "Product Launch Dir",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://productlistdir.com",
+    "http": 200,
+    "final_url": "https://productlistdir.com",
+    "title": "Software Products Organized for Comparison and Discovery - Product List Dir (2026)",
+    "chars": 106126,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.188,
+    "row": 146,
+    "name": "Product List Dir",
+    "candidates": [
+      {
+        "url": "https://productlistdir.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://productlistdir.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://productlistdir.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://productlistdir.com/submit",
+    "submit_title": "Submit Your Product to Product List Dir - Product List Dir"
+  },
+  {
+    "url": "https://productwing.com",
+    "http": 200,
+    "final_url": "https://productwing.com",
+    "title": "Software Products Worth Discovering and Comparing - Product Wing (2026)",
+    "chars": 106610,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.186,
+    "row": 147,
+    "name": "Product Wing",
+    "candidates": [
+      {
+        "url": "https://productwing.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://productwing.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://productwing.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://productwing.com/submit",
+    "submit_title": "Submit Your Product to Product Wing - Product Wing"
+  },
+  {
+    "url": "https://productburst.com",
+    "http": 200,
+    "final_url": "https://bubble.io/limit_exceeded?appname=productburst",
+    "title": "Visual Programming | Bubble",
+    "chars": 45279,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.474,
+    "row": 148,
+    "name": "ProductBurst",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://productcatalog.io",
+    "http": 200,
+    "final_url": "https://productcatalog.io",
+    "title": "PCMT - Product Catalog Management Tool",
+    "chars": 31861,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.434,
+    "row": 149,
+    "name": "ProductCatalog",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://productdir.com",
+    "http": 200,
+    "final_url": "https://productdir.com",
+    "title": "",
+    "chars": 114,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.224,
+    "row": 150,
+    "name": "ProductDir",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://productfeed.co",
+    "http": 0,
+    "final_url": "https://productfeed.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.07,
+    "row": 151,
+    "name": "ProductFeed",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://producthero.co",
+    "http": 0,
+    "final_url": "https://producthero.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.058,
+    "row": 152,
+    "name": "ProductHero",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://productpages.co",
+    "http": 200,
+    "final_url": "https://productpages.co",
+    "title": "",
+    "chars": 114,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.141,
+    "row": 153,
+    "name": "ProductPages",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://productsup.co",
+    "http": 0,
+    "final_url": "https://productsup.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.047,
+    "row": 154,
+    "name": "ProductsUp",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://projecthunt.me",
+    "http": 200,
+    "final_url": "https://projecthunt.me",
+    "title": "ProjectHunt - Discover and share projects",
+    "chars": 119937,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.018,
+    "row": 155,
+    "name": "ProjectHunt",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.promoteproject.com",
+    "http": 200,
+    "final_url": "https://www.promoteproject.com",
+    "title": "Promote Project - Startup Articles, Entrepreneurship Tips and Business Insights",
+    "chars": 88231,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 7.394,
+    "row": 156,
+    "name": "Promote Project",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://ramen.tools",
+    "http": 200,
+    "final_url": "https://ramen.tools",
+    "title": "ramen.tools - See what tools 6000+ makers are using",
+    "chars": 48282,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.759,
+    "row": 157,
+    "name": "Ramen.Tools",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasarena.com",
+    "http": 200,
+    "final_url": "https://championleadership.com/",
+    "title": "Home - Champion Leadership Group",
+    "chars": 209446,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.423,
+    "row": 158,
+    "name": "SaaS Arena",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasbrowser.com",
+    "http": 200,
+    "final_url": "https://saasbrowser.com/en",
+    "title": "SaaS Database & Software Search Engine for B2B Lead Generation | SaaS Browser",
+    "chars": 213857,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.26,
+    "row": 159,
+    "name": "SaaS Browser",
+    "candidates": [
+      {
+        "url": "https://saasbrowser.com/en/add-your-saas",
+        "anchor": "Add Your SaaS!",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://saasbrowser.com/en/add-your-saas",
+    "submit_http": 200,
+    "submit_final": "https://saasbrowser.com/en/users/sign_up",
+    "submit_title": "Sign Up | SaaS Browser"
+  },
+  {
+    "url": "https://saasexplorer.co",
+    "http": 0,
+    "final_url": "https://saasexplorer.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.044,
+    "row": 160,
+    "name": "SaaS Explorer",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasfield.com",
+    "http": 200,
+    "final_url": "https://saasfield.com",
+    "title": "Compare AI SaaS Tools by Use Case, Pricing, and Workflow - SaaS Field (2026)",
+    "chars": 105410,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.122,
+    "row": 161,
+    "name": "Saas Field",
+    "candidates": [
+      {
+        "url": "https://saasfield.com/submit",
+        "anchor": "Submit Your AI Tool",
+        "score": 19
+      },
+      {
+        "url": "https://saasfield.com/get-started",
+        "anchor": "Submit a AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://saasfield.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://saasfield.com/submit",
+    "submit_title": "Submit Your AI SaaS Product to SaaS Field - SaaS Field"
+  },
+  {
+    "url": "https://saashubdirectory.com",
+    "http": 502,
+    "final_url": "https://saashubdirectory.com",
+    "title": "saashubdirectory.com | 502: Bad gateway",
+    "chars": 6439,
+    "class": "SERVER_ERROR",
+    "challenge": null,
+    "error": "HTTP 502",
+    "elapsed_s": 0.146,
+    "row": 162,
+    "name": "SaaS Hub Directory",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saashunter.co",
+    "http": 0,
+    "final_url": "https://saashunter.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.06,
+    "row": 163,
+    "name": "SaaS Hunter",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saaslaunch.io",
+    "http": 200,
+    "final_url": "https://saaslaunch.io",
+    "title": "MVF Homepage - saaslaunch.io",
+    "chars": 250561,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.486,
+    "row": 164,
+    "name": "SaaS Launch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saaslaunchlist.com",
+    "http": 0,
+    "final_url": "https://saaslaunchlist.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+    "elapsed_s": 10.061,
+    "row": 165,
+    "name": "SaaS Launch List",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saaspages.xyz",
+    "http": 200,
+    "final_url": "https://saaspages.xyz",
+    "title": "SaaS Pages",
+    "chars": 21005,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.917,
+    "row": 166,
+    "name": "SaaS Pages",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasroots.com",
+    "http": 200,
+    "final_url": "https://saasroots.com",
+    "title": "Foundational SaaS Products for Startups and Business Teams - SaaS Roots (2026)",
+    "chars": 106090,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.205,
+    "row": 167,
+    "name": "SaaS Roots",
+    "candidates": [
+      {
+        "url": "https://saasroots.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://saasroots.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://saasroots.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://saasroots.com/submit",
+    "submit_title": "Submit Your SaaS Product to SaaS Roots - SaaS Roots"
+  },
+  {
+    "url": "https://saastoolsdir.com",
+    "http": 200,
+    "final_url": "https://saastoolsdir.com",
+    "title": "Organized SaaS Tools to Compare by Category and Pricing - SaaS Tools Dir (2026)",
+    "chars": 106170,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.186,
+    "row": 168,
+    "name": "SaaS Tools Dir",
+    "candidates": [
+      {
+        "url": "https://saastoolsdir.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://saastoolsdir.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://saastoolsdir.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://saastoolsdir.com/submit",
+    "submit_title": "Submit Your SaaS Product to SaaS Tools Dir - SaaS Tools Dir"
+  },
+  {
+    "url": "https://saaswheel.com",
+    "http": 200,
+    "final_url": "https://saaswheel.com",
+    "title": "Compare SaaS Products for Workflows, Teams, and Growth - SaaS Wheel (2026)",
+    "chars": 105823,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.17,
+    "row": 169,
+    "name": "SaaS Wheel",
+    "candidates": [
+      {
+        "url": "https://saaswheel.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://saaswheel.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://saaswheel.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://saaswheel.com/submit",
+    "submit_title": "Submit Your SaaS Product to SaaS Wheel - SaaS Wheel"
+  },
+  {
+    "url": "https://saasboard.co",
+    "http": 0,
+    "final_url": "https://saasboard.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -5] No address associated with hostname>",
+    "elapsed_s": 0.063,
+    "row": 170,
+    "name": "SaaSBoard",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasdir.com",
+    "http": 403,
+    "final_url": "https://www.serchen.com/",
+    "title": "Just a moment...",
+    "chars": 5640,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.136,
+    "row": 171,
+    "name": "SaaSDir",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saasframe.io",
+    "http": 200,
+    "final_url": "https://www.saasframe.io/",
+    "title": "SaaSFrame — UX & UI Design Examples Library for SaaS Websites and Interfaces",
+    "chars": 265669,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.657,
+    "row": 172,
+    "name": "SaaSFrame",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saashunt.best",
+    "http": 200,
+    "final_url": "https://saashunt.best",
+    "title": "SaasHunt - SaasHunt is a platform to discover and upvote the best tech products. Find top products launching daily.",
+    "chars": 499850,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.766,
+    "row": 173,
+    "name": "SaasHunt",
+    "candidates": [
+      {
+        "url": "https://saashunt.best/projects/submit",
+        "anchor": "Submit Project",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://saashunt.best/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://saashunt.best/sign-in?redirect=/projects/submit",
+    "submit_title": "SaasHunt - SaasHunt is a platform to discover and upvote the best tech products. Find top products launching daily."
+  },
+  {
+    "url": "https://saasnova.co",
+    "http": 0,
+    "final_url": "https://saasnova.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error timed out>",
+    "elapsed_s": 15.066,
+    "row": 174,
+    "name": "SaaSNova",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.saaspa.ge",
+    "http": 200,
+    "final_url": "https://www.saaspa.ge",
+    "title": "Saaspa.ge - Launch Your Product This Week",
+    "chars": 499743,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.348,
+    "row": 175,
+    "name": "Saaspa.ge",
+    "candidates": [
+      {
+        "url": "https://www.saaspa.ge/submit",
+        "anchor": "Submit Product",
+        "score": 29
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://www.saaspa.ge/submit",
+    "submit_http": 200,
+    "submit_final": "https://www.saaspa.ge/auth/signin?callbackUrl=https%3A%2F%2Fwww.saaspa.ge%2F",
+    "submit_title": "Saaspa.ge - Launch Your Product This Week"
+  },
+  {
+    "url": "https://saaspick.com",
+    "http": 200,
+    "final_url": "https://saaspick.com",
+    "title": "",
+    "chars": 4728,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.384,
+    "row": 176,
+    "name": "SaaSPick",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://saaspo.com",
+    "http": 200,
+    "final_url": "https://saaspo.com",
+    "title": "The best SaaS Web Design Inspiration | Saaspo",
+    "chars": 124494,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.125,
+    "row": 177,
+    "name": "SaaSpo",
+    "candidates": [
+      {
+        "url": "https://saaspo.com/submit",
+        "anchor": "submit page.",
+        "score": 19
+      },
+      {
+        "url": "https://saaspo.com/advertise",
+        "anchor": "Add your logo here!",
+        "score": 15
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://saaspo.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://saaspo.com/submit",
+    "submit_title": "Saaspo | Submit your website"
+  },
+  {
+    "url": "https://saasregister.co",
+    "http": 0,
+    "final_url": "https://saasregister.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.078,
+    "row": 178,
+    "name": "SaaSRegister",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://scoutforge.net",
+    "http": 200,
+    "final_url": "https://scoutforge.net",
+    "title": "Scout Forge | Discover and Review New Apps Safely",
+    "chars": 499422,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.239,
+    "row": 179,
+    "name": "Scout Forge",
+    "candidates": [
+      {
+        "url": "https://scoutforge.net/app-register",
+        "anchor": "Submit Your App",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://scoutforge.net/app-register",
+    "submit_http": 200,
+    "submit_final": "https://scoutforge.net/app-register",
+    "submit_title": "Submit Your App | Scout Forge"
+  },
+  {
+    "url": "https://www.seewhatnewai.com",
+    "http": 200,
+    "final_url": "https://www.seewhatnewai.com",
+    "title": "SeeWhatNewAI Directory: Discover AI tools | SeeWhatNewAI",
+    "chars": 499880,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.133,
+    "row": 180,
+    "name": "See What New AI",
+    "candidates": [
+      {
+        "url": "https://www.seewhatnewai.com/submit",
+        "anchor": "Submit",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.seewhatnewai.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://www.seewhatnewai.com/submit",
+    "submit_title": "Submit Your AI Tool | SeeWhatNewAI"
+  },
+  {
+    "url": "https://shipybara.com",
+    "http": 200,
+    "final_url": "https://shipybara.com",
+    "title": "Shipybara - Discover the Best Tech Products",
+    "chars": 390274,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.513,
+    "row": 181,
+    "name": "Shipybara",
+    "candidates": [
+      {
+        "url": "https://shipybara.com/projects/submit",
+        "anchor": "Submit Project",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://shipybara.com/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://shipybara.com/sign-in?redirect=/projects/submit",
+    "submit_title": "Shipybara - Discover the Best Tech Products"
+  },
+  {
+    "url": "https://www.showmysites.com",
+    "http": 200,
+    "final_url": "https://www.showmysites.com",
+    "title": "Directory & Launch Platform - Submit Your Website - ShowMySites",
+    "chars": 244726,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.015,
+    "row": 182,
+    "name": "ShowMySites",
+    "candidates": [
+      {
+        "url": "https://www.showmysites.com/accounts/signup/",
+        "anchor": "Join & Add Your Website",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://www.showmysites.com/accounts/signup/",
+    "submit_http": 200,
+    "submit_final": "https://www.showmysites.com/accounts/signup/",
+    "submit_title": "Sign Up - ShowMySites"
+  },
+  {
+    "url": "https://sidehustlestack.co",
+    "http": 509,
+    "final_url": "https://sidehustlestack.co",
+    "title": "Quota Exceeded",
+    "chars": 21373,
+    "class": "SERVER_ERROR",
+    "challenge": null,
+    "error": "HTTP 509",
+    "elapsed_s": 0.101,
+    "row": 183,
+    "name": "Side Hustle Stack",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.sitelike.org",
+    "http": 200,
+    "final_url": "https://www.sitelike.org",
+    "title": "Similar Sites & Alternative Website Finder | Sites Like",
+    "chars": 86242,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.234,
+    "row": 184,
+    "name": "Sitelike.org",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://smartkithub.com",
+    "http": 200,
+    "final_url": "https://smartkithub.com",
+    "title": "Smart Software Products for Building a Better Work Kit - Smart Kit Hub (2026)",
+    "chars": 182784,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.187,
+    "row": 185,
+    "name": "Smart Kit Hub",
+    "candidates": [
+      {
+        "url": "https://smartkithub.com/get-started",
+        "anchor": "Submit Product",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://smartkithub.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://smartkithub.com/get-started",
+    "submit_title": "Get Started - Smart Kit Hub"
+  },
+  {
+    "url": "https://softwarebolt.com",
+    "http": 200,
+    "final_url": "https://softwarebolt.com",
+    "title": "Software Products to Compare Quickly by Category and Fit - Software Bolt (2026)",
+    "chars": 107369,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.168,
+    "row": 186,
+    "name": "Software Bolt",
+    "candidates": [
+      {
+        "url": "https://softwarebolt.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://softwarebolt.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://softwarebolt.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://softwarebolt.com/submit",
+    "submit_title": "Submit Your Product to Software Bolt - Software Bolt"
+  },
+  {
+    "url": "https://softwarelist.io",
+    "http": 0,
+    "final_url": "https://softwarelist.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -5] No address associated with hostname>",
+    "elapsed_s": 0.195,
+    "row": 187,
+    "name": "SoftwareList",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://solvertools.com",
+    "http": 200,
+    "final_url": "https://solvertools.com",
+    "title": "Software Tools That Solve Workflow and Operations Problems - Solver Tools (2026)",
+    "chars": 183567,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.199,
+    "row": 188,
+    "name": "Solver Tools",
+    "candidates": [
+      {
+        "url": "https://solvertools.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://solvertools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://solvertools.com/get-started",
+    "submit_title": "Get Started - Solver Tools"
+  },
+  {
+    "url": "https://sourcedir.com",
+    "http": 200,
+    "final_url": "https://sourcedir.com",
+    "title": "Trusted Software Products to Compare by Category and Use Case - Source Dir (2026)",
+    "chars": 106389,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.142,
+    "row": 189,
+    "name": "Source Dir",
+    "candidates": [
+      {
+        "url": "https://sourcedir.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://sourcedir.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://sourcedir.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://sourcedir.com/submit",
+    "submit_title": "Submit Your Product to Source Dir - Source Dir"
+  },
+  {
+    "url": "https://stackdirectory.com",
+    "http": 200,
+    "final_url": "https://stackdirectory.com",
+    "title": "Software Products for Building and Improving Your Stack - Stack Directory (2026)",
+    "chars": 106783,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.133,
+    "row": 190,
+    "name": "Stack Directory",
+    "candidates": [
+      {
+        "url": "https://stackdirectory.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://stackdirectory.com/get-started",
+        "anchor": "Submit a Product",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://stackdirectory.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://stackdirectory.com/submit",
+    "submit_title": "Submit Your Product to Stack Directory - Stack Directory"
+  },
+  {
+    "url": "https://startupaideas.com",
+    "http": 200,
+    "final_url": "https://startupaideas.com",
+    "title": "AI Tools for Founders, Startup Research, and Growth Work - Startup AIdeas (2026)",
+    "chars": 168514,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.271,
+    "row": 191,
+    "name": "Startup AIdeas",
+    "candidates": [
+      {
+        "url": "https://startupaideas.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://startupaideas.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://startupaideas.com/get-started",
+    "submit_title": "Get Started - Startup AIdeas"
+  },
+  {
+    "url": "https://startupbenchmarks.com",
+    "http": 200,
+    "final_url": "https://startupbenchmarks.com",
+    "title": "Startup Software to Compare for Operations, Growth, and Team Work - Startup Benchmarks (2026)",
+    "chars": 185149,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.19,
+    "row": 192,
+    "name": "Startup Benchmarks",
+    "candidates": [
+      {
+        "url": "https://startupbenchmarks.com/get-started",
+        "anchor": "Submit Product",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://startupbenchmarks.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://startupbenchmarks.com/get-started",
+    "submit_title": "Get Started - Startup Benchmarks"
+  },
+  {
+    "url": "https://startupindex.co",
+    "http": 200,
+    "final_url": "https://startupindex.co",
+    "title": "",
+    "chars": 114,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.161,
+    "row": 193,
+    "name": "Startup Index",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupvessel.com",
+    "http": 200,
+    "final_url": "https://startupvessel.com",
+    "title": "Startup Software for Founders Building Their Operating Stack - Startup Vessel (2026)",
+    "chars": 184487,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.177,
+    "row": 194,
+    "name": "Startup Vessel",
+    "candidates": [
+      {
+        "url": "https://startupvessel.com/get-started",
+        "anchor": "Submit Product",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://startupvessel.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://startupvessel.com/get-started",
+    "submit_title": "Get Started - Startup Vessel"
+  },
+  {
+    "url": "https://startupdex.com",
+    "http": 0,
+    "final_url": "https://startupdex.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'startupdex.com'. (_ssl.c:1000)>",
+    "elapsed_s": 0.17,
+    "row": 195,
+    "name": "StartupDex",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupforge.io",
+    "http": 0,
+    "final_url": "https://startupforge.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>",
+    "elapsed_s": 14.731,
+    "row": 196,
+    "name": "StartupForge",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupglobe.co",
+    "http": 0,
+    "final_url": "https://startupglobe.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.062,
+    "row": 197,
+    "name": "StartupGlobe",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startuphive.co",
+    "http": 0,
+    "final_url": "https://startuphive.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.062,
+    "row": 198,
+    "name": "StartupHive",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startuplift.com",
+    "http": 0,
+    "final_url": "https://startuplift.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1000)>",
+    "elapsed_s": 0.193,
+    "row": 199,
+    "name": "StartupLift",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startuplister.com",
+    "http": 404,
+    "final_url": "https://bubble.io/domain_not_supported?domain=startuplister.com",
+    "title": "Visual Programming | Bubble",
+    "chars": 45329,
+    "class": "DEAD",
+    "challenge": null,
+    "error": "HTTP 404",
+    "elapsed_s": 0.738,
+    "row": 200,
+    "name": "StartupLister",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupnow.co",
+    "http": 0,
+    "final_url": "https://startupnow.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.startupnow.com'. (_ssl.c:1000)>",
+    "elapsed_s": 0.38,
+    "row": 201,
+    "name": "StartupNow",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupslab.site",
+    "http": 200,
+    "final_url": "https://startupslab.site",
+    "title": "Startups Lab - Launch Your Startup. Get Discovered. Grow.",
+    "chars": 84806,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.412,
+    "row": 202,
+    "name": "Startups Lab",
+    "candidates": [
+      {
+        "url": "https://startupslab.site/submit-product",
+        "anchor": "Submit Product",
+        "score": 29
+      },
+      {
+        "url": "https://startupslab.site/submit-product?plan=spotlight",
+        "anchor": "$ 29 /month Slot Available Claim this exclusive spotlight slot for 30 days and get featured.",
+        "score": 19
+      },
+      {
+        "url": "https://startupslab.site/submit-product?plan=featured",
+        "anchor": "Get a slot - $ 19 /mo",
+        "score": 19
+      },
+      {
+        "url": "https://submitmysaas.com/projects/startups-lab",
+        "anchor": "",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://startupslab.site/submit-product",
+    "submit_http": 200,
+    "submit_final": "https://startupslab.site/submit-product",
+    "submit_title": "Submit Your Product - Launch on Startups Lab"
+  },
+  {
+    "url": "https://startupshelf.co",
+    "http": 0,
+    "final_url": "https://startupshelf.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.08,
+    "row": 203,
+    "name": "StartupShelf",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startuptrack.io",
+    "http": 0,
+    "final_url": "https://startuptrack.io",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 5.164,
+    "row": 204,
+    "name": "StartupTrack",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupvault.co",
+    "http": 0,
+    "final_url": "https://startupvault.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error timed out>",
+    "elapsed_s": 15.123,
+    "row": 205,
+    "name": "StartupVault",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://startupwave.co",
+    "http": 200,
+    "final_url": "https://startupwave.co",
+    "title": "STARTUPWAVE",
+    "chars": 172140,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.544,
+    "row": 206,
+    "name": "StartupWave",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://superaiboom.com",
+    "http": 200,
+    "final_url": "https://superaiboom.com",
+    "title": "High-Impact AI Tools for Work, Creativity, and Automation - Super AI Boom (2026)",
+    "chars": 112998,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.168,
+    "row": 207,
+    "name": "Super AI Boom",
+    "candidates": [
+      {
+        "url": "https://superaiboom.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://superaiboom.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://superaiboom.com/get-started",
+    "submit_title": "Get Started - Super AI Boom"
+  },
+  {
+    "url": "https://techpluto.com",
+    "http": 200,
+    "final_url": "https://www.techpluto.com/",
+    "title": "Home - TechPluto - Latest Startup & Tech News",
+    "chars": 138307,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.58,
+    "row": 208,
+    "name": "TechPluto",
+    "candidates": [
+      {
+        "url": "https://www.techpluto.com/submit-startup/",
+        "anchor": "Submit startup",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.techpluto.com/submit-startup/",
+    "submit_http": 200,
+    "submit_final": "https://www.techpluto.com/submit-startup/",
+    "submit_title": "Submit startup - TechPluto - Latest Startup & Tech News"
+  },
+  {
+    "url": "https://thatappshow.com",
+    "http": 200,
+    "final_url": "https://thatappshow.com",
+    "title": "Apps and Software Products Worth Discovering - That App Show (2026)",
+    "chars": 113350,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.243,
+    "row": 209,
+    "name": "That App Show",
+    "candidates": [
+      {
+        "url": "https://thatappshow.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://thatappshow.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://thatappshow.com/get-started",
+    "submit_title": "Get Started - That App Show"
+  },
+  {
+    "url": "https://theapptools.com",
+    "http": 200,
+    "final_url": "https://theapptools.com",
+    "title": "AI Applications for Practical Work and Daily Output - The App Tools (2026)",
+    "chars": 145745,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.181,
+    "row": 210,
+    "name": "The App Tools",
+    "candidates": [
+      {
+        "url": "https://theapptools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://theapptools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://theapptools.com/get-started",
+    "submit_title": "Get Started - The App Tools"
+  },
+  {
+    "url": "https://thecoretools.com",
+    "http": 200,
+    "final_url": "https://thecoretools.com",
+    "title": "Core Software Tools for Productive Work and Team Operations - The Core Tools (2026)",
+    "chars": 183495,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.166,
+    "row": 211,
+    "name": "The Core Tools",
+    "candidates": [
+      {
+        "url": "https://thecoretools.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://thecoretools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://thecoretools.com/get-started",
+    "submit_title": "Get Started - The Core Tools"
+  },
+  {
+    "url": "https://thekeytools.com",
+    "http": 200,
+    "final_url": "https://thekeytools.com",
+    "title": "Essential AI Tools for Work, Research, and Productivity - The Key Tools (2026)",
+    "chars": 144898,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.18,
+    "row": 212,
+    "name": "The Key Tools",
+    "candidates": [
+      {
+        "url": "https://thekeytools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://thekeytools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://thekeytools.com/get-started",
+    "submit_title": "Get Started - The Key Tools"
+  },
+  {
+    "url": "https://themegatools.com",
+    "http": 200,
+    "final_url": "https://themegatools.com",
+    "title": "A Broad Software Tools Directory Across Major Categories - The Mega Tools (2026)",
+    "chars": 146083,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.192,
+    "row": 213,
+    "name": "The Mega Tools",
+    "candidates": [
+      {
+        "url": "https://themegatools.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://themegatools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://themegatools.com/get-started",
+    "submit_title": "Get Started - The Mega Tools"
+  },
+  {
+    "url": "https://thestartuppitch.com",
+    "http": 0,
+    "final_url": "https://thestartuppitch.com",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'thestartuppitch.com'. (_ssl.c:1000)>",
+    "elapsed_s": 0.414,
+    "row": 214,
+    "name": "The Startup Pitch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://tinytoolhub.com",
+    "http": 200,
+    "final_url": "https://tinytoolhub.com",
+    "title": "Useful Lightweight Tools for Focused Work and Small Teams - Tiny Tool Hub (2026)",
+    "chars": 169421,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.281,
+    "row": 215,
+    "name": "Tiny Tool Hub",
+    "candidates": [
+      {
+        "url": "https://tinytoolhub.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://tinytoolhub.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://tinytoolhub.com/get-started",
+    "submit_title": "Get Started - Tiny Tool Hub"
+  },
+  {
+    "url": "https://www.tinylaunch.com",
+    "http": 200,
+    "final_url": "https://www.tinylaunch.com",
+    "title": "TinyLaunch - Product Launch Platform",
+    "chars": 234323,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.543,
+    "row": 216,
+    "name": "TinyLaunch",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://tinylaunchpad.com",
+    "http": 200,
+    "final_url": "https://tinylaunchpad.com",
+    "title": "TinyLaunchpad - Discover the Best Tech Products",
+    "chars": 305851,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.328,
+    "row": 217,
+    "name": "TinyLaunchpad",
+    "candidates": [
+      {
+        "url": "https://tinylaunchpad.com/projects/submit",
+        "anchor": "Submit Project",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://tinylaunchpad.com/projects/submit",
+    "submit_http": 200,
+    "submit_final": "https://tinylaunchpad.com/sign-in?redirect=/projects/submit",
+    "submit_title": "TinyLaunchpad - Discover the Best Tech Products"
+  },
+  {
+    "url": "https://toolfinddir.com",
+    "http": 200,
+    "final_url": "https://toolfinddir.com",
+    "title": "Find AI Tools by Category, Pricing, and Workflow Need - Tool Find Dir (2026)",
+    "chars": 169237,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.233,
+    "row": 218,
+    "name": "Tool Finddir",
+    "candidates": [
+      {
+        "url": "https://toolfinddir.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolfinddir.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toolfinddir.com/get-started",
+    "submit_title": "Get Started - Tool Find Dir"
+  },
+  {
+    "url": "https://tooljourney.com",
+    "http": 200,
+    "final_url": "https://tooljourney.com",
+    "title": "Software Tools for Planning, Execution, and Professional Work - Tool Journey (2026)",
+    "chars": 145539,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.209,
+    "row": 219,
+    "name": "Tool Journey",
+    "candidates": [
+      {
+        "url": "https://tooljourney.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://tooljourney.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://tooljourney.com/get-started",
+    "submit_title": "Get Started - Tool Journey"
+  },
+  {
+    "url": "https://toolprism.com",
+    "http": 200,
+    "final_url": "https://toolprism.com",
+    "title": "Compare AI Tools Through Clear Categories and Use Cases - Tool Prism (2026)",
+    "chars": 167515,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.253,
+    "row": 220,
+    "name": "Tool Prism",
+    "candidates": [
+      {
+        "url": "https://toolprism.com/get-started",
+        "anchor": "Submit AI Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolprism.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toolprism.com/get-started",
+    "submit_title": "Get Started - Tool Prism"
+  },
+  {
+    "url": "https://toolsignal.com",
+    "http": 200,
+    "final_url": "https://toolsignal.com",
+    "title": "High-Signal Software Tools for Teams and Workflows - Tool Signal (2026)",
+    "chars": 169505,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.277,
+    "row": 221,
+    "name": "Tool Signal",
+    "candidates": [
+      {
+        "url": "https://toolsignal.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolsignal.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toolsignal.com/get-started",
+    "submit_title": "Get Started - Tool Signal"
+  },
+  {
+    "url": "https://tooldb.dev",
+    "http": 0,
+    "final_url": "https://tooldb.dev",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -5] No address associated with hostname>",
+    "elapsed_s": 0.083,
+    "row": 222,
+    "name": "ToolDB",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolfio.com",
+    "http": 200,
+    "final_url": "https://toolfio.com",
+    "title": "Best SaaS & AI Tools Directory for Builders | Toolfio",
+    "chars": 373234,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.658,
+    "row": 223,
+    "name": "toolfio.com",
+    "candidates": [
+      {
+        "url": "https://toolfio.com/submit",
+        "anchor": "Submit your Website",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolfio.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://toolfio.com/submit",
+    "submit_title": "Submit your product | Toolfio"
+  },
+  {
+    "url": "https://toolfolio.io",
+    "http": 200,
+    "final_url": "https://toolfolio.com/",
+    "title": "Toolfolio - All the Tools You Need in One Place",
+    "chars": 499993,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.669,
+    "row": 224,
+    "name": "Toolfolio",
+    "candidates": [
+      {
+        "url": "https://toolfolio.com/boosted-listing",
+        "anchor": "Submit tool",
+        "score": 25
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolfolio.com/boosted-listing",
+    "submit_http": 200,
+    "submit_final": "https://toolfolio.com/boosted-listing",
+    "submit_title": "Toolfolio - All the Tools You Need in One Place"
+  },
+  {
+    "url": "https://toolhive.io",
+    "http": 200,
+    "final_url": "https://compliancehive.eu/nl",
+    "title": "Compliance Tooling MKB: AVG, NIS2 & ISO 27001 | ComplianceHive",
+    "chars": 63359,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.621,
+    "row": 225,
+    "name": "ToolHive",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolindex.co",
+    "http": 0,
+    "final_url": "https://toolindex.co",
+    "title": "",
+    "chars": 0,
+    "class": "UNREACHABLE",
+    "challenge": null,
+    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+    "elapsed_s": 0.069,
+    "row": 226,
+    "name": "ToolIndex",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolradar.io",
+    "http": 200,
+    "final_url": "https://toolradar.io",
+    "title": "toolradar.io",
+    "chars": 1052,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.468,
+    "row": 227,
+    "name": "ToolRadar",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolcosmos.com",
+    "http": 200,
+    "final_url": "https://toolcosmos.com",
+    "title": "A Wide-Angle Software Tools Directory Across the Landscape - Tool Cosmos (2026)",
+    "chars": 169123,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.226,
+    "row": 228,
+    "name": "Tools Cosmos",
+    "candidates": [
+      {
+        "url": "https://toolcosmos.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolcosmos.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toolcosmos.com/get-started",
+    "submit_title": "Get Started - Tool Cosmos"
+  },
+  {
+    "url": "https://toolsformakers.com",
+    "http": 200,
+    "final_url": "https://globalpande.ru.com/",
+    "title": "GOOD88 - TRẢI NGHIỆM CÁ CƯỢC TẠI GOOD88.COM HOT NHẤT 2025",
+    "chars": 128843,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 3.074,
+    "row": 229,
+    "name": "Tools For Makers",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolslisthq.com",
+    "http": 200,
+    "final_url": "https://toolslisthq.com",
+    "title": "Compare Software Tools by Category, Workflow, and Pricing - Tools List HQ (2026)",
+    "chars": 145935,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.178,
+    "row": 230,
+    "name": "Tools List HQ",
+    "candidates": [
+      {
+        "url": "https://toolslisthq.com/get-started",
+        "anchor": "Submit a Tool",
+        "score": 15
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolslisthq.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toolslisthq.com/get-started",
+    "submit_title": "Get Started - Tools List HQ"
+  },
+  {
+    "url": "https://toolsunderradar.com",
+    "http": 200,
+    "final_url": "https://toolsunderradar.com",
+    "title": "Underrated Software Tools and Hidden Gems Worth Trying - Tools Under Radar (2026)",
+    "chars": 113556,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.178,
+    "row": 231,
+    "name": "Tools Under Radar",
+    "candidates": [
+      {
+        "url": "https://toolsunderradar.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolsunderradar.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toolsunderradar.com/get-started",
+    "submit_title": "Get Started - Tools Under Radar"
+  },
+  {
+    "url": "https://toolscout.app",
+    "http": 200,
+    "final_url": "https://toolscout.app",
+    "title": "Best AI Tools, SaaS Reviews & Software Guides 2026 | ToolScout",
+    "chars": 26549,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.143,
+    "row": 232,
+    "name": "ToolScout",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://toolspedia.io",
+    "http": 200,
+    "final_url": "https://toolspedia.io",
+    "title": "ToolsPedia | AI Tools, Apps & Software Directory",
+    "chars": 499996,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.845,
+    "row": 233,
+    "name": "Toolspedia",
+    "candidates": [
+      {
+        "url": "https://toolspedia.io/submit-tool/",
+        "anchor": "Submit Tool",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toolspedia.io/submit-tool/",
+    "submit_http": 200,
+    "submit_final": "https://toolspedia.io/submit-tool/",
+    "submit_title": "Submit AI Tool - Add Your AI Tool, Boost Your Visibility"
+  },
+  {
+    "url": "https://toptrendtools.com",
+    "http": 200,
+    "final_url": "https://toptrendtools.com",
+    "title": "Trending Software Tools Across Work and Productivity - Top Trend Tools (2026)",
+    "chars": 169003,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.301,
+    "row": 234,
+    "name": "Top Trend Tools",
+    "candidates": [
+      {
+        "url": "https://toptrendtools.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toptrendtools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toptrendtools.com/get-started",
+    "submit_title": "Get Started - Top Trend Tools"
+  },
+  {
+    "url": "https://toshilist.com",
+    "http": 200,
+    "final_url": "https://toshilist.com",
+    "title": "Cleanly Curated Software Products for Everyday Discovery - Toshi List (2026)",
+    "chars": 113693,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.234,
+    "row": 235,
+    "name": "Toshi List",
+    "candidates": [
+      {
+        "url": "https://toshilist.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://toshilist.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://toshilist.com/get-started",
+    "submit_title": "Get Started - Toshi List"
+  },
+  {
+    "url": "https://trustiner.com",
+    "http": 200,
+    "final_url": "https://trustiner.com",
+    "title": "Trusted Software Products for Work, Teams, and Operations - Trustiner (2026)",
+    "chars": 184369,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.278,
+    "row": 236,
+    "name": "Trustiner",
+    "candidates": [
+      {
+        "url": "https://trustiner.com/get-started",
+        "anchor": "Submit Product",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://trustiner.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://trustiner.com/get-started",
+    "submit_title": "Get Started - Trustiner"
+  },
+  {
+    "url": "https://unitelist.com",
+    "http": 200,
+    "final_url": "https://unitelist.com",
+    "title": "Software Products for Connected Teams and Shared Workflows - Unite List (2026)",
+    "chars": 184389,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.214,
+    "row": 237,
+    "name": "Unite List",
+    "candidates": [
+      {
+        "url": "https://unitelist.com/get-started",
+        "anchor": "Submit Product",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://unitelist.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://unitelist.com/get-started",
+    "submit_title": "Get Started - Unite List"
+  },
+  {
+    "url": "https://www.verifiedtools.info",
+    "http": 200,
+    "final_url": "https://www.verifiedtools.info",
+    "title": "Get your tool found — by people and by AI | Verified Tools",
+    "chars": 100438,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.188,
+    "row": 238,
+    "name": "Verified Tools",
+    "candidates": [
+      {
+        "url": "https://www.verifiedtools.info/submit",
+        "anchor": "Get listed Submit your tool, pass the review, and keep a permanent dofollow backlink from a verified directory. Submit a",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.verifiedtools.info/submit",
+    "submit_http": 200,
+    "submit_final": "https://www.verifiedtools.info/submit",
+    "submit_title": "Submit Your Tool - Verified Tools"
+  },
+  {
+    "url": "https://verifieddr.com",
+    "http": 200,
+    "final_url": "https://verifieddr.com",
+    "title": "Find Link Partners. Grow Your Domain Rating. | VerifiedDR",
+    "chars": 120914,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.313,
+    "row": 239,
+    "name": "VerifiedDR",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://viesearch.com",
+    "http": 200,
+    "final_url": "https://viesearch.com",
+    "title": "Viesearch - Community Powered Search",
+    "chars": 386627,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.309,
+    "row": 240,
+    "name": "Viesearch",
+    "candidates": [
+      {
+        "url": "https://viesearch.com/submit",
+        "anchor": "Your Site Here",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://viesearch.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://viesearch.com/submit",
+    "submit_title": "Submit a URL - Viesearch"
+  },
+  {
+    "url": "https://weliketools.com",
+    "http": 200,
+    "final_url": "https://weliketools.com",
+    "title": "Recommended Software Tools Worth Serious Consideration - We Like Tools (2026)",
+    "chars": 184185,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.175,
+    "row": 241,
+    "name": "We Like Tools",
+    "candidates": [
+      {
+        "url": "https://weliketools.com/get-started",
+        "anchor": "Submit Tool",
+        "score": 25
+      },
+      {
+        "url": "https://x.com/@submitmatic",
+        "anchor": "",
+        "score": 14
+      },
+      {
+        "url": "https://submitsaas.com/",
+        "anchor": "We Submit Your SaaS to 140+ Directories Effortlessly",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://weliketools.com/get-started",
+    "submit_http": 200,
+    "submit_final": "https://weliketools.com/get-started",
+    "submit_title": "Get Started - We Like Tools"
+  },
+  {
+    "url": "https://webwiki.com",
+    "http": 200,
+    "final_url": "https://www.webwiki.com/",
+    "title": "webwiki.com - Webwiki COM",
+    "chars": 253680,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 2.005,
+    "row": 242,
+    "name": "WebWiki",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://whatlaunched.today",
+    "http": 200,
+    "final_url": "https://whatlaunched.today/en",
+    "title": "What Launched Today - Discover Latest Startups",
+    "chars": 499658,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.02,
+    "row": 243,
+    "name": "What Launched Today",
+    "candidates": [
+      {
+        "url": "https://whatlaunched.today/auth/signup?returnUrl=%2Fdashboard%2Fsubmit",
+        "anchor": "Launch your startup",
+        "score": 29
+      },
+      {
+        "url": "https://whatlaunched.today/en/launch/spenza",
+        "anchor": "Launch your branded MVNO in just 7 days with Spenza. Get eSI",
+        "score": 19
+      },
+      {
+        "url": "https://whatlaunched.today/en/launch/saasrocketspace",
+        "anchor": "Simply the most spectacular way to launch your SaaS business",
+        "score": 19
+      }
+    ],
+    "submit_class": "AUTH_REQUIRED",
+    "submit_url": "https://whatlaunched.today/auth/signup?returnUrl=%2Fdashboard%2Fsubmit",
+    "submit_http": 200,
+    "submit_final": "https://whatlaunched.today/auth/signup?returnUrl=%2Fdashboard%2Fsubmit",
+    "submit_title": "Sign Up - What Launched Today"
+  },
+  {
+    "url": "https://trustmrr.com/startup/startup-directory",
+    "http": 200,
+    "final_url": "https://trustmrr.com/startup/startup-directory",
+    "title": "Startup Directory - $43 last 30 days | TrustMRR",
+    "chars": 203334,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.259,
+    "row": 244,
+    "name": "TrustMRR",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://fazier.com",
+    "http": 200,
+    "final_url": "https://fazier.com",
+    "title": "Fazier – Find your next favourite product, every day.",
+    "chars": 174431,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.825,
+    "row": 245,
+    "name": "Fazier",
+    "candidates": [
+      {
+        "url": "https://fazier.com/submit",
+        "anchor": "Submit Product",
+        "score": 29
+      },
+      {
+        "url": "https://submitbro.com/",
+        "anchor": "100+ Directories Submission Service",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://fazier.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://fazier.com/submit",
+    "submit_title": "Fazier – Find your next favourite product, every day."
+  },
+  {
+    "url": "https://peerlist.io",
+    "http": 200,
+    "final_url": "https://peerlist.io",
+    "title": "Peerlist | The Professional Network for builders to show and tell!",
+    "chars": 137840,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.325,
+    "row": 246,
+    "name": "Peerlist",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://www.aixploria.com",
+    "http": 200,
+    "final_url": "https://www.aixploria.com/en/",
+    "title": "AI Tools Directory & List of Best Free AI by Category (Top 10) | AIxploria",
+    "chars": 306378,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.409,
+    "row": 247,
+    "name": "AIxploria",
+    "candidates": [
+      {
+        "url": "https://www.aixploria.com/en/add-ai/",
+        "anchor": "Submit an AI Tool",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.aixploria.com/en/add-ai/",
+    "submit_http": 200,
+    "submit_final": "https://www.aixploria.com/en/featured-on-aixploria/#submit",
+    "submit_title": "Featured on AIxploria | 2026 | AIxploria"
+  },
+  {
+    "url": "https://launchigniter.com",
+    "http": 200,
+    "final_url": "https://launchigniter.com",
+    "title": "LaunchIgniter - Discover and Launch Amazing Products",
+    "chars": 499963,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.176,
+    "row": 248,
+    "name": "LaunchIgniter",
+    "candidates": [
+      {
+        "url": "https://launchigniter.com/submit-directories",
+        "anchor": "Submit Directories",
+        "score": 19
+      },
+      {
+        "url": "https://launchigniter.com/submit",
+        "anchor": "Submit Your Product",
+        "score": 19
+      },
+      {
+        "url": "https://www.producthunt.com/products/launchigniter/reviews?review=238210",
+        "anchor": "Arnav Pawar @arnav_pawar1 Great platform to launch your projects. The import from peerlist/product hunt feature stands o",
+        "score": 14
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://launchigniter.com/submit-directories",
+    "submit_http": 200,
+    "submit_final": "https://launchigniter.com/submit-directories",
+    "submit_title": "931+ Submit Directories to List Your Startup (2026) | LaunchIgniter"
+  },
+  {
+    "url": "https://www.foundrlist.com",
+    "http": 200,
+    "final_url": "https://www.foundrlist.com",
+    "title": "FoundrList — The Social Network for Founders & Startup Builders",
+    "chars": 499916,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 0.9,
+    "row": 249,
+    "name": "FoundrList",
+    "candidates": [
+      {
+        "url": "https://www.foundrlist.com/submit",
+        "anchor": "Launch",
+        "score": 19
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://www.foundrlist.com/submit",
+    "submit_http": 200,
+    "submit_final": "https://www.foundrlist.com/submit",
+    "submit_title": "Launch | FoundrList"
+  },
+  {
+    "url": "https://www.softwareadvice.com",
+    "http": 403,
+    "final_url": "https://www.softwareadvice.com",
+    "title": "Just a moment...",
+    "chars": 5669,
+    "class": "BLOCKED",
+    "challenge": "just a moment",
+    "error": "HTTP 403",
+    "elapsed_s": 0.12,
+    "row": 250,
+    "name": "Software Advice",
+    "candidates": [],
+    "submit_class": "UNKNOWN",
+    "submit_url": "",
+    "submit_http": 0,
+    "submit_final": "",
+    "submit_title": ""
+  },
+  {
+    "url": "https://appscribed.com/product-list/",
+    "http": 200,
+    "final_url": "https://appscribed.com/submit-ai-tool/",
+    "title": "Submit AI Tool - $49 Permanent Listing & Review | Appscribed",
+    "chars": 182390,
+    "class": "OK",
+    "challenge": null,
+    "error": "",
+    "elapsed_s": 1.163,
+    "row": 251,
+    "name": "Appscribed",
+    "candidates": [
+      {
+        "url": "https://appscribed.com/submit-ai-tool/",
+        "anchor": "Submit Tool",
+        "score": 29
+      }
+    ],
+    "submit_class": "OPEN",
+    "submit_url": "https://appscribed.com/submit-ai-tool/",
+    "submit_http": 200,
+    "submit_final": "https://appscribed.com/submit-ai-tool/",
+    "submit_title": "Submit AI Tool - $49 Permanent Listing & Review | Appscribed"
+  }
+]
