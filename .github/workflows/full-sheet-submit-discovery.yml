@@ -20,11 +20,11 @@ jobs:
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import concurrent.futures as cf, html, json, re, socket, ssl
+          import concurrent.futures as cf, html, json, re
           from pathlib import Path
           from urllib.parse import urlparse,urljoin
           from urllib.request import Request,build_opener,HTTPRedirectHandler
-          from urllib.error import HTTPError,URLError
+          from urllib.error import HTTPError
           UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36'
           CH=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification')
           NOTFOUND=('404','not found','page not found','doesn’t exist','does not exist','page unavailable')
@@ -51,7 +51,7 @@ jobs:
             if r['http'] in (404,410) or any(x in low for x in NOTFOUND): return 'STALE'
             if r['http']>=500:return 'SERVER_ERROR'
             if not (200<=r['http']<400):return 'UNKNOWN'
-            semantic=('submit','add your','add product','add startup','add tool','get listed','list your','launch your','<form') if kind=='database' else ('sign up','signup','register','create account','create profile','join now','<form')
+            semantic=('submit a','submit your','submit startup','submit product','submit tool','add your','add product','add startup','add tool','get listed','list your','launch your') if kind=='database' else ('sign up','signup','register','create account','create profile','join now','join us')
             if any(x in low for x in semantic):
               fl=(r['final']+' '+r['title']).lower()
               if any(x in fl for x in ('/login','/signin','/sign-in','login','sign in')): return 'AUTH_REQUIRED'
@@ -62,20 +62,19 @@ jobs:
             rows=json.loads(Path(f'results/full-sheet-audit/{kind}.json').read_text())
             for r in rows:
               if r.get('submit_class')!='UNKNOWN':continue
-              p=urlparse(r.get('final_url') or r['url']);
+              p=urlparse(r.get('final_url') or r['url'])
               if p.scheme not in ('http','https') or not p.netloc:continue
               root=f'{p.scheme}://{p.netloc}/'
-              for path in paths:tasks.append((kind,r['row'],r['name'],root,urljoin(root,path)))
+              for path in paths:tasks.append((kind,r['row'],r['name'],urljoin(root,path)))
           def do(t):
-            kind,row,name,root,url=t;r=fetch(url);c=classify(r,kind)
+            kind,row,name,url=t;r=fetch(url);c=classify(r,kind)
             return {'kind':kind,'row':row,'name':name,'candidate_url':url,'http':r['http'],'final':r['final'],'title':r['title'],'class':c,'error':r['error']}
           allr=[]
           with cf.ThreadPoolExecutor(max_workers=48) as ex:
             for n,r in enumerate(ex.map(do,tasks),1):
               allr.append(r)
               if n%150==0:print(n,'/',len(tasks),flush=True)
-          best={}
-          rank={'OPEN':5,'AUTH_REQUIRED':4,'BLOCKED':3,'SERVER_ERROR':2,'STALE':1,'UNKNOWN':0}
+          best={};rank={'OPEN':5,'AUTH_REQUIRED':4,'BLOCKED':3,'SERVER_ERROR':2,'STALE':1,'UNKNOWN':0}
           for r in allr:
             k=(r['kind'],r['row']);cur=best.get(k)
             if cur is None or rank[r['class']]>rank[cur['class']]:best[k]=r
