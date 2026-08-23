@@ -1,0 +1,37 @@
+{
+  "database_total": 250,
+  "social_total": 210,
+  "database_access": {
+    "UNREACHABLE": 46,
+    "OK": 190,
+    "SERVER_ERROR": 5,
+    "BLOCKED": 7,
+    "DEAD": 2
+  },
+  "database_submit": {
+    "UNKNOWN": 64,
+    "BLOCKED": 13,
+    "OPEN": 93,
+    "SERVER_ERROR": 5,
+    "STALE": 50,
+    "AUTH_REQUIRED": 25
+  },
+  "social_access": {
+    "OK": 179,
+    "BLOCKED": 25,
+    "DEAD": 3,
+    "UNREACHABLE": 2,
+    "SERVER_ERROR": 1
+  },
+  "social_submit": {
+    "YES - EXISTING PROFILE": 179,
+    "YES - CURRENT ENTRY": 4,
+    "PAST YES / NOW DEAD": 3,
+    "BLOCKED": 23,
+    "YES HISTORICAL / CURRENT UNKNOWN": 1
+  },
+  "cloak_rescued": 5,
+  "vpn_curl_rescued": 0,
+  "verified_vpn_cloak_exceptions": 2,
+  "verified_at": "2026-08-23 12:56 UTC"
+}
