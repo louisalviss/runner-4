@@ -1,5 +1,5 @@
 {
-  "target": "https://nowsecure.nl/",
+  "target": "https://nopecha.com/demo/turnstile",
   "wrapper": "0.5.8",
-  "purpose": "Compare stock Playwright vs current licensed Cloak binary on Cloudflare nowsecure target"
+  "purpose": "Compare stock Playwright vs current licensed Cloak binary on public Cloudflare Turnstile demo"
 }
