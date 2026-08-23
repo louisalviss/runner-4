@@ -20,7 +20,7 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -35,8 +35,10 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
           python -m pip install -q pillow yt-dlp
+          yt-dlp --version
+          ffmpeg -version | head -n 1
 
-      - name: Render video
+      - name: Render full video
         shell: bash
         run: |
           set -euo pipefail
@@ -55,11 +57,12 @@ jobs:
           q=json.load(open('output/edm-nostalgia/qa.json'))
           assert q['resolution']==[1080,1920],q
           assert q['codec']=='h264',q
-          assert q['audio_streams']==0,q
+          assert q['audio_streams']==1,q
           assert 59.0 <= q['duration'] <= 60.0,q
+          assert len(q['sources'])==10,q
           print(json.dumps(q,ensure_ascii=False,indent=2))
           PY
-          ffprobe -v error -show_entries format=duration -show_entries stream=codec_name,width,height -of json output/edm-nostalgia/final.mp4
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,codec_type,width,height -of json output/edm-nostalgia/final.mp4
 
       - uses: actions/upload-artifact@v4
         with:
