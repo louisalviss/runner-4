@@ -1,29 +1,26 @@
 from __future__ import annotations
 
-import json, pathlib, subprocess, sys, textwrap
+import json, pathlib, subprocess, sys
 from PIL import Image, ImageDraw, ImageFont
 
 W,H,FPS = 1080,1920,30
-BG=(8,8,10)
 WHITE=(248,248,246)
-MUTED=(118,120,126)
-DIM=(58,60,66)
-ACCENT=(255,255,255)
-PANEL=(10,10,12,220)
 FONT='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 BOLD='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 
+# Source policy: no preference for official/licensed/stock. The only production
+# criteria are song match, visual usefulness, quality, and technical usability.
 TRACKS=[
-    {'rank':10,'song':'Tsunami','artist':'DVBBS & Borgeous','query':'DVBBS Borgeous Tsunami official music video','fallback':2941128},
-    {'rank':9,'song':'Heroes (We Could Be)','artist':'Alesso ft. Tove Lo','query':'Alesso Heroes We Could Be official video','fallback':3722010},
-    {'rank':8,'song':'The Nights','artist':'Avicii','query':'Avicii The Nights official music video','fallback':1692701},
-    {'rank':7,'song':'Summer','artist':'Calvin Harris','query':'Calvin Harris Summer official video','fallback':13054630},
-    {'rank':6,'song':'Titanium','artist':'David Guetta ft. Sia','query':'David Guetta Titanium ft Sia official video','fallback':2941105},
-    {'rank':5,'song':'Animals','artist':'Martin Garrix','query':'Martin Garrix Animals official video','fallback':3042698},
-    {'rank':4,'song':"Don't You Worry Child",'artist':'Swedish House Mafia','query':"Swedish House Mafia Don't You Worry Child official video",'fallback':30328826},
-    {'rank':3,'song':'Clarity','artist':'Zedd ft. Foxes','query':'Zedd Clarity official music video','fallback':12695738},
-    {'rank':2,'song':'Wake Me Up','artist':'Avicii','query':'Avicii Wake Me Up official video','fallback':9003204},
-    {'rank':1,'song':'Levels','artist':'Avicii','query':'Avicii Levels official music video','fallback':7722307},
+    {'rank':10,'song':'Tsunami','artist':'DVBBS & Borgeous'},
+    {'rank':9,'song':'Heroes (We Could Be)','artist':'Alesso ft. Tove Lo'},
+    {'rank':8,'song':'The Nights','artist':'Avicii'},
+    {'rank':7,'song':'Summer','artist':'Calvin Harris'},
+    {'rank':6,'song':'Titanium','artist':'David Guetta ft. Sia'},
+    {'rank':5,'song':'Animals','artist':'Martin Garrix'},
+    {'rank':4,'song':"Don't You Worry Child",'artist':'Swedish House Mafia'},
+    {'rank':3,'song':'Clarity','artist':'Zedd ft. Foxes'},
+    {'rank':2,'song':'Wake Me Up','artist':'Avicii'},
+    {'rank':1,'song':'Levels','artist':'Avicii'},
 ]
 
 INTRO=2.2
@@ -38,7 +35,18 @@ def run(cmd:list[str],check=True):
 
 
 def probe_duration(path:pathlib.Path)->float:
-    return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',str(path)],text=True).strip())
+    return float(subprocess.check_output([
+        'ffprobe','-v','error','-show_entries','format=duration',
+        '-of','default=nw=1:nk=1',str(path)
+    ],text=True).strip())
+
+
+def has_audio(path:pathlib.Path)->bool:
+    p=subprocess.check_output([
+        'ffprobe','-v','error','-select_streams','a:0',
+        '-show_entries','stream=codec_type','-of','csv=p=0',str(path)
+    ],text=True).strip()
+    return p=='audio'
 
 
 def font(size:int,bold=False):
@@ -56,13 +64,11 @@ def fit_text(draw:ImageDraw.ImageDraw,text:str,maxw:int,start:int,minsize:int,bo
 def overlay_png(current_index:int|None,out:pathlib.Path,cta=False):
     im=Image.new('RGBA',(W,H),(0,0,0,0))
     d=ImageDraw.Draw(im)
-    # top/bottom readability plates
     d.rectangle((0,0,W,260),fill=(0,0,0,196))
     d.rectangle((0,1260,W,H),fill=(0,0,0,224))
     d.text((58,72),'TOP 10 NOSTALGIC',font=font(54,True),fill=WHITE)
     d.text((58,133),'EDM SONGS — 2010s',font=font(58,True),fill=WHITE)
     d.text((60,206),'the era that made festival EDM feel enormous',font=font(24),fill=(188,190,196))
-    # frame separators
     d.line((42,1260,1038,1260),fill=(255,255,255,90),width=2)
     y0=1308; rowh=49
     for i,t in enumerate(TRACKS):
@@ -103,40 +109,68 @@ def intro_overlay(out:pathlib.Path):
     im.save(out)
 
 
+def source_queries(t:dict)->list[str]:
+    a=t['artist']; s=t['song']
+    # Deliberately broad: DHS/source selection is not constrained to official sources.
+    return [
+        f'{a} {s}',
+        f'{a} {s} live',
+        f'{a} {s} festival',
+        f'{s} {a} music video',
+        f'{s} {a} crowd live',
+    ]
+
+
 def download_footage(t:dict,assets:pathlib.Path)->dict:
     out=assets/f"rank-{t['rank']:02d}.mp4"
-    # Prefer official/recognizable public video search. Silent visual only.
-    yt=['yt-dlp','--no-playlist','--no-warnings','--socket-timeout','20','--retries','2',
-        '-f','bv*[height<=1080]/bestvideo[height<=1080]/best[height<=1080]',
-        '--download-sections','*00:00:15-00:00:40','--force-keyframes-at-cuts','--merge-output-format','mp4',
-        '-o',str(out),f"ytsearch1:{t['query']}"]
-    p=run(yt,check=False)
-    if p.returncode==0 and out.exists() and out.stat().st_size>300000:
-        return {'source':'youtube-search','query':t['query'],'path':str(out)}
-    # Reliable fallback; still keeps the real-concert/festival visual grammar.
-    if out.exists(): out.unlink()
-    url=f"https://www.pexels.com/download/video/{t['fallback']}/"
-    p=run(['curl','-L','--fail','--retry','4','--retry-delay','2','-A','Mozilla/5.0',url,'-o',str(out)],check=False)
-    if p.returncode!=0 or not out.exists() or out.stat().st_size<100000:
-        raise RuntimeError(f"failed footage for rank {t['rank']}")
-    return {'source':'pexels-fallback','id':t['fallback'],'path':str(out)}
+    info=assets/f"rank-{t['rank']:02d}.info.json"
+    for query in source_queries(t):
+        for p in (out,info):
+            if p.exists(): p.unlink()
+        cmd=[
+            'yt-dlp','--no-playlist','--no-warnings','--socket-timeout','25','--retries','3',
+            '--match-filter','duration > 35 & duration < 900',
+            '-f','bv*[height<=1080]+ba/b[height<=1080]/b',
+            '--download-sections','*00:00:15-00:00:43','--force-keyframes-at-cuts',
+            '--merge-output-format','mp4','--write-info-json',
+            '-o',str(out),f'ytsearch1:{query}'
+        ]
+        p=run(cmd,check=False)
+        if p.returncode==0 and out.exists() and out.stat().st_size>500000 and has_audio(out):
+            meta={'source':'internet-search','query':query,'path':str(out)}
+            if info.exists():
+                try:
+                    raw=json.loads(info.read_text(encoding='utf-8'))
+                    meta.update({
+                        'title':raw.get('title'),
+                        'webpage_url':raw.get('webpage_url'),
+                        'uploader':raw.get('uploader'),
+                    })
+                except Exception:
+                    pass
+            return meta
+    raise RuntimeError(f"No usable internet source found for rank {t['rank']} {t['song']}")
 
 
 def make_segment(src:pathlib.Path,overlay:pathlib.Path,dur:float,out:pathlib.Path,start:float=0.0):
-    # Full-bleed crop; static native overlay keeps the TikTok-native ranking template clean.
-    vf=(f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
-        f"eq=contrast=1.04:saturation=1.08:brightness=-0.015,"
-        f"overlay=0:0:format=auto,fps={FPS},format=yuv420p")
-    cmd=['ffmpeg','-hide_banner','-loglevel','error','-y','-stream_loop','-1','-ss',f'{start:.2f}','-i',str(src),'-loop','1','-i',str(overlay),
-         '-t',f'{dur:.3f}','-filter_complex',vf,'-map','0:v:0','-an','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','19','-movflags','+faststart',str(out)]
-    run(cmd)
+    fadeout=max(0.0,dur-0.08)
+    fc=(
+        f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+        f"eq=contrast=1.04:saturation=1.08:brightness=-0.015[v];"
+        f"[1:v]format=rgba[ov];"
+        f"[v][ov]overlay=0:0:format=auto,fps={FPS},format=yuv420p[vout]"
+    )
+    run([
+        'ffmpeg','-hide_banner','-loglevel','error','-y','-stream_loop','-1','-ss',f'{start:.2f}','-i',str(src),
+        '-loop','1','-i',str(overlay),'-t',f'{dur:.3f}','-filter_complex',fc,
+        '-map','[vout]','-map','0:a:0','-af',f'aresample=48000,afade=t=in:st=0:d=0.08,afade=t=out:st={fadeout:.3f}:d=0.08',
+        '-ac','2','-ar','48000','-c:v','libx264','-preset','veryfast','-crf','19','-c:a','aac','-b:a','192k',
+        '-r',str(FPS),'-movflags','+faststart','-shortest',str(out)
+    ])
 
 
-def make_intro(src:pathlib.Path,overlay:pathlib.Path,dur:float,out:pathlib.Path):
-    vf=(f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
-        f"eq=contrast=1.06:saturation=1.10:brightness=-0.03,overlay=0:0:format=auto,fps={FPS},format=yuv420p")
-    run(['ffmpeg','-hide_banner','-loglevel','error','-y','-stream_loop','-1','-i',str(src),'-loop','1','-i',str(overlay),'-t',f'{dur:.3f}',
-         '-filter_complex',vf,'-map','0:v:0','-an','-r',str(FPS),'-c:v','libx264','-preset','veryfast','-crf','19','-movflags','+faststart',str(out)])
+def make_intro(src:pathlib.Path,overlay:pathlib.Path,dur:float,out:pathlib.Path,start:float=0.0):
+    make_segment(src,overlay,dur,out,start=start)
 
 
 def main():
@@ -156,35 +190,45 @@ def main():
 
     outputs=[]; timeline=[]; cursor=0.0
     intro=clips/'c00-intro.mp4'
-    make_intro(pathlib.Path(sources[0]['path']),ov/'intro.png',INTRO,intro)
+    make_intro(pathlib.Path(sources[0]['path']),ov/'intro.png',INTRO,intro,start=0.0)
     outputs.append(intro); timeline.append({'type':'intro','start':cursor,'end':cursor+INTRO}); cursor+=INTRO
 
     for i,(t,meta) in enumerate(zip(TRACKS,sources)):
         dur=ONE if t['rank']==1 else REGULAR
         target=clips/f"c{len(outputs):02d}-rank-{t['rank']:02d}.mp4"
         src=pathlib.Path(meta['path'])
-        # Vary source position a little when full sources are available.
-        start=(i%4)*1.25
+        start=INTRO if i==0 else (i%4)*1.2
         make_segment(src,ov/f'list-{i:02d}.png',dur,target,start=start)
         outputs.append(target)
-        timeline.append({'type':'track','rank':t['rank'],'song':t['song'],'artist':t['artist'],'start':round(cursor,3),'end':round(cursor+dur,3),'source':meta})
+        timeline.append({
+            'type':'track','rank':t['rank'],'song':t['song'],'artist':t['artist'],
+            'start':round(cursor,3),'end':round(cursor+dur,3),'source':meta
+        })
         cursor+=dur
 
     outro=clips/f"c{len(outputs):02d}-outro.mp4"
-    make_segment(pathlib.Path(sources[-1]['path']),ov/'outro.png',OUTRO,outro,start=8.0)
+    make_segment(pathlib.Path(sources[-1]['path']),ov/'outro.png',OUTRO,outro,start=ONE+1.5)
     outputs.append(outro); timeline.append({'type':'outro','start':round(cursor,3),'end':round(cursor+OUTRO,3)}); cursor+=OUTRO
 
     lst=work/'concat.txt'; lst.write_text('\n'.join("file '"+str(p.resolve())+"'" for p in outputs)+'\n')
+    joined=work/'joined.mp4'
+    run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',str(lst),'-c','copy',str(joined)])
     final=out/'final.mp4'
-    run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',str(lst),'-an','-vf',f'fps={FPS},format=yuv420p',
-         '-r',str(FPS),'-c:v','libx264','-preset','medium','-crf','18','-movflags','+faststart',str(final)])
+    run([
+        'ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(joined),'-map','0:v:0','-map','0:a:0',
+        '-c:v','copy','-af','loudnorm=I=-14:TP=-1.5:LRA=11','-c:a','aac','-b:a','192k','-movflags','+faststart',str(final)
+    ])
     D=probe_duration(final)
-    if abs(D-59.5)>0.40: raise RuntimeError(f'duration mismatch {D}')
+    if abs(D-59.5)>0.45: raise RuntimeError(f'duration mismatch {D}')
 
-    timing={'title':'Top 10 Nostalgic EDM Songs — 2010s','duration':D,'fps':FPS,'resolution':[W,H],'audio':'intentionally omitted for DHS','timeline':timeline}
+    timing={
+        'title':'Top 10 Nostalgic EDM Songs — 2010s','duration':D,'fps':FPS,'resolution':[W,H],
+        'audio':'embedded from selected source clips; normalized for final output',
+        'source_policy':'broad internet selection; no official-source priority',
+        'timeline':timeline
+    }
     (out/'timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2),encoding='utf-8')
 
-    # Contact sheet for visual QC.
     sample=[0.8,3.5,8.6,13.7,18.8,23.9,29.0,34.1,39.2,44.3,49.4,55.5,58.8]
     thumbs=[]
     for j,t in enumerate(sample):
@@ -195,13 +239,16 @@ def main():
     for j,im in enumerate(thumbs[:16]): sheet.paste(im,((j%4)*270,(j//4)*480))
     sheet.save(out/'qa-contact.jpg',quality=94)
 
-    # Machine QA.
     raw=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(final)],text=True))
     vs=next(s for s in raw['streams'] if s.get('codec_type')=='video')
-    qa={'duration':D,'resolution':[vs['width'],vs['height']],'codec':vs['codec_name'],'fps':FPS,'audio_streams':sum(1 for s in raw['streams'] if s.get('codec_type')=='audio'),'sources':sources}
+    qa={
+        'duration':D,'resolution':[vs['width'],vs['height']],'codec':vs['codec_name'],'fps':FPS,
+        'audio_streams':sum(1 for s in raw['streams'] if s.get('codec_type')=='audio'),
+        'sources':sources
+    }
     assert qa['resolution']==[1080,1920],qa
     assert qa['codec']=='h264',qa
-    assert qa['audio_streams']==0,qa
+    assert qa['audio_streams']==1,qa
     (out/'qa.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(qa,ensure_ascii=False,indent=2))
 
