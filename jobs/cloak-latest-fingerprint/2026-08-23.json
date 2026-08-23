@@ -1,0 +1,6 @@
+{
+  "target": "https://www.scrapingcourse.com/cloudflare-challenge",
+  "wrapper": "0.5.8",
+  "attempt": 2,
+  "purpose": "Hardened A/B: capture stock block and Cloak pass/block/browser-close independently"
+}
