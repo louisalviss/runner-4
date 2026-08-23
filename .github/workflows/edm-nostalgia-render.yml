@@ -1,0 +1,68 @@
+name: EDM Nostalgia Countdown Render
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/render_edm_nostalgia.py'
+      - '.github/workflows/edm-nostalgia-render.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install -q pillow yt-dlp
+
+      - name: Render video
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/render_edm_nostalgia.py output/edm-nostalgia
+
+      - name: QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s output/edm-nostalgia/final.mp4
+          test -s output/edm-nostalgia/qa-contact.jpg
+          test -s output/edm-nostalgia/qa.json
+          test -s output/edm-nostalgia/timing.json
+          python - <<'PY'
+          import json
+          q=json.load(open('output/edm-nostalgia/qa.json'))
+          assert q['resolution']==[1080,1920],q
+          assert q['codec']=='h264',q
+          assert q['audio_streams']==0,q
+          assert 59.0 <= q['duration'] <= 60.0,q
+          print(json.dumps(q,ensure_ascii=False,indent=2))
+          PY
+          ffprobe -v error -show_entries format=duration -show_entries stream=codec_name,width,height -of json output/edm-nostalgia/final.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: edm-nostalgia-${{ github.run_id }}
+          path: |
+            output/edm-nostalgia/final.mp4
+            output/edm-nostalgia/qa-contact.jpg
+            output/edm-nostalgia/qa.json
+            output/edm-nostalgia/timing.json
+          retention-days: 3
+          if-no-files-found: error
