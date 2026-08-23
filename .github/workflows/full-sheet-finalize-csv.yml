@@ -1,0 +1,90 @@
+name: Finalize Full Sheet Audit CSV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'results/full-sheet-audit/cloak_access.json'
+      - 'results/full-sheet-audit/deep_submit.json'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Build final CSVs when both enrichments exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f results/full-sheet-audit/cloak_access.json || exit 0
+          test -f results/full-sheet-audit/deep_submit.json || exit 0
+          python3 - <<'PY'
+          import csv,json
+          from datetime import datetime,timezone
+          from pathlib import Path
+          root=Path('results/full-sheet-audit')
+          cloak=json.loads((root/'cloak_access.json').read_text())
+          cidx={(x['kind'],x['row']):x for x in cloak}
+          deep=json.loads((root/'deep_submit.json').read_text())
+          didx={(x['kind'],x['row']):x for x in deep}
+          verified=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+          def access_merge(kind,r):
+            c=cidx.get((kind,r['row']))
+            if r.get('class')=='OK': return ('OK','DIRECT',r.get('http',0),r.get('final_url',''),r.get('title',''),False,'')
+            if r.get('class')=='DEAD': return ('DEAD','DIRECT',r.get('http',0),r.get('final_url',''),r.get('title',''),False,r.get('error',''))
+            if c and c.get('cloak_ok'):
+              return ('OK','CLOAK',c.get('cloak_http',0),c.get('cloak_final',''),c.get('cloak_title',''),False,'')
+            status=r.get('class','UNKNOWN')
+            needs=status in ('BLOCKED','UNREACHABLE')
+            note=(c or {}).get('cloak_error') or (c or {}).get('cloak_challenge') or r.get('challenge') or r.get('error','')
+            return (status,'CLOAK_FAILED' if c else 'DIRECT', (c or {}).get('cloak_http') or r.get('http',0),(c or {}).get('cloak_final') or r.get('final_url',''),(c or {}).get('cloak_title') or r.get('title',''),needs,note)
+          def submit_merge(kind,r):
+            sc=r.get('submit_class','UNKNOWN');su=r.get('submit_url','');sh=r.get('submit_http',0);sf=r.get('submit_final','');st=r.get('submit_title','')
+            if sc=='UNKNOWN':
+              d=didx.get((kind,r['row']))
+              if d and d.get('class')!='UNKNOWN': sc=d.get('class');su=d.get('candidate_url','');sh=d.get('http',0);sf=d.get('final','');st=d.get('title','')
+            return sc,su,sh,sf,st
+          db=json.loads((root/'database.json').read_text())
+          with (root/'database-final.csv').open('w',newline='',encoding='utf-8-sig') as f:
+            w=csv.writer(f);w.writerow(['Source Row','Name','URL','Access Status','Access Method','HTTP','Final URL','Page Title','Submit Status','Submit URL','Submit HTTP','Submit Final URL','Auth Required','Needs VPN','Notes','Verified At'])
+            for r in db:
+              ac,am,ah,af,at,nv,note=access_merge('database',r);sc,su,sh,sf,st=submit_merge('database',r)
+              needs_vpn='Yes' if nv or sc=='BLOCKED' else ''
+              notes=note
+              if sc=='UNKNOWN': notes=(notes+'; ' if notes else '')+'No public submit entry found in homepage/common paths'
+              w.writerow([r['row'],r['name'],r['url'],ac,am,ah,af,at,sc,su,sh,sf,'Yes' if sc=='AUTH_REQUIRED' else '',needs_vpn,notes,verified])
+          social=json.loads((root/'social.json').read_text())
+          with (root/'social-final.csv').open('w',newline='',encoding='utf-8-sig') as f:
+            w=csv.writer(f);w.writerow(['Source Row','Social','Profile URL','Profile Status','Access Method','HTTP','Final URL','Page Title','Historical Submit','Submit Classification','Current Signup Status','Signup URL','Signup HTTP','Auth Required','Needs VPN','Notes','Verified At'])
+            for r in social:
+              ac,am,ah,af,at,nv,note=access_merge('social',r);sc,su,sh,sf,st=submit_merge('social',r)
+              if ac=='OK': submit_class='YES - EXISTING PROFILE'
+              elif ac=='DEAD': submit_class='PAST YES / NOW DEAD'
+              elif sc in ('OPEN','AUTH_REQUIRED'): submit_class='YES - CURRENT ENTRY'
+              elif sc=='BLOCKED': submit_class='BLOCKED'
+              else: submit_class='YES HISTORICAL / CURRENT UNKNOWN'
+              needs_vpn='Yes' if nv or sc=='BLOCKED' else ''
+              w.writerow([r['row'],r['name'],r['url'],ac,am,ah,af,at,'Yes - submitted 19/8',submit_class,sc,su,sh,'Yes' if sc=='AUTH_REQUIRED' else '',needs_vpn,note,verified])
+          # compact summary
+          def count_csv(path,col):
+            rows=list(csv.DictReader(open(path,encoding='utf-8-sig')));d={}
+            for r in rows:d[r[col]]=d.get(r[col],0)+1
+            return d
+          summary={'database_access':count_csv(root/'database-final.csv','Access Status'),'database_submit':count_csv(root/'database-final.csv','Submit Status'),'social_access':count_csv(root/'social-final.csv','Profile Status'),'social_submit':count_csv(root/'social-final.csv','Submit Classification')}
+          (root/'final-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+          print(json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Persist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/database-final.csv results/full-sheet-audit/social-final.csv results/full-sheet-audit/final-summary.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Store final full sheet audit CSVs [skip ci]'
+          git pull --rebase origin main || true
+          git push || true
