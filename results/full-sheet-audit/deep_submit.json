@@ -47,10 +47,10 @@
     "kind": "database",
     "row": 7,
     "name": "Nextpedia",
-    "candidate_url": "https://nextpedia.io/submit",
+    "candidate_url": "https://nextpedia.io/submit-tool",
     "http": 200,
-    "final": "https://nextpedia.io/submit",
-    "title": "One moment, please...",
+    "final": "https://nextpedia.io/submit-tool/",
+    "title": "Submit Tool | NextPedia",
     "class": "OPEN",
     "error": ""
   },
@@ -102,11 +102,11 @@
     "kind": "database",
     "row": 13,
     "name": "Startup Resources",
-    "candidate_url": "https://startupresources.io/launch",
-    "http": 200,
-    "final": "https://startupresources.io/resource/launch-effect/",
-    "title": "Launch Effect | Startup Resources",
-    "class": "OPEN",
+    "candidate_url": "https://startupresources.io/submit",
+    "http": 202,
+    "final": "https://startupresources.io/submit",
+    "title": "",
+    "class": "UNKNOWN",
     "error": ""
   },
   {
@@ -136,11 +136,11 @@
     "row": 17,
     "name": "AI Database",
     "candidate_url": "https://ai-database.org/submit",
-    "http": 200,
+    "http": 404,
     "final": "https://ai-database.org/submit",
-    "title": "One moment, please...",
-    "class": "OPEN",
-    "error": ""
+    "title": "404: This page could not be found.",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "database",
@@ -213,11 +213,11 @@
     "row": 28,
     "name": "CtrlAltCC",
     "candidate_url": "https://ctrlalt.cc/submit",
-    "http": 404,
+    "http": 202,
     "final": "https://ctrlalt.cc/submit",
-    "title": "Page not found • ctrlalt.cc🦩",
-    "class": "STALE",
-    "error": "HTTP 404"
+    "title": "",
+    "class": "UNKNOWN",
+    "error": ""
   },
   {
     "kind": "database",
@@ -268,11 +268,11 @@
     "row": 40,
     "name": "Launch Space",
     "candidate_url": "https://launchspace.io/submit",
-    "http": 200,
+    "http": 404,
     "final": "https://launchspace.io/submit",
-    "title": "One moment, please...",
-    "class": "OPEN",
-    "error": ""
+    "title": "404 Not Found",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "database",
@@ -311,12 +311,12 @@
     "kind": "database",
     "row": 50,
     "name": "SaaS Discovery",
-    "candidate_url": "https://saasdiscovery.com/submit",
-    "http": 200,
-    "final": "https://saasdiscovery.com/submit/",
-    "title": "Submit – SaaS Discovery",
-    "class": "OPEN",
-    "error": ""
+    "candidate_url": "https://saasdiscovery.com/submit-startup",
+    "http": 404,
+    "final": "https://saasdiscovery.com/submit-startup",
+    "title": "Page not found – SaaS Discovery",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "database",
@@ -366,10 +366,10 @@
     "kind": "database",
     "row": 55,
     "name": "Startup Collections",
-    "candidate_url": "https://startupcollections.com/submit",
+    "candidate_url": "https://startupcollections.com/submit-product",
     "http": 200,
-    "final": "https://startupcollections.com/submit",
-    "title": "One moment, please...",
+    "final": "https://startupcollections.com/submit-product/",
+    "title": "Submit Product - Startup Collections",
     "class": "OPEN",
     "error": ""
   },
@@ -811,7 +811,7 @@
     "final": "https://launchweekly.com/submit",
     "title": "",
     "class": "UNKNOWN",
-    "error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    "error": "URLError: <urlopen error [Errno 111] Connection refused>"
   },
   {
     "kind": "database",
@@ -872,12 +872,12 @@
     "kind": "database",
     "row": 131,
     "name": "Makerlist.io",
-    "candidate_url": "https://makerlist.io/submit",
-    "http": 200,
-    "final": "https://makerlist.io/submit",
-    "title": "One moment, please...",
-    "class": "OPEN",
-    "error": ""
+    "candidate_url": "https://makerlist.io/submit-startup",
+    "http": 404,
+    "final": "https://makerlist.io/submit-startup",
+    "title": "404 Not Found",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "database",
@@ -1060,11 +1060,11 @@
     "row": 158,
     "name": "SaaS Arena",
     "candidate_url": "https://championleadership.com/submit",
-    "http": 200,
+    "http": 404,
     "final": "https://championleadership.com/submit",
-    "title": "One moment, please...",
-    "class": "OPEN",
-    "error": ""
+    "title": "Page not found – Champion Leadership Group",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "database",
@@ -1426,7 +1426,7 @@
     "http": 200,
     "final": "https://toolradar.io/submit",
     "title": "toolradar.io",
-    "class": "OPEN",
+    "class": "UNKNOWN",
     "error": ""
   },
   {
@@ -1444,9 +1444,9 @@
     "kind": "database",
     "row": 232,
     "name": "ToolScout",
-    "candidate_url": "https://toolscout.app/submit-product",
+    "candidate_url": "https://toolscout.app/submit",
     "http": 404,
-    "final": "https://toolscout.app/submit-product",
+    "final": "https://toolscout.app/submit",
     "title": "Page not found",
     "class": "STALE",
     "error": "HTTP 404"
@@ -1510,11 +1510,11 @@
     "kind": "social",
     "row": 14,
     "name": "pinterest.com",
-    "candidate_url": "https://www.pinterest.com/signup",
+    "candidate_url": "https://www.pinterest.com/sign-up",
     "http": 200,
-    "final": "https://www.pinterest.com/",
-    "title": "Pinterest",
-    "class": "STALE",
+    "final": "https://www.pinterest.com/sign-up/",
+    "title": "",
+    "class": "OPEN",
     "error": ""
   },
   {
@@ -2159,11 +2159,11 @@
     "kind": "social",
     "row": 127,
     "name": "Gettr.Com",
-    "candidate_url": "https://gettr.com/signup",
+    "candidate_url": "https://gettr.com/register",
     "http": 200,
-    "final": "https://gettr.com/signup",
+    "final": "https://gettr.com/register",
     "title": "GETTR - The Marketplace of Ideas",
-    "class": "UNKNOWN",
+    "class": "STALE",
     "error": ""
   },
   {
@@ -2214,12 +2214,12 @@
     "kind": "social",
     "row": 136,
     "name": "Royalroad.Com",
-    "candidate_url": "https://www.royalroad.com/create-account",
-    "http": 429,
-    "final": "https://www.royalroad.com/create-account",
-    "title": "",
-    "class": "BLOCKED",
-    "error": "HTTP 429"
+    "candidate_url": "https://www.royalroad.com/signup",
+    "http": 404,
+    "final": "https://www.royalroad.com/signup",
+    "title": "Not Found | Royal Road",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "social",
@@ -2247,12 +2247,12 @@
     "kind": "social",
     "row": 140,
     "name": "lifeinsys.com",
-    "candidate_url": "https://lifeinsys.com/create-account",
-    "http": 523,
-    "final": "https://lifeinsys.com/create-account",
-    "title": "",
-    "class": "SERVER_ERROR",
-    "error": "HTTP 523"
+    "candidate_url": "https://lifeinsys.com/register",
+    "http": 200,
+    "final": "https://lifeinsys.com/register",
+    "title": "Create an Account | LifeInSYS",
+    "class": "OPEN",
+    "error": ""
   },
   {
     "kind": "social",
@@ -2316,7 +2316,7 @@
     "candidate_url": "https://backloggery.com/signup",
     "http": 200,
     "final": "https://backloggery.com/signup",
-    "title": "One moment, please...",
+    "title": "Backloggery",
     "class": "OPEN",
     "error": ""
   },
@@ -2478,12 +2478,12 @@
     "kind": "social",
     "row": 185,
     "name": "Blockdit.Com",
-    "candidate_url": "https://www.blockdit.com/join",
-    "http": 200,
-    "final": "https://www.blockdit.com/join",
-    "title": "supaporn posai",
-    "class": "OPEN",
-    "error": ""
+    "candidate_url": "https://www.blockdit.com/signup",
+    "http": 404,
+    "final": "https://www.blockdit.com/signup",
+    "title": "This page could not be found | Blockdit",
+    "class": "STALE",
+    "error": "HTTP 404"
   },
   {
     "kind": "social",
