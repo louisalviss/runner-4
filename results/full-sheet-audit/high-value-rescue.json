@@ -1,8 +1,8 @@
 {
-  "verified_at": "2026-08-23 19:15 UTC",
+  "verified_at": "2026-08-23 19:17 UTC",
   "total": 10,
-  "direct_ok": 1,
-  "vpn_rescued": 0,
+  "direct_ok": 2,
+  "vpn_rescued": 4,
   "results": [
     {
       "name": "Product Hunt",
@@ -18,24 +18,24 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 267,
-        "sample": "www.producthunt.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc708edba46414 Performance and Security by Cloudflare Privacy",
+        "sample": "www.producthunt.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc731f7ed2ca2b Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "best": {
         "name": "Product Hunt",
         "url": "https://www.producthunt.com/posts/new",
-        "method": "CLOAK",
-        "country": "DIRECT",
-        "ok": false,
-        "http": 403,
-        "final_url": "https://www.producthunt.com/posts/new",
-        "title": "Just a moment...",
-        "challenge": "just a moment",
-        "chars": 267,
-        "sample": "www.producthunt.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc708edba46414 Performance and Security by Cloudflare Privacy",
+        "method": "VPN+CLOAK",
+        "country": "TH",
+        "ok": true,
+        "http": 200,
+        "final_url": "https://www.producthunt.com/login?origin=%2Fposts%2Fnew",
+        "title": "Login",
+        "challenge": null,
+        "chars": 1682,
+        "sample": "Best Products Launches News Forums Advertise Subscribe Sign in Sign up on Product Hunt Join our community of friendly folks discovering and sharing the latest products in tech. Sign in with Linkedin Sign in with Github Sign in with X We'll never post to any of your accounts without your permission. Top Product Categories Engineering & Development Vibe Coding Tools AI Coding Agents AI Code Editors LLMs AI Chatbots AI Infrastructure Tools Prompt En",
         "error": ""
       },
-      "rescued_by_vpn": false
+      "rescued_by_vpn": true
     },
     {
       "name": "Reddit profile",
@@ -84,24 +84,24 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 264,
-        "sample": "www.capterra.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70a4fae5b152 Performance and Security by Cloudflare Privacy",
+        "sample": "www.capterra.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc7335fbd0a5ff Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "best": {
         "name": "Capterra vendor",
         "url": "https://www.capterra.com/vendors/",
-        "method": "CLOAK",
-        "country": "DIRECT",
-        "ok": false,
-        "http": 403,
+        "method": "VPN+CLOAK",
+        "country": "TH",
+        "ok": true,
+        "http": 200,
         "final_url": "https://www.capterra.com/vendors/",
-        "title": "Just a moment...",
-        "challenge": "just a moment",
-        "chars": 264,
-        "sample": "www.capterra.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70a4fae5b152 Performance and Security by Cloudflare Privacy",
+        "title": "Capterra - For Vendors",
+        "challenge": null,
+        "chars": 1773,
+        "sample": "25+ years helping businesses find the right software Get Your Product Listed Vendor Account login Capterra, powered by G2 Digital Markets Join the world’s largest platform connecting millions of in-market software buyers with vendors like you. Learn More Acquire and retain high-intent software buyers with G2 Digital Markets Build your brand Stand out with a customized product listing. Build credibility and trust by collecting verified reviews and",
         "error": ""
       },
-      "rescued_by_vpn": false
+      "rescued_by_vpn": true
     },
     {
       "name": "Hacker News submit",
@@ -111,13 +111,13 @@
         "url": "https://news.ycombinator.com/submit",
         "method": "CLOAK",
         "country": "DIRECT",
-        "ok": false,
-        "http": 429,
+        "ok": true,
+        "http": 200,
         "final_url": "https://news.ycombinator.com/submit",
         "title": "",
         "challenge": null,
-        "chars": 6,
-        "sample": "Sorry.",
+        "chars": 132,
+        "sample": "You have to be logged in to submit. Login username: password: Forgot your password? Create Account username: password:",
         "error": ""
       },
       "best": {
@@ -125,13 +125,13 @@
         "url": "https://news.ycombinator.com/submit",
         "method": "CLOAK",
         "country": "DIRECT",
-        "ok": false,
-        "http": 429,
+        "ok": true,
+        "http": 200,
         "final_url": "https://news.ycombinator.com/submit",
         "title": "",
         "challenge": null,
-        "chars": 6,
-        "sample": "Sorry.",
+        "chars": 132,
+        "sample": "You have to be logged in to submit. Login username: password: Forgot your password? Create Account username: password:",
         "error": ""
       },
       "rescued_by_vpn": false
@@ -150,24 +150,24 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 258,
-        "sample": "medium.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70b80e2b402a Performance and Security by Cloudflare Privacy",
+        "sample": "medium.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc734acab8ca91 Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "best": {
         "name": "Medium profile",
         "url": "https://medium.com/@footballmaimeagent",
-        "method": "CLOAK",
-        "country": "DIRECT",
-        "ok": false,
-        "http": 403,
+        "method": "VPN+CLOAK",
+        "country": "TH",
+        "ok": true,
+        "http": 200,
         "final_url": "https://medium.com/@footballmaimeagent",
-        "title": "Just a moment...",
-        "challenge": "just a moment",
-        "chars": 258,
-        "sample": "medium.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70b80e2b402a Performance and Security by Cloudflare Privacy",
+        "title": "Footballmaimeagent com – Medium",
+        "challenge": null,
+        "chars": 555,
+        "sample": "Get app Write Sign up Sign in Footballmaimeagent com Home Reposts Activity About Footballmaimeagent com · 6d ago Footballmaimeagent.com FootballmaiMeAgent คือแหล่งข้อมูลสำหรับผู้ที่สนใจแทงบอลออนไลน์กับเว็บตรงไม่ผ่านเอเย่นต์ รวบรวมการเปรียบเทียบเว็บพนันบอลชั้นนำ อัตราต่อรอง… Footballmaimeagent com FootballmaiMeAgent รวมข้อมูลเว็บแทงบอลไม่ผ่านเอเย่นต์ เปรียบเทียบค่าน้ำ โปรโมชั่น ระบบฝากถอน และเว็บบอลชั้นนำในไทย. Website: https://footballmaimeagent.",
         "error": ""
       },
-      "rescued_by_vpn": false
+      "rescued_by_vpn": true
     },
     {
       "name": "WordPress start",
@@ -216,7 +216,7 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 262,
-        "sample": "www.toolify.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70cddd5a60c4 Performance and Security by Cloudflare Privacy",
+        "sample": "www.toolify.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc73617fe32ff2 Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "best": {
@@ -230,7 +230,7 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 262,
-        "sample": "www.toolify.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70cddd5a60c4 Performance and Security by Cloudflare Privacy",
+        "sample": "www.toolify.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc73617fe32ff2 Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "rescued_by_vpn": false
@@ -282,7 +282,7 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 258,
-        "sample": "beacons.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70e14a04cb9c Performance and Security by Cloudflare Privacy",
+        "sample": "beacons.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc7375d82af286 Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "best": {
@@ -296,7 +296,7 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 258,
-        "sample": "beacons.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70e14a04cb9c Performance and Security by Cloudflare Privacy",
+        "sample": "beacons.ai Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc7375d82af286 Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "rescued_by_vpn": false
@@ -315,24 +315,24 @@
         "title": "Just a moment...",
         "challenge": "just a moment",
         "chars": 259,
-        "sample": "topai.tools Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70eb29e32efe Performance and Security by Cloudflare Privacy",
+        "sample": "topai.tools Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc737fbaf45980 Performance and Security by Cloudflare Privacy",
         "error": ""
       },
       "best": {
         "name": "TopAI submit",
         "url": "https://topai.tools/submit",
-        "method": "CLOAK",
-        "country": "DIRECT",
-        "ok": false,
-        "http": 403,
+        "method": "VPN+CLOAK",
+        "country": "TH",
+        "ok": true,
+        "http": 200,
         "final_url": "https://topai.tools/submit",
-        "title": "Just a moment...",
-        "challenge": "just a moment",
-        "chars": 259,
-        "sample": "topai.tools Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a2fc70eb29e32efe Performance and Security by Cloudflare Privacy",
+        "title": "Submit your AI tool - TopAI.Tools",
+        "challenge": null,
+        "chars": 2219,
+        "sample": "TopAI.tools BROWSE DEALS SEARCH SIGN IN SUBMIT Submit your AI tool Submit your AI tool and reach 1m+ qualified users actively searching for AI tools like yours every month. Fast Track $47 one-time Live within 48 hrs (no queue) Just landed section (Homepage) Permanent listing Free listing edits SUBMIT NOW Best Value Featured Listing $229 one-time · Featured for 7 days Everything in Fast Track Featured on homepage + other sections Boosted search re",
         "error": ""
       },
-      "rescued_by_vpn": false
+      "rescued_by_vpn": true
     }
   ]
 }
