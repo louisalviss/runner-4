@@ -1,5 +1,5 @@
 {
-  "target": "https://nopecha.com/demo/turnstile",
+  "target": "https://www.scrapingcourse.com/cloudflare-challenge",
   "wrapper": "0.5.8",
-  "purpose": "Compare stock Playwright vs current licensed Cloak binary on public Cloudflare Turnstile demo"
+  "purpose": "Find a genuine fallback case: stock Playwright blocked by Cloudflare while Cloak 151 may pass"
 }
