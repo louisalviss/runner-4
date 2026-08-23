@@ -1,0 +1,191 @@
+name: High Value Rescue Probe
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/high-value-rescue-probe.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install browser and VPN tools
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openvpn iproute2 iptables curl xvfb
+      - name: Build probe scripts and direct Cloak pass
+        shell: bash
+        run: |
+          mkdir -p results/full-sheet-audit /tmp/relays
+          cat > /tmp/targets.json <<'JSON'
+          [
+            {"name":"Product Hunt","url":"https://www.producthunt.com/posts/new"},
+            {"name":"Reddit profile","url":"https://www.reddit.com/user/footballmaimeagent/"},
+            {"name":"Capterra vendor","url":"https://www.capterra.com/vendors/"},
+            {"name":"Hacker News submit","url":"https://news.ycombinator.com/submit"},
+            {"name":"Medium profile","url":"https://medium.com/@footballmaimeagent"},
+            {"name":"WordPress start","url":"https://wordpress.com/start/"},
+            {"name":"Toolify submit","url":"https://www.toolify.ai/submit"},
+            {"name":"Crunchbase create","url":"https://www.crunchbase.com/add-new"},
+            {"name":"Beacons signup","url":"https://beacons.ai/signup"},
+            {"name":"TopAI submit","url":"https://topai.tools/submit"}
+          ]
+          JSON
+          cat > /tmp/probe.py <<'PY'
+          import json,sys,time
+          from pathlib import Path
+          from cloakbrowser import launch
+          src=Path(sys.argv[1]); outp=Path(sys.argv[2]); country=sys.argv[3] if len(sys.argv)>3 else 'DIRECT'
+          targets=json.loads(src.read_text())
+          challenge_terms=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity','blocked by network security','security checkpoint')
+          rows=[]
+          browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+          try:
+            for t in targets:
+              page=None; rec={**t,'method':'CLOAK' if country=='DIRECT' else 'VPN+CLOAK','country':country}
+              try:
+                page=browser.new_page(viewport={'width':1365,'height':768})
+                resp=page.goto(t['url'],wait_until='domcontentloaded',timeout=18000)
+                page.wait_for_timeout(1300)
+                text=page.locator('body').inner_text(timeout=6000)
+                title=page.title(); status=resp.status if resp else 0
+                low=(title+' '+text[:7000]).lower()
+                challenge=next((x for x in challenge_terms if x in low),None)
+                rec.update({'ok':bool(status and 200<=status<400 and not challenge and len(text)>100),'http':status,'final_url':page.url,'title':title[:180],'challenge':challenge,'chars':len(text),'sample':' '.join(text.split())[:450],'error':''})
+              except Exception as e:
+                rec.update({'ok':False,'http':0,'final_url':'','title':'','challenge':None,'chars':0,'sample':'','error':type(e).__name__+': '+str(e)[:240]})
+              finally:
+                if page:
+                  try: page.close()
+                  except: pass
+              rows.append(rec)
+          finally:
+            browser.close()
+          outp.write_text(json.dumps(rows,ensure_ascii=False,indent=2))
+          print(country,'ok',sum(x['ok'] for x in rows),'/',len(rows))
+          PY
+          xvfb-run -a python3 /tmp/probe.py /tmp/targets.json /tmp/direct.json DIRECT
+      - name: VPN plus Cloak pass for direct failures
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          rows=json.loads(pathlib.Path('/tmp/direct.json').read_text())
+          t=[{'name':x['name'],'url':x['url']} for x in rows if not x.get('ok')]
+          pathlib.Path('/tmp/remaining.json').write_text(json.dumps(t,ensure_ascii=False))
+          print('vpn_targets',len(t))
+          PY
+          curl -fsSL --max-time 30 'https://www.vpngate.net/api/iphone/' -o /tmp/vpngate.csv
+          python3 - <<'PY'
+          import base64,csv,io,json,pathlib
+          pref=['TH','JP','SG','KR','MY','TW']; raw=pathlib.Path('/tmp/vpngate.csv').read_text(encoding='utf-8-sig',errors='replace')
+          rows=list(csv.DictReader(io.StringIO('\n'.join(x for x in raw.splitlines() if x and not x.startswith('*')))))
+          pathlib.Path('/tmp/auth').write_text('vpn\nvpn\n'); out=[]
+          for c in pref:
+            rs=[r for r in rows if (r.get('CountryShort') or '').upper()==c and (r.get('OpenVPN_ConfigData_Base64') or '').strip()]
+            rs.sort(key=lambda r:int(r.get('Speed') or 0),reverse=True)
+            for r in rs[:1]:
+              try: cfg=base64.b64decode(r['OpenVPN_ConfigData_Base64']).decode(errors='replace')
+              except: continue
+              cfg='\n'.join('auth-user-pass /tmp/auth' if x.strip().startswith('auth-user-pass') else x for x in cfg.splitlines())+'\n'
+              p=pathlib.Path(f'/tmp/relays/{len(out):02d}-{c}.ovpn'); p.write_text(cfg)
+              out.append({'cfg':str(p),'country':c,'relay':r.get('IP','')})
+          pathlib.Path('/tmp/relays.json').write_text(json.dumps(out)); print('relays',len(out))
+          PY
+          IFACE=$(ip route show default | awk '{print $5; exit}')
+          sudo ip netns add vpnns
+          sudo ip link add vh type veth peer name vn
+          sudo ip link set vn netns vpnns
+          sudo ip addr add 10.239.0.1/24 dev vh
+          sudo ip link set vh up
+          sudo ip netns exec vpnns ip addr add 10.239.0.2/24 dev vn
+          sudo ip netns exec vpnns ip link set lo up
+          sudo ip netns exec vpnns ip link set vn up
+          sudo ip netns exec vpnns ip route add default via 10.239.0.1
+          sudo sysctl -w net.ipv4.ip_forward=1 >/dev/null
+          sudo iptables -t nat -A POSTROUTING -s 10.239.0.0/24 -o "$IFACE" -j MASQUERADE
+          sudo iptables -A FORWARD -i vh -o "$IFACE" -j ACCEPT
+          sudo iptables -A FORWARD -i "$IFACE" -o vh -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+          sudo mkdir -p /etc/netns/vpnns
+          printf 'nameserver 1.1.1.1\nnameserver 8.8.8.8\n' | sudo tee /etc/netns/vpnns/resolv.conf >/dev/null
+          python3 - <<'PY'
+          import json,pathlib
+          pathlib.Path('/tmp/vpn-results.json').write_text('[]')
+          PY
+          python3 - <<'PY' > /tmp/relay-lines
+          import json
+          for r in json.load(open('/tmp/relays.json'))[:4]: print(r['country']+'\t'+r['cfg'])
+          PY
+          while IFS=$'\t' read -r COUNTRY CFG; do
+            COUNT=$(python3 -c 'import json;print(len(json.load(open("/tmp/remaining.json"))))')
+            [ "$COUNT" = 0 ] && break
+            sudo ip netns exec vpnns pkill openvpn 2>/dev/null || true
+            sleep 1
+            sudo rm -f /tmp/openvpn.log
+            sudo touch /tmp/openvpn.log && sudo chmod 666 /tmp/openvpn.log
+            sudo ip netns exec vpnns openvpn --config "$CFG" --daemon --log /tmp/openvpn.log
+            GOOD=0
+            for i in $(seq 1 15); do
+              sleep 1
+              if grep -q 'Initialization Sequence Completed' /tmp/openvpn.log; then GOOD=1; break; fi
+              if grep -Eq 'AUTH_FAILED|TLS Error|Connection timed out|Connection refused|fatal error' /tmp/openvpn.log; then break; fi
+            done
+            [ "$GOOD" = 0 ] && continue
+            sudo ip netns exec vpnns sudo -u runner -E env HOME=/home/runner PATH="$PATH" xvfb-run -a python3 /tmp/probe.py /tmp/remaining.json /tmp/this-vpn.json "$COUNTRY" || true
+            python3 - <<'PY'
+          import json,pathlib
+          direct=json.loads(pathlib.Path('/tmp/direct.json').read_text())
+          old=json.loads(pathlib.Path('/tmp/vpn-results.json').read_text())
+          cur=json.loads(pathlib.Path('/tmp/this-vpn.json').read_text()) if pathlib.Path('/tmp/this-vpn.json').exists() else []
+          best={x['name']:x for x in old}
+          for x in cur:
+            if x.get('ok') and not best.get(x['name'],{}).get('ok'): best[x['name']]=x
+          pathlib.Path('/tmp/vpn-results.json').write_text(json.dumps(list(best.values()),ensure_ascii=False,indent=2))
+          failed={x['name']:{'name':x['name'],'url':x['url']} for x in direct if not x.get('ok')}
+          for x in best.values():
+            if x.get('ok'): failed.pop(x['name'],None)
+          pathlib.Path('/tmp/remaining.json').write_text(json.dumps(list(failed.values()),ensure_ascii=False))
+          print('rescued_total',sum(x.get('ok') for x in best.values()),'remaining',len(failed))
+          PY
+          done < /tmp/relay-lines
+          python3 - <<'PY'
+          import json,pathlib,datetime
+          direct=json.loads(pathlib.Path('/tmp/direct.json').read_text()); vpn=json.loads(pathlib.Path('/tmp/vpn-results.json').read_text())
+          vb={x['name']:x for x in vpn if x.get('ok')}
+          out=[]
+          for d in direct:
+            final=vb.get(d['name'],d); out.append({'name':d['name'],'url':d['url'],'direct':d,'best':final,'rescued_by_vpn':d.get('ok')==False and final.get('ok')==True})
+          obj={'verified_at':datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC'),'total':len(out),'direct_ok':sum(x['direct'].get('ok') for x in out),'vpn_rescued':sum(x['rescued_by_vpn'] for x in out),'results':out}
+          pathlib.Path('results/full-sheet-audit/high-value-rescue.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+          print(json.dumps({k:obj[k] for k in ('total','direct_ok','vpn_rescued','verified_at')}))
+          PY
+      - name: Persist result
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/high-value-rescue.json
+          git commit -m 'Store high value rescue probe [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
