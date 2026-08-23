@@ -1,0 +1,2435 @@
+[
+  {
+    "name": "SideProjectors",
+    "home": "https://www.sideprojectors.com",
+    "old": "https://www.sideprojectors.com/submit",
+    "classification": "AUTH_REQUIRED",
+    "best_route": "https://www.sideprojectors.com/auth/login",
+    "homepage_probe": {
+      "url": "https://www.sideprojectors.com",
+      "http": 200,
+      "final": "https://www.sideprojectors.com/",
+      "title": "Sell, buy, show off your side projects - SideProjectors | Marketplace to buy and sell side projects.",
+      "chars": 15473,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://www.sideprojectors.com/submit/type",
+          "text": "+   SUBMIT A PROJECT"
+        },
+        {
+          "url": "https://www.sideprojectors.com/project/90274/quickiyai-or-ai-training-jobs-and-remote-careers-in-ai",
+          "text": "FOR SALE ⋅ > $5,000\nQuickiyai | AI Training Jobs and Remote Careers in AI\nReady-to-launch AI job platform – remote, prof"
+        },
+        {
+          "url": "https://www.pyro.app",
+          "text": "Pyro - Create your very own niche video community with Zero Coding\nCreate your very own YouTube-like video community. Fi"
+        },
+        {
+          "url": "https://www.sideprojectors.com/project/89871/clinith-os-clinic-erp-and-patient-portal",
+          "text": "FOR SALE ⋅ ~ $9,999 NEGOTIABLE\nClinith OS — Clinic ERP & Patient Portal\nClinith OS unifies booking, calendars, EMR-lite,"
+        },
+        {
+          "url": "https://www.sideprojectors.com/project/88810/business-launch-suite",
+          "text": "Business Launch Suite\nFrom raw and bold ideas to market-ready businesses, all in o.."
+        },
+        {
+          "url": "https://www.sideprojectors.com/submit/type",
+          "text": "Submit a project"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://www.sideprojectors.com/submit",
+      "http": 200,
+      "final": "https://www.sideprojectors.com/auth/login",
+      "title": "Sell, buy, show off your side projects - SideProjectors | Marketplace to buy and sell side projects.",
+      "chars": 719,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://www.sideprojectors.com/submit/type",
+          "text": "+   SUBMIT A PROJECT"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://www.sideprojectors.com/submit/type",
+        "http": 200,
+        "final": "https://www.sideprojectors.com/auth/login",
+        "title": "Sell, buy, show off your side projects - SideProjectors | Marketplace to buy and sell side projects.",
+        "chars": 727,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "+   SUBMIT A PROJECT"
+          }
+        ],
+        "error": "",
+        "anchor_text": "+   SUBMIT A PROJECT"
+      },
+      {
+        "url": "https://www.sideprojectors.com/project/90274/quickiyai-or-ai-training-jobs-and-remote-careers-in-ai",
+        "http": 200,
+        "final": "https://www.sideprojectors.com/project/90274/quickiyai-or-ai-training-jobs-and-remote-careers-in-ai",
+        "title": "Quickiyai | AI Training Jobs and Remote Careers in AI SideProjectors",
+        "chars": 16784,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "+   SUBMIT A PROJECT"
+          },
+          {
+            "url": "https://www.hn.plus",
+            "text": "HN+ : Launch your own HackerNews clone!\nThinking about launching your very on community like HackerNews? Use HN+ to crea"
+          },
+          {
+            "url": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.sideprojectors.com/project/90274/quickiyai-or-ai-training-jobs-and-remote-careers-in-ai&title=NaNReady-to-launch AI job platform – remote, profitable and geo plus proxy block.&source=https://www.sideprojectors.com",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://www.sideprojectors.com/project/90274/quickiyai-or-ai-training-jobs-and-remote-careers-in-ai&title=Quickiyai | AI Training Jobs and Remote Careers in AI",
+            "text": ""
+          },
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "Submit a project"
+          }
+        ],
+        "error": "",
+        "anchor_text": "FOR SALE ⋅ > $5,000\nQuickiyai | AI Training Jobs and Remote Careers in AI\nReady-to-launch AI job platform – remote, prof"
+      },
+      {
+        "url": "https://www.sideprojectors.com/project/89871/clinith-os-clinic-erp-and-patient-portal",
+        "http": 200,
+        "final": "https://www.sideprojectors.com/project/89871/clinith-os-clinic-erp-and-patient-portal",
+        "title": "Clinith OS — Clinic ERP & Patient Portal SideProjectors",
+        "chars": 5325,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "+   SUBMIT A PROJECT"
+          },
+          {
+            "url": "https://www.hn.plus",
+            "text": "HN+ : Launch your own HackerNews clone!\nThinking about launching your very on community like HackerNews? Use HN+ to crea"
+          },
+          {
+            "url": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.sideprojectors.com/project/89871/clinith-os-clinic-erp-and-patient-portal&title=NaNClinith OS unifies booking, calendars, EMR-lite, billing, claims, inventory,&source=https://www.sideprojectors.com",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://www.sideprojectors.com/project/89871/clinith-os-clinic-erp-and-patient-portal&title=Clinith OS — Clinic ERP & Patient Portal",
+            "text": ""
+          },
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "Submit a project"
+          }
+        ],
+        "error": "",
+        "anchor_text": "FOR SALE ⋅ ~ $9,999 NEGOTIABLE\nClinith OS — Clinic ERP & Patient Portal\nClinith OS unifies booking, calendars, EMR-lite,"
+      },
+      {
+        "url": "https://www.sideprojectors.com/project/88810/business-launch-suite",
+        "http": 200,
+        "final": "https://www.sideprojectors.com/project/88810/business-launch-suite",
+        "title": "Business Launch Suite SideProjectors",
+        "chars": 13515,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.app"
+          },
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.app"
+          },
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.app"
+          },
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.app"
+          },
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.app"
+          },
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "+   SUBMIT A PROJECT"
+          },
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.ap.."
+          },
+          {
+            "url": "https://businesslaunchsuite.app",
+            "text": "https://businesslaunchsuite.app"
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?text=Business Launch Suite&url=https://www.sideprojectors.com/project/88810/business-launch-suite",
+            "text": ""
+          },
+          {
+            "url": "https://www.facebook.com/dialog/share?app_id=279824422133476&display=popup&href=https://www.sideprojectors.com/project/88810/business-launch-suite",
+            "text": ""
+          },
+          {
+            "url": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.sideprojectors.com/project/88810/business-launch-suite&title=NaNFrom raw and bold ideas to market-ready businesses, all in one powerful suite.&source=https://www.sideprojectors.com",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://www.sideprojectors.com/project/88810/business-launch-suite&title=Business Launch Suite",
+            "text": ""
+          },
+          {
+            "url": "https://www.sideprojectors.com/submit/type",
+            "text": "Submit a project"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Business Launch Suite\nFrom raw and bold ideas to market-ready businesses, all in o.."
+      },
+      {
+        "url": "https://www.pyro.app",
+        "http": 200,
+        "final": "https://www.pyro.app/",
+        "title": "Pyro - Create your very own video community, video CMS, YouTube clone",
+        "chars": 6545,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 3,
+        "links": [],
+        "error": "",
+        "anchor_text": "Pyro - Create your very own niche video community with Zero Coding\nCreate your very own YouTube-like video community. Fi"
+      }
+    ]
+  },
+  {
+    "name": "AlternativeTo",
+    "home": "https://alternativeto.net",
+    "old": "https://alternativeto.net/submit",
+    "classification": "OPEN",
+    "best_route": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+    "homepage_probe": {
+      "url": "https://alternativeto.net",
+      "http": 200,
+      "final": "https://alternativeto.net/",
+      "title": "AlternativeTo - Crowdsourced software recommendations | AlternativeTo",
+      "chars": 14372,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 2,
+      "links": [
+        {
+          "url": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+          "text": ""
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+          "text": "OpenAI launches a ChatGPT plugin for Apple Messages that can basically text on your behalf"
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/",
+          "text": ""
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/",
+          "text": "Spline V2 launches with rebuilt 3D editor, AI agents, WebGPU, and new desktop app"
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/",
+          "text": ""
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/",
+          "text": "Slack launches 'Slack Code' with dedicated channels for teams to code with AI agents"
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/",
+          "text": ""
+        },
+        {
+          "url": "https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/",
+          "text": "China’s popular YouTube alternative Bilibili relaunches app globally with English support"
+        },
+        {
+          "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+          "text": "Application Launcher"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://alternativeto.net/submit",
+      "http": 404,
+      "final": "https://alternativeto.net/submit/",
+      "title": "Page not found | AlternativeTo",
+      "chars": 1184,
+      "challenge": null,
+      "ok": false,
+      "login_signal": true,
+      "forms": 1,
+      "links": [],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+        "http": 200,
+        "final": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+        "title": "OpenAI launches a ChatGPT plugin for Apple Messages that can basically text on your behalf | AlternativeTo",
+        "chars": 5729,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+            "text": "OpenAI launches a ChatGPT plugin for Apple Messages that can basically text on your behalf"
+          },
+          {
+            "url": "https://www.facebook.com/sharer/sharer.php?u=https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+            "text": ""
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?url=https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/&text=OpenAI%20launches%20a%20ChatGPT%20plugin%20for%20Apple%20Messages%20that%20can%20basically%20text%20on%20your%20behalf%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/&title=OpenAI%20launches%20a%20ChatGPT%20plugin%20for%20Apple%20Messages%20that%20can%20basically%20text%20on%20your%20behalf%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/news/2026/8/openai-launches-a-chatgpt-plugin-for-apple-messages-that-can-basically-text-on-your-behalf/",
+            "text": "OpenAI launches a ChatGPT plugin for Apple Messages that can basically text on your behalf"
+          },
+          {
+            "url": "https://alternativeto.net/news/2026/8/openai-launches-new-chatgpt-for-teens-mode-with-stricter-safety-controls-and-study-features/",
+            "text": "OpenAI launches new ChatGPT for Teens mode with stricter safety controls & study features"
+          },
+          {
+            "url": "https://alternativeto.net/news/2026/8/openai-launches-a-computer-history-feature-that-tracks-user-activity-across-apps-and-sites/",
+            "text": "OpenAI launches a Computer History feature that tracks user activity across apps and sites"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/",
+        "http": 200,
+        "final": "https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/",
+        "title": "Spline V2 launches with rebuilt 3D editor, AI agents, WebGPU, and new desktop app | AlternativeTo",
+        "chars": 3491,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/",
+            "text": "Spline V2 launches with rebuilt 3D editor, AI agents, WebGPU, and new desktop app"
+          },
+          {
+            "url": "https://www.facebook.com/sharer/sharer.php?u=https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/",
+            "text": ""
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?url=https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/&text=Spline%20V2%20launches%20with%20rebuilt%203D%20editor%2C%20AI%20agents%2C%20WebGPU%2C%20and%20new%20desktop%20app%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://alternativeto.net/news/2026/8/spline-v2-launches-with-rebuilt-3d-editor-ai-agents-webgpu-and-new-desktop-app/&title=Spline%20V2%20launches%20with%20rebuilt%203D%20editor%2C%20AI%20agents%2C%20WebGPU%2C%20and%20new%20desktop%20app%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/news/2025/9/spline-launches-timeline-for-animating-3d-scenes-with-keyframes/",
+            "text": "Spline launches Timeline for animating 3D scenes with keyframes"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/",
+        "http": 200,
+        "final": "https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/",
+        "title": "Slack launches 'Slack Code' with dedicated channels for teams to code with AI agents | AlternativeTo",
+        "chars": 4118,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/",
+            "text": "Slack launches 'Slack Code' with dedicated channels for teams to code with AI agents"
+          },
+          {
+            "url": "https://www.facebook.com/sharer/sharer.php?u=https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/",
+            "text": ""
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?url=https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/&text=Slack%20launches%20'Slack%20Code'%20with%20dedicated%20channels%20for%20teams%20to%20code%20with%20AI%20agents%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://alternativeto.net/news/2026/8/slack-launches-slack-code-with-dedicated-channels-for-teams-to-code-with-ai-agents/&title=Slack%20launches%20'Slack%20Code'%20with%20dedicated%20channels%20for%20teams%20to%20code%20with%20AI%20agents%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/news/2026/6/claude-tag-beta-launches-for-slack-automates-team-tasks-and-workflows/",
+            "text": "Claude Tag beta launches for Slack, automates team tasks and workflows"
+          },
+          {
+            "url": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
+            "text": "Slack is launching collaborative vibe-coding channels"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/",
+        "http": 200,
+        "final": "https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/",
+        "title": "China’s popular YouTube alternative Bilibili relaunches app globally with English support | AlternativeTo",
+        "chars": 6845,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/",
+            "text": "China’s popular YouTube alternative Bilibili relaunches app globally with English support"
+          },
+          {
+            "url": "https://www.facebook.com/sharer/sharer.php?u=https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/",
+            "text": ""
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?url=https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/&text=China%E2%80%99s%20popular%20YouTube%20alternative%20Bilibili%20relaunches%20app%20globally%20with%20English%20support%20%7C%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://alternativeto.net/news/2026/8/china-s-popular-youtube-alternative-bilibili-relaunches-app-with-english-support-globally/&title=China%E2%80%99s%20popular%20YouTube%20alternative%20Bilibili%20relaunches%20app%20globally%20with%20English%20support%20%7C%20AlternativeTo",
+            "text": ""
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+        "http": 200,
+        "final": "https://alternativeto.net/browse/all/?tag=application-launcher",
+        "title": "Apps tagged with 'Application Launchers' | AlternativeTo",
+        "chars": 11907,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launchers"
+          },
+          {
+            "url": "https://www.facebook.com/sharer/sharer.php?u=https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": ""
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?url=https://alternativeto.net/browse/all/?tag=application-launcher&text=Apps%20tagged%20with%20'Application%20Launchers'%20on%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https://alternativeto.net/browse/all/?tag=application-launcher&title=Apps%20tagged%20with%20'Application%20Launchers'%20on%20AlternativeTo",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/flow-launcher/about/",
+            "text": "Flow Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/lawnchair-launcher/about/",
+            "text": "Lawnchair"
+          },
+          {
+            "url": "https://alternativeto.net/software/flow-launcher/about/",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/software/flow-launcher/about/",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/software/flow-launcher/about/",
+            "text": "Flow Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/flow-launcher/",
+            "text": "69 alternatives"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/flow-launcher/about/",
+            "text": "Flow Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/lawnchair-launcher/about/",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/software/lawnchair-launcher/about/",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/software/lawnchair-launcher/about/",
+            "text": "Lawnchair"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/lawnchair-launcher/",
+            "text": "83 alternatives"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/launchy/about/",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/software/launchy/about/",
+            "text": ""
+          },
+          {
+            "url": "https://alternativeto.net/software/launchy/about/",
+            "text": "Launchy"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/launchy/",
+            "text": "114 alternatives"
+          },
+          {
+            "url": "https://alternativeto.net/browse/all/?tag=application-launcher",
+            "text": "Application Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/winalfred/about/",
+            "text": "Wox Launcher"
+          },
+          {
+            "url": "https://alternativeto.net/software/listary/about/",
+            "text": ""
+          }
+        ],
+        "error": "",
+        "anchor_text": "Application Launcher"
+      }
+    ]
+  },
+  {
+    "name": "Dev Hunt",
+    "home": "https://devhunt.org",
+    "old": "https://devhunt.org/submit",
+    "classification": "AUTH_REQUIRED",
+    "best_route": "https://devhunt.org/submit",
+    "homepage_probe": {
+      "url": "https://devhunt.org",
+      "http": 200,
+      "final": "https://devhunt.org/",
+      "title": "Dev Hunt – The best new Dev Tools every day.",
+      "chars": 768,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://devhunt.org/login",
+          "text": "Submit your Dev Tool"
+        },
+        {
+          "url": "https://listingbott.com/",
+          "text": "Submit website to directories"
+        },
+        {
+          "url": "https://chartsy.app/?utm_source=devhunt&utm_medium=directory&utm_campaign=launch?ref=devhunt",
+          "text": ""
+        },
+        {
+          "url": "https://devhunt.org/tool/freewaitlists",
+          "text": "Free waitlist API and widgets for your landing page"
+        },
+        {
+          "url": "https://devhunt.org/tool/launchpact",
+          "text": ""
+        },
+        {
+          "url": "https://www.launchpact.io?ref=devhunt",
+          "text": ""
+        },
+        {
+          "url": "https://devhunt.org/tool/launchpact",
+          "text": "Find support for your Product Hunt launch from fellow founders"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://devhunt.org/submit",
+      "http": 200,
+      "final": "https://devhunt.org/submit",
+      "title": "undefined's profile on Dev Hunt - Dev Hunt",
+      "chars": 734,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://devhunt.org/login",
+          "text": "Submit your Dev Tool"
+        },
+        {
+          "url": "https://listingbott.com/",
+          "text": "Submit website to directories"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://devhunt.org/login",
+        "http": 200,
+        "final": "https://devhunt.org/login",
+        "title": "Login to your account",
+        "chars": 820,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://devhunt.org/login",
+            "text": "Submit your Dev Tool"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "Submit website to directories"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Submit your Dev Tool"
+      },
+      {
+        "url": "https://listingbott.com/",
+        "http": 200,
+        "final": "https://listingbott.com/",
+        "title": "ListingBott - #1 for directory submission sites!",
+        "chars": 8188,
+        "challenge": null,
+        "ok": true,
+        "login_signal": false,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://www.capterra.com",
+            "text": "Capterra\nSubmit\n\nDR: 93 • Traffic: 4.2M • Technology & Software;Business & B2B Solutions; Marketing, SEO & Content; E-co"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\nSubmit\n\nDR: 83 • Traffic: 650K •"
+          },
+          {
+            "url": "https://www.producthunt.com",
+            "text": "Product Hunt\nSubmit\n\nDR: 90 • Traffic: 32.1M • Technology & Software"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\nSubmit\n\nDR: 66 • Traffic: 60K •"
+          },
+          {
+            "url": "https://www.saasworthy.com",
+            "text": "SaaSworthy\nSubmit\n\nDR: 72 • Traffic: 256K • Technology & Software"
+          },
+          {
+            "url": "https://www.getapp.com",
+            "text": "GetApp\nSubmit\n\nDR: 88 • Traffic: 3.1M • Technology & Software"
+          },
+          {
+            "url": "https://www.softwareadvice.com",
+            "text": "Software Advice\nSubmit\n\nDR: 86 • Traffic: 2.8M • Technology & Software"
+          },
+          {
+            "url": "https://www.futurepedia.io",
+            "text": "Futurepedia\nSubmit\n\nDR: 78 • Traffic: 890K • AI Assistants & Virtual Agents"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\nSubmit\n\nDR: 51 • Traffic: 65K •"
+          },
+          {
+            "url": "https://theresanaiforthat.com/",
+            "text": "There's An AI For That\nSubmit\n\nDR: 71 • Traffic: 420K • AI Assistants & Virtual Agents"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\nSubmit\n\nDR: 81 • Traffic: 80K •"
+          },
+          {
+            "url": "https://www.aitoolsdirectory.com",
+            "text": "AI Tools Directory\nSubmit\n\nDR: 65 • Traffic: 180K • AI Assistants & Virtual Agents"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 72 • \n  Traffic: 150K •"
+          },
+          {
+            "url": "https://www.topai.tools",
+            "text": "TopAI.tools\n      \n      \n         Submit\n      \n   \n   \n      DR: 69 • \n  Traffic: 230K • \n   AI Assistants & Virtual A"
+          },
+          {
+            "url": "https://www.aiscout.net",
+            "text": "AI Scout\n      \n      \n         Submit\n      \n   \n   \n      DR: 63 • \n  Traffic: 150K • \n   AI Assistants & Virtual Agen"
+          },
+          {
+            "url": "https://www.aivalley.ai",
+            "text": "AI Valley\n      \n      \n         Submit\n      \n   \n   \n      DR: 67 • \n  Traffic: 210K • \n   AI Assistants & Virtual Age"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 42 • \n  Traffic: 10K •"
+          },
+          {
+            "url": "https://www.clutch.co",
+            "text": "Clutch\n      \n      \n         Submit\n      \n   \n   \n      DR: 91 • \n  Traffic: 2.9M • \n   Business & B2B Solutions; Mark"
+          },
+          {
+            "url": "https://www.designrush.com",
+            "text": "DesignRush\n      \n      \n         Submit\n      \n   \n   \n      DR: 85 • \n  Traffic: 1.2M • \n   Business & B2B Solutions; "
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 69 • \n  Traffic: 8K •"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 84 • \n  Traffic: 450K •"
+          },
+          {
+            "url": "https://webcatalog.io/en/",
+            "text": "WebCatalog\n      \n      \n         Submit\n      \n   \n   \n      DR: 55 • \n  Traffic: 946.2K • \n   Business & B2B Solutions"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 76 • \n  Traffic: 32K •"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 81 • \n  Traffic: 720K •"
+          },
+          {
+            "url": "https://vision.directory/",
+            "text": "Vision Directory\n      \n      \n         Submit\n      \n   \n   \n      DR: 35 • \n  Traffic: 3K • \n   Business & B2B Solutio"
+          },
+          {
+            "url": "https://www.saasrefs.com/",
+            "text": "SaaS Refs\n      \n      \n         Submit\n      \n   \n   \n      DR: 2 • \n  Traffic: 1.2K • \n   Business & B2B Solutions;Tec"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 81 • \n  Traffic: 720K •"
+          },
+          {
+            "url": "https://www.britainbusinessdirectory.com/",
+            "text": "Britain Business Directory\n      \n      \n         Submit\n      \n   \n   \n      DR: 63 • \n  Traffic: 4.5K • \n   Business &"
+          },
+          {
+            "url": "https://community.startup.foundation/",
+            "text": "Startup Foundation Community\n      \n      \n         Submit\n      \n   \n   \n      DR: 40 • \n  Traffic: 5K • \n   Business &"
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "item\n      \n      \n         Submit\n      \n   \n   \n      DR: 81 • \n  Traffic: 720K •"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Submit website to directories"
+      },
+      {
+        "url": "https://devhunt.org/tool/freewaitlists",
+        "http": 200,
+        "final": "https://devhunt.org/tool/freewaitlists",
+        "title": "FreeWaitlists - Free waitlist API and widgets for your landing page",
+        "chars": 1597,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://devhunt.org/login",
+            "text": "Submit your Dev Tool"
+          },
+          {
+            "url": "https://devhunt.org/tool/freewaitlists#details",
+            "text": "Launch details"
+          },
+          {
+            "url": "https://devhunt.org/tool/freewaitlists#launches",
+            "text": "Related launches"
+          },
+          {
+            "url": "https://chartsy.app/?utm_source=devhunt&utm_medium=directory&utm_campaign=launch?ref=devhunt",
+            "text": ""
+          },
+          {
+            "url": "https://devhunt.org/tool/freewaitlists",
+            "text": "FreeWaitlists\n\nFree waitlist API and widgets for your landing page\n\nFree\nAPI\nEmails\n1855\nImpressions"
+          },
+          {
+            "url": "https://devhunt.org/tool/launchpact",
+            "text": "LaunchPact\n\nFind support for your Product Hunt launch from fellow founders\n\nOne time fee\n1157\nImpressions"
+          },
+          {
+            "url": "https://www.launchpact.io?ref=devhunt",
+            "text": ""
+          }
+        ],
+        "error": "",
+        "anchor_text": "Free waitlist API and widgets for your landing page"
+      },
+      {
+        "url": "https://devhunt.org/tool/launchpact",
+        "http": 200,
+        "final": "https://devhunt.org/tool/launchpact",
+        "title": "LaunchPact - Find support for your Product Hunt launch from fellow founders",
+        "chars": 4245,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://devhunt.org/login",
+            "text": "Submit your Dev Tool"
+          },
+          {
+            "url": "https://www.launchpact.io?ref=devhunt",
+            "text": "Live preview"
+          },
+          {
+            "url": "https://devhunt.org/@LaunchPact_89f",
+            "text": ""
+          },
+          {
+            "url": "https://devhunt.org/tool/launchpact",
+            "text": "About product"
+          },
+          {
+            "url": "https://devhunt.org/tool/launchpact#comments",
+            "text": "Comments"
+          },
+          {
+            "url": "https://devhunt.org/tool/launchpact#details",
+            "text": "Launch details"
+          },
+          {
+            "url": "https://devhunt.org/tool/launchpact#launches",
+            "text": "Related launches"
+          },
+          {
+            "url": "https://devhunt.org/@LaunchPact_89f",
+            "text": "Launch Pact"
+          },
+          {
+            "url": "https://chartsy.app/?utm_source=devhunt&utm_medium=directory&utm_campaign=launch?ref=devhunt",
+            "text": ""
+          },
+          {
+            "url": "https://devhunt.org/tool/freewaitlists",
+            "text": "FreeWaitlists\n\nFree waitlist API and widgets for your landing page\n\nFree\nAPI\nEmails\n1855\nImpressions"
+          },
+          {
+            "url": "https://devhunt.org/tool/launchpact",
+            "text": "LaunchPact\n\nFind support for your Product Hunt launch from fellow founders\n\nOne time fee\n1158\nImpressions"
+          },
+          {
+            "url": "https://www.launchpact.io?ref=devhunt",
+            "text": ""
+          },
+          {
+            "url": "https://listingbott.com/",
+            "text": "Submit website to directories"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://chartsy.app/?utm_source=devhunt&utm_medium=directory&utm_campaign=launch?ref=devhunt",
+        "http": 200,
+        "final": "https://chartsy.app/?utm_source=devhunt&utm_medium=directory&utm_campaign=launch?ref=devhunt",
+        "title": "Subscription & Revenue Analytics for your SaaS | Chartsy",
+        "chars": 4064,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://launchbuff.com",
+            "text": ""
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.launchpact.io?ref=devhunt",
+        "http": 200,
+        "final": "https://www.launchpact.io/?ref=devhunt",
+        "title": "LaunchPact — Verified Product Hunt Launch Support",
+        "chars": 26264,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.launchpact.io/product-hunt-launch-checklist",
+            "text": "Launch checklist"
+          },
+          {
+            "url": "https://www.launchpact.io/signup",
+            "text": "Find your launch crew →"
+          },
+          {
+            "url": "https://www.launchpact.io/signup",
+            "text": "List your PH launch date"
+          },
+          {
+            "url": "https://www.launchpact.io/p/feedpulse",
+            "text": "FeedPulse\nActivated\n\nCentralize your audience feedback\n\nRandall Spence\n·\nSaaS\n·\nLaunching on Product Hunt in 14 days\n\n23"
+          },
+          {
+            "url": "https://www.launchpact.io/p/transcendence",
+            "text": "Transcendence\n\nThe ultimate Mantra-based Meditation timer for iOS\n\nBrent Vardy\n·\nHealth & Fitness\n·\nLaunching on Product"
+          },
+          {
+            "url": "https://www.launchpact.io/p/kempt",
+            "text": "Kempt\n\nHome maintenance, on autopilot\n\nBrian Garland\n·\nSaaS\n·\nLaunching on Product Hunt in 17 days\n\n145\n\nWILL UPVOTE\nON "
+          },
+          {
+            "url": "https://www.launchpact.io/p/bluey",
+            "text": "Bluey\nActivated\n\nEmail marketing without limits\n\nShivam Singh\n·\nMarketing\n·\nLaunching on Product Hunt in 22 days\n\n109\n\nW"
+          },
+          {
+            "url": "https://www.launchpact.io/p/replyhey-2",
+            "text": "ReplyHey\nActivated\n\nGet Customers From Reddit on Autopilot.\n\nAmmar R.\n·\nMarketing\n·\nLaunching on Product Hunt in 8 days\n"
+          },
+          {
+            "url": "https://www.launchpact.io/p/leasebase",
+            "text": "LeaseBase\nActivated\n\nSelf-manage rentals with ease\n\nRachid Abadli\n·\nSaaS\n·\nLaunching on Product Hunt in 8 days\n\n88\n\nWILL"
+          },
+          {
+            "url": "https://www.launchpact.io/p/glyfiq",
+            "text": "Glyfiq\n\nMedical & health icon plugin for Figma, Illustrator & Framer\n\n315\n\nEXPECTED\nUPVOTES\n\n299\n\nVERIFIED\nUPVOTES\n\nAlex"
+          },
+          {
+            "url": "https://www.launchpact.io/p/flipp",
+            "text": "flipp\n\nFree in-browser PDF tools\n\n106\n\nEXPECTED\nUPVOTES\n\n103\n\nVERIFIED\nUPVOTES\n\nAman\n·\nLaunched on PH"
+          },
+          {
+            "url": "https://www.launchpact.io/p/devcleaner-reclaim-gbs-from-dev-tools",
+            "text": "DevCleaner - Reclaim GBs from Dev Tools\n\nFree the gigabytes your dev tools and AI apps hoard\n\n92\n\nEXPECTED\nUPVOTES\n\n91\n\n"
+          },
+          {
+            "url": "https://www.launchpact.io/p/voicepad-ai",
+            "text": "VoicePad AI\n\nOffline voice dictation for Windows, Mac, iOS & Android\n\n95\n\nEXPECTED\nUPVOTES\n\n86\n\nVERIFIED\nUPVOTES\n\nBogdan"
+          },
+          {
+            "url": "https://www.launchpact.io/p/zorya-pregnancy-tracker",
+            "text": "Zorya - Pregnancy Tracker\n\nPrivate pregnancy tracker. No cloud, no accounts.\n\n84\n\nEXPECTED\nUPVOTES\n\n84\n\nVERIFIED\nUPVOTES"
+          },
+          {
+            "url": "https://www.launchpact.io/p/reline",
+            "text": "Reline\n\nAI meeting notes — no bot ever joins your call.\n\n85\n\nEXPECTED\nUPVOTES\n\n81\n\nVERIFIED\nUPVOTES\n\nReline\n·\nLaunched o"
+          },
+          {
+            "url": "https://www.launchpact.io/p/facy",
+            "text": "Facy\n\nAI Image and Video Generator with usable free tier\n\n87\n\nEXPECTED\nUPVOTES\n\n80\n\nVERIFIED\nUPVOTES\n\nFacy\n·\nLaunched on"
+          },
+          {
+            "url": "https://www.launchpact.io/p/websignalytics",
+            "text": "WebSignalytics\n\nPlain-language web analytics reports\n\n91\n\nEXPECTED\nUPVOTES\n\n76\n\nVERIFIED\nUPVOTES\n\nchristopher\n·\nLaunched"
+          },
+          {
+            "url": "https://www.launchpact.io/p/trestle",
+            "text": "Trestle\n\nLocal secret scanner for AI-assisted development\n\n72\n\nEXPECTED\nUPVOTES\n\n70\n\nVERIFIED\nUPVOTES\n\nRadu\n·\nLaunched o"
+          },
+          {
+            "url": "https://www.launchpact.io/p/alsonai-2",
+            "text": "AlsonAI Illustrated Books\n\nAI-assisted storybooks, now with full creative control.\n\n74\n\nEXPECTED\nUPVOTES\n\n67\n\nVERIFIED\nU"
+          },
+          {
+            "url": "https://www.launchpact.io/p/alsonai",
+            "text": "AlsonAI\n\nStories: created, illustrated, and published with AI\n\n72\n\nEXPECTED\nUPVOTES\n\n64\n\nVERIFIED\nUPVOTES\n\nfaris khan\n·\n"
+          },
+          {
+            "url": "https://www.launchpact.io/p/drifty",
+            "text": "drifty\n\nAI productivity agent that shuts down distractions while you\n\n66\n\nEXPECTED\nUPVOTES\n\n60\n\nVERIFIED\nUPVOTES\n\nAri Sh"
+          },
+          {
+            "url": "https://www.launchpact.io/p/glyfiq",
+            "text": "Glyfiq\n\nMedical & health icon plugin for Figma, Illustrator & Framer\n\n315\n\nEXPECTED\nUPVOTES\n\n299\n\nVERIFIED\nUPVOTES\n\nAlex"
+          },
+          {
+            "url": "https://www.launchpact.io/p/flipp",
+            "text": "flipp\n\nFree in-browser PDF tools\n\n106\n\nEXPECTED\nUPVOTES\n\n103\n\nVERIFIED\nUPVOTES\n\nAman\n·\nLaunched on PH"
+          },
+          {
+            "url": "https://www.launchpact.io/p/devcleaner-reclaim-gbs-from-dev-tools",
+            "text": "DevCleaner - Reclaim GBs from Dev Tools\n\nFree the gigabytes your dev tools and AI apps hoard\n\n92\n\nEXPECTED\nUPVOTES\n\n91\n\n"
+          },
+          {
+            "url": "https://www.launchpact.io/p/voicepad-ai",
+            "text": "VoicePad AI\n\nOffline voice dictation for Windows, Mac, iOS & Android\n\n95\n\nEXPECTED\nUPVOTES\n\n86\n\nVERIFIED\nUPVOTES\n\nBogdan"
+          },
+          {
+            "url": "https://www.launchpact.io/p/zorya-pregnancy-tracker",
+            "text": "Zorya - Pregnancy Tracker\n\nPrivate pregnancy tracker. No cloud, no accounts.\n\n84\n\nEXPECTED\nUPVOTES\n\n84\n\nVERIFIED\nUPVOTES"
+          },
+          {
+            "url": "https://www.launchpact.io/p/reline",
+            "text": "Reline\n\nAI meeting notes — no bot ever joins your call.\n\n85\n\nEXPECTED\nUPVOTES\n\n81\n\nVERIFIED\nUPVOTES\n\nReline\n·\nLaunched o"
+          },
+          {
+            "url": "https://www.launchpact.io/p/facy",
+            "text": "Facy\n\nAI Image and Video Generator with usable free tier\n\n87\n\nEXPECTED\nUPVOTES\n\n80\n\nVERIFIED\nUPVOTES\n\nFacy\n·\nLaunched on"
+          },
+          {
+            "url": "https://www.launchpact.io/p/websignalytics",
+            "text": "WebSignalytics\n\nPlain-language web analytics reports\n\n91\n\nEXPECTED\nUPVOTES\n\n76\n\nVERIFIED\nUPVOTES\n\nchristopher\n·\nLaunched"
+          },
+          {
+            "url": "https://www.launchpact.io/p/trestle",
+            "text": "Trestle\n\nLocal secret scanner for AI-assisted development\n\n72\n\nEXPECTED\nUPVOTES\n\n70\n\nVERIFIED\nUPVOTES\n\nRadu\n·\nLaunched o"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      }
+    ]
+  },
+  {
+    "name": "G2",
+    "home": "https://www.g2.com",
+    "old": "https://www.g2.com/submit",
+    "classification": "UNRESOLVED",
+    "best_route": "",
+    "homepage_probe": {
+      "url": "https://www.g2.com",
+      "http": 403,
+      "final": "https://www.g2.com/",
+      "title": "g2.com",
+      "chars": 0,
+      "challenge": null,
+      "ok": false,
+      "login_signal": false,
+      "forms": 0,
+      "links": [],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://www.g2.com/submit",
+      "http": 404,
+      "final": "https://www.g2.com/submit",
+      "title": "Not Found",
+      "chars": 933,
+      "challenge": null,
+      "ok": false,
+      "login_signal": false,
+      "forms": 1,
+      "links": [
+        {
+          "url": "https://www.g2.com/products/new",
+          "text": "Add Your Product/Service"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://www.g2.com/products/new",
+        "http": 403,
+        "final": "https://www.g2.com/products/new",
+        "title": "g2.com",
+        "chars": 0,
+        "challenge": null,
+        "ok": false,
+        "login_signal": false,
+        "forms": 0,
+        "links": [],
+        "error": "",
+        "anchor_text": "Add Your Product/Service"
+      }
+    ]
+  },
+  {
+    "name": "SaaS Worthy",
+    "home": "https://www.saasworthy.com",
+    "old": "https://www.saasworthy.com/submit",
+    "classification": "OPEN",
+    "best_route": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+    "homepage_probe": {
+      "url": "https://www.saasworthy.com",
+      "http": 200,
+      "final": "https://www.saasworthy.com/",
+      "title": "SaaSworthy | Top Business Software and Reviews",
+      "chars": 5810,
+      "challenge": null,
+      "ok": true,
+      "login_signal": false,
+      "forms": 2,
+      "links": [
+        {
+          "url": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+          "text": "Vendor Portal"
+        },
+        {
+          "url": "https://www.saasworthy.com/blog/top-ai-tools-launched-in-2025",
+          "text": ""
+        },
+        {
+          "url": "https://www.saasworthy.com/blog/top-ai-tools-launched-in-2025",
+          "text": "Top AI Tools Launched in 2025 That Made a Huge Impact"
+        },
+        {
+          "url": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+          "text": "Vendor Portal"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://www.saasworthy.com/submit",
+      "http": 404,
+      "final": "https://www.saasworthy.com/submit",
+      "title": "Not Found",
+      "chars": 1492,
+      "challenge": null,
+      "ok": false,
+      "login_signal": false,
+      "forms": 1,
+      "links": [
+        {
+          "url": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+          "text": "Vendor Portal"
+        },
+        {
+          "url": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+          "text": "Vendor Portal"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+        "http": 200,
+        "final": "https://www.saasworthy.com/vendorsportal/index.php?r=site/login",
+        "title": "Vendors Portal Login | SaaSworthy",
+        "chars": 138,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 2,
+        "links": [],
+        "error": "",
+        "anchor_text": "Vendor Portal"
+      },
+      {
+        "url": "https://www.saasworthy.com/blog/top-ai-tools-launched-in-2025",
+        "http": 200,
+        "final": "https://www.saasworthy.com/blog/top-ai-tools-launched-in-2025",
+        "title": "Top AI Tools Launched in 2025 That Made a Huge Impact",
+        "chars": 11758,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 2,
+        "links": [
+          {
+            "url": "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.saasworthy.com%2Fblog%2Ftop-ai-tools-launched-in-2025",
+            "text": "Facebook"
+          },
+          {
+            "url": "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.saasworthy.com%2Fblog%2Ftop-ai-tools-launched-in-2025&text=Top%20AI%20Tools%20Launched%20in%202025%20That%20Made%20a%20Huge%20Impact",
+            "text": "Twitter"
+          },
+          {
+            "url": "https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.saasworthy.com%2Fblog%2Ftop-ai-tools-launched-in-2025",
+            "text": "LinkedIn"
+          },
+          {
+            "url": "https://www.reddit.com/submit?url=https%3A%2F%2Fwww.saasworthy.com%2Fblog%2Ftop-ai-tools-launched-in-2025&title=Top%20AI%20Tools%20Launched%20in%202025%20That%20Made%20a%20Huge%20Impact",
+            "text": "Reddit"
+          },
+          {
+            "url": "mailto:?subject=Top%20AI%20Tools%20Launched%20in%202025%20That%20Made%20a%20Huge%20Impact&body=https%3A%2F%2Fwww.saasworthy.com%2Fblog%2Ftop-ai-tools-launched-in-2025",
+            "text": "Email"
+          },
+          {
+            "url": "https://www.saasworthy.com/blog/top-ai-tools-launched-in-2025#saasworthy-takeaways-from-ai-tool-launches-in-2025",
+            "text": "SaaSworthy Takeaways From AI Tool Launches in 2025"
+          },
+          {
+            "url": "https://www.saasworthy.com/offerings",
+            "text": "Get Listed"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      }
+    ]
+  },
+  {
+    "name": "Uneed",
+    "home": "https://www.uneed.best",
+    "old": "https://www.uneed.best/submit",
+    "classification": "OPEN",
+    "best_route": "https://www.uneed.best/submit-a-tool",
+    "homepage_probe": {
+      "url": "https://www.uneed.best",
+      "http": 200,
+      "final": "https://www.uneed.best/",
+      "title": "Uneed - Launch. Get seen. Grow. | Uneed",
+      "chars": 5524,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://www.uneed.best/",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://www.uneed.best/submit-a-tool",
+          "text": "Submit a product"
+        },
+        {
+          "url": "https://www.uneed.best/posts/4075",
+          "text": "PeterAnderson33\n\n8 hours ago\n\nHey creators & builders!\n\nJust submitted AI Ads Generator to Uneed, and we need just 8 upv"
+        },
+        {
+          "url": "https://www.uneed.best/tool/startupsubmit",
+          "text": ""
+        },
+        {
+          "url": "https://www.uneed.best/posts/4075",
+          "text": "PeterAnderson338 hours agoHey creators & builders! Just submitted AI Ads Generator to Uneed, and we need just 8 upvotes "
+        },
+        {
+          "url": "https://www.uneed.best/submit-a-tool",
+          "text": "Submit a product"
+        },
+        {
+          "url": "https://www.uneed.best/launch-guide",
+          "text": "Launch Guide"
+        },
+        {
+          "url": "https://www.uneed.best/submit-a-tool",
+          "text": "Add your product"
+        },
+        {
+          "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+          "text": "Product Launch Checklist"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://www.uneed.best/submit",
+      "http": 404,
+      "final": "https://www.uneed.best/submit",
+      "title": "Uneed - Launch. Get seen. Grow. | Uneed",
+      "chars": 336,
+      "challenge": null,
+      "ok": false,
+      "login_signal": false,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://www.uneed.best/submit-a-tool",
+          "text": "Submit a product"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://www.uneed.best/submit-a-tool",
+        "http": 200,
+        "final": "https://www.uneed.best/submit-a-tool",
+        "title": "Add your product to Uneed | Uneed",
+        "chars": 4379,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://www.uneed.best/",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://www.producthunt.com/posts/uneed-2?comment=3271821",
+            "text": "\"One of my 3 launchpads I check every day. PH, DH and Uneed. More people should know about this one.\"\n\nJohn Rush"
+          },
+          {
+            "url": "https://x.com/YoannaJuille/status/2038982991825785093?s=20",
+            "text": "\"So happy to have won first place!!! It was a fantastic launch, reaching 22 countries. Uneed brings global visibility, i"
+          },
+          {
+            "url": "https://x.com/LuciusHQ/status/1935250116639867352",
+            "text": "\"Way better launch experience with Uneed than PH!\"\n\nLucius"
+          },
+          {
+            "url": "https://x.com/vince_jos/status/1985574995293323479",
+            "text": "\"☝️One of the reasons why Uneed is better than most launch platforms is because Thomas always make sure there’s no cheat"
+          },
+          {
+            "url": "https://x.com/sekraus/status/1961093327266172951",
+            "text": "\"I really like Uneed by Thomas. I launched my project lately and it gave me far more attention then producthunt.\"\n\nSebas"
+          },
+          {
+            "url": "https://x.com/RamyWafaa/status/1881692442841506087",
+            "text": "\"Woho that worked fast! First custom illustration order from a client who follows @UneedLists and saw our launch today! "
+          },
+          {
+            "url": "https://x.com/sharvinshah26/status/1856366184511484008",
+            "text": "\"However try out Uneed. I recently launched my product there and got decent number of visitors but visitor to sales rati"
+          },
+          {
+            "url": "https://x.com/natension/status/1844785298758111291",
+            "text": "\"One of the things I'm looking forward to most, when I finally launch a product is getting it listed on uneed, getting a"
+          },
+          {
+            "url": "https://x.com/nomalex_/status/1840665191064748272",
+            "text": "\"I've always thought Uneed would be a big competitor of Product Hunt in the future. This is why I rushed (and paid) to l"
+          },
+          {
+            "url": "https://indiemaker.space/sergiu/post/52224baa-dc92-11ee-b54a-0200555c4945",
+            "text": "\"That's soo cool, I get traffic from Uneed everyday, definitely worth the launch :)\"\n\nSergiu Chiriac"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide",
+            "text": "Launch Guide"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Add your product"
+          },
+          {
+            "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://chatgpt.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.&hints=search",
+            "text": "Ask ChatGPT"
+          },
+          {
+            "url": "https://claude.ai/new?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Claude"
+          },
+          {
+            "url": "https://www.perplexity.ai/search?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Perplexity"
+          },
+          {
+            "url": "https://grok.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Grok"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Submit a product"
+      },
+      {
+        "url": "https://www.uneed.best/tool/startupsubmit",
+        "http": 200,
+        "final": "https://www.uneed.best/tool/startupsubmit",
+        "title": "StartupSubmit — Marketing | Uneed | Uneed",
+        "chars": 2760,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.uneed.best/",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://startupsubmit.app/?ref=uneed.best&ref_type=adv",
+            "text": "Visit website"
+          },
+          {
+            "url": "https://www.uneed.best/login?redirectTo=/tool/startupsubmit",
+            "text": "Save"
+          },
+          {
+            "url": "https://www.uneed.best/login?redirectTo=%2Ftool%2Fstartupsubmit%3Ftab%3Dcomments%26review%3D1",
+            "text": "Log in to leave a review"
+          },
+          {
+            "url": "https://startupsubmit.app/?ref=uneed.best&ref_type=adv",
+            "text": "Visit website"
+          },
+          {
+            "url": "https://www.uneed.best/login?redirectTo=/tool/startupsubmit",
+            "text": "Save"
+          },
+          {
+            "url": "https://www.uneed.best/profile/startupsubmit",
+            "text": "startupsubmit"
+          },
+          {
+            "url": "https://twitter.com/Dstartupsubmit",
+            "text": ""
+          },
+          {
+            "url": "https://www.uneed.best/tool/makers-page",
+            "text": "Makers Page\n\nList indie products free and automate your product launch"
+          },
+          {
+            "url": "https://www.uneed.best/tool/onefreepage-com",
+            "text": "onefreepage.com®\n\nClaim a simple business page with links to your site, socials & reviews."
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide",
+            "text": "Launch Guide"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Add your product"
+          },
+          {
+            "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://chatgpt.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.&hints=search",
+            "text": "Ask ChatGPT"
+          },
+          {
+            "url": "https://claude.ai/new?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Claude"
+          },
+          {
+            "url": "https://www.perplexity.ai/search?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Perplexity"
+          },
+          {
+            "url": "https://grok.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Grok"
+          }
+        ],
+        "error": "",
+        "anchor_text": ""
+      },
+      {
+        "url": "https://www.uneed.best/posts/4075",
+        "http": 200,
+        "final": "https://www.uneed.best/posts/4075",
+        "title": "PeterAnderson33's post on Uneed | Uneed",
+        "chars": 2404,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.uneed.best/",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide",
+            "text": "Launch Guide"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Add your product"
+          },
+          {
+            "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://chatgpt.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.&hints=search",
+            "text": "Ask ChatGPT"
+          },
+          {
+            "url": "https://claude.ai/new?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Claude"
+          },
+          {
+            "url": "https://www.perplexity.ai/search?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Perplexity"
+          },
+          {
+            "url": "https://grok.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Grok"
+          }
+        ],
+        "error": "",
+        "anchor_text": "PeterAnderson33\n\n8 hours ago\n\nHey creators & builders!\n\nJust submitted AI Ads Generator to Uneed, and we need just 8 upv"
+      },
+      {
+        "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+        "http": 200,
+        "final": "https://www.uneed.best/free-tools/product-launch-checklist",
+        "title": "Product Launch Checklist | Uneed | Uneed",
+        "chars": 6569,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.uneed.best/",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Submit your product"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide",
+            "text": "Launch Guide"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Add your product"
+          },
+          {
+            "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://chatgpt.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.&hints=search",
+            "text": "Ask ChatGPT"
+          },
+          {
+            "url": "https://claude.ai/new?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Claude"
+          },
+          {
+            "url": "https://www.perplexity.ai/search?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Perplexity"
+          },
+          {
+            "url": "https://grok.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Grok"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Product Launch Checklist"
+      },
+      {
+        "url": "https://www.uneed.best/",
+        "http": 200,
+        "final": "https://www.uneed.best/",
+        "title": "Uneed - Launch. Get seen. Grow. | Uneed",
+        "chars": 5524,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.uneed.best/",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Submit a product"
+          },
+          {
+            "url": "https://www.uneed.best/posts/4075",
+            "text": "PeterAnderson33\n\n8 hours ago\n\nHey creators & builders!\n\nJust submitted AI Ads Generator to Uneed, and we need just 8 upv"
+          },
+          {
+            "url": "https://www.uneed.best/tool/startupsubmit",
+            "text": ""
+          },
+          {
+            "url": "https://www.uneed.best/posts/4075",
+            "text": "PeterAnderson338 hours agoHey creators & builders! Just submitted AI Ads Generator to Uneed, and we need just 8 upvotes "
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Submit a product"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide",
+            "text": "Launch Guide"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Add your product"
+          },
+          {
+            "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+            "text": "Product Launch Checklist"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Launchpad"
+      },
+      {
+        "url": "https://www.uneed.best/launch-guide",
+        "http": 200,
+        "final": "https://www.uneed.best/launch-guide",
+        "title": "How to Launch Your Product on Uneed (and Get Your First Users) | Uneed",
+        "chars": 11950,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://www.uneed.best/",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#what-you-get-when-you-launch-on-uneed",
+            "text": "What You Get When You Launch on Uneed"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#before-launch-day-how-to-prepare",
+            "text": "Before Launch Day: How to Prepare"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#build-anticipation-with-a-pre-launch-page",
+            "text": "Build anticipation with a pre-launch page"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "share your pre-launch page"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#choose-the-right-launch-day",
+            "text": "Choose the right launch day"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#display-a-launching-soon-badge",
+            "text": "Display a \"Launching Soon\" badge"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#launch-day-strategy-how-to-get-votes",
+            "text": "Launch Day Strategy: How to Get Votes"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#after-your-launch",
+            "text": "After Your Launch"
+          },
+          {
+            "url": "https://www.uneed.best/advertising/relaunch",
+            "text": "relaunch"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#launch-with-the-community-behind-you",
+            "text": "Launch with the community behind you"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Submit your product"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#what-you-get-when-you-launch-on-uneed",
+            "text": "What You Get When You Launch on Uneed"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#before-launch-day-how-to-prepare",
+            "text": "Before Launch Day: How to Prepare"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#build-anticipation-with-a-pre-launch-page",
+            "text": "Build anticipation with a pre-launch page"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#choose-the-right-launch-day",
+            "text": "Choose the right launch day"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#display-a-launching-soon-badge",
+            "text": "Display a \"Launching Soon\" badge"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#launch-day-strategy-how-to-get-votes",
+            "text": "Launch Day Strategy: How to Get Votes"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#after-your-launch",
+            "text": "After Your Launch"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide#launch-with-the-community-behind-you",
+            "text": "Launch with the community behind you"
+          },
+          {
+            "url": "https://www.uneed.best/launch-guide",
+            "text": "Launch Guide"
+          },
+          {
+            "url": "https://www.uneed.best/submit-a-tool",
+            "text": "Add your product"
+          },
+          {
+            "url": "https://www.uneed.best/free-tools/product-launch-checklist",
+            "text": "Product Launch Checklist"
+          },
+          {
+            "url": "https://chatgpt.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.&hints=search",
+            "text": "Ask ChatGPT"
+          },
+          {
+            "url": "https://claude.ai/new?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Claude"
+          },
+          {
+            "url": "https://www.perplexity.ai/search?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Perplexity"
+          },
+          {
+            "url": "https://grok.com/?q=What%20is%20Uneed%20(uneed.best)%20and%20how%20does%20it%20work%3F%0A%0AUneed%20is%20a%20launch%20platform%20and%20directory%20for%20tech%20products%20and%20startups.%20Explain%20how%20launching%20on%20Uneed%20works%2C%20what%20makers%20actually%20get%20(homepage%20visibility%2C%20a%20do-follow%20backlink%20from%20a%20high-authority%20domain%2C%20real%20community%20feedback)%2C%20how%20the%20launch%20options%20compare%20(Fast-track%20and%20Skip%20the%20waiting%20line)%2C%20and%20who%20it's%20a%20good%20fit%20for.%0A%0AYou%20can%20check%20https%3A%2F%2Fwww.uneed.best%20and%20https%3A%2F%2Fwww.uneed.best%2Fllms.txt%20for%20up-to-date%20details.%0A%0AKeep%20it%20short%20and%20practical%20for%20an%20indie%20hacker%20deciding%20where%20to%20launch.",
+            "text": "Ask Grok"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Launch Guide"
+      }
+    ]
+  },
+  {
+    "name": "TrustMRR",
+    "home": "https://trustmrr.com/startup/startup-directory",
+    "old": "https://trustmrr.com/submit",
+    "classification": "OPEN",
+    "best_route": "https://trustmrr.com/login",
+    "homepage_probe": {
+      "url": "https://trustmrr.com/startup/startup-directory",
+      "http": 200,
+      "final": "https://trustmrr.com/startup/startup-directory",
+      "title": "Startup Directory - $43 last 30 days | TrustMRR",
+      "chars": 3408,
+      "challenge": null,
+      "ok": true,
+      "login_signal": false,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+          "text": "StartupSubmit\n\nRank on Google & AI fast. 250+ done-for-you directory listings."
+        },
+        {
+          "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+          "text": "StartupSubmit"
+        },
+        {
+          "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+          "text": "StartupSubmit"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://trustmrr.com/submit",
+      "http": 404,
+      "final": "https://trustmrr.com/submit",
+      "title": "Page Not Found - TrustMRR",
+      "chars": 2238,
+      "challenge": null,
+      "ok": false,
+      "login_signal": false,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+          "text": "StartupSubmit\n\nRank on Google & AI fast. 250+ done-for-you directory listings."
+        },
+        {
+          "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+          "text": "StartupSubmit"
+        },
+        {
+          "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+          "text": "StartupSubmit"
+        },
+        {
+          "url": "https://trustmrr.com/dashboard",
+          "text": "User dashboard\nList or claim a startup, connect revenue data, and manage listings, offers, and your account.\n/dashboard"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://trustmrr.com/dashboard",
+        "http": 200,
+        "final": "https://trustmrr.com/login",
+        "title": "Log in | TrustMRR",
+        "chars": 213,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [],
+        "error": "",
+        "anchor_text": "User dashboard\nList or claim a startup, connect revenue data, and manage listings, offers, and your account.\n/dashboard"
+      },
+      {
+        "url": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+        "http": 403,
+        "final": "https://startupsubmit.app/?utm_source=trustmrr&utm_medium=referral&utm_campaign=sponsor_card",
+        "title": "Checking your browser before accessing. Just a moment...",
+        "chars": 92,
+        "challenge": "just a moment",
+        "ok": false,
+        "login_signal": false,
+        "forms": 0,
+        "links": [],
+        "error": "",
+        "anchor_text": "StartupSubmit\n\nRank on Google & AI fast. 250+ done-for-you directory listings."
+      }
+    ]
+  },
+  {
+    "name": "Peerlist",
+    "home": "https://peerlist.io",
+    "old": "https://peerlist.io/submit",
+    "classification": "OPEN",
+    "best_route": "https://peerlist.io/signup",
+    "homepage_probe": {
+      "url": "https://peerlist.io",
+      "http": 200,
+      "final": "https://peerlist.io/",
+      "title": "Peerlist | The Professional Network for builders to show and tell!",
+      "chars": 3824,
+      "challenge": null,
+      "ok": true,
+      "login_signal": true,
+      "forms": 2,
+      "links": [
+        {
+          "url": "https://peerlist.io/launchpad",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/launchpad",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/signup",
+          "text": "Create Profile"
+        },
+        {
+          "url": "https://peerlist.io/ads?utm_source=landing_page",
+          "text": "🎉 NEW:\n\nIntroducing Peerlist Ads"
+        },
+        {
+          "url": "https://peerlist.io/signup",
+          "text": "Create Profile"
+        },
+        {
+          "url": "https://peerlist.io/project-spotlight",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/project-spotlight",
+          "text": "Peerlist Launchpad"
+        }
+      ],
+      "error": ""
+    },
+    "old_route_probe": {
+      "url": "https://peerlist.io/submit",
+      "http": 404,
+      "final": "https://peerlist.io/submit",
+      "title": "Peerlist | 404 Page Not Found",
+      "chars": 291,
+      "challenge": null,
+      "ok": false,
+      "login_signal": true,
+      "forms": 0,
+      "links": [
+        {
+          "url": "https://peerlist.io/launchpad/2026/week/34",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/launchpad/2026/week/34",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/signup",
+          "text": "Create Profile"
+        },
+        {
+          "url": "https://peerlist.io/launchpad",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/launchpad",
+          "text": "Launchpad"
+        },
+        {
+          "url": "https://peerlist.io/signup",
+          "text": "Create Profile"
+        }
+      ],
+      "error": ""
+    },
+    "candidate_probes": [
+      {
+        "url": "https://peerlist.io/signup",
+        "http": 200,
+        "final": "https://peerlist.io/signup",
+        "title": "Join Peerlist",
+        "chars": 304,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Create Profile"
+      },
+      {
+        "url": "https://peerlist.io/launchpad",
+        "http": 200,
+        "final": "https://peerlist.io/launchpad",
+        "title": "Peerlist Launchpad",
+        "chars": 2235,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://peerlist.io/launchpad/2026/week/34",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2026/week/34",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/category",
+            "text": "Categories"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/14",
+            "text": "Week 14"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/15",
+            "text": "Week 15"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/16",
+            "text": "Week 16"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/17",
+            "text": "Week 17"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/18",
+            "text": "Week 18"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/19",
+            "text": "Week 19"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/20",
+            "text": "Week 20"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/21",
+            "text": "Week 21"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/22",
+            "text": "Week 22"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/23",
+            "text": "Week 23"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/24",
+            "text": "Week 24"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/25",
+            "text": "Week 25"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/26",
+            "text": "Week 26"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/27",
+            "text": "Week 27"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/28",
+            "text": "Week 28"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/29",
+            "text": "Week 29"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/30",
+            "text": "Week 30"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/31",
+            "text": "Week 31"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/32",
+            "text": "Week 32"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/33",
+            "text": "Week 33"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/34",
+            "text": "Week 34"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/35",
+            "text": "Week 35"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/36",
+            "text": "Week 36"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Launchpad"
+      },
+      {
+        "url": "https://peerlist.io/ads?utm_source=landing_page",
+        "http": 200,
+        "final": "https://peerlist.io/ads?utm_source=landing_page",
+        "title": "Advertise On Peerlist — Get in Front of Real Builders",
+        "chars": 4437,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 0,
+        "links": [
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad?utm_source=ads-page",
+            "text": "Live preview"
+          },
+          {
+            "url": "https://peerlist.io/project-spotlight",
+            "text": "Peerlist Launchpad"
+          }
+        ],
+        "error": "",
+        "anchor_text": "🎉 NEW:\n\nIntroducing Peerlist Ads"
+      },
+      {
+        "url": "https://peerlist.io/project-spotlight",
+        "http": 200,
+        "final": "https://peerlist.io/launchpad",
+        "title": "Peerlist Launchpad",
+        "chars": 3231,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://peerlist.io/launchpad/2026/week/34",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2026/week/34",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/category",
+            "text": "Categories"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/14",
+            "text": "Week 14"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/15",
+            "text": "Week 15"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/16",
+            "text": "Week 16"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/17",
+            "text": "Week 17"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/18",
+            "text": "Week 18"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/19",
+            "text": "Week 19"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/20",
+            "text": "Week 20"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/21",
+            "text": "Week 21"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/22",
+            "text": "Week 22"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/23",
+            "text": "Week 23"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/24",
+            "text": "Week 24"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/25",
+            "text": "Week 25"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/26",
+            "text": "Week 26"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/27",
+            "text": "Week 27"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/28",
+            "text": "Week 28"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/29",
+            "text": "Week 29"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/30",
+            "text": "Week 30"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/31",
+            "text": "Week 31"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/32",
+            "text": "Week 32"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/33",
+            "text": "Week 33"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/34",
+            "text": "Week 34"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/35",
+            "text": "Week 35"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/36",
+            "text": "Week 36"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Launchpad"
+      },
+      {
+        "url": "https://peerlist.io/launchpad/2026/week/34",
+        "http": 200,
+        "final": "https://peerlist.io/launchpad/2026/week/34",
+        "title": "Peerlist Launchpad",
+        "chars": 3231,
+        "challenge": null,
+        "ok": true,
+        "login_signal": true,
+        "forms": 1,
+        "links": [
+          {
+            "url": "https://peerlist.io/launchpad/2026/week/34",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2026/week/34",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/launchpad",
+            "text": "Launchpad"
+          },
+          {
+            "url": "https://peerlist.io/signup",
+            "text": "Create Profile"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/category",
+            "text": "Categories"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/14",
+            "text": "Week 14"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/15",
+            "text": "Week 15"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/16",
+            "text": "Week 16"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/17",
+            "text": "Week 17"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/18",
+            "text": "Week 18"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/19",
+            "text": "Week 19"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/20",
+            "text": "Week 20"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/21",
+            "text": "Week 21"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/22",
+            "text": "Week 22"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/23",
+            "text": "Week 23"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/24",
+            "text": "Week 24"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/25",
+            "text": "Week 25"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/26",
+            "text": "Week 26"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/27",
+            "text": "Week 27"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/28",
+            "text": "Week 28"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/29",
+            "text": "Week 29"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/30",
+            "text": "Week 30"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/31",
+            "text": "Week 31"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/32",
+            "text": "Week 32"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/33",
+            "text": "Week 33"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/34",
+            "text": "Week 34"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/35",
+            "text": "Week 35"
+          },
+          {
+            "url": "https://peerlist.io/launchpad/2024/week/36",
+            "text": "Week 36"
+          }
+        ],
+        "error": "",
+        "anchor_text": "Launchpad"
+      }
+    ]
+  }
+]
