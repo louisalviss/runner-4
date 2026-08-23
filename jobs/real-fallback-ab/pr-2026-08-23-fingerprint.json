@@ -1,5 +1,5 @@
 {
-  "target": "https://demo.fingerprint.com/web-scraping",
-  "purpose": "Observable PR run: stock Playwright vs pinned CloakBrowser v146",
-  "created_at": "2026-08-23T08:49:00+07:00"
+  "target": "https://nowsecure.nl",
+  "purpose": "Observable PR run: stock Playwright vs pinned CloakBrowser v146 on Cloudflare challenge test",
+  "created_at": "2026-08-23T08:53:00+07:00"
 }
