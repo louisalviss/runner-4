@@ -2,6 +2,11 @@ name: EDM Nostalgia Countdown Render
 
 on:
   workflow_dispatch:
+  push:
+    branches: [edm-nostalgia-render]
+    paths:
+      - 'scripts/render_edm_nostalgia.py'
+      - '.github/workflows/edm-nostalgia-render.yml'
   pull_request:
     branches: [main]
     paths:
