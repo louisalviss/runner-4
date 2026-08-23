@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - 'jobs/real-fallback-ab/*.json'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'jobs/real-fallback-ab/*.json'
 
 permissions:
   contents: write
@@ -114,6 +118,7 @@ jobs:
           xvfb-run -a python /tmp/ab.py
 
       - name: Persist result
+        if: github.event_name == 'push'
         shell: bash
         run: |
           set -euo pipefail
