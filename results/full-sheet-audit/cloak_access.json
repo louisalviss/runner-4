@@ -1,54 +1,6 @@
 [
   {
     "kind": "database",
-    "row": 2,
-    "name": "Betafy",
-    "url": "https://betafy.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "TimeoutError: Page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://betafy.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 26.055
-  },
-  {
-    "kind": "database",
-    "row": 6,
-    "name": "LaunchBase",
-    "url": "https://launchbase.app",
-    "direct_class": "SERVER_ERROR",
-    "direct_http": 500,
-    "cloak_ok": false,
-    "cloak_http": 500,
-    "cloak_final": "https://launchbase.app/",
-    "cloak_title": "500 Server Error",
-    "cloak_chars": 121,
-    "cloak_challenge": null,
-    "cloak_error": "",
-    "seconds": 2.402
-  },
-  {
-    "kind": "database",
-    "row": 10,
-    "name": "SaaSList",
-    "url": "https://saaslist.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saaslist.co/\nCall log:\n  - navigating to \"https://saaslist.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.207
-  },
-  {
-    "kind": "database",
     "row": 12,
     "name": "StackShare",
     "url": "https://stackshare.io",
@@ -57,43 +9,11 @@
     "cloak_ok": false,
     "cloak_http": 429,
     "cloak_final": "https://stackshare.io/",
-    "cloak_title": "",
-    "cloak_chars": 236,
+    "cloak_title": "Vercel Security Checkpoint",
+    "cloak_chars": 110,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.859
-  },
-  {
-    "kind": "database",
-    "row": 15,
-    "name": "ToolBoard",
-    "url": "https://toolboard.io",
-    "direct_class": "SERVER_ERROR",
-    "direct_http": 500,
-    "cloak_ok": false,
-    "cloak_http": 500,
-    "cloak_final": "https://toolboardcanvas.com/",
-    "cloak_title": "WordPress › Error",
-    "cloak_chars": 93,
-    "cloak_challenge": null,
-    "cloak_error": "",
-    "seconds": 2.842
-  },
-  {
-    "kind": "database",
-    "row": 18,
-    "name": "AI Scout",
-    "url": "https://aiscout.net",
-    "direct_class": "SERVER_ERROR",
-    "direct_http": 520,
-    "cloak_ok": false,
-    "cloak_http": 520,
-    "cloak_final": "https://aiscout.net/",
-    "cloak_title": "ERROR 520",
-    "cloak_chars": 560,
-    "cloak_challenge": null,
-    "cloak_error": "",
-    "seconds": 15.935
+    "seconds": 3.222
   },
   {
     "kind": "database",
@@ -109,7 +29,7 @@
     "cloak_chars": 264,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.672
+    "seconds": 1.646
   },
   {
     "kind": "database",
@@ -125,7 +45,7 @@
     "cloak_chars": 0,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.644
+    "seconds": 2.013
   },
   {
     "kind": "database",
@@ -141,23 +61,7 @@
     "cloak_chars": 267,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.749
-  },
-  {
-    "kind": "database",
-    "row": 51,
-    "name": "SaaS Genius",
-    "url": "https://saas-genius.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saas-genius.com/\nCall log:\n  - navigating to \"https://saas-genius.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.298
+    "seconds": 2.033
   },
   {
     "kind": "database",
@@ -173,7 +77,7 @@
     "cloak_chars": 265,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.684
+    "seconds": 1.566
   },
   {
     "kind": "database",
@@ -189,7 +93,7 @@
     "cloak_chars": 259,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.656
+    "seconds": 1.768
   },
   {
     "kind": "database",
@@ -202,234 +106,10 @@
     "cloak_http": 403,
     "cloak_final": "https://www.trustpilot.com/",
     "cloak_title": "Trustpilot Reviews: Experience the power of customer reviews",
-    "cloak_chars": 19898,
+    "cloak_chars": 14328,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 2.532
-  },
-  {
-    "kind": "database",
-    "row": 73,
-    "name": "Alternative Tools",
-    "url": "https://alternativetools.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://alternativetools.io/\nCall log:\n  - navigating to \"https://alternativetools.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.806
-  },
-  {
-    "kind": "database",
-    "row": 85,
-    "name": "BuildLog",
-    "url": "https://buildlog.to",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://buildlog.to/\nCall log:\n  - navigating to \"https://buildlog.to/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.208
-  },
-  {
-    "kind": "database",
-    "row": 89,
-    "name": "Callupcontact",
-    "url": "https://www.callupcontact.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_SSL_UNRECOGNIZED_NAME_ALERT at https://www.callupcontact.com/\nCall log:\n  - navigating to \"https://www.callupcontact.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.204
-  },
-  {
-    "kind": "database",
-    "row": 91,
-    "name": "DailyLaunch",
-    "url": "https://dailylaunch.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://dailylaunch.io/\nCall log:\n  - navigating to \"https://dailylaunch.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.53
-  },
-  {
-    "kind": "database",
-    "row": 94,
-    "name": "DevLaunch",
-    "url": "https://devlaunch.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "TimeoutError: Page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://devlaunch.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 25.085
-  },
-  {
-    "kind": "database",
-    "row": 98,
-    "name": "Foundr Tools",
-    "url": "https://foundr.tools",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://foundr.tools/\nCall log:\n  - navigating to \"https://foundr.tools/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.284
-  },
-  {
-    "kind": "database",
-    "row": 99,
-    "name": "FreshStartups",
-    "url": "https://freshstartups.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://freshstartups.io/\nCall log:\n  - navigating to \"https://freshstartups.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.418
-  },
-  {
-    "kind": "database",
-    "row": 104,
-    "name": "IndieFounder",
-    "url": "https://indiefounder.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "TimeoutError: Page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://indiefounder.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 25.089
-  },
-  {
-    "kind": "database",
-    "row": 106,
-    "name": "IndieMade",
-    "url": "https://indiemade.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://indiemade.co/\nCall log:\n  - navigating to \"https://indiemade.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.233
-  },
-  {
-    "kind": "database",
-    "row": 107,
-    "name": "IndiePages",
-    "url": "https://indiepages.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://indiepages.com/\nCall log:\n  - navigating to \"https://indiepages.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.279
-  },
-  {
-    "kind": "database",
-    "row": 117,
-    "name": "LaunchDay",
-    "url": "https://launchday.app",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://launchday.app/\nCall log:\n  - navigating to \"https://launchday.app/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.339
-  },
-  {
-    "kind": "database",
-    "row": 118,
-    "name": "LauncherList",
-    "url": "https://launcherlist.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://launcherlist.com/\nCall log:\n  - navigating to \"https://launcherlist.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.31
-  },
-  {
-    "kind": "database",
-    "row": 119,
-    "name": "Launching Now",
-    "url": "https://launchingnow.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://launchingnow.co/\nCall log:\n  - navigating to \"https://launchingnow.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.196
-  },
-  {
-    "kind": "database",
-    "row": 123,
-    "name": "LaunchStarter",
-    "url": "https://launchstarter.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://launchstarter.io/\nCall log:\n  - navigating to \"https://launchstarter.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.4
+    "seconds": 3.032
   },
   {
     "kind": "database",
@@ -438,254 +118,14 @@
     "url": "https://launchtab.com",
     "direct_class": "BLOCKED",
     "direct_http": 403,
-    "cloak_ok": true,
-    "cloak_http": 200,
+    "cloak_ok": false,
+    "cloak_http": 403,
     "cloak_final": "https://www.atom.com/name/LaunchTab",
-    "cloak_title": "LaunchTab.com — Premium Domain For Sale | Atom",
-    "cloak_chars": 1314,
-    "cloak_challenge": null,
+    "cloak_title": "Just a moment...",
+    "cloak_chars": 260,
+    "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 5.577
-  },
-  {
-    "kind": "database",
-    "row": 125,
-    "name": "LaunchWeekly",
-    "url": "https://launchweekly.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_CONNECTION_REFUSED at https://launchweekly.com/\nCall log:\n  - navigating to \"https://launchweekly.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 4.561
-  },
-  {
-    "kind": "database",
-    "row": 126,
-    "name": "LaunchZone",
-    "url": "https://launchzone.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://launchzone.io/\nCall log:\n  - navigating to \"https://launchzone.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.545
-  },
-  {
-    "kind": "database",
-    "row": 129,
-    "name": "Maker Directory",
-    "url": "https://makerdirectory.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://makerdirectory.io/\nCall log:\n  - navigating to \"https://makerdirectory.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.562
-  },
-  {
-    "kind": "database",
-    "row": 130,
-    "name": "MakerBoard",
-    "url": "https://makerboard.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://makerboard.co/\nCall log:\n  - navigating to \"https://makerboard.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.247
-  },
-  {
-    "kind": "database",
-    "row": 137,
-    "name": "New Startups",
-    "url": "https://newstartups.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://newstartups.io/\nCall log:\n  - navigating to \"https://newstartups.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.388
-  },
-  {
-    "kind": "database",
-    "row": 143,
-    "name": "PitchWalker",
-    "url": "https://pitchwalker.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://pitchwalker.com/\nCall log:\n  - navigating to \"https://pitchwalker.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.251
-  },
-  {
-    "kind": "database",
-    "row": 145,
-    "name": "Product Launch Dir",
-    "url": "https://productlaunchdir.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://productlaunchdir.com/\nCall log:\n  - navigating to \"https://productlaunchdir.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.221
-  },
-  {
-    "kind": "database",
-    "row": 151,
-    "name": "ProductFeed",
-    "url": "https://productfeed.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://productfeed.co/\nCall log:\n  - navigating to \"https://productfeed.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.218
-  },
-  {
-    "kind": "database",
-    "row": 152,
-    "name": "ProductHero",
-    "url": "https://producthero.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://producthero.co/\nCall log:\n  - navigating to \"https://producthero.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.197
-  },
-  {
-    "kind": "database",
-    "row": 154,
-    "name": "ProductsUp",
-    "url": "https://productsup.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://productsup.co/\nCall log:\n  - navigating to \"https://productsup.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.212
-  },
-  {
-    "kind": "database",
-    "row": 160,
-    "name": "SaaS Explorer",
-    "url": "https://saasexplorer.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saasexplorer.co/\nCall log:\n  - navigating to \"https://saasexplorer.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.209
-  },
-  {
-    "kind": "database",
-    "row": 162,
-    "name": "SaaS Hub Directory",
-    "url": "https://saashubdirectory.com",
-    "direct_class": "SERVER_ERROR",
-    "direct_http": 502,
-    "cloak_ok": false,
-    "cloak_http": 502,
-    "cloak_final": "https://saashubdirectory.com/",
-    "cloak_title": "saashubdirectory.com | 502: Bad gateway",
-    "cloak_chars": 392,
-    "cloak_challenge": null,
-    "cloak_error": "",
-    "seconds": 1.855
-  },
-  {
-    "kind": "database",
-    "row": 163,
-    "name": "SaaS Hunter",
-    "url": "https://saashunter.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saashunter.co/\nCall log:\n  - navigating to \"https://saashunter.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.188
-  },
-  {
-    "kind": "database",
-    "row": 165,
-    "name": "SaaS Launch List",
-    "url": "https://saaslaunchlist.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saaslaunchlist.com/\nCall log:\n  - navigating to \"https://saaslaunchlist.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 21.224
-  },
-  {
-    "kind": "database",
-    "row": 170,
-    "name": "SaaSBoard",
-    "url": "https://saasboard.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saasboard.co/\nCall log:\n  - navigating to \"https://saasboard.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.245
+    "seconds": 1.763
   },
   {
     "kind": "database",
@@ -701,263 +141,7 @@
     "cloak_chars": 263,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.808
-  },
-  {
-    "kind": "database",
-    "row": 174,
-    "name": "SaaSNova",
-    "url": "https://saasnova.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "TimeoutError: Page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://saasnova.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 25.083
-  },
-  {
-    "kind": "database",
-    "row": 178,
-    "name": "SaaSRegister",
-    "url": "https://saasregister.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://saasregister.co/\nCall log:\n  - navigating to \"https://saasregister.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.218
-  },
-  {
-    "kind": "database",
-    "row": 183,
-    "name": "Side Hustle Stack",
-    "url": "https://sidehustlestack.co",
-    "direct_class": "SERVER_ERROR",
-    "direct_http": 509,
-    "cloak_ok": false,
-    "cloak_http": 509,
-    "cloak_final": "https://sidehustlestack.co/",
-    "cloak_title": "Quota Exceeded",
-    "cloak_chars": 364,
-    "cloak_challenge": null,
-    "cloak_error": "",
-    "seconds": 1.631
-  },
-  {
-    "kind": "database",
-    "row": 187,
-    "name": "SoftwareList",
-    "url": "https://softwarelist.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://softwarelist.io/\nCall log:\n  - navigating to \"https://softwarelist.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.668
-  },
-  {
-    "kind": "database",
-    "row": 195,
-    "name": "StartupDex",
-    "url": "https://startupdex.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://startupdex.com/\nCall log:\n  - navigating to \"https://startupdex.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.323
-  },
-  {
-    "kind": "database",
-    "row": 196,
-    "name": "StartupForge",
-    "url": "https://startupforge.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_CONNECTION_RESET at https://startupforge.io/\nCall log:\n  - navigating to \"https://startupforge.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.622
-  },
-  {
-    "kind": "database",
-    "row": 197,
-    "name": "StartupGlobe",
-    "url": "https://startupglobe.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://startupglobe.co/\nCall log:\n  - navigating to \"https://startupglobe.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.207
-  },
-  {
-    "kind": "database",
-    "row": 198,
-    "name": "StartupHive",
-    "url": "https://startuphive.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://startuphive.co/\nCall log:\n  - navigating to \"https://startuphive.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.196
-  },
-  {
-    "kind": "database",
-    "row": 199,
-    "name": "StartupLift",
-    "url": "https://startuplift.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_SSL_PROTOCOL_ERROR at https://startuplift.com/\nCall log:\n  - navigating to \"https://startuplift.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.413
-  },
-  {
-    "kind": "database",
-    "row": 201,
-    "name": "StartupNow",
-    "url": "https://startupnow.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://startupnow.co/\nCall log:\n  - navigating to \"https://startupnow.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.657
-  },
-  {
-    "kind": "database",
-    "row": 203,
-    "name": "StartupShelf",
-    "url": "https://startupshelf.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://startupshelf.co/\nCall log:\n  - navigating to \"https://startupshelf.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.232
-  },
-  {
-    "kind": "database",
-    "row": 204,
-    "name": "StartupTrack",
-    "url": "https://startuptrack.io",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://startuptrack.io/\nCall log:\n  - navigating to \"https://startuptrack.io/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.523
-  },
-  {
-    "kind": "database",
-    "row": 205,
-    "name": "StartupVault",
-    "url": "https://startupvault.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "TimeoutError: Page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://startupvault.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 25.09
-  },
-  {
-    "kind": "database",
-    "row": 214,
-    "name": "The Startup Pitch",
-    "url": "https://thestartuppitch.com",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://thestartuppitch.com/\nCall log:\n  - navigating to \"https://thestartuppitch.com/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.551
-  },
-  {
-    "kind": "database",
-    "row": 222,
-    "name": "ToolDB",
-    "url": "https://tooldb.dev",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://tooldb.dev/\nCall log:\n  - navigating to \"https://tooldb.dev/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.328
-  },
-  {
-    "kind": "database",
-    "row": 226,
-    "name": "ToolIndex",
-    "url": "https://toolindex.co",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://toolindex.co/\nCall log:\n  - navigating to \"https://toolindex.co/\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.211
+    "seconds": 1.792
   },
   {
     "kind": "database",
@@ -973,7 +157,7 @@
     "cloak_chars": 270,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.661
+    "seconds": 1.506
   },
   {
     "kind": "social",
@@ -989,7 +173,7 @@
     "cloak_chars": 222,
     "cloak_challenge": "blocked by network security",
     "cloak_error": "",
-    "seconds": 1.569
+    "seconds": 1.494
   },
   {
     "kind": "social",
@@ -1005,7 +189,7 @@
     "cloak_chars": 258,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.619
+    "seconds": 1.514
   },
   {
     "kind": "social",
@@ -1021,7 +205,7 @@
     "cloak_chars": 267,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.649
+    "seconds": 1.564
   },
   {
     "kind": "social",
@@ -1037,7 +221,7 @@
     "cloak_chars": 513,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.58
+    "seconds": 1.436
   },
   {
     "kind": "social",
@@ -1053,7 +237,7 @@
     "cloak_chars": 270,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.761
+    "seconds": 1.551
   },
   {
     "kind": "social",
@@ -1069,7 +253,7 @@
     "cloak_chars": 258,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.703
+    "seconds": 1.488
   },
   {
     "kind": "social",
@@ -1078,14 +262,14 @@
     "url": "https://muckrack.com/footballmaimeagent-com/bio",
     "direct_class": "BLOCKED",
     "direct_http": 403,
-    "cloak_ok": false,
-    "cloak_http": 403,
+    "cloak_ok": true,
+    "cloak_http": 200,
     "cloak_final": "https://muckrack.com/footballmaimeagent-com/bio",
-    "cloak_title": "Just a moment...",
-    "cloak_chars": 260,
-    "cloak_challenge": "just a moment",
+    "cloak_title": "Footballmaimeagent com’s Biography | Muck Rack",
+    "cloak_chars": 2720,
+    "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.621
+    "seconds": 2.673
   },
   {
     "kind": "social",
@@ -1101,7 +285,7 @@
     "cloak_chars": 270,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.69
+    "seconds": 1.572
   },
   {
     "kind": "social",
@@ -1110,14 +294,14 @@
     "url": "https://www.speedrun.com/users/footballmaimeagent",
     "direct_class": "BLOCKED",
     "direct_http": 403,
-    "cloak_ok": false,
-    "cloak_http": 403,
+    "cloak_ok": true,
+    "cloak_http": 200,
     "cloak_final": "https://www.speedrun.com/users/footballmaimeagent",
-    "cloak_title": "Just a moment...",
-    "cloak_chars": 264,
-    "cloak_challenge": "just a moment",
+    "cloak_title": "footballmaimeagent - Speedrun.com",
+    "cloak_chars": 582,
+    "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.68
+    "seconds": 2.337
   },
   {
     "kind": "social",
@@ -1130,10 +314,10 @@
     "cloak_http": 200,
     "cloak_final": "https://stocktwits.com/footballmaimeagent",
     "cloak_title": "Footballmaimeagent.com (@footballmaimeagent) | Stocktwits",
-    "cloak_chars": 2062,
+    "cloak_chars": 2317,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 2.222
+    "seconds": 2.597
   },
   {
     "kind": "social",
@@ -1145,11 +329,11 @@
     "cloak_ok": false,
     "cloak_http": 429,
     "cloak_final": "https://potofu.me/footballmaimeagent",
-    "cloak_title": "Footballmaimeagent.com | POTOFU | POTOFU",
-    "cloak_chars": 485,
+    "cloak_title": "Vercel Security Checkpoint",
+    "cloak_chars": 110,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 2.835
+    "seconds": 1.527
   },
   {
     "kind": "social",
@@ -1165,7 +349,7 @@
     "cloak_chars": 259,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.73
+    "seconds": 1.573
   },
   {
     "kind": "social",
@@ -1181,7 +365,7 @@
     "cloak_chars": 260,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.693
+    "seconds": 1.519
   },
   {
     "kind": "social",
@@ -1197,7 +381,7 @@
     "cloak_chars": 266,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.691
+    "seconds": 1.586
   },
   {
     "kind": "social",
@@ -1209,11 +393,11 @@
     "cloak_ok": false,
     "cloak_http": 429,
     "cloak_final": "https://stackshare.io/avery.rhodes187295/footballmaimeagent-com",
-    "cloak_title": "Footballmaimeagent com - Avery Rhodes's Tech Stack | StackShare | StackShare",
-    "cloak_chars": 863,
+    "cloak_title": "Vercel Security Checkpoint",
+    "cloak_chars": 110,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.932
+    "seconds": 1.614
   },
   {
     "kind": "social",
@@ -1229,23 +413,7 @@
     "cloak_chars": 262,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.705
-  },
-  {
-    "kind": "social",
-    "row": 140,
-    "name": "lifeinsys.com",
-    "url": "https://lifeinsys.com/user/footballmaimeagent",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://lifeinsys.com/user/footballmaimeagent\nCall log:\n  - navigating to \"https://lifeinsys.com/user/footballmaimeagent\", waiting until \"domcontentloaded\"\n",
-    "seconds": 19.588
+    "seconds": 1.581
   },
   {
     "kind": "social",
@@ -1261,7 +429,7 @@
     "cloak_chars": 513,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.667
+    "seconds": 1.518
   },
   {
     "kind": "social",
@@ -1277,7 +445,7 @@
     "cloak_chars": 902,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 2.727
+    "seconds": 3.104
   },
   {
     "kind": "social",
@@ -1293,7 +461,7 @@
     "cloak_chars": 1962,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.975
+    "seconds": 1.83
   },
   {
     "kind": "social",
@@ -1309,7 +477,7 @@
     "cloak_chars": 1357,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 2.536
+    "seconds": 2.862
   },
   {
     "kind": "social",
@@ -1325,23 +493,7 @@
     "cloak_chars": 13,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.897
-  },
-  {
-    "kind": "social",
-    "row": 191,
-    "name": "Bloggportalen.Se",
-    "url": "https://www.bloggportalen.se/BlogPortal/view/BlogDetails?id=328725",
-    "direct_class": "UNREACHABLE",
-    "direct_http": 0,
-    "cloak_ok": true,
-    "cloak_http": 200,
-    "cloak_final": "https://www.bloggportalen.se/BlogPortal/view/BlogDetails?id=328725",
-    "cloak_title": "Bloggportalen.se - Footballmaimeagent com",
-    "cloak_chars": 1433,
-    "cloak_challenge": null,
-    "cloak_error": "",
-    "seconds": 2.981
+    "seconds": 1.875
   },
   {
     "kind": "social",
@@ -1357,7 +509,7 @@
     "cloak_chars": 263,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.65
+    "seconds": 1.498
   },
   {
     "kind": "social",
@@ -1373,7 +525,7 @@
     "cloak_chars": 13,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.897
+    "seconds": 1.887
   },
   {
     "kind": "social",
@@ -1385,27 +537,11 @@
     "cloak_ok": false,
     "cloak_http": 429,
     "cloak_final": "https://ofuse.me/footballmaimeagent",
-    "cloak_title": "Footballmaimeagent.com | OFUSE (オフセ)",
-    "cloak_chars": 0,
+    "cloak_title": "Vercel Security Checkpoint",
+    "cloak_chars": 110,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.909
-  },
-  {
-    "kind": "social",
-    "row": 205,
-    "name": "Grepmed.Com",
-    "url": "https://www.grepmed.com/footballmaimeagent",
-    "direct_class": "SERVER_ERROR",
-    "direct_http": 504,
-    "cloak_ok": false,
-    "cloak_http": 0,
-    "cloak_final": "",
-    "cloak_title": "",
-    "cloak_chars": 0,
-    "cloak_challenge": null,
-    "cloak_error": "Error: Page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://www.grepmed.com/footballmaimeagent\nCall log:\n  - navigating to \"https://www.grepmed.com/footballmaimeagent\", waiting until \"domcontentloaded\"\n",
-    "seconds": 0.398
+    "seconds": 1.513
   },
   {
     "kind": "social",
@@ -1421,7 +557,7 @@
     "cloak_chars": 258,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.801
+    "seconds": 1.475
   },
   {
     "kind": "social",
@@ -1437,7 +573,7 @@
     "cloak_chars": 262,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.658
+    "seconds": 1.587
   },
   {
     "kind": "social",
@@ -1453,7 +589,7 @@
     "cloak_chars": 261,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.706
+    "seconds": 1.486
   },
   {
     "kind": "social",
@@ -1469,7 +605,7 @@
     "cloak_chars": 110,
     "cloak_challenge": null,
     "cloak_error": "",
-    "seconds": 1.75
+    "seconds": 1.625
   },
   {
     "kind": "social",
@@ -1485,6 +621,6 @@
     "cloak_chars": 260,
     "cloak_challenge": "just a moment",
     "cloak_error": "",
-    "seconds": 1.663
+    "seconds": 1.477
   }
 ]
