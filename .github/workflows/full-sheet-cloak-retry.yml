@@ -12,7 +12,7 @@ permissions:
 jobs:
   retry:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     env:
       CLOAKBROWSER_VERSION: '146.0.7680.177.5'
     steps:
@@ -32,20 +32,18 @@ jobs:
           python -m pip install -q 'cloakbrowser==0.5.3'
           python -m playwright install-deps chromium
           CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
-      - name: Retry failed access through Cloak
+      - name: Retry anti-bot blocks through Cloak
         shell: bash
         run: |
           xvfb-run -a python3 - <<'PY'
-          import json,re,time
+          import json,time
           from pathlib import Path
-          from urllib.parse import urlparse
           from cloakbrowser import launch
           targets=[]
           for kind in ('database','social'):
-            p=Path(f'results/full-sheet-audit/{kind}.json')
-            rows=json.loads(p.read_text())
+            rows=json.loads(Path(f'results/full-sheet-audit/{kind}.json').read_text())
             for r in rows:
-              if r.get('class') in ('BLOCKED','UNREACHABLE','SERVER_ERROR') and str(r.get('url','')).startswith('https://'):
+              if r.get('class')=='BLOCKED' and str(r.get('url','')).startswith('https://'):
                 targets.append({'kind':kind,'row':r['row'],'name':r['name'],'url':r['url'],'direct_class':r.get('class'),'direct_http':r.get('http',0)})
           print('targets',len(targets),flush=True)
           browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
@@ -56,9 +54,9 @@ jobs:
               rec=dict(t); page=None; t0=time.time()
               try:
                 page=browser.new_page(viewport={'width':1365,'height':768})
-                resp=page.goto(t['url'],wait_until='domcontentloaded',timeout=25000)
-                page.wait_for_timeout(1400)
-                text=page.locator('body').inner_text(timeout=8000)
+                resp=page.goto(t['url'],wait_until='domcontentloaded',timeout=15000)
+                page.wait_for_timeout(1200)
+                text=page.locator('body').inner_text(timeout=6000)
                 status=resp.status if resp else 0
                 title=page.title()
                 low=(title+' '+text[:6000]).lower()
