@@ -1,0 +1,90 @@
+name: Full Sheet Cloak Fast
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-sheet-cloak-fast.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install CloakBrowser
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Retry blocks in four parallel workers
+        shell: bash
+        run: |
+          cat > /tmp/cloak_worker.py <<'PY'
+          import json,sys,time
+          from pathlib import Path
+          from cloakbrowser import launch
+          targets=json.loads(Path(sys.argv[1]).read_text()); wid=int(sys.argv[2]); workers=int(sys.argv[3])
+          mine=[x for i,x in enumerate(targets) if i%workers==wid]
+          terms=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity','blocked by network security')
+          out=[]; browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+          try:
+            for t in mine:
+              rec=dict(t); page=None;t0=time.time()
+              try:
+                page=browser.new_page(viewport={'width':1365,'height':768})
+                resp=page.goto(t['url'],wait_until='domcontentloaded',timeout=12000);page.wait_for_timeout(900)
+                text=page.locator('body').inner_text(timeout=5000);status=resp.status if resp else 0;title=page.title();low=(title+' '+text[:6000]).lower();ch=next((x for x in terms if x in low),None)
+                rec.update({'cloak_ok':bool(status and 200<=status<400 and not ch),'cloak_http':status,'cloak_final':page.url,'cloak_title':title[:200],'cloak_chars':len(text),'cloak_challenge':ch,'cloak_error':''})
+              except Exception as e:rec.update({'cloak_ok':False,'cloak_http':0,'cloak_final':'','cloak_title':'','cloak_chars':0,'cloak_challenge':None,'cloak_error':type(e).__name__+': '+str(e)[:220]})
+              finally:
+                if page:
+                  try:page.close()
+                  except:pass
+              rec['seconds']=round(time.time()-t0,3);out.append(rec)
+          finally:browser.close()
+          Path(f'/tmp/cloak-{wid}.json').write_text(json.dumps(out,ensure_ascii=False))
+          PY
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          t=[]
+          for kind in ('database','social'):
+            for r in json.loads(Path(f'results/full-sheet-audit/{kind}.json').read_text()):
+              if r.get('class')=='BLOCKED' and str(r.get('url','')).startswith('https://'):
+                t.append({'kind':kind,'row':r['row'],'name':r['name'],'url':r['url'],'direct_class':r.get('class'),'direct_http':r.get('http',0)})
+          Path('/tmp/cloak-targets.json').write_text(json.dumps(t,ensure_ascii=False));print('targets',len(t))
+          PY
+          for w in 0 1 2 3; do xvfb-run -a python3 /tmp/cloak_worker.py /tmp/cloak-targets.json "$w" 4 & done
+          wait
+          python3 - <<'PY'
+          import json,pathlib
+          out=[]
+          for w in range(4):out.extend(json.loads(pathlib.Path(f'/tmp/cloak-{w}.json').read_text()))
+          out.sort(key=lambda x:(x['kind'],x['row']))
+          pathlib.Path('results/full-sheet-audit/cloak_access_fast.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          print('cloak_ok',sum(x.get('cloak_ok') for x in out),'/',len(out))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/cloak_access_fast.json
+          git commit -m 'Store fast Cloak sheet retry [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
