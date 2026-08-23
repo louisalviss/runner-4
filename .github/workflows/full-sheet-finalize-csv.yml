@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'results/full-sheet-audit/cloak_access.json'
+      - 'results/full-sheet-audit/cloak_access_fast.json'
       - 'results/full-sheet-audit/deep_submit.json'
       - 'results/full-sheet-audit/vpn_access.json'
 
@@ -22,7 +22,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -f results/full-sheet-audit/cloak_access.json || exit 0
+          test -f results/full-sheet-audit/cloak_access_fast.json || exit 0
           test -f results/full-sheet-audit/deep_submit.json || exit 0
           test -f results/full-sheet-audit/vpn_access.json || exit 0
           python3 - <<'PY'
@@ -30,7 +30,7 @@ jobs:
           from datetime import datetime,timezone
           from pathlib import Path
           root=Path('results/full-sheet-audit')
-          cloak=json.loads((root/'cloak_access.json').read_text())
+          cloak=json.loads((root/'cloak_access_fast.json').read_text())
           cidx={(x['kind'],x['row']):x for x in cloak}
           deep=json.loads((root/'deep_submit.json').read_text())
           didx={(x['kind'],x['row']):x for x in deep}
@@ -49,7 +49,8 @@ jobs:
             status=r.get('class','UNKNOWN')
             needs=status in ('BLOCKED','UNREACHABLE')
             note=(c or {}).get('cloak_error') or (c or {}).get('cloak_challenge') or r.get('challenge') or r.get('error','')
-            return (status,'CLOAK_FAILED' if c else 'DIRECT', (c or {}).get('cloak_http') or r.get('http',0),(c or {}).get('cloak_final') or r.get('final_url',''),(c or {}).get('cloak_title') or r.get('title',''),needs,note)
+            method='CLOAK_FAILED' if c else 'DIRECT'
+            return (status,method,(c or {}).get('cloak_http') or r.get('http',0),(c or {}).get('cloak_final') or r.get('final_url',''),(c or {}).get('cloak_title') or r.get('title',''),needs,note)
           def submit_merge(kind,r):
             sc=r.get('submit_class','UNKNOWN');su=r.get('submit_url','');sh=r.get('submit_http',0);sf=r.get('submit_final','');st=r.get('submit_title','')
             if sc=='UNKNOWN':
