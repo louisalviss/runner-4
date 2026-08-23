@@ -1,0 +1,55 @@
+name: Build Sheet Ready Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-sheet-ready-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build TSV chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv, pathlib
+          root=pathlib.Path('results/full-sheet-audit')
+          out=root/'sheet-ready'; out.mkdir(exist_ok=True)
+          specs=[
+            ('database-final.csv','database',['Source Row','Name','URL','Access Status','Access Method','Submit Status','Submit URL','Auth Required','Needs VPN','Notes','Verified At']),
+            ('social-final.csv','social',['Source Row','Social','Profile URL','Profile Status','Access Method','Submit Classification','Current Signup Status','Signup URL','Auth Required','Needs VPN','Notes','Verified At'])
+          ]
+          for src,prefix,cols in specs:
+            rows=list(csv.DictReader((root/src).open(encoding='utf-8-sig')))
+            clean=[]
+            for r in rows:
+              vals=[]
+              for c in cols:
+                v=(r.get(c) or '').replace('\t',' ').replace('\r',' ').replace('\n',' ').strip()
+                vals.append(v)
+              clean.append(vals)
+            header='\t'.join(cols)
+            chunk_size=50
+            for i in range(0,len(clean),chunk_size):
+              n=i//chunk_size+1
+              lines=[]
+              if i==0: lines.append(header)
+              lines += ['\t'.join(x) for x in clean[i:i+chunk_size]]
+              (out/f'{prefix}-{n}.tsv').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+            (out/f'{prefix}-count.txt').write_text(str(len(rows)),encoding='utf-8')
+          PY
+      - name: Persist
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/sheet-ready
+          git commit -m 'Store compact sheet-ready audit chunks [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
