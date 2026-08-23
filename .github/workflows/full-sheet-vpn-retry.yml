@@ -1,0 +1,117 @@
+name: Full Sheet VPN Retry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'results/full-sheet-audit/cloak_access.json'
+
+permissions:
+  contents: write
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Install VPN tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openvpn iproute2 iptables curl
+      - name: Probe remaining blocked URLs over rotating VPN Gate relays
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          rows=json.loads(pathlib.Path('results/full-sheet-audit/cloak_access.json').read_text())
+          targets=[r for r in rows if r.get('direct_class')=='BLOCKED' and not r.get('cloak_ok') and str(r.get('url','')).startswith('https://')]
+          pathlib.Path('/tmp/targets.tsv').write_text('\n'.join(f"{r['kind']}\t{r['row']}\t{r['name']}\t{r['url']}" for r in targets)+'\n')
+          print('targets',len(targets))
+          PY
+          test -s /tmp/targets.tsv || { echo '[]' > results/full-sheet-audit/vpn_access.json; exit 0; }
+          mkdir -p /tmp/relays results/full-sheet-audit
+          curl -fsSL --max-time 30 'https://www.vpngate.net/api/iphone/' -o /tmp/vpngate.csv
+          python3 - <<'PY'
+          import base64,csv,io,pathlib
+          pref=['TH','SG','JP','KR','VN','MY','PH','ID','TW']
+          raw=pathlib.Path('/tmp/vpngate.csv').read_text(encoding='utf-8-sig',errors='replace')
+          rows=list(csv.DictReader(io.StringIO('\n'.join(x for x in raw.splitlines() if x and not x.startswith('*')))))
+          pathlib.Path('/tmp/auth').write_text('vpn\nvpn\n')
+          out=[]
+          for c in pref:
+            rs=[r for r in rows if (r.get('CountryShort') or '').upper()==c and (r.get('OpenVPN_ConfigData_Base64') or '').strip()]
+            rs.sort(key=lambda r:int(r.get('Speed') or 0),reverse=True)
+            for r in rs[:2]:
+              try:cfg=base64.b64decode(r['OpenVPN_ConfigData_Base64']).decode(errors='replace')
+              except:continue
+              cfg='\n'.join('auth-user-pass /tmp/auth' if x.strip().startswith('auth-user-pass') else x for x in cfg.splitlines())+'\n'
+              p=pathlib.Path(f'/tmp/relays/{len(out):02d}-{c}.ovpn');p.write_text(cfg);out.append((str(p),c,r.get('IP','')))
+          pathlib.Path('/tmp/relays.tsv').write_text('\n'.join('\t'.join(x) for x in out)+'\n')
+          PY
+          IFACE=$(ip route show default | awk '{print $5; exit}')
+          sudo ip netns add vpnns
+          sudo ip link add vh type veth peer name vn
+          sudo ip link set vn netns vpnns
+          sudo ip addr add 10.238.0.1/24 dev vh
+          sudo ip link set vh up
+          sudo ip netns exec vpnns ip addr add 10.238.0.2/24 dev vn
+          sudo ip netns exec vpnns ip link set lo up
+          sudo ip netns exec vpnns ip link set vn up
+          sudo ip netns exec vpnns ip route add default via 10.238.0.1
+          sudo sysctl -w net.ipv4.ip_forward=1 >/dev/null
+          sudo iptables -t nat -A POSTROUTING -s 10.238.0.0/24 -o "$IFACE" -j MASQUERADE
+          sudo iptables -A FORWARD -i vh -o "$IFACE" -j ACCEPT
+          sudo iptables -A FORWARD -i "$IFACE" -o vh -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+          sudo mkdir -p /etc/netns/vpnns
+          printf 'nameserver 1.1.1.1\nnameserver 8.8.8.8\n' | sudo tee /etc/netns/vpnns/resolv.conf >/dev/null
+          printf 'kind\trow\tname\turl\tcountry\trelay\texit_ip\thttp\tbytes\ttitle\tchallenge\n' > /tmp/results.tsv
+          attempt=0
+          while IFS=$'\t' read -r cfg country relay; do
+            attempt=$((attempt+1)); [ "$attempt" -le 6 ] || break
+            sudo ip netns exec vpnns pkill openvpn 2>/dev/null || true; sleep 1
+            sudo rm -f /tmp/openvpn.log; sudo touch /tmp/openvpn.log; sudo chmod 666 /tmp/openvpn.log
+            sudo ip netns exec vpnns openvpn --config "$cfg" --daemon --log /tmp/openvpn.log || true
+            ok=0
+            for i in {1..12}; do sleep 1; grep -q 'Initialization Sequence Completed' /tmp/openvpn.log && { ok=1; break; }; grep -Eq 'AUTH_FAILED|TLS Error|Connection timed out|Connection refused|fatal error' /tmp/openvpn.log && break || true; done
+            [ "$ok" = 1 ] || continue
+            exitip=$(sudo ip netns exec vpnns curl -fsS --connect-timeout 6 --max-time 10 https://api.ipify.org || true)
+            while IFS=$'\t' read -r kind row name url; do
+              if grep -qP "^${kind}\t${row}\t" /tmp/results.tsv; then continue; fi
+              safe="${kind}-${row}"; f="/tmp/${safe}.html"
+              line=$(sudo ip netns exec vpnns curl -L --compressed --connect-timeout 8 --max-time 18 -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36' -sS -o "$f" -w '%{http_code}\t%{size_download}' "$url" || true)
+              code=$(printf '%s' "$line" | cut -f1); bytes=$(printf '%s' "$line" | cut -f2)
+              info=$(python3 - "$f" <<'PY'
+          import html,re,sys,pathlib
+          p=pathlib.Path(sys.argv[1]);s=p.read_text(errors='ignore') if p.exists() else ''
+          m=re.search(r'<title[^>]*>(.*?)</title>',s,re.I|re.S);title=html.unescape(re.sub(r'\s+',' ',m.group(1)).strip())[:120] if m else ''
+          low=(title+' '+s[:12000]).lower();terms=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity')
+          ch=next((x for x in terms if x in low),'')
+          print(title.replace('\t',' ')+'\t'+ch)
+          PY
+              )
+              title=$(printf '%s' "$info" | cut -f1); challenge=$(printf '%s' "$info" | cut -f2)
+              if [[ "$code" =~ ^2|^3 ]] && [ "${bytes:-0}" -gt 500 ] && [ -z "$challenge" ]; then
+                printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$kind" "$row" "$name" "$url" "$country" "$relay" "$exitip" "$code" "$bytes" "$title" "$challenge" >> /tmp/results.tsv
+              fi
+            done < /tmp/targets.tsv
+          done < /tmp/relays.tsv
+          python3 - <<'PY'
+          import csv,json,pathlib
+          p=pathlib.Path('/tmp/results.tsv'); rows=list(csv.DictReader(p.open(),delimiter='\t'))
+          for r in rows:r['row']=int(r['row']);r['http']=int(r['http']);r['bytes']=int(float(r['bytes']))
+          pathlib.Path('results/full-sheet-audit/vpn_access.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
+          print('vpn rescued',len(rows))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/vpn_access.json
+          git commit -m 'Store full sheet VPN retry [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
