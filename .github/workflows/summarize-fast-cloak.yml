@@ -1,0 +1,26 @@
+name: Summarize Fast Cloak
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/summarize-fast-cloak.yml']
+permissions:
+  contents: write
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('results/full-sheet-audit/cloak_access_fast.json'); rows=json.loads(p.read_text())
+          out={'total':len(rows),'rescued':sum(bool(x.get('cloak_ok')) for x in rows),'failed':sum(not bool(x.get('cloak_ok')) for x in rows),'database':{},'social':{}}
+          for k in ('database','social'):
+            rr=[x for x in rows if x['kind']==k];out[k]={'total':len(rr),'rescued':sum(bool(x.get('cloak_ok')) for x in rr),'failed':sum(not bool(x.get('cloak_ok')) for x in rr)}
+          pathlib.Path('results/full-sheet-audit/cloak-summary.json').write_text(json.dumps(out,indent=2));print(out)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/cloak-summary.json
+          git commit -m 'Store Cloak audit summary [skip ci]' || true
+          git push || true
