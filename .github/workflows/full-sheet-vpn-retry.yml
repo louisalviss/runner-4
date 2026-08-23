@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'results/full-sheet-audit/cloak_access.json'
+      - 'results/full-sheet-audit/cloak_access_fast.json'
 
 permissions:
   contents: write
@@ -27,13 +27,14 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           import json,pathlib
-          rows=json.loads(pathlib.Path('results/full-sheet-audit/cloak_access.json').read_text())
+          rows=json.loads(pathlib.Path('results/full-sheet-audit/cloak_access_fast.json').read_text())
           targets=[r for r in rows if r.get('direct_class')=='BLOCKED' and not r.get('cloak_ok') and str(r.get('url','')).startswith('https://')]
           pathlib.Path('/tmp/targets.tsv').write_text('\n'.join(f"{r['kind']}\t{r['row']}\t{r['name']}\t{r['url']}" for r in targets)+'\n')
           print('targets',len(targets))
           PY
+          mkdir -p results/full-sheet-audit
           test -s /tmp/targets.tsv || { echo '[]' > results/full-sheet-audit/vpn_access.json; exit 0; }
-          mkdir -p /tmp/relays results/full-sheet-audit
+          mkdir -p /tmp/relays
           curl -fsSL --max-time 30 'https://www.vpngate.net/api/iphone/' -o /tmp/vpngate.csv
           python3 - <<'PY'
           import base64,csv,io,pathlib
@@ -81,7 +82,7 @@ jobs:
             exitip=$(sudo ip netns exec vpnns curl -fsS --connect-timeout 6 --max-time 10 https://api.ipify.org || true)
             while IFS=$'\t' read -r kind row name url; do
               if grep -qP "^${kind}\t${row}\t" /tmp/results.tsv; then continue; fi
-              safe="${kind}-${row}"; f="/tmp/${safe}.html"
+              f="/tmp/${kind}-${row}.html"
               line=$(sudo ip netns exec vpnns curl -L --compressed --connect-timeout 8 --max-time 18 -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36' -sS -o "$f" -w '%{http_code}\t%{size_download}' "$url" || true)
               code=$(printf '%s' "$line" | cut -f1); bytes=$(printf '%s' "$line" | cut -f2)
               info=$(python3 - "$f" <<'PY'
@@ -94,14 +95,14 @@ jobs:
           PY
               )
               title=$(printf '%s' "$info" | cut -f1); challenge=$(printf '%s' "$info" | cut -f2)
-              if [[ "$code" =~ ^2|^3 ]] && [ "${bytes:-0}" -gt 500 ] && [ -z "$challenge" ]; then
+              if [[ "$code" =~ ^[23] ]] && [ "${bytes:-0}" -gt 500 ] && [ -z "$challenge" ]; then
                 printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$kind" "$row" "$name" "$url" "$country" "$relay" "$exitip" "$code" "$bytes" "$title" "$challenge" >> /tmp/results.tsv
               fi
             done < /tmp/targets.tsv
           done < /tmp/relays.tsv
           python3 - <<'PY'
           import csv,json,pathlib
-          p=pathlib.Path('/tmp/results.tsv'); rows=list(csv.DictReader(p.open(),delimiter='\t'))
+          rows=list(csv.DictReader(pathlib.Path('/tmp/results.tsv').open(),delimiter='\t'))
           for r in rows:r['row']=int(r['row']);r['http']=int(r['http']);r['bytes']=int(float(r['bytes']))
           pathlib.Path('results/full-sheet-audit/vpn_access.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
           print('vpn rescued',len(rows))
