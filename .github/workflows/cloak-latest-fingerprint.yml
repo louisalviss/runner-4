@@ -1,4 +1,4 @@
-name: Cloak Latest Turnstile A/B
+name: Cloak Real Cloudflare Challenge A/B
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
-      TARGET: 'https://nopecha.com/demo/turnstile'
+      TARGET: 'https://www.scrapingcourse.com/cloudflare-challenge'
       CLOAKBROWSER_LICENSE_KEY: ${{ secrets.CLOAKBROWSER_LICENSE_KEY }}
     steps:
       - uses: actions/checkout@v4
@@ -43,45 +43,57 @@ jobs:
           from cloakbrowser import launch
 
           target = os.environ['TARGET']
+          success_text = 'you bypassed the cloudflare challenge'
           out = {'target': target, 'key_present': bool(os.environ.get('CLOAKBROWSER_LICENSE_KEY')), 'runs': []}
 
-          def token_info(page):
-              return page.evaluate('''() => {
-                const els = [...document.querySelectorAll('input[name="cf-turnstile-response"], textarea[name="cf-turnstile-response"]')];
-                const vals = els.map(e => e.value || '').filter(Boolean);
-                return {count: els.length, tokenLengths: vals.map(v => v.length), tokenPresent: vals.some(v => v.length > 20)};
-              }''')
+          def snap(page, t):
+              try:
+                  body = page.locator('body').inner_text(timeout=5000)
+              except Exception as e:
+                  body = f'BODY_ERROR: {e}'
+              low = body.lower()
+              names = sorted({c.get('name','') for c in page.context.cookies()})
+              return {
+                  't': t,
+                  'title': page.title(),
+                  'url': page.url,
+                  'body_excerpt': body[:700],
+                  'passed': success_text in low,
+                  'challenge': any(x in (page.title()+' '+body).lower() for x in ['just a moment','verify you are human','checking if the site connection is secure','performing security verification']),
+                  'cf_clearance': 'cf_clearance' in names,
+              }
 
           def run_one(name, browser):
               p = browser.new_page(viewport={'width':1365,'height':768})
-              t0=time.time(); r=p.goto(target, wait_until='domcontentloaded', timeout=60000)
+              t0=time.time()
+              try:
+                  r=p.goto(target, wait_until='domcontentloaded', timeout=60000)
+              except Exception as e:
+                  r=None
+                  nav_error=str(e)
+              else:
+                  nav_error=None
               samples=[]
-              for i in range(10):
-                  time.sleep(2)
-                  try:
-                      samples.append({'t':2*(i+1), **token_info(p), 'frames': [f.url for f in p.frames]})
-                  except Exception as e:
-                      samples.append({'t':2*(i+1), 'error':str(e)})
-              body=p.locator('body').inner_text(timeout=15000)
-              low=body.lower()
-              ti=token_info(p)
+              for t in [3, 8, 15, 25, 40]:
+                  remaining=t-(time.time()-t0)
+                  if remaining>0: time.sleep(remaining)
+                  samples.append(snap(p,t))
+                  if samples[-1]['passed']:
+                      break
+              final=snap(p, round(time.time()-t0,1))
               out['runs'].append({
-                  'engine': name,
-                  'status': r.status if r else None,
-                  'final_url': p.url,
-                  'title': p.title(),
-                  'elapsed_s': round(time.time()-t0,3),
-                  'body_excerpt': body[:3000],
-                  'turnstile': ti,
-                  'samples': samples,
-                  'challenge_text': any(x in low for x in ['verify you are human','checking your browser','just a moment','failure','error']),
-                  'fingerprint': p.evaluate('''() => ({webdriver:navigator.webdriver, ua:navigator.userAgent, platform:navigator.platform})''')
+                  'engine':name,
+                  'initial_status':r.status if r else None,
+                  'nav_error':nav_error,
+                  'elapsed_s':round(time.time()-t0,3),
+                  'final':final,
+                  'samples':samples,
+                  'fingerprint':p.evaluate('''() => ({webdriver:navigator.webdriver, ua:navigator.userAgent, platform:navigator.platform, languages:navigator.languages, plugins:navigator.plugins.length, hardwareConcurrency:navigator.hardwareConcurrency, deviceMemory:navigator.deviceMemory||null})''')
               })
               browser.close()
 
           with sync_playwright() as pw:
               run_one('stock_playwright', pw.chromium.launch(headless=False))
-
           run_one('cloak_151_latest', launch(headless=False, humanize=True))
 
           print('RESULT_JSON_START')
