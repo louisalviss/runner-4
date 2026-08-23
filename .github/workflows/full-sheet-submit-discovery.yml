@@ -1,0 +1,94 @@
+name: Full Sheet Submit Discovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-sheet-submit-discovery.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe common submit/signup paths for unknowns
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import concurrent.futures as cf, html, json, re, socket, ssl
+          from pathlib import Path
+          from urllib.parse import urlparse,urljoin
+          from urllib.request import Request,build_opener,HTTPRedirectHandler
+          from urllib.error import HTTPError,URLError
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36'
+          CH=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification')
+          NOTFOUND=('404','not found','page not found','doesn’t exist','does not exist','page unavailable')
+          DB_PATHS=['submit','submit-startup','submit-product','submit-tool','add','add-product','add-tool','add-startup','get-listed','list-your-product','launch']
+          SOC_PATHS=['signup','sign-up','register','join','create-account','create-profile']
+          def fetch(url,timeout=10):
+            body='';code=0;final=url;err=''
+            try:
+              req=Request(url,headers={'User-Agent':UA,'Accept-Language':'en-US,en;q=0.9'})
+              with build_opener(HTTPRedirectHandler()).open(req,timeout=timeout) as r:
+                code=getattr(r,'status',200) or 200;final=r.geturl();body=r.read(180000).decode('utf-8','ignore')
+            except HTTPError as e:
+              code=e.code;final=e.geturl() or url
+              try:body=e.read(100000).decode('utf-8','ignore')
+              except:pass
+              err=f'HTTP {e.code}'
+            except Exception as e:err=type(e).__name__+': '+str(e)[:140]
+            m=re.search(r'<title[^>]*>(.*?)</title>',body,re.I|re.S);title=html.unescape(re.sub(r'\s+',' ',m.group(1)).strip())[:180] if m else ''
+            low=(title+' '+body[:20000]).lower();challenge=next((x for x in CH if x in low),None)
+            return {'url':url,'http':code,'final':final,'title':title,'body':body,'challenge':challenge,'error':err}
+          def classify(r,kind):
+            low=(r['title']+' '+r['body'][:30000]).lower()
+            if r['http'] in (401,403,429) or r['challenge']: return 'BLOCKED'
+            if r['http'] in (404,410) or any(x in low for x in NOTFOUND): return 'STALE'
+            if r['http']>=500:return 'SERVER_ERROR'
+            if not (200<=r['http']<400):return 'UNKNOWN'
+            semantic=('submit','add your','add product','add startup','add tool','get listed','list your','launch your','<form') if kind=='database' else ('sign up','signup','register','create account','create profile','join now','<form')
+            if any(x in low for x in semantic):
+              fl=(r['final']+' '+r['title']).lower()
+              if any(x in fl for x in ('/login','/signin','/sign-in','login','sign in')): return 'AUTH_REQUIRED'
+              return 'OPEN'
+            return 'UNKNOWN'
+          tasks=[]
+          for kind,paths in [('database',DB_PATHS),('social',SOC_PATHS)]:
+            rows=json.loads(Path(f'results/full-sheet-audit/{kind}.json').read_text())
+            for r in rows:
+              if r.get('submit_class')!='UNKNOWN':continue
+              p=urlparse(r.get('final_url') or r['url']);
+              if p.scheme not in ('http','https') or not p.netloc:continue
+              root=f'{p.scheme}://{p.netloc}/'
+              for path in paths:tasks.append((kind,r['row'],r['name'],root,urljoin(root,path)))
+          def do(t):
+            kind,row,name,root,url=t;r=fetch(url);c=classify(r,kind)
+            return {'kind':kind,'row':row,'name':name,'candidate_url':url,'http':r['http'],'final':r['final'],'title':r['title'],'class':c,'error':r['error']}
+          allr=[]
+          with cf.ThreadPoolExecutor(max_workers=48) as ex:
+            for n,r in enumerate(ex.map(do,tasks),1):
+              allr.append(r)
+              if n%150==0:print(n,'/',len(tasks),flush=True)
+          best={}
+          rank={'OPEN':5,'AUTH_REQUIRED':4,'BLOCKED':3,'SERVER_ERROR':2,'STALE':1,'UNKNOWN':0}
+          for r in allr:
+            k=(r['kind'],r['row']);cur=best.get(k)
+            if cur is None or rank[r['class']]>rank[cur['class']]:best[k]=r
+          out=sorted(best.values(),key=lambda r:(r['kind'],r['row']))
+          Path('results/full-sheet-audit/deep_submit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          print('rows',len(out),'open',sum(x['class']=='OPEN' for x in out),'auth',sum(x['class']=='AUTH_REQUIRED' for x in out))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/deep_submit.json
+          git commit -m 'Store deep submit discovery [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
