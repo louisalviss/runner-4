@@ -6,6 +6,7 @@ on:
     paths:
       - 'results/full-sheet-audit/cloak_access.json'
       - 'results/full-sheet-audit/deep_submit.json'
+      - 'results/full-sheet-audit/vpn_access.json'
 
 permissions:
   contents: write
@@ -17,12 +18,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - name: Build final CSVs when both enrichments exist
+      - name: Build final CSVs when all enrichments exist
         shell: bash
         run: |
           set -euo pipefail
           test -f results/full-sheet-audit/cloak_access.json || exit 0
           test -f results/full-sheet-audit/deep_submit.json || exit 0
+          test -f results/full-sheet-audit/vpn_access.json || exit 0
           python3 - <<'PY'
           import csv,json
           from datetime import datetime,timezone
@@ -32,13 +34,18 @@ jobs:
           cidx={(x['kind'],x['row']):x for x in cloak}
           deep=json.loads((root/'deep_submit.json').read_text())
           didx={(x['kind'],x['row']):x for x in deep}
+          vpn=json.loads((root/'vpn_access.json').read_text())
+          vidx={(x['kind'],x['row']):x for x in vpn}
           verified=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
           def access_merge(kind,r):
-            c=cidx.get((kind,r['row']))
+            c=cidx.get((kind,r['row'])); v=vidx.get((kind,r['row']))
             if r.get('class')=='OK': return ('OK','DIRECT',r.get('http',0),r.get('final_url',''),r.get('title',''),False,'')
             if r.get('class')=='DEAD': return ('DEAD','DIRECT',r.get('http',0),r.get('final_url',''),r.get('title',''),False,r.get('error',''))
             if c and c.get('cloak_ok'):
               return ('OK','CLOAK',c.get('cloak_http',0),c.get('cloak_final',''),c.get('cloak_title',''),False,'')
+            if v:
+              note=f"VPN {v.get('country','')} exit {v.get('exit_ip','')}".strip()
+              return ('OK','VPN',v.get('http',0),r.get('url',''),v.get('title',''),False,note)
             status=r.get('class','UNKNOWN')
             needs=status in ('BLOCKED','UNREACHABLE')
             note=(c or {}).get('cloak_error') or (c or {}).get('cloak_challenge') or r.get('challenge') or r.get('error','')
@@ -70,12 +77,11 @@ jobs:
               else: submit_class='YES HISTORICAL / CURRENT UNKNOWN'
               needs_vpn='Yes' if nv or sc=='BLOCKED' else ''
               w.writerow([r['row'],r['name'],r['url'],ac,am,ah,af,at,'Yes - submitted 19/8',submit_class,sc,su,sh,'Yes' if sc=='AUTH_REQUIRED' else '',needs_vpn,note,verified])
-          # compact summary
           def count_csv(path,col):
             rows=list(csv.DictReader(open(path,encoding='utf-8-sig')));d={}
             for r in rows:d[r[col]]=d.get(r[col],0)+1
             return d
-          summary={'database_access':count_csv(root/'database-final.csv','Access Status'),'database_submit':count_csv(root/'database-final.csv','Submit Status'),'social_access':count_csv(root/'social-final.csv','Profile Status'),'social_submit':count_csv(root/'social-final.csv','Submit Classification')}
+          summary={'database_access':count_csv(root/'database-final.csv','Access Status'),'database_submit':count_csv(root/'database-final.csv','Submit Status'),'social_access':count_csv(root/'social-final.csv','Profile Status'),'social_submit':count_csv(root/'social-final.csv','Submit Classification'),'vpn_rescued':len(vpn)}
           (root/'final-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
           print(json.dumps(summary,ensure_ascii=False))
           PY
