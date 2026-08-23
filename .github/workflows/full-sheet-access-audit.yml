@@ -1,0 +1,182 @@
+name: Full Sheet Access Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-sheet-access-audit.yml'
+      - 'probe-input/database.tsv'
+      - 'probe-input/social.tsv'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe all URLs and discover submit/signup paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p results/full-sheet-audit
+          python3 - <<'PY'
+          import concurrent.futures as cf
+          import html, json, re, socket, ssl, time
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urljoin, urlparse
+          from urllib.request import Request, build_opener, HTTPRedirectHandler
+          from urllib.error import HTTPError, URLError
+
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36'
+          CHALLENGE=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity')
+          SUBMIT_TERMS=('submit','add your','add product','add startup','add tool','add app','list your','get listed','launch your','suggest a','submit startup','submit tool','submit product','submit app')
+          SIGNUP_TERMS=('sign up','signup','register','join','create account','create profile','get started','become a member')
+          BAD_EXT=('.jpg','.jpeg','.png','.gif','.svg','.webp','.pdf','.zip','.mp4','.mp3')
+
+          class Links(HTMLParser):
+            def __init__(self): super().__init__(); self.links=[]; self.cur=None; self.buf=[]
+            def handle_starttag(self, tag, attrs):
+              if tag=='a':
+                d=dict(attrs); self.cur=d.get('href'); self.buf=[]
+            def handle_data(self, data):
+              if self.cur is not None: self.buf.append(data)
+            def handle_endtag(self, tag):
+              if tag=='a' and self.cur is not None:
+                self.links.append((self.cur, ' '.join(self.buf).strip())); self.cur=None; self.buf=[]
+
+          def fetch(url, timeout=15):
+            t=time.time(); body=''; code=0; final=url; err=''; title=''
+            try:
+              req=Request(url, headers={'User-Agent':UA,'Accept-Language':'en-US,en;q=0.9','Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'})
+              with build_opener(HTTPRedirectHandler()).open(req, timeout=timeout) as r:
+                code=getattr(r,'status',200) or 200; final=r.geturl(); raw=r.read(500000)
+                body=raw.decode('utf-8','ignore')
+            except HTTPError as e:
+              code=e.code; final=e.geturl() or url
+              try: body=e.read(300000).decode('utf-8','ignore')
+              except: pass
+              err=f'HTTP {e.code}'
+            except (URLError, socket.timeout, TimeoutError, ssl.SSLError) as e:
+              err=type(e).__name__+': '+str(e)[:180]
+            except Exception as e:
+              err=type(e).__name__+': '+str(e)[:180]
+            m=re.search(r'<title[^>]*>(.*?)</title>',body,re.I|re.S)
+            if m: title=html.unescape(re.sub(r'\s+',' ',m.group(1)).strip())[:200]
+            low=(title+' '+body[:12000]).lower()
+            challenge=next((x for x in CHALLENGE if x in low),None)
+            if code in (404,410): cls='DEAD'
+            elif code>=500: cls='SERVER_ERROR'
+            elif code in (401,403,429) or challenge: cls='BLOCKED'
+            elif 200 <= code < 400: cls='OK'
+            elif code==0: cls='UNREACHABLE'
+            else: cls='OTHER'
+            return {'url':url,'http':code,'final_url':final,'title':title,'chars':len(body),'class':cls,'challenge':challenge,'error':err,'elapsed_s':round(time.time()-t,3),'body':body}
+
+          def candidates(base_url, body, terms):
+            p=Links()
+            try: p.feed(body)
+            except: return []
+            base_host=(urlparse(base_url).hostname or '').lower().removeprefix('www.')
+            scored=[]
+            for href,text in p.links:
+              if not href or href.startswith(('#','javascript:','mailto:','tel:')): continue
+              full=urljoin(base_url,href)
+              up=urlparse(full)
+              if up.scheme not in ('http','https') or full.lower().split('?')[0].endswith(BAD_EXT): continue
+              host=(up.hostname or '').lower().removeprefix('www.')
+              blob=(text+' '+href).lower()
+              hits=[t for t in terms if t in blob]
+              if not hits: continue
+              score=len(hits)*10
+              if host==base_host or host.endswith('.'+base_host) or base_host.endswith('.'+host): score+=5
+              if any(k in href.lower() for k in ('submit','signup','sign-up','register','join','launch','add-','add/')): score+=4
+              scored.append((score,full,text[:120]))
+            seen=set(); out=[]
+            for score,full,text in sorted(scored,reverse=True):
+              key=full.split('#')[0]
+              if key in seen: continue
+              seen.add(key); out.append({'url':key,'anchor':text,'score':score})
+              if len(out)>=5: break
+            return out
+
+          def probe_candidate(c):
+            if not c: return {'submit_class':'UNKNOWN','submit_url':'','submit_http':0,'submit_final':'','submit_title':''}
+            r=fetch(c['url'],12); low=(r['final_url']+' '+r['title']).lower()
+            if r['class']=='OK':
+              if any(x in low for x in ('/login','/signin','/sign-in','/signup','/sign-up','/register','login','sign in','sign up','register')):
+                sc='AUTH_REQUIRED'
+              else: sc='OPEN'
+            elif r['class']=='BLOCKED': sc='BLOCKED'
+            elif r['class']=='DEAD': sc='STALE'
+            elif r['class']=='SERVER_ERROR': sc='SERVER_ERROR'
+            else: sc='UNKNOWN'
+            return {'submit_class':sc,'submit_url':c['url'],'submit_http':r['http'],'submit_final':r['final_url'],'submit_title':r['title']}
+
+          def parse_tsv(path):
+            arr=[]
+            for line in Path(path).read_text(errors='replace').splitlines():
+              if not line.strip(): continue
+              row,name,url=line.split('\t',2); arr.append({'row':int(row),'name':name,'url':url})
+            return arr
+
+          db=parse_tsv('probe-input/database.tsv'); social=parse_tsv('probe-input/social.tsv')
+
+          def audit_db(item):
+            r=fetch(item['url'])
+            cands=candidates(r['final_url'] or item['url'],r['body'],SUBMIT_TERMS) if r['body'] else []
+            sub=probe_candidate(cands[0] if cands else None)
+            out={k:v for k,v in r.items() if k!='body'}; out.update(item); out['candidates']=cands; out.update(sub); return out
+
+          def audit_social(item):
+            r=fetch(item['url'])
+            p=urlparse(r['final_url'] or item['url']); root=f'{p.scheme or "https"}://{p.netloc}/' if p.netloc else item['url']
+            body=r['body']; root_r=None
+            cands=candidates(r['final_url'] or item['url'],body,SIGNUP_TERMS) if body else []
+            if not cands:
+              root_r=fetch(root,10)
+              cands=candidates(root_r['final_url'] or root,root_r['body'],SIGNUP_TERMS) if root_r.get('body') else []
+            sub=probe_candidate(cands[0] if cands else None)
+            out={k:v for k,v in r.items() if k!='body'}; out.update(item); out['signup_candidates']=cands; out.update(sub)
+            out['signup_probe_source']='profile' if cands and body else ('root' if cands else '')
+            return out
+
+          def run(items, fn, out_path):
+            results=[]
+            with cf.ThreadPoolExecutor(max_workers=24) as ex:
+              futs={ex.submit(fn,x):x for x in items}
+              for n,f in enumerate(cf.as_completed(futs),1):
+                try: rec=f.result()
+                except Exception as e:
+                  x=futs[f]; rec={**x,'class':'UNREACHABLE','http':0,'final_url':'','title':'','chars':0,'challenge':None,'error':repr(e),'submit_class':'UNKNOWN','submit_url':'','submit_http':0,'submit_final':'','submit_title':''}
+                results.append(rec)
+                if n%25==0: print(out_path,n,'/',len(items),flush=True)
+            results.sort(key=lambda x:x['row'])
+            Path(out_path).write_text(json.dumps(results,ensure_ascii=False,indent=2))
+            return results
+
+          dbr=run(db,audit_db,'results/full-sheet-audit/database.json')
+          sr=run(social,audit_social,'results/full-sheet-audit/social.json')
+          summary={
+            'database':{'total':len(dbr),'access':{},'submit':{}},
+            'social':{'total':len(sr),'access':{},'submit':{}}
+          }
+          for key,rows in [('database',dbr),('social',sr)]:
+            for r in rows:
+              summary[key]['access'][r.get('class','UNKNOWN')]=summary[key]['access'].get(r.get('class','UNKNOWN'),0)+1
+              summary[key]['submit'][r.get('submit_class','UNKNOWN')]=summary[key]['submit'].get(r.get('submit_class','UNKNOWN'),0)+1
+          Path('results/full-sheet-audit/summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+          print(json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Persist results
+        if: always()
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit
+          git commit -m 'Store full sheet access audit [skip ci]' || true
+          git push || true
