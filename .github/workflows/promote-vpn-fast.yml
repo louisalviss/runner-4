@@ -1,0 +1,27 @@
+name: Promote Fast VPN Result
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'results/full-sheet-audit/vpn_access_fast.json'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Promote
+        run: |
+          cp results/full-sheet-audit/vpn_access_fast.json results/full-sheet-audit/vpn_access.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/vpn_access.json
+          git commit -m 'Promote fast VPN sheet retry [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
