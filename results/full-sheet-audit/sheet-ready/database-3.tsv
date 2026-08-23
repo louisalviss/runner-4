@@ -1,0 +1,50 @@
+102	Hunt for Tools	https://huntfortools.com	OK	DIRECT	OPEN	https://huntfortools.com/get-started				2026-08-23 12:56 UTC
+103	Idea Kiln	https://ideakiln.com	OK	DIRECT	OPEN	https://ideakiln.com/dashboard/submit-idea				2026-08-23 12:56 UTC
+104	IndieFounder	https://indiefounder.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error timed out>; No verified public submit entry found	2026-08-23 12:56 UTC
+105	IndieLaunch	https://indielaunch.co	OK	DIRECT	STALE	https://indielaunch.ai/submit				2026-08-23 12:56 UTC
+106	IndieMade	https://indiemade.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+107	IndiePages	https://indiepages.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1000)>; No verified public submit entry found	2026-08-23 12:56 UTC
+108	IndieStack	https://indiestack.co	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+109	Indietool	https://www.indietool.io	OK	DIRECT	AUTH_REQUIRED	https://www.indietool.io/user/signup	Yes			2026-08-23 12:56 UTC
+110	IndieTools	https://indietools.app	OK	DIRECT	AUTH_REQUIRED	https://www.indietools.app/signin?callbackUrl=/dashboard/products/new	Yes			2026-08-23 12:56 UTC
+111	kj123.cn	https://www.kj123.cn	OK	DIRECT	STALE	https://goodpics.net/submit				2026-08-23 12:56 UTC
+112	Latest AI Updates	https://latestaiupdates.com	OK	DIRECT	OPEN	https://latestaiupdates.com/get-started				2026-08-23 12:56 UTC
+113	Launch	https://trylaunch.ai	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+114	Launch List	https://www.launch-list.org	OK	DIRECT	OPEN	https://www.launch-list.org/get-listed				2026-08-23 12:56 UTC
+115	Launch Scroll	https://launchscroll.com	OK	DIRECT	OPEN	https://launchscroll.com/get-started				2026-08-23 12:56 UTC
+116	Launch Vault	https://www.launchvault.dev	OK	DIRECT	AUTH_REQUIRED	https://www.launchvault.dev/projects/submit	Yes			2026-08-23 12:56 UTC
+117	LaunchDay	https://launchday.app	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>; No verified public submit entry found	2026-08-23 12:56 UTC
+118	LauncherList	https://launcherlist.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+119	Launching Now	https://launchingnow.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+120	LaunchitX	https://launchitx.com	OK	DIRECT	AUTH_REQUIRED	https://launchitx.com/projects/submit	Yes			2026-08-23 12:56 UTC
+121	Launchpad.so	https://launchpad.so	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+122	LaunchPool	https://launchpool.co	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+123	LaunchStarter	https://launchstarter.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+124	LaunchTab	https://launchtab.com	OK	CLOAK	STALE	https://www.atom.com/submit				2026-08-23 12:56 UTC
+125	LaunchWeekly	https://launchweekly.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno 111] Connection refused>; No verified public submit entry found	2026-08-23 12:56 UTC
+126	LaunchZone	https://launchzone.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+127	ListYourProduct	https://listyourproduct.com	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+128	Make.rs	https://make.rs	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+129	Maker Directory	https://makerdirectory.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+130	MakerBoard	https://makerboard.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+131	Makerlist.io	https://makerlist.io	OK	DIRECT	STALE	https://makerlist.io/submit-startup				2026-08-23 12:56 UTC
+132	MedSci AI	https://aisite.medsci.cn	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+133	My Launch Stash	https://mylaunchstash.com	OK	DIRECT	OPEN	https://mylaunchstash.com/get-started				2026-08-23 12:56 UTC
+134	My Start Tools	https://mystarttools.com	OK	DIRECT	OPEN	https://mystarttools.com/get-started				2026-08-23 12:56 UTC
+135	NavFolders	https://navfolders.com	OK	DIRECT	AUTH_REQUIRED	https://navfolders.com/submit	Yes			2026-08-23 12:56 UTC
+136	Navs Site	https://navs.site	OK	DIRECT	OPEN	https://navs.site/website/submitbear				2026-08-23 12:56 UTC
+137	New Startups	https://newstartups.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+138	NewTools	https://newtools.co	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+139	NextGen Tools	https://www.nxgntools.com	OK	DIRECT	STALE	https://www.nxgntools.com/submit				2026-08-23 12:56 UTC
+140	Open Launch	https://openlaunch.ai	OK	DIRECT	AUTH_REQUIRED	https://openlaunch.ai/projects/submit	Yes			2026-08-23 12:56 UTC
+141	OpenHunts	https://openhunts.com	OK	DIRECT	AUTH_REQUIRED	https://openhunts.com/projects/submit	Yes			2026-08-23 12:56 UTC
+142	PeerPush	https://peerpush.net	OK	DIRECT	AUTH_REQUIRED	https://peerpush.com/submit	Yes			2026-08-23 12:56 UTC
+143	PitchWalker	https://pitchwalker.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+144	Power Up Tools	https://poweruptools.com	OK	DIRECT	OPEN	https://poweruptools.com/get-started				2026-08-23 12:56 UTC
+145	Product Launch Dir	https://productlaunchdir.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+146	Product List Dir	https://productlistdir.com	OK	DIRECT	OPEN	https://productlistdir.com/submit				2026-08-23 12:56 UTC
+147	Product Wing	https://productwing.com	OK	DIRECT	OPEN	https://productwing.com/submit				2026-08-23 12:56 UTC
+148	ProductBurst	https://productburst.com	OK	DIRECT	STALE	https://bubble.io/submit				2026-08-23 12:56 UTC
+149	ProductCatalog	https://productcatalog.io	OK	DIRECT	STALE	https://productcatalog.io/submit				2026-08-23 12:56 UTC
+150	ProductDir	https://productdir.com	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+151	ProductFeed	https://productfeed.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC

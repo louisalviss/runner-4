@@ -1,0 +1,51 @@
+Source Row	Social	Profile URL	Profile Status	Access Method	Submit Classification	Current Signup Status	Signup URL	Auth Required	Needs VPN	Notes	Verified At
+13	Twitter.com	https://x.com/fbmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://x.com/i/jf/onboarding/web?mode=signup&redirect_after_login=%2Ffbmaimeagent	Yes			2026-08-23 12:56 UTC
+14	pinterest.com	https://www.pinterest.com/footballmaimeagent/	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://www.pinterest.com/sign-up				2026-08-23 12:56 UTC
+15	twitch.tv	https://www.twitch.tv/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://www.twitch.tv/signup				2026-08-23 12:56 UTC
+16	youtube.com	https://www.youtube.com/@footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://www.youtube.com/register				2026-08-23 12:56 UTC
+17	reddit.com	https://www.reddit.com/user/footballmaimeagent/	BLOCKED	CLOAK_FAILED	YES - CURRENT ENTRY	OPEN	https://www.reddit.com/register		Yes	blocked by network security	2026-08-23 12:56 UTC
+18	500px.com	https://500px.com/p/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	UNKNOWN					2026-08-23 12:56 UTC
+19	about.me	https://about.me/footballmaimeagent	DEAD	DIRECT	PAST YES / NOW DEAD	AUTH_REQUIRED	https://about.me/signup/email	Yes		HTTP 404	2026-08-23 12:56 UTC
+20	vimeo.com	https://vimeo.com/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://vimeo.com/join				2026-08-23 12:56 UTC
+21	gravatar.com	https://gravatar.com/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	BLOCKED	https://gravatar.com/connect?gravatar_from=signup		Yes		2026-08-23 12:56 UTC
+22	myspace.com	https://myspace.com/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://myspace.com/signup	Yes			2026-08-23 12:56 UTC
+23	instapaper.com	https://www.instapaper.com/p/fbmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	UNKNOWN					2026-08-23 12:56 UTC
+24	medium.com	https://medium.com/@footballmaimeagent	BLOCKED	CLOAK_FAILED	BLOCKED	BLOCKED	https://medium.com/signup		Yes	just a moment	2026-08-23 12:56 UTC
+25	Substance3d.Adobe.Com	https://substance3d.adobe.com/community-assets/profile/org.adobe.user:079881196A82CB880A495C83@AdobeID	OK	DIRECT	YES - EXISTING PROFILE	UNKNOWN					2026-08-23 12:56 UTC
+26	Webflow.Io	https://footballmaimeagent.webflow.io/	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://footballmaimeagent.webflow.io/signup				2026-08-23 12:56 UTC
+27	Bit.Ly	https://bit.ly/m/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://bitly.com/pages/pricing				2026-08-23 12:56 UTC
+28	Issuu.Com	https://issuu.com/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://issuu.com/signup?referrer=header	Yes			2026-08-23 12:56 UTC
+29	B.Hatena.Ne.Jp	https://b.hatena.ne.jp/footballmaimeagent/bookmark	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://www.hatena.ne.jp/register?location=https%3A%2F%2Fb.hatena.ne.jp%2F%3Fregistered_from%3Dglobal-header&via=201037	Yes			2026-08-23 12:56 UTC
+30	Disqus.Com	https://disqus.com/by/footballmaimeagent/about/	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://disqus.com/signup				2026-08-23 12:56 UTC
+31	Form.Jotform.Com	https://form.jotform.com/262281965536062	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://www.jotform.com/signup/	Yes			2026-08-23 12:56 UTC
+32	Community.Cisco.Com	https://community.cisco.com/t5/user/viewprofilepage/user-id/2102403	BLOCKED	CLOAK_FAILED	BLOCKED	BLOCKED	https://community.cisco.com/signup		Yes	just a moment	2026-08-23 12:56 UTC
+33	Nicovideo.Jp	https://www.nicovideo.jp/user/145158030	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://www.nicovideo.jp/signup				2026-08-23 12:56 UTC
+34	Qna.Habr.Com	https://qna.habr.com/user/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://qna.habr.com/signup				2026-08-23 12:56 UTC
+35	profile.ameba.jp	https://www.ameba.jp/profile/general/footballmaimeagent/	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://auth.user.ameba.jp/signup?utm_medium=ameba&utm_source=profile.ameba.jp&client_id=2898454d9cc906ad54ed0a75ebff86c29b18d45b947391c54852d218a1294b13&callback=https://www.ameba.jp&force_ameba_id=true	Yes			2026-08-23 12:56 UTC
+36	Mixcloud.Com	https://www.mixcloud.com/footballmaimeagent/	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://www.mixcloud.com/signup/	Yes			2026-08-23 12:56 UTC
+37	Gumroad.Com	https://footballmaimeagent.gumroad.com/	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://footballmaimeagent.gumroad.com/signup				2026-08-23 12:56 UTC
+38	Tabelog.Com	https://tabelog.com/rvwr/035094785/prof/	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://tabelog.com/sign-up				2026-08-23 12:56 UTC
+39	Ameba.Jp	https://ameblo.jp/footballmaimeagent/entry-12976019066.html	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://auth.user.ameba.jp/signup?callback=https%3A%2F%2Fwww.ameba.jp&utm_medium=ameba&utm_source=ameblo.jp&utm_campaign=ameba_blog_header_button&force_ameba_id=true	Yes			2026-08-23 12:56 UTC
+40	Yumpu.Com	https://www.yumpu.com/user/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://www.yumpu.com/signup				2026-08-23 12:56 UTC
+41	Deviantart.Com	https://www.deviantart.com/footballmaimeagent	BLOCKED	CLOAK_FAILED	YES - CURRENT ENTRY	OPEN	https://www.deviantart.com/join		Yes	HTTP 403	2026-08-23 12:56 UTC
+42	Bsky.App	https://bsky.app/profile/fbmaimeagent.bsky.social	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://bsky.app/signup				2026-08-23 12:56 UTC
+43	Hub.Docker.Com	https://hub.docker.com/u/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://app.docker.com/signup	Yes			2026-08-23 12:56 UTC
+44	Sketchfab.Com	https://sketchfab.com/fbmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://sketchfab.com/signup	Yes			2026-08-23 12:56 UTC
+45	Public.Tableau.Com	https://public.tableau.com/app/profile/footballmaimeagent.com/viz/Footballmaimeagent_com/Feuille1	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://public.tableau.com/signup				2026-08-23 12:56 UTC
+46	comicvine.gamespot.com	https://comicvine.gamespot.com/profile/fbmaimeagent/	BLOCKED	CLOAK_FAILED	BLOCKED	BLOCKED	https://comicvine.gamespot.com/signup		Yes	just a moment	2026-08-23 12:56 UTC
+47	Myanimelist.Net	https://myanimelist.net/profile/fbmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://myanimelist.net/register.php?from=%2Fprofile%2Ffbmaimeagent%23lastcomment	Yes			2026-08-23 12:56 UTC
+48	Godaddysites.Com	https://site-42eydj213.godaddysites.com/	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://site-42eydj213.godaddysites.com/signup				2026-08-23 12:56 UTC
+49	intensedebate.com	https://www.intensedebate.com/profiles/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://www.intensedebate.com/signup	Yes			2026-08-23 12:56 UTC
+50	S.Id	https://s.id/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://dash.s.id/auth/register	Yes			2026-08-23 12:56 UTC
+51	Tawk.To	https://tawk.to/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://dashboard.tawk.to/signup	Yes			2026-08-23 12:56 UTC
+52	Vc.Ru	https://vc.ru/id6080863	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://vc.ru/signup				2026-08-23 12:56 UTC
+53	gitbook.io	https://footballmaimeagent.gitbook.io/footballmaimeagent-docs/	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://footballmaimeagent.gitbook.io/signup				2026-08-23 12:56 UTC
+54	telegra.ph	https://telegra.ph/Footballmaimeagentcom-08-18	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://telegra.ph/signup				2026-08-23 12:56 UTC
+55	pbase.com	https://pbase.com/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://pbase.com/register	Yes			2026-08-23 12:56 UTC
+56	Website.Informer.Com	https://website.informer.com/footballmaimeagent.com	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://website.informer.com/signup				2026-08-23 12:56 UTC
+57	Tistory.Com	https://footballmaimeagent.tistory.com/1	OK	DIRECT	YES - EXISTING PROFILE	STALE	https://footballmaimeagent.tistory.com/signup				2026-08-23 12:56 UTC
+58	Beacons.Ai	https://beacons.ai/footballmaimeagent	BLOCKED	CLOAK_FAILED	BLOCKED	BLOCKED	https://beacons.ai/signup		Yes	just a moment	2026-08-23 12:56 UTC
+59	3dwarehouse.Sketchup.Com	https://3dwarehouse.sketchup.com/by/footballmaimeagent	OK	DIRECT	YES - EXISTING PROFILE	UNKNOWN					2026-08-23 12:56 UTC
+60	Pxhere.Com	https://pxhere.com/en/photographer-me/5107398	OK	DIRECT	YES - EXISTING PROFILE	AUTH_REQUIRED	https://pxhere.com/en/signup	Yes			2026-08-23 12:56 UTC
+61	Bitchute.Com	https://www.bitchute.com/channel/fSchfr6WBEto	OK	DIRECT	YES - EXISTING PROFILE	UNKNOWN					2026-08-23 12:56 UTC
+62	coub.com	https://coub.com/avery-rhodes	OK	DIRECT	YES - EXISTING PROFILE	OPEN	https://twitter.com/coub?utm_source=coub_web&utm_medium=side_menu&utm_campaign=join_our_smm				2026-08-23 12:56 UTC

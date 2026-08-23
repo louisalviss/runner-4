@@ -1,0 +1,51 @@
+Source Row	Name	URL	Access Status	Access Method	Submit Status	Submit URL	Auth Required	Needs VPN	Notes	Verified At
+2	Betafy	https://betafy.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error timed out>; No verified public submit entry found	2026-08-23 12:56 UTC
+3	CrunchBase	https://www.crunchbase.com	OK	DIRECT	BLOCKED	https://www.crunchbase.com/submit		Yes		2026-08-23 12:56 UTC
+4	EarlyTools	https://earlytools.com	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+5	Future Tools	https://www.futuretools.io	OK	DIRECT	OPEN	https://futuretools.io/submit-a-tool				2026-08-23 12:56 UTC
+6	LaunchBase	https://launchbase.app	SERVER_ERROR	DIRECT	SERVER_ERROR	https://launchbase.app/submit			HTTP 500	2026-08-23 12:56 UTC
+7	Nextpedia	https://nextpedia.io	OK	DIRECT	OPEN	https://nextpedia.io/submit-tool				2026-08-23 12:56 UTC
+8	PitchGround	https://pitchground.com	OK	DIRECT	STALE	https://seoengine.ai/submit				2026-08-23 12:56 UTC
+9	SaaSHub	https://www.saashub.com	OK	DIRECT	OPEN	https://www.saashub.com/services/submit				2026-08-23 12:56 UTC
+10	SaaSList	https://saaslist.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+11	SideProjectors	https://www.sideprojectors.com	OK	DIRECT	STALE	https://www.sideprojectors.com/submit				2026-08-23 12:56 UTC
+12	StackShare	https://stackshare.io	BLOCKED	CLOAK_FAILED	BLOCKED	https://stackshare.io/submit		Yes	HTTP 429	2026-08-23 12:56 UTC
+13	Startup Resources	https://startupresources.io	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+14	StartupBase	https://startupbase.io	OK	DIRECT	OPEN	https://startupbase.io/launch				2026-08-23 12:56 UTC
+15	ToolBoard	https://toolboard.io	SERVER_ERROR	DIRECT	SERVER_ERROR	https://toolboardcanvas.com/submit			HTTP 500	2026-08-23 12:56 UTC
+16	AI Cyclopedia	https://www.aicyclopedia.com	OK	DIRECT	BLOCKED	https://aicyclopedia.com/submit-your-ai-tool/		Yes		2026-08-23 12:56 UTC
+17	AI Database	https://www.ai-database.org	OK	DIRECT	STALE	https://ai-database.org/submit				2026-08-23 12:56 UTC
+18	AI Scout	https://aiscout.net	SERVER_ERROR	DIRECT	UNKNOWN				HTTP 520; No verified public submit entry found	2026-08-23 12:56 UTC
+19	AI Tool Directory	https://aitooldirectory.com	OK	DIRECT	AUTH_REQUIRED	https://aitooldirectory.com/login?redirect=/submit	Yes			2026-08-23 12:56 UTC
+20	AI Valley	https://aivalley.ai	OK	DIRECT	OPEN	https://aivalley.ai/submit				2026-08-23 12:56 UTC
+21	All Things AI	https://allthings-ai.com	OK	DIRECT	STALE	https://allthings-ai.com/submit				2026-08-23 12:56 UTC
+22	AlternativeTo	https://alternativeto.net	OK	DIRECT	STALE	https://alternativeto.net/submit				2026-08-23 12:56 UTC
+23	AngelList / Wellfound	https://wellfound.com	OK	DIRECT	BLOCKED	https://wellfound.com/submit		Yes		2026-08-23 12:56 UTC
+24	App Stacks	https://appstacks.club	OK	DIRECT	STALE	https://appstacks.club/submit				2026-08-23 12:56 UTC
+25	AppSumo (if eligible later)	https://appsumo.com	OK	DIRECT	OPEN	https://sell.appsumo.com/				2026-08-23 12:56 UTC
+26	BetaList	https://betalist.com	OK	DIRECT	OPEN	https://betalist.com/submit				2026-08-23 12:56 UTC
+27	Capterra (if SaaS mature)	https://www.capterra.com	OK	VPN+CLOAK	BLOCKED	https://www.capterra.com/submit		Yes	Verified via VPN+CLOAK TH	2026-08-23 12:56 UTC
+28	CtrlAltCC	https://ctrlalt.cc	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+29	Dang AI	https://dang.ai	OK	DIRECT	AUTH_REQUIRED	https://dang.ai/pricing	Yes			2026-08-23 12:56 UTC
+30	Dev Hunt	https://devhunt.org	OK	DIRECT	STALE	https://devhunt.org/submit				2026-08-23 12:56 UTC
+31	DevPages	https://devpages.io	OK	DIRECT	OPEN	https://devpages.io/submit-a-tool				2026-08-23 12:56 UTC
+32	Futurepedia (if AI startup)	https://www.futurepedia.io	OK	DIRECT	OPEN	https://www.futurepedia.io/submit-tool				2026-08-23 12:56 UTC
+33	G2 (later stage)	https://www.g2.com	BLOCKED	CLOAK_FAILED	STALE	https://www.g2.com/submit		Yes	HTTP 403	2026-08-23 12:56 UTC
+34	GitHub (awesome lists)	https://github.com	OK	DIRECT	STALE	https://github.com/submit				2026-08-23 12:56 UTC
+35	GrowthList	https://www.thegrowthlist.co	OK	DIRECT	OPEN	https://www.thegrowthlist.co/tactics/launch-on-product-hunt				2026-08-23 12:56 UTC
+36	Hacker News (Show HN)	https://news.ycombinator.com/show	OK	DIRECT	BLOCKED	https://news.ycombinator.com/submit		Yes		2026-08-23 12:56 UTC
+37	Indie Hackers	https://www.indiehackers.com	OK	DIRECT	OPEN	https://www.indiehackers.com/products/new				2026-08-23 12:56 UTC
+38	Indie Page	https://indiepa.ge	OK	DIRECT	STALE	https://indiepa.ge/submit				2026-08-23 12:56 UTC
+39	Launch Dir	https://www.launchdir.com	OK	DIRECT	AUTH_REQUIRED	https://launchdir.com/dashboard/launches/new/	Yes			2026-08-23 12:56 UTC
+40	Launch Space	https://launchspace.io	OK	DIRECT	STALE	https://launchspace.io/submit				2026-08-23 12:56 UTC
+41	Launching Next	https://www.launchingnext.com	OK	DIRECT	OPEN	https://www.launchingnext.com/submit/				2026-08-23 12:56 UTC
+42	Launching.io	https://www.launching.io	OK	DIRECT	OPEN	https://www.launchingnext.com/submit/				2026-08-23 12:56 UTC
+43	Makerlog (Projects section)	https://getmakerlog.com	OK	DIRECT	STALE	https://ambitiousfounder.com/submit				2026-08-23 12:56 UTC
+44	Makerpad Directory	https://www.makerpad.co	OK	DIRECT	AUTH_REQUIRED	https://www.makerpad.co/companies/create	Yes			2026-08-23 12:56 UTC
+45	MicroLaunch	https://microlaunch.net	OK	DIRECT	OPEN	https://microlaunch.net/deals/submitator				2026-08-23 12:56 UTC
+46	No Code List	https://nocodelist.co	OK	DIRECT	STALE	https://nocodelist.co/submit				2026-08-23 12:56 UTC
+47	PitchWall	https://pitchwall.co	OK	DIRECT	OPEN	https://pitchwall.co/submit				2026-08-23 12:56 UTC
+48	Product Hunt	https://www.producthunt.com	OK	VPN+CLOAK	AUTH_REQUIRED	https://www.producthunt.com/posts/new	Yes		Verified via VPN+CLOAK TH	2026-08-23 12:56 UTC
+49	SaaS AI Tools	https://saasaitools.com	OK	DIRECT	OPEN	https://saasaitools.com/submit/				2026-08-23 12:56 UTC
+50	SaaS Discovery	https://saasdiscovery.com	OK	DIRECT	STALE	https://saasdiscovery.com/submit-startup				2026-08-23 12:56 UTC
+51	SaaS Genius	https://saas-genius.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC

@@ -1,0 +1,50 @@
+152	ProductHero	https://producthero.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+153	ProductPages	https://productpages.co	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+154	ProductsUp	https://productsup.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+155	ProjectHunt	https://projecthunt.me	OK	DIRECT	STALE	https://projecthunt.me/submit				2026-08-23 12:56 UTC
+156	Promote Project	https://www.promoteproject.com	OK	DIRECT	AUTH_REQUIRED	https://www.promoteproject.com/submit-startup	Yes			2026-08-23 12:56 UTC
+157	Ramen.Tools	https://ramen.tools	OK	DIRECT	STALE	https://ramen.tools/submit				2026-08-23 12:56 UTC
+158	SaaS Arena	https://saasarena.com	OK	DIRECT	STALE	https://championleadership.com/submit				2026-08-23 12:56 UTC
+159	SaaS Browser	https://saasbrowser.com	OK	DIRECT	AUTH_REQUIRED	https://saasbrowser.com/en/add-your-saas	Yes			2026-08-23 12:56 UTC
+160	SaaS Explorer	https://saasexplorer.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+161	Saas Field	https://saasfield.com	OK	DIRECT	OPEN	https://saasfield.com/submit				2026-08-23 12:56 UTC
+162	SaaS Hub Directory	https://saashubdirectory.com	SERVER_ERROR	DIRECT	SERVER_ERROR	https://saashubdirectory.com/submit			HTTP 502	2026-08-23 12:56 UTC
+163	SaaS Hunter	https://saashunter.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+164	SaaS Launch	https://saaslaunch.io	OK	DIRECT	STALE	https://saaslaunch.io/submit				2026-08-23 12:56 UTC
+165	SaaS Launch List	https://saaslaunchlist.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -3] Temporary failure in name resolution>; No verified public submit entry found	2026-08-23 12:56 UTC
+166	SaaS Pages	https://saaspages.xyz	OK	DIRECT	STALE	https://saaspages.xyz/submit				2026-08-23 12:56 UTC
+167	SaaS Roots	https://saasroots.com	OK	DIRECT	OPEN	https://saasroots.com/submit				2026-08-23 12:56 UTC
+168	SaaS Tools Dir	https://saastoolsdir.com	OK	DIRECT	OPEN	https://saastoolsdir.com/submit				2026-08-23 12:56 UTC
+169	SaaS Wheel	https://saaswheel.com	OK	DIRECT	OPEN	https://saaswheel.com/submit				2026-08-23 12:56 UTC
+170	SaaSBoard	https://saasboard.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -5] No address associated with hostname>; No verified public submit entry found	2026-08-23 12:56 UTC
+171	SaaSDir	https://saasdir.com	BLOCKED	CLOAK_FAILED	BLOCKED	https://www.serchen.com/submit		Yes	just a moment	2026-08-23 12:56 UTC
+172	SaaSFrame	https://saasframe.io	OK	DIRECT	STALE	https://www.saasframe.io/submit				2026-08-23 12:56 UTC
+173	SaasHunt	https://saashunt.best	OK	DIRECT	AUTH_REQUIRED	https://saashunt.best/projects/submit	Yes			2026-08-23 12:56 UTC
+174	SaaSNova	https://saasnova.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error timed out>; No verified public submit entry found	2026-08-23 12:56 UTC
+175	Saaspa.ge	https://www.saaspa.ge	OK	DIRECT	AUTH_REQUIRED	https://www.saaspa.ge/submit	Yes			2026-08-23 12:56 UTC
+176	SaaSPick	https://saaspick.com	OK	DIRECT	STALE	https://saaspick.com/submit				2026-08-23 12:56 UTC
+177	SaaSpo	https://saaspo.com	OK	DIRECT	OPEN	https://saaspo.com/submit				2026-08-23 12:56 UTC
+178	SaaSRegister	https://saasregister.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+179	Scout Forge	https://scoutforge.net	OK	DIRECT	AUTH_REQUIRED	https://scoutforge.net/app-register	Yes			2026-08-23 12:56 UTC
+180	See What New AI	https://www.seewhatnewai.com	OK	DIRECT	OPEN	https://www.seewhatnewai.com/submit				2026-08-23 12:56 UTC
+181	Shipybara	https://shipybara.com	OK	DIRECT	AUTH_REQUIRED	https://shipybara.com/projects/submit	Yes			2026-08-23 12:56 UTC
+182	ShowMySites	https://www.showmysites.com	OK	DIRECT	AUTH_REQUIRED	https://www.showmysites.com/accounts/signup/	Yes			2026-08-23 12:56 UTC
+183	Side Hustle Stack	https://sidehustlestack.co	SERVER_ERROR	DIRECT	SERVER_ERROR	https://sidehustlestack.co/submit			HTTP 509	2026-08-23 12:56 UTC
+184	Sitelike.org	https://www.sitelike.org	OK	DIRECT	STALE	https://www.sitelike.org/submit				2026-08-23 12:56 UTC
+185	Smart Kit Hub	https://smartkithub.com	OK	DIRECT	OPEN	https://smartkithub.com/get-started				2026-08-23 12:56 UTC
+186	Software Bolt	https://softwarebolt.com	OK	DIRECT	OPEN	https://softwarebolt.com/submit				2026-08-23 12:56 UTC
+187	SoftwareList	https://softwarelist.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -5] No address associated with hostname>; No verified public submit entry found	2026-08-23 12:56 UTC
+188	Solver Tools	https://solvertools.com	OK	DIRECT	OPEN	https://solvertools.com/get-started				2026-08-23 12:56 UTC
+189	Source Dir	https://sourcedir.com	OK	DIRECT	OPEN	https://sourcedir.com/submit				2026-08-23 12:56 UTC
+190	Stack Directory	https://stackdirectory.com	OK	DIRECT	OPEN	https://stackdirectory.com/submit				2026-08-23 12:56 UTC
+191	Startup AIdeas	https://startupaideas.com	OK	DIRECT	OPEN	https://startupaideas.com/get-started				2026-08-23 12:56 UTC
+192	Startup Benchmarks	https://startupbenchmarks.com	OK	DIRECT	OPEN	https://startupbenchmarks.com/get-started				2026-08-23 12:56 UTC
+193	Startup Index	https://startupindex.co	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+194	Startup Vessel	https://startupvessel.com	OK	DIRECT	OPEN	https://startupvessel.com/get-started				2026-08-23 12:56 UTC
+195	StartupDex	https://startupdex.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'startupdex.com'. (_ssl.c:1000)>; No verified public submit entry found	2026-08-23 12:56 UTC
+196	StartupForge	https://startupforge.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno 104] Connection reset by peer>; No verified public submit entry found	2026-08-23 12:56 UTC
+197	StartupGlobe	https://startupglobe.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+198	StartupHive	https://startuphive.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+199	StartupLift	https://startuplift.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1000)>; No verified public submit entry found	2026-08-23 12:56 UTC
+200	StartupLister	https://startuplister.com	DEAD	DIRECT	STALE	https://bubble.io/submit			HTTP 404	2026-08-23 12:56 UTC
+201	StartupNow	https://startupnow.co	UNREACHABLE	DIRECT	STALE	https://startupnow.co/submit		Yes	URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.startupnow.com'. (_ssl.c:1000)>	2026-08-23 12:56 UTC

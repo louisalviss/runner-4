@@ -1,0 +1,50 @@
+202	Startups Lab	https://startupslab.site	OK	DIRECT	OPEN	https://startupslab.site/submit-product				2026-08-23 12:56 UTC
+203	StartupShelf	https://startupshelf.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+204	StartupTrack	https://startuptrack.io	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+205	StartupVault	https://startupvault.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error timed out>; No verified public submit entry found	2026-08-23 12:56 UTC
+206	StartupWave	https://startupwave.co	OK	DIRECT	OPEN	https://startupwave.co/submit				2026-08-23 12:56 UTC
+207	Super AI Boom	https://superaiboom.com	OK	DIRECT	OPEN	https://superaiboom.com/get-started				2026-08-23 12:56 UTC
+208	TechPluto	https://techpluto.com	OK	DIRECT	OPEN	https://www.techpluto.com/submit-startup/				2026-08-23 12:56 UTC
+209	That App Show	https://thatappshow.com	OK	DIRECT	OPEN	https://thatappshow.com/get-started				2026-08-23 12:56 UTC
+210	The App Tools	https://theapptools.com	OK	DIRECT	OPEN	https://theapptools.com/get-started				2026-08-23 12:56 UTC
+211	The Core Tools	https://thecoretools.com	OK	DIRECT	OPEN	https://thecoretools.com/get-started				2026-08-23 12:56 UTC
+212	The Key Tools	https://thekeytools.com	OK	DIRECT	OPEN	https://thekeytools.com/get-started				2026-08-23 12:56 UTC
+213	The Mega Tools	https://themegatools.com	OK	DIRECT	OPEN	https://themegatools.com/get-started				2026-08-23 12:56 UTC
+214	The Startup Pitch	https://thestartuppitch.com	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'thestartuppitch.com'. (_ssl.c:1000)>; No verified public submit entry found	2026-08-23 12:56 UTC
+215	Tiny Tool Hub	https://tinytoolhub.com	OK	DIRECT	OPEN	https://tinytoolhub.com/get-started				2026-08-23 12:56 UTC
+216	TinyLaunch	https://www.tinylaunch.com	OK	DIRECT	STALE	https://www.tinylaunch.com/submit				2026-08-23 12:56 UTC
+217	TinyLaunchpad	https://tinylaunchpad.com	OK	DIRECT	AUTH_REQUIRED	https://tinylaunchpad.com/projects/submit	Yes			2026-08-23 12:56 UTC
+218	Tool Finddir	https://toolfinddir.com	OK	DIRECT	OPEN	https://toolfinddir.com/get-started				2026-08-23 12:56 UTC
+219	Tool Journey	https://tooljourney.com	OK	DIRECT	OPEN	https://tooljourney.com/get-started				2026-08-23 12:56 UTC
+220	Tool Prism	https://toolprism.com	OK	DIRECT	OPEN	https://toolprism.com/get-started				2026-08-23 12:56 UTC
+221	Tool Signal	https://toolsignal.com	OK	DIRECT	OPEN	https://toolsignal.com/get-started				2026-08-23 12:56 UTC
+222	ToolDB	https://tooldb.dev	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -5] No address associated with hostname>; No verified public submit entry found	2026-08-23 12:56 UTC
+223	toolfio.com	https://toolfio.com	OK	DIRECT	OPEN	https://toolfio.com/submit				2026-08-23 12:56 UTC
+224	Toolfolio	https://toolfolio.io	OK	DIRECT	OPEN	https://toolfolio.com/boosted-listing				2026-08-23 12:56 UTC
+225	ToolHive	https://toolhive.io	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+226	ToolIndex	https://toolindex.co	UNREACHABLE	DIRECT	UNKNOWN			Yes	URLError: <urlopen error [Errno -2] Name or service not known>; No verified public submit entry found	2026-08-23 12:56 UTC
+227	ToolRadar	https://toolradar.io	OK	DIRECT	UNKNOWN				No verified public submit entry found	2026-08-23 12:56 UTC
+228	Tools Cosmos	https://toolcosmos.com	OK	DIRECT	OPEN	https://toolcosmos.com/get-started				2026-08-23 12:56 UTC
+229	Tools For Makers	https://toolsformakers.com	OK	DIRECT	STALE	https://globalpande.ru.com/submit				2026-08-23 12:56 UTC
+230	Tools List HQ	https://toolslisthq.com	OK	DIRECT	OPEN	https://toolslisthq.com/get-started				2026-08-23 12:56 UTC
+231	Tools Under Radar	https://toolsunderradar.com	OK	DIRECT	OPEN	https://toolsunderradar.com/get-started				2026-08-23 12:56 UTC
+232	ToolScout	https://toolscout.app	OK	DIRECT	STALE	https://toolscout.app/submit				2026-08-23 12:56 UTC
+233	Toolspedia	https://toolspedia.io	OK	DIRECT	OPEN	https://toolspedia.io/submit-tool/				2026-08-23 12:56 UTC
+234	Top Trend Tools	https://toptrendtools.com	OK	DIRECT	OPEN	https://toptrendtools.com/get-started				2026-08-23 12:56 UTC
+235	Toshi List	https://toshilist.com	OK	DIRECT	OPEN	https://toshilist.com/get-started				2026-08-23 12:56 UTC
+236	Trustiner	https://trustiner.com	OK	DIRECT	OPEN	https://trustiner.com/get-started				2026-08-23 12:56 UTC
+237	Unite List	https://unitelist.com	OK	DIRECT	OPEN	https://unitelist.com/get-started				2026-08-23 12:56 UTC
+238	Verified Tools	https://www.verifiedtools.info	OK	DIRECT	OPEN	https://www.verifiedtools.info/submit				2026-08-23 12:56 UTC
+239	VerifiedDR	https://verifieddr.com	OK	DIRECT	STALE	https://verifieddr.com/submit				2026-08-23 12:56 UTC
+240	Viesearch	https://viesearch.com	OK	DIRECT	OPEN	https://viesearch.com/submit				2026-08-23 12:56 UTC
+241	We Like Tools	https://weliketools.com	OK	DIRECT	OPEN	https://weliketools.com/get-started				2026-08-23 12:56 UTC
+242	WebWiki	https://webwiki.com	OK	DIRECT	BLOCKED	https://www.webwiki.com/submit		Yes		2026-08-23 12:56 UTC
+243	What Launched Today	https://whatlaunched.today	OK	DIRECT	AUTH_REQUIRED	https://whatlaunched.today/auth/signup?returnUrl=%2Fdashboard%2Fsubmit	Yes			2026-08-23 12:56 UTC
+244	TrustMRR	https://trustmrr.com/startup/startup-directory	OK	DIRECT	STALE	https://trustmrr.com/submit				2026-08-23 12:56 UTC
+245	Fazier	https://fazier.com	OK	DIRECT	OPEN	https://fazier.com/submit				2026-08-23 12:56 UTC
+246	Peerlist	https://peerlist.io	OK	DIRECT	STALE	https://peerlist.io/submit				2026-08-23 12:56 UTC
+247	AIxploria	https://www.aixploria.com	OK	DIRECT	OPEN	https://www.aixploria.com/en/add-ai/				2026-08-23 12:56 UTC
+248	LaunchIgniter	https://launchigniter.com	OK	DIRECT	OPEN	https://launchigniter.com/submit-directories				2026-08-23 12:56 UTC
+249	FoundrList	https://www.foundrlist.com	OK	DIRECT	OPEN	https://www.foundrlist.com/submit				2026-08-23 12:56 UTC
+250	Software Advice	https://www.softwareadvice.com	BLOCKED	CLOAK_FAILED	BLOCKED	https://www.softwareadvice.com/submit		Yes	just a moment	2026-08-23 12:56 UTC
+251	Appscribed	https://appscribed.com/product-list/	OK	DIRECT	OPEN	https://appscribed.com/submit-ai-tool/				2026-08-23 12:56 UTC
