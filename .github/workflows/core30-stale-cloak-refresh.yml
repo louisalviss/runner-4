@@ -1,3 +1,4 @@
+# trigger 2026-08-24
 name: Core30 Stale Cloak Refresh
 
 on:
@@ -87,7 +88,6 @@ jobs:
                   u=x['url'].split('#')[0]
                   if u not in seen and urlparse(u).scheme in ('http','https'):
                     seen.add(u); candidates.append({'url':u,'text':x['text']})
-              # Favor same-domain and strongest action keywords.
               host=urlparse(t['home']).netloc.lower().removeprefix('www.')
               def score(x):
                 uh=urlparse(x['url']).netloc.lower().removeprefix('www.')
