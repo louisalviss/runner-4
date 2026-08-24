@@ -1,0 +1,236 @@
+{
+  "verified_at": "2026-08-24 19:17 UTC",
+  "total": 25,
+  "counts": {
+    "STALE": 20,
+    "NO_LONGER_RELEVANT": 3,
+    "OPEN": 2
+  },
+  "results": [
+    {
+      "row": 17,
+      "name": "AI Database",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://ai-database.org/",
+      "candidate_count": 14
+    },
+    {
+      "row": 21,
+      "name": "All Things AI",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://allthings-ai.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 24,
+      "name": "App Stacks",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://appstacks.club/",
+      "candidate_count": 14
+    },
+    {
+      "row": 40,
+      "name": "Launch Space",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 0,
+      "homepage_final": "",
+      "candidate_count": 14
+    },
+    {
+      "row": 43,
+      "name": "Makerlog (Projects section)",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://ambitiousfounder.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 53,
+      "name": "Side Project Ideas",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://sideprojectideas.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 59,
+      "name": "Tiny Alternatives",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://tinyalternatives.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 77,
+      "name": "AppVault",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://appvault.io/en/",
+      "candidate_count": 14
+    },
+    {
+      "row": 80,
+      "name": "Ben's Bites",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://www.bensbites.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 87,
+      "name": "BuiltWithTools",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://builtwithtools.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 95,
+      "name": "DR Checker",
+      "classification": "NO_LONGER_RELEVANT",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://drchecker.org/",
+      "candidate_count": 14
+    },
+    {
+      "row": 124,
+      "name": "LaunchTab",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 403,
+      "homepage_final": "https://www.atom.com/name/LaunchTab",
+      "candidate_count": 14
+    },
+    {
+      "row": 148,
+      "name": "ProductBurst",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://bubble.io/limit_exceeded?appname=productburst",
+      "candidate_count": 14
+    },
+    {
+      "row": 149,
+      "name": "ProductCatalog",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://productcatalog.io/",
+      "candidate_count": 14
+    },
+    {
+      "row": 155,
+      "name": "ProjectHunt",
+      "classification": "NO_LONGER_RELEVANT",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://projecthunt.me/",
+      "candidate_count": 14
+    },
+    {
+      "row": 157,
+      "name": "Ramen.Tools",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://ramen.tools/",
+      "candidate_count": 14
+    },
+    {
+      "row": 158,
+      "name": "SaaS Arena",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://championleadership.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 164,
+      "name": "SaaS Launch",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://saaslaunch.io/",
+      "candidate_count": 14
+    },
+    {
+      "row": 166,
+      "name": "SaaS Pages",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://saaspages.xyz/",
+      "candidate_count": 14
+    },
+    {
+      "row": 172,
+      "name": "SaaSFrame",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://www.saasframe.io/",
+      "candidate_count": 14
+    },
+    {
+      "row": 176,
+      "name": "SaaSPick",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://saaspick.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 184,
+      "name": "Sitelike.org",
+      "classification": "OPEN",
+      "best_route": "https://www.sitelike.org/add-site",
+      "homepage_http": 200,
+      "homepage_final": "https://www.sitelike.org/",
+      "candidate_count": 14
+    },
+    {
+      "row": 229,
+      "name": "Tools For Makers",
+      "classification": "STALE",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://globalpande.ru.com/",
+      "candidate_count": 14
+    },
+    {
+      "row": 232,
+      "name": "ToolScout",
+      "classification": "NO_LONGER_RELEVANT",
+      "best_route": "",
+      "homepage_http": 200,
+      "homepage_final": "https://toolscout.app/",
+      "candidate_count": 14
+    },
+    {
+      "row": 239,
+      "name": "VerifiedDR",
+      "classification": "OPEN",
+      "best_route": "https://verifieddr.com/website/submitsaas-com",
+      "homepage_http": 200,
+      "homepage_final": "https://verifieddr.com/",
+      "candidate_count": 14
+    }
+  ]
+}
