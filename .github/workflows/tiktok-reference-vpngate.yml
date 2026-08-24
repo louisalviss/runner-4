@@ -1,0 +1,41 @@
+name: TikTok Reference VPNGate Recovery
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.runner/tiktok-ref-trigger.txt'
+      - '.github/workflows/tiktok-reference-vpngate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover reference through JP KR SG VPNGate pool
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg openvpn iproute2 iptables curl
+          python3 -m pip install -q -U yt-dlp
+          mkdir -p scripts dsh-handoff/downloads
+          curl -fsSL 'https://raw.githubusercontent.com/louisalviss/runner-6/edm-top10-dsh-render/scripts/dsh-ytdlp-vpngate.sh' -o scripts/dsh-ytdlp-vpngate.sh
+          chmod +x scripts/dsh-ytdlp-vpngate.sh
+          SRC="$(YTDLP_BIN="$(command -v yt-dlp)" DSH_MEDIA_MODE=video bash scripts/dsh-ytdlp-vpngate.sh 'https://www.tiktok.com/@x/video/7674932885383662849' 1080)"
+          test -n "$SRC" && test -s "$SRC"
+          cp "$SRC" dsh-handoff/reference.mp4
+          ffprobe -v error -show_entries format=duration,size,bit_rate -show_entries stream=codec_type,codec_name,width,height -of json dsh-handoff/reference.mp4 > dsh-handoff/reference-ffprobe.json
+          ffmpeg -nostdin -hide_banner -y -v error -i dsh-handoff/reference.mp4 -vf 'fps=1/3,scale=360:-2,tile=5x4:padding=4:margin=4' -frames:v 1 dsh-handoff/reference-contact.jpg || true
+          ffmpeg -nostdin -v error -i dsh-handoff/reference.mp4 -f null -
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tiktok-reference-vpngate-${{ github.run_id }}
+          path: dsh-handoff/
+          retention-days: 3
+          if-no-files-found: warn
