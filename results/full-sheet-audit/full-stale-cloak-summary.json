@@ -1,0 +1,347 @@
+{
+  "verified_at": "2026-08-24 00:33 UTC",
+  "total": 42,
+  "counts": {
+    "STALE": 31,
+    "OPEN": 5,
+    "DEAD_OR_UNREACHABLE": 6
+  },
+  "results": [
+    {
+      "row": 8,
+      "name": "PitchGround",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 17,
+      "name": "AI Database",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 21,
+      "name": "All Things AI",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 24,
+      "name": "App Stacks",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 34,
+      "name": "GitHub (awesome lists)",
+      "classification": "OPEN",
+      "best_route": "https://github.com/submit",
+      "home_http": 200,
+      "old_http": 200
+    },
+    {
+      "row": 38,
+      "name": "Indie Page",
+      "classification": "DEAD_OR_UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "old_http": 404
+    },
+    {
+      "row": 40,
+      "name": "Launch Space",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 43,
+      "name": "Makerlog (Projects section)",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 46,
+      "name": "No Code List",
+      "classification": "OPEN",
+      "best_route": "https://nocodelist.co/submit",
+      "home_http": 200,
+      "old_http": 200
+    },
+    {
+      "row": 50,
+      "name": "SaaS Discovery",
+      "classification": "OPEN",
+      "best_route": "https://saasdiscovery.com/launchpad/",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 53,
+      "name": "Side Project Ideas",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 59,
+      "name": "Tiny Alternatives",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 66,
+      "name": "Active Search Results",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 71,
+      "name": "AIFindr",
+      "classification": "DEAD_OR_UNREACHABLE",
+      "best_route": "",
+      "home_http": 404,
+      "old_http": 404
+    },
+    {
+      "row": 77,
+      "name": "AppVault",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 0
+    },
+    {
+      "row": 80,
+      "name": "Ben's Bites",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 82,
+      "name": "BestofAI",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 84,
+      "name": "Brownbook",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 87,
+      "name": "BuiltWithTools",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 88,
+      "name": "BusinessHunt",
+      "classification": "DEAD_OR_UNREACHABLE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 200
+    },
+    {
+      "row": 95,
+      "name": "DR Checker",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 105,
+      "name": "IndieLaunch",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 111,
+      "name": "kj123.cn",
+      "classification": "DEAD_OR_UNREACHABLE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 124,
+      "name": "LaunchTab",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 131,
+      "name": "Makerlist.io",
+      "classification": "OPEN",
+      "best_route": "https://makerlist.io/",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 139,
+      "name": "NextGen Tools",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 148,
+      "name": "ProductBurst",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 149,
+      "name": "ProductCatalog",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 155,
+      "name": "ProjectHunt",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 157,
+      "name": "Ramen.Tools",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 158,
+      "name": "SaaS Arena",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 164,
+      "name": "SaaS Launch",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 166,
+      "name": "SaaS Pages",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 172,
+      "name": "SaaSFrame",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 176,
+      "name": "SaaSPick",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 184,
+      "name": "Sitelike.org",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 0
+    },
+    {
+      "row": 200,
+      "name": "StartupLister",
+      "classification": "DEAD_OR_UNREACHABLE",
+      "best_route": "",
+      "home_http": 404,
+      "old_http": 404
+    },
+    {
+      "row": 201,
+      "name": "StartupNow",
+      "classification": "DEAD_OR_UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "old_http": 404
+    },
+    {
+      "row": 216,
+      "name": "TinyLaunch",
+      "classification": "OPEN",
+      "best_route": "https://www.tinylaunch.com/login?returnTo=%2Fsubmit",
+      "home_http": 200,
+      "old_http": 200
+    },
+    {
+      "row": 229,
+      "name": "Tools For Makers",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 232,
+      "name": "ToolScout",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    },
+    {
+      "row": 239,
+      "name": "VerifiedDR",
+      "classification": "STALE",
+      "best_route": "",
+      "home_http": 200,
+      "old_http": 404
+    }
+  ]
+}
