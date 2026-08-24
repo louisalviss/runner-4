@@ -1,0 +1,653 @@
+{
+  "verified_at": "2026-08-24 20:15 UTC",
+  "total": 64,
+  "counts": {
+    "UNREACHABLE": 48,
+    "UNKNOWN": 3,
+    "OPEN": 11,
+    "AUTH_REQUIRED": 1,
+    "DEAD_OR_REPURPOSED": 1
+  },
+  "results": [
+    {
+      "row": 2,
+      "name": "Betafy",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 4,
+      "name": "EarlyTools",
+      "classification": "UNKNOWN",
+      "best_route": "",
+      "home_http": 200,
+      "home_final": "https://forsale.godaddy.com/forsale/earlytools.com?utm_source=TDFS_BINNS2&utm_medium=parkedpages&utm_campaign=x_corp_tdfs-binns2_base&traffic_type=TDFS_BINNS2&traffic_id=binns2&",
+      "title": "earlytools.com is for sale — Buy for $2,399 or Lease to Own | GoDaddy",
+      "sample": "Excellent 4.5 out of 5 The domain name earlytools.com is for sale! Get this domain FAST TRANSFER Own it today for $2,399, or select Lease to Own. Buy now USD$2,399 Lease to own USD$110 / month Next Free transaction support Secure payments L"
+    },
+    {
+      "row": 10,
+      "name": "SaaSList",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 13,
+      "name": "Startup Resources",
+      "classification": "OPEN",
+      "best_route": "https://startupresources.io/add-resource/",
+      "home_http": 200,
+      "home_final": "https://startupresources.io/",
+      "title": "The Best Tools For Your Startup | Startup Resources",
+      "sample": "Skip to content Categories Blog About Add Resource Search Search Startup Tools Delivered To Your Inbox Join 2,000 entrepreneurs and makers getting a weekly curated email of startup tools and articles. Email Get Startup Tools Latest tools Bl"
+    },
+    {
+      "row": 18,
+      "name": "AI Scout",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 28,
+      "name": "CtrlAltCC",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 51,
+      "name": "SaaS Genius",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 73,
+      "name": "Alternative Tools",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 85,
+      "name": "BuildLog",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 89,
+      "name": "Callupcontact",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 91,
+      "name": "DailyLaunch",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 94,
+      "name": "DevLaunch",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 96,
+      "name": "FF2050.AI",
+      "classification": "OPEN",
+      "best_route": "https://ff2050.com/",
+      "home_http": 200,
+      "home_final": "https://ff2050.com/",
+      "title": "Ff2050 Zone – Reviews, how-tos and hardware picks for players.",
+      "sample": "July 30, 2026 Home About Contact Privacy F Ff2050 Zone Home Guides Reviews Tips & Tricks Hardware Mobile Gaming Contact Us GUIDES The Secret Rules of Kid-Safe Modding for Minecraft and Beyond The Hidden World Behind the Download Button You "
+    },
+    {
+      "row": 98,
+      "name": "Foundr Tools",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 99,
+      "name": "FreshStartups",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 100,
+      "name": "GetWorm",
+      "classification": "OPEN",
+      "best_route": "https://getworm.com/submit",
+      "home_http": 200,
+      "home_final": "https://getworm.com/",
+      "title": "Home",
+      "sample": "GET WORMDISCOVERCURATED GOT A STARTUP ? Help a Startup start-up And let them love you back Discover latest products & services from startups, and get exclusive early bird offers (worms) in return LOGIN SIGNUP AND DISCOVER WORMS Startups off"
+    },
+    {
+      "row": 104,
+      "name": "IndieFounder",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 106,
+      "name": "IndieMade",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 107,
+      "name": "IndiePages",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 108,
+      "name": "IndieStack",
+      "classification": "OPEN",
+      "best_route": "https://indiestack.co/submit",
+      "home_http": 200,
+      "home_final": "https://indiestack.co/",
+      "title": "IndieStack — The Builder's Control Room",
+      "sample": "SYS API_VAULT: ENCRYPTED | KEEP_ALIVE: ACTIVE | STACKS_MONITORED: 2,800+ | UPTIME: 99.97% | BUILD: v2.5.0 INDIESTACK v2 FEATURES HOW TO IDEAS COMMUNITY PROMPTS MARKETPLACE PRICING SIGN IN START FREE → OPERATIONAL COMMAND CENTER for independ"
+    },
+    {
+      "row": 113,
+      "name": "Launch",
+      "classification": "AUTH_REQUIRED",
+      "best_route": "https://trylaunch.ai/auth?mode=signup",
+      "home_http": 200,
+      "home_final": "https://trylaunch.ai/",
+      "title": "Launch — Where Vibe Coders Get Discovered",
+      "sample": "Products Collections Newsletter Forums Pricing Advertise 🇺🇸 Toggle theme Login Sign Up Today Week Month Year All Platform Rated Popular Latest Revenue Launch your thing to 500,000+ vibe coders Ship it. Get discovered. Build your reputation "
+    },
+    {
+      "row": 117,
+      "name": "LaunchDay",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 118,
+      "name": "LauncherList",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 119,
+      "name": "Launching Now",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 121,
+      "name": "Launchpad.so",
+      "classification": "DEAD_OR_REPURPOSED",
+      "best_route": "",
+      "home_http": 200,
+      "home_final": "https://launchpad.so/",
+      "title": "launchpad.so for sale | Spaceship.com",
+      "sample": "Domain for sale launchpad.so Free transaction support Secure payments Spaceship reliability Listed with spaceship.com GET THIS DOMAIN Buy now $2,495 Make offer $ Payment methods Next You will be redirected to spaceship.com Buyer protection "
+    },
+    {
+      "row": 122,
+      "name": "LaunchPool",
+      "classification": "UNKNOWN",
+      "best_route": "",
+      "home_http": 200,
+      "home_final": "https://forsale.godaddy.com/forsale/launchpool.co?utm_source=TDFS_BINNS2&utm_medium=parkedpages&utm_campaign=x_corp_tdfs-binns2_base&traffic_type=TDFS_BINNS2&traffic_id=binns2&",
+      "title": "launchpool.co is for sale — Buy for $1,488 or Lease to Own | GoDaddy",
+      "sample": "Excellent 4.5 out of 5 The domain name Launchpool.co is for sale! Get this domain PREMIUM VERIFIED DOMAIN Own it today for $1,488, or select Lease to Own. Buy now USD$1,488 Lease to own USD$248 / month Next Free transaction support Secure p"
+    },
+    {
+      "row": 123,
+      "name": "LaunchStarter",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 125,
+      "name": "LaunchWeekly",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 126,
+      "name": "LaunchZone",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 127,
+      "name": "ListYourProduct",
+      "classification": "OPEN",
+      "best_route": "https://listyourproduct.com/",
+      "home_http": 200,
+      "home_final": "https://listyourproduct.com/",
+      "title": "ListYourProduct – AI-Powered Product Listings for Amazon & Meesho",
+      "sample": "ListYourProduct HOW TO USE FEATURES HIGHLIGHTS PRICING FAQ SIGN IN SIGN UP Create Product Listings From A Single Photo Upload a product photo and get a complete, keyword-rich listing — title, description, and bullet points — ready to publis"
+    },
+    {
+      "row": 128,
+      "name": "Make.rs",
+      "classification": "OPEN",
+      "best_route": "https://make.rs/submit",
+      "home_http": 200,
+      "home_final": "https://make.rs/",
+      "title": "What are you working on? | Make.rs",
+      "sample": "FeedStorytellerStacksAdvertiseAboutSign in What are you working on? Create your Maker page and show the world what you've done 👉 make.rs/@ CLAIM You'll be in good company with other makers like you Latest entries from our makers Everyone Fo"
+    },
+    {
+      "row": 129,
+      "name": "Maker Directory",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 130,
+      "name": "MakerBoard",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 132,
+      "name": "MedSci AI",
+      "classification": "OPEN",
+      "best_route": "https://aisite.medsci.cn/submit",
+      "home_http": 202,
+      "home_final": "https://aisite.medsci.cn/",
+      "title": "AI导航站和AI工具列表 - 梅斯AI导航站",
+      "sample": "首页 梅斯小智 DeepEvidence MCP Skills广场 排行榜 资讯 临床指南 期刊 梅斯公开课 收录 分类导航 综合类 大模型 超级智能体 AI科学与工程 多模态/世界模型 Web3 AI浏览器插件 新闻通讯 其他 医药&生物学 心理健康工具 医疗健康工具 医药写作 诊断与治疗 文献阅读 中医AI 影像/病理领域 生物信息学 AI制药 MCP服务器 开发工具 研究与数据 云平台 MCP服务 MCP管理 客户数据平台 官方服务 虚拟化 AI-聊天机器人 日历管理 "
+    },
+    {
+      "row": 137,
+      "name": "New Startups",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 138,
+      "name": "NewTools",
+      "classification": "UNKNOWN",
+      "best_route": "",
+      "home_http": 200,
+      "home_final": "https://forsale.godaddy.com/forsale/newtools.co?utm_source=TDFS_BINNS2&utm_medium=parkedpages&utm_campaign=x_corp_tdfs-binns2_base&traffic_type=TDFS_BINNS2&traffic_id=binns2&",
+      "title": "newtools.co is for sale — Buy for $1,450 or Lease to Own | GoDaddy",
+      "sample": "Excellent 4.5 out of 5 The domain name NewTools.co is for sale! Get this domain PREMIUM VERIFIED DOMAIN Own it today for $1,450, or select Lease to Own. Buy now USD$1,450 Lease to own USD$242 / month Next Free transaction support Secure pay"
+    },
+    {
+      "row": 143,
+      "name": "PitchWalker",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 145,
+      "name": "Product Launch Dir",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 150,
+      "name": "ProductDir",
+      "classification": "OPEN",
+      "best_route": "https://productdir.com/lander",
+      "home_http": 200,
+      "home_final": "https://productdir.com/lander",
+      "title": "",
+      "sample": "productdir.com has expired and is parked free, courtesy of GoDaddy.com. Get This Domain Copyright © 1999-2026 GoDaddy, LLC. All rights reserved. Privacy Policy Disclaimer: References to any specific company, product or services on this Site"
+    },
+    {
+      "row": 151,
+      "name": "ProductFeed",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 152,
+      "name": "ProductHero",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 153,
+      "name": "ProductPages",
+      "classification": "OPEN",
+      "best_route": "https://productpages.co/lander",
+      "home_http": 200,
+      "home_final": "https://productpages.co/lander",
+      "title": "",
+      "sample": "productpages.co is parked free, courtesy of GoDaddy.com. Get This Domain Related Searches product pages Copyright © 1999-2026 GoDaddy, LLC. All rights reserved. Privacy Policy Disclaimer: References to any specific company, product or servi"
+    },
+    {
+      "row": 154,
+      "name": "ProductsUp",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 160,
+      "name": "SaaS Explorer",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 163,
+      "name": "SaaS Hunter",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 165,
+      "name": "SaaS Launch List",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 170,
+      "name": "SaaSBoard",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 174,
+      "name": "SaaSNova",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 178,
+      "name": "SaaSRegister",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 187,
+      "name": "SoftwareList",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 193,
+      "name": "Startup Index",
+      "classification": "OPEN",
+      "best_route": "https://startupindex.co/lander",
+      "home_http": 200,
+      "home_final": "https://startupindex.co/lander",
+      "title": "",
+      "sample": "startupindex.co is parked free, courtesy of GoDaddy.com. Get This Domain Related Searches start_up index Copyright © 1999-2026 GoDaddy, LLC. All rights reserved. Privacy Policy Disclaimer: References to any specific company, product or serv"
+    },
+    {
+      "row": 195,
+      "name": "StartupDex",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 196,
+      "name": "StartupForge",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 197,
+      "name": "StartupGlobe",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 198,
+      "name": "StartupHive",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 199,
+      "name": "StartupLift",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 203,
+      "name": "StartupShelf",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 204,
+      "name": "StartupTrack",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 205,
+      "name": "StartupVault",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 214,
+      "name": "The Startup Pitch",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 222,
+      "name": "ToolDB",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 225,
+      "name": "ToolHive",
+      "classification": "OPEN",
+      "best_route": "https://compliancehive.eu/submit",
+      "home_http": 200,
+      "home_final": "https://compliancehive.eu/nl",
+      "title": "Compliance Tooling MKB: AVG, NIS2 & ISO 27001 | ComplianceHive",
+      "sample": "Functies Prijzen Blog Contact EN Inloggen Begin vandaag COMPLIANCE VOOR MKB Niet een formulier. Een levend bewijs van compliance. Geen statisch document dat veroudert, maar een levend register dat meegroeit met je organisatie. ComplianceHiv"
+    },
+    {
+      "row": 226,
+      "name": "ToolIndex",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    },
+    {
+      "row": 227,
+      "name": "ToolRadar",
+      "classification": "UNREACHABLE",
+      "best_route": "",
+      "home_http": 0,
+      "home_final": "",
+      "title": "",
+      "sample": ""
+    }
+  ]
+}
