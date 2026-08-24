@@ -1,0 +1,78 @@
+name: TikTok Player Reference Probe
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.runner/tiktok-player-trigger.txt'
+      - '.github/workflows/tiktok-player-probe.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe official TikTok player and capture media
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install -q 'playwright>=1.46,<2'
+          mkdir -p player-evidence
+          python3 - <<'PY'
+import json, pathlib
+from playwright.sync_api import sync_playwright
+ID='7674932885383662849'
+url=f'https://www.tiktok.com/player/v1/{ID}?autoplay=1&music_info=1&description=1'
+out={'url':url,'responses':[],'saved':[]}
+with sync_playwright() as p:
+    b=p.chromium.launch(channel='chrome',headless=True,args=['--no-sandbox','--disable-dev-shm-usage','--autoplay-policy=no-user-gesture-required'])
+    c=b.new_context(viewport={'width':720,'height':1280},user_agent='Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 Version/18.6 Mobile/15E148 Safari/604.1')
+    page=c.new_page()
+    def onresp(r):
+        ct=(r.headers.get('content-type') or '').lower()
+        u=r.url
+        if 'video' in ct or '/video/tos/' in u or 'tiktokcdn' in u or 'muscdn' in u:
+            rec={'url':u,'status':r.status,'content_type':ct}
+            out['responses'].append(rec)
+            if 'video' in ct:
+                try:
+                    data=r.body()
+                    if len(data)>300000:
+                        path=f'player-evidence/media-{len(out["saved"]):02d}.bin'
+                        pathlib.Path(path).write_bytes(data)
+                        out['saved'].append({'path':path,'bytes':len(data),'url':u})
+                except Exception as e:
+                    rec['body_error']=str(e)
+    page.on('response',onresp)
+    resp=page.goto(url,wait_until='domcontentloaded',timeout=30000)
+    page.wait_for_timeout(10000)
+    out['status']=resp.status if resp else None
+    out['title']=page.title()
+    out['body']=page.locator('body').inner_text(timeout=5000)[:10000]
+    out['video_srcs']=page.locator('video').evaluate_all("els => els.map(v => ({src:v.src,currentSrc:v.currentSrc,duration:v.duration,readyState:v.readyState,error:v.error&&{code:v.error.code,message:v.error.message}}))")
+    page.screenshot(path='player-evidence/player.png',full_page=False)
+    c.close(); b.close()
+pathlib.Path('player-evidence/player.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps(out,ensure_ascii=False))
+PY
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          for f in player-evidence/media-*.bin; do
+            [ -e "$f" ] || continue
+            if ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$f" >/dev/null 2>&1; then
+              cp "$f" player-evidence/reference.mp4
+              ffprobe -v error -show_entries format=duration,size,bit_rate -show_entries stream=codec_type,codec_name,width,height -of json player-evidence/reference.mp4 > player-evidence/reference-ffprobe.json
+              ffmpeg -nostdin -v error -i player-evidence/reference.mp4 -f null -
+              break
+            fi
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tiktok-player-probe-${{ github.run_id }}
+          path: player-evidence/
+          retention-days: 3
+          if-no-files-found: warn
