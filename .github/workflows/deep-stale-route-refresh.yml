@@ -1,0 +1,204 @@
+name: Deep Stale Route Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deep-stale-route-refresh.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3' requests beautifulsoup4
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Deep probe 25 live stale targets
+        run: |
+          mkdir -p results/full-sheet-audit
+          cat > /tmp/deep_stale.py <<'PY'
+          import json,re,time,sys,requests,xml.etree.ElementTree as ET
+          from urllib.parse import urljoin,urlparse
+          from pathlib import Path
+          from cloakbrowser import launch
+
+          TARGETS=[
+            (17,'AI Database','https://www.ai-database.org'),
+            (21,'All Things AI','https://allthings-ai.com'),
+            (24,'App Stacks','https://appstacks.club'),
+            (40,'Launch Space','https://launchspace.io'),
+            (43,'Makerlog (Projects section)','https://getmakerlog.com'),
+            (53,'Side Project Ideas','https://sideprojectideas.com'),
+            (59,'Tiny Alternatives','https://tinyalternatives.com'),
+            (77,'AppVault','https://appvault.io'),
+            (80,"Ben's Bites",'https://news.bensbites.com'),
+            (87,'BuiltWithTools','https://builtwithtools.com'),
+            (95,'DR Checker','https://drchecker.org'),
+            (124,'LaunchTab','https://launchtab.com'),
+            (148,'ProductBurst','https://productburst.com'),
+            (149,'ProductCatalog','https://productcatalog.io'),
+            (155,'ProjectHunt','https://projecthunt.me'),
+            (157,'Ramen.Tools','https://ramen.tools'),
+            (158,'SaaS Arena','https://saasarena.com'),
+            (164,'SaaS Launch','https://saaslaunch.io'),
+            (166,'SaaS Pages','https://saaspages.xyz'),
+            (172,'SaaSFrame','https://saasframe.io'),
+            (176,'SaaSPick','https://saaspick.com'),
+            (184,'Sitelike.org','https://www.sitelike.org'),
+            (229,'Tools For Makers','https://toolsformakers.com'),
+            (232,'ToolScout','https://toolscout.app'),
+            (239,'VerifiedDR','https://verifieddr.com'),
+          ]
+
+          GOOD=re.compile(r'(submit|add (a |your )?(tool|product|startup|app|site|website|business|listing)|get listed|list your|launch your|suggest (a |new )?(tool|product|app)|vendor portal|claim (your )?(profile|listing|business)|create (a )?(listing|product|startup)|publish (your )?(tool|product))',re.I)
+          AUTH=re.compile(r'(login|log in|sign in|sign up|signup|register|create account|oauth|continue with google|authentication|unauthorized)',re.I)
+          BAD=re.compile(r'(share|twitter|facebook|linkedin|reddit|article|blog|news|advertis|affiliate|privacy|terms|newsletter|press)',re.I)
+          DEAD=re.compile(r'(page not found|404 not found|domain.*expired|domain.*for sale|this site can.?t be reached|website is parked)',re.I)
+          NOREL=re.compile(r'(domain rating|dr checker|ui inspiration|ux inspiration|newsletter about side project ideas|independent software review)',re.I)
+
+          def host(u):
+            h=urlparse(u).netloc.lower().split(':')[0]
+            return h[4:] if h.startswith('www.') else h
+          def same(a,b):
+            ha,hb=host(a),host(b)
+            return ha==hb or ha.endswith('.'+hb) or hb.endswith('.'+ha)
+          def score(url,text=''):
+            q=(url+' '+text).lower(); s=0
+            for k,w in [('submit',50),('add-',35),('add_',35),('add/',30),('get-listed',30),('listing',24),('launch',20),('vendor',18),('claim',16),('suggest',15),('signup',10),('register',8),('login',6),('contact',2)]:
+              if k in q:s+=w
+            if BAD.search(q): s-=50
+            return s
+
+          def sitemap_urls(base):
+            urls=[]; seen=set(); sess=requests.Session(); sess.headers['User-Agent']='Mozilla/5.0'
+            roots=[urljoin(base,'/sitemap.xml'),urljoin(base,'/sitemap_index.xml')]
+            try:
+              r=sess.get(urljoin(base,'/robots.txt'),timeout=8)
+              if r.ok:
+                for line in r.text.splitlines():
+                  if line.lower().startswith('sitemap:'):
+                    roots.append(line.split(':',1)[1].strip())
+            except: pass
+            queue=roots[:]
+            while queue and len(seen)<700:
+              u=queue.pop(0)
+              if u in seen: continue
+              seen.add(u)
+              try:
+                r=sess.get(u,timeout=10)
+                if not r.ok or '<loc>' not in r.text: continue
+                locs=re.findall(r'<loc>\s*(.*?)\s*</loc>',r.text,re.I)
+                for x in locs[:500]:
+                  x=x.replace('&amp;','&')
+                  if x.endswith('.xml') and same(x,base): queue.append(x)
+                  elif same(x,base): urls.append(x)
+              except: pass
+            return list(dict.fromkeys(urls))[:700]
+
+          browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+          def visit(url,extract=False):
+            p=browser.new_page(viewport={'width':1365,'height':768}); rec={'url':url}
+            try:
+              resp=p.goto(url,wait_until='domcontentloaded',timeout=18000); p.wait_for_timeout(900)
+              status=resp.status if resp else 0; final=p.url; title=p.title(); text=p.locator('body').inner_text(timeout=6000)
+              compact=' '.join(text.split()); low=(title+' '+compact[:9000]).lower()
+              links=[]
+              if extract:
+                try:
+                  for a in p.locator('a').all()[:250]:
+                    href=a.get_attribute('href') or ''; label=(a.inner_text(timeout=400) or '').strip()
+                    if not href: continue
+                    u=urljoin(final,href).split('#')[0]
+                    if same(u,final): links.append({'url':u,'text':label[:160]})
+                except: pass
+              forms=p.locator('form').count()
+              rec.update({'http':status,'final':final,'title':title[:180],'text':compact[:1500],'chars':len(text),'forms':forms,'good_signal':bool(GOOD.search(title+' '+compact[:9000])),'auth_signal':bool(AUTH.search(title+' '+compact[:5000])),'dead_signal':bool(DEAD.search(title+' '+compact[:4000])),'norel_signal':bool(NOREL.search(title+' '+compact[:5000])),'links':links,'ok':bool(status and 200<=status<400 and len(text)>60 and not DEAD.search(low)),'error':''})
+            except Exception as e:
+              rec.update({'http':0,'final':'','title':'','text':'','chars':0,'forms':0,'good_signal':False,'auth_signal':False,'dead_signal':False,'norel_signal':False,'links':[],'ok':False,'error':type(e).__name__+': '+str(e)[:240]})
+            finally:
+              try:p.close()
+              except:pass
+            return rec
+
+          wid=int(sys.argv[1]); workers=int(sys.argv[2]); mine=[x for i,x in enumerate(TARGETS) if i%workers==wid]
+          out=[]
+          try:
+            for row,name,home in mine:
+              h=visit(home,extract=True)
+              cands=[]; seen=set()
+              for x in h.get('links',[]):
+                if x['url'] not in seen and (GOOD.search(x['url']+' '+x['text']) or AUTH.search(x['url']+' '+x['text'])):
+                  seen.add(x['url']); cands.append(x)
+              for u in sitemap_urls(h.get('final') or home):
+                if u not in seen and (GOOD.search(u) or re.search(r'/(login|signup|register|account|dashboard|contact)(/|$)',u,re.I)):
+                  seen.add(u); cands.append({'url':u,'text':'sitemap'})
+              base=(h.get('final') or home).rstrip('/')
+              for path in ['/submit','/submit/','/submit-tool','/submit-a-tool','/submit-product','/submit-startup','/add','/add-tool','/add-product','/add-listing','/add-business','/get-listed','/list','/launch','/launchpad','/dashboard','/signup','/register','/contact']:
+                u=urljoin(base+'/',path.lstrip('/'))
+                if u not in seen:
+                  seen.add(u); cands.append({'url':u,'text':'generated'})
+              cands=sorted(cands,key=lambda x:score(x['url'],x['text']),reverse=True)[:14]
+              probes=[]
+              for x in cands:
+                v=visit(x['url']); v['source_text']=x['text']; probes.append(v)
+              strong=[]; auth=[]
+              for v in probes:
+                if not v['ok'] or not same(v.get('final') or v['url'],h.get('final') or home): continue
+                q=(v.get('final','')+' '+v.get('title','')+' '+v.get('text',''))
+                if v['good_signal'] and (v['forms']>0 or GOOD.search(q)):
+                  if v['auth_signal'] and (re.search(r'(login|signup|register|oauth|unauthor)',v.get('final',''),re.I) or re.search(r'(login to submit|sign in to submit|must be logged|create account)',v.get('text',''),re.I)):
+                    auth.append(v)
+                  else: strong.append(v)
+              if strong:
+                cls='OPEN'; best=strong[0]
+              elif auth:
+                cls='AUTH_REQUIRED'; best=auth[0]
+              elif h.get('norel_signal'):
+                cls='NO_LONGER_RELEVANT'; best=None
+              else:
+                cls='STALE'; best=None
+              out.append({'row':row,'name':name,'home':home,'classification':cls,'best_route':(best or {}).get('final',''),'homepage':h,'candidate_count':len(cands),'probes':probes})
+          finally:
+            browser.close()
+          Path(f'/tmp/deep-{wid}.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+          for w in 0 1 2 3 4; do xvfb-run -a python3 /tmp/deep_stale.py "$w" 5 & done
+          wait
+          python3 - <<'PY'
+          import json,collections,datetime,pathlib
+          rows=[]
+          for w in range(5): rows += json.loads(pathlib.Path(f'/tmp/deep-{w}.json').read_text())
+          rows.sort(key=lambda x:x['row']); counts=collections.Counter(x['classification'] for x in rows)
+          obj={'verified_at':datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC'),'total':len(rows),'counts':dict(counts),'results':rows}
+          pathlib.Path('results/full-sheet-audit/deep-stale-route-refresh.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+          summary={'verified_at':obj['verified_at'],'total':obj['total'],'counts':obj['counts'],'results':[{'row':x['row'],'name':x['name'],'classification':x['classification'],'best_route':x['best_route'],'homepage_http':x['homepage']['http'],'homepage_final':x['homepage']['final'],'candidate_count':x['candidate_count']} for x in rows]}
+          pathlib.Path('results/full-sheet-audit/deep-stale-route-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+          print(json.dumps(summary,ensure_ascii=False))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add results/full-sheet-audit/deep-stale-route-*.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m 'Store deep stale route refresh [skip ci]'
+          git push
