@@ -1,0 +1,141 @@
+name: Unknown64 Cloak Review
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/unknown64-cloak-review.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install CloakBrowser
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Build UNKNOWN target list
+        run: |
+          python3 - <<'PY'
+          import csv,json,pathlib
+          p=pathlib.Path('results/full-sheet-audit/database-final.csv')
+          rows=[]
+          with p.open(encoding='utf-8-sig',newline='') as f:
+            for r in csv.DictReader(f):
+              if (r.get('Submit Status') or '').strip()=='UNKNOWN':
+                rows.append({'row':int(r['Source Row']),'name':r['Name'],'home':r['URL']})
+          pathlib.Path('/tmp/targets.json').write_text(json.dumps(rows,ensure_ascii=False))
+          print('targets',len(rows))
+          PY
+      - name: Probe UNKNOWN rows with Cloak
+        shell: bash
+        run: |
+          mkdir -p results/full-sheet-audit
+          cat > /tmp/worker.py <<'PY'
+          import json,re,sys
+          from urllib.parse import urljoin,urlparse
+          from pathlib import Path
+          from cloakbrowser import launch
+
+          targets=json.loads(Path('/tmp/targets.json').read_text())
+          wid=int(sys.argv[1]); workers=int(sys.argv[2]); mine=[x for i,x in enumerate(targets) if i%workers==wid]
+          STRONG=re.compile(r'(submit|add (your )?(tool|product|startup|resource|listing|site)|get listed|launch (your )?(tool|product|startup)|list (your )?(tool|product|startup)|suggest (a )?(tool|product|resource)|vendor|claim (your )?(profile|business)|create (a )?(product|listing))',re.I)
+          AUTH=re.compile(r'(login|log in|sign in|sign up|signup|register|create account|continue with google|oauth)',re.I)
+          CONTACT=re.compile(r'(contact|email us|let us know|suggestions|submit.*email|send us)',re.I)
+          PARKED=re.compile(r'(domain.*(for sale|expired|registered at namecheap|parked)|buy this domain|sedo domain parking|hugedomains)',re.I)
+          NEG=re.compile(r'(news|blog|article|affiliate|advertis|newsletter)',re.I)
+          COMMON=['/submit','/submit/','/submit-tool','/submit-a-tool','/submit-product','/submit-startup','/add-resource','/add-listing','/add-product','/get-listed','/launch','/join','/signup','/register','/contact','/about']
+
+          def visit(browser,url,extract=False):
+            p=browser.new_page(viewport={'width':1365,'height':768}); rec={'url':url}
+            try:
+              resp=p.goto(url,wait_until='domcontentloaded',timeout=14000); p.wait_for_timeout(700)
+              text=p.locator('body').inner_text(timeout=4000); title=p.title(); final=p.url; status=resp.status if resp else 0
+              blob=title+' '+text[:10000]; links=[]
+              if extract:
+                try:
+                  for a in p.locator('a').all():
+                    href=a.get_attribute('href') or ''; label=(a.inner_text(timeout=350) or '').strip(); q=label+' '+href
+                    if href and STRONG.search(q) and not NEG.search(q): links.append({'url':urljoin(final,href).split('#')[0],'text':label[:100]})
+                except Exception: pass
+              rec.update({'http':status,'final':final,'title':title[:180],'chars':len(text),'ok':bool(status and 200<=status<400 and len(text)>40),'auth':bool(AUTH.search(blob)),'contact':bool(CONTACT.search(blob)),'strong':bool(STRONG.search(blob)),'parked':bool(PARKED.search(blob)),'sample':' '.join(text.split())[:800],'links':links[:15],'error':''})
+            except Exception as e:
+              rec.update({'http':0,'final':'','title':'','chars':0,'ok':False,'auth':False,'contact':False,'strong':False,'parked':False,'sample':'','links':[],'error':type(e).__name__+': '+str(e)[:220]})
+            finally:
+              try:p.close()
+              except:pass
+            return rec
+
+          out=[]; browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+          try:
+            for t in mine:
+              home=visit(browser,t['home'],True); cands=[]; seen=set()
+              for x in home.get('links',[]):
+                if x['url'] not in seen: seen.add(x['url']); cands.append(x)
+              if home.get('ok'):
+                p=urlparse(home.get('final') or t['home']); base=f"{p.scheme}://{p.netloc}"
+                for path in COMMON:
+                  u=base+path
+                  if u not in seen: seen.add(u); cands.append({'url':u,'text':'generated '+path})
+              probes=[]
+              for x in cands[:6]:
+                v=visit(browser,x['url']); v['anchor_text']=x['text']; probes.append(v)
+              viable=[]
+              for v in probes:
+                if not v.get('ok'): continue
+                blob=v.get('anchor_text','')+' '+v.get('title','')+' '+v.get('sample','')+' '+v.get('final','')
+                if STRONG.search(blob) and not PARKED.search(blob): viable.append(v)
+              if home.get('parked'):
+                cls='DEAD_OR_REPURPOSED'; best=''
+              elif not home.get('ok'):
+                cls='UNREACHABLE'; best=''
+              elif viable:
+                b=viable[0]; best=b.get('final') or b['url']; cls='AUTH_REQUIRED' if b.get('auth') and re.search(r'(login|sign|join|register|auth)',best,re.I) else 'OPEN'
+              elif home.get('contact'):
+                cls='MANUAL_CONTACT'; best=home.get('final') or t['home']
+              else:
+                cls='UNKNOWN'; best=''
+              out.append({'row':t['row'],'name':t['name'],'home':t['home'],'classification':cls,'best_route':best,'homepage':home,'candidate_probes':probes})
+          finally:
+            browser.close()
+          Path(f'/tmp/out-{wid}.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+          for w in 0 1 2 3; do xvfb-run -a python3 /tmp/worker.py "$w" 4 & done
+          wait
+          python3 - <<'PY'
+          import json,pathlib,collections,datetime
+          rows=[]
+          for w in range(4): rows.extend(json.loads(pathlib.Path(f'/tmp/out-{w}.json').read_text()))
+          rows.sort(key=lambda x:x['row']); counts=collections.Counter(x['classification'] for x in rows)
+          obj={'verified_at':datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC'),'total':len(rows),'counts':dict(counts),'results':rows}
+          pathlib.Path('results/full-sheet-audit/unknown64-cloak-review.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+          pathlib.Path('results/full-sheet-audit/unknown64-cloak-summary.json').write_text(json.dumps({'verified_at':obj['verified_at'],'total':obj['total'],'counts':obj['counts'],'results':[{'row':x['row'],'name':x['name'],'classification':x['classification'],'best_route':x['best_route'],'home_http':x['homepage']['http'],'home_final':x['homepage']['final'],'title':x['homepage']['title'],'sample':x['homepage']['sample'][:240]} for x in rows]},ensure_ascii=False,indent=2))
+          print(json.dumps(obj['counts']))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/unknown64-cloak-*.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Store UNKNOWN64 Cloak review [skip ci]"
+          for n in 1 2 3; do git pull --rebase origin main || true; git push origin HEAD:main && exit 0; sleep "$n"; done
+          exit 1
