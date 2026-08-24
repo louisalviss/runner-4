@@ -1,0 +1,60 @@
+name: Full Stale Cloak Refresh v2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'jobs/full-stale-refresh-trigger.json'
+      - 'scripts/full_stale_cloak_refresh.py'
+      - '.github/workflows/full-stale-cloak-refresh-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install CloakBrowser
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Run four Cloak workers
+        run: |
+          mkdir -p results/full-sheet-audit
+          for w in 0 1 2 3; do xvfb-run -a python3 scripts/full_stale_cloak_refresh.py "$w" 4 "/tmp/out-$w.json" & done
+          wait
+          python3 - <<'PY'
+          import json,pathlib,datetime,collections
+          rows=[]
+          for w in range(4): rows.extend(json.loads(pathlib.Path(f'/tmp/out-{w}.json').read_text()))
+          rows.sort(key=lambda x:x['row']); counts=collections.Counter(x['classification'] for x in rows)
+          obj={'verified_at':datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC'),'total':len(rows),'counts':dict(counts),'results':rows}
+          pathlib.Path('results/full-sheet-audit/full-stale-cloak-refresh.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+          summary={'verified_at':obj['verified_at'],'total':obj['total'],'counts':obj['counts'],'results':[{'row':x['row'],'name':x['name'],'classification':x['classification'],'best_route':x['best_route'],'home_http':x['homepage_probe']['http'],'old_http':x['old_route_probe']['http']} for x in rows]}
+          pathlib.Path('results/full-sheet-audit/full-stale-cloak-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/full-stale-cloak-refresh.json results/full-sheet-audit/full-stale-cloak-summary.json
+          git commit -m 'Store full stale Cloak refresh [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
