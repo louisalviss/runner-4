@@ -1,4 +1,5 @@
 name: Unknown64 Cloak Review
+# trigger: 2026-08-25 semantic pass
 
 on:
   push:
