@@ -1,0 +1,30 @@
+{
+  "title": "13 ngày: SpontaneousH",
+  "target_seconds": 60,
+  "editorial_rules": [
+    "source evidence first; b-roll only when it directly matches narration",
+    "one idea equals one shot; target 25-35 shots",
+    "no shot asset repeated",
+    "no generic street/subway footage under Reddit evidence",
+    "anonymous self-report caveat must be visible",
+    "do not claim one dose inevitably causes addiction"
+  ],
+  "facts": [
+    {"date":"2009-09-14","text":"Original AMA: 24, master's degree, well-paying full-time job; says he tried heroin."},
+    {"date":"2009-09-27","text":"Update 13 days later: says he continued using and injected for the first time."},
+    {"date":"2010-10","text":"Later update describes overdose, Narcan, hospital and rehab."},
+    {"date":"2017-01-08","text":"Says he is almost six years clean and life is good; also admits earlier warning signs."},
+    {"date":"2021-09-24","text":"Says he is alive, clean and doing well."}
+  ],
+  "voiceover": [
+    "Ngày 14 tháng 9 năm 2009, một tài khoản Reddit đăng: Tôi vừa thử heroin hôm qua.",
+    "Anh nói mình 24 tuổi, có bằng thạc sĩ, công việc lương tốt, và gần như không dùng ma túy trước đó.",
+    "Trong phần bình luận, nhiều người cảnh báo. Nhưng điểm đáng chú ý là sự tự tin: anh tin mình hiểu rủi ro và có thể dừng lại.",
+    "Mười ba ngày sau, ngày 27 tháng 9, cùng tài khoản quay lại. Anh nói mình đã tiếp tục dùng heroin kể từ bài đầu, và hôm đó vừa tiêm lần đầu.",
+    "Đây không phải câu chuyện một liều chắc chắn khiến mọi người nghiện. Chính xác hơn: sau lần thử đầu, anh tiếp tục dùng, rồi mất kiểm soát rất nhanh.",
+    "Các cập nhật sau mô tả nghiện, điều trị, relapse, overdose, Narcan, bệnh viện và rehab.",
+    "Nhưng câu chuyện không kết thúc ở đó. Năm 2017, anh quay lại và nói mình đã gần sáu năm sạch ma túy và rượu. Anh cũng thừa nhận cuộc sống trước lần thử đầu tiên có nhiều dấu hiệu cảnh báo hơn mình từng nghĩ.",
+    "Năm 2021, anh đăng thêm một câu ngắn: vẫn sống, vẫn sạch, và vẫn ổn.",
+    "Đây là lịch sử tự thuật của một tài khoản ẩn danh, không phải hồ sơ y khoa được xác minh độc lập. Nhưng chỉ cần đặt hai bài đăng cách nhau 13 ngày cạnh nhau, timeline đã đủ mạnh."
+  ]
+}
