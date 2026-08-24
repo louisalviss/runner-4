@@ -1,0 +1,201 @@
+name: Full Stale Cloak Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/full-stale-cloak-refresh.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CLOAKBROWSER_VERSION: '146.0.7680.177.5'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cloakbrowser
+          key: cloakbrowser-linux-${{ env.CLOAKBROWSER_VERSION }}
+      - name: Install CloakBrowser
+        run: |
+          python -m pip install -q 'cloakbrowser==0.5.3'
+          python -m playwright install-deps chromium
+          CLOAKBROWSER_VERSION="$CLOAKBROWSER_VERSION" python -m cloakbrowser install
+      - name: Probe all current stale rows
+        shell: bash
+        run: |
+          mkdir -p results/full-sheet-audit
+          cat > /tmp/targets.json <<'JSON'
+          [
+            {"row":8,"name":"PitchGround","home":"https://pitchground.com","old":"https://seoengine.ai/submit"},
+            {"row":17,"name":"AI Database","home":"https://www.ai-database.org","old":"https://ai-database.org/submit"},
+            {"row":21,"name":"All Things AI","home":"https://allthings-ai.com","old":"https://allthings-ai.com/submit"},
+            {"row":24,"name":"App Stacks","home":"https://appstacks.club","old":"https://appstacks.club/submit"},
+            {"row":34,"name":"GitHub (awesome lists)","home":"https://github.com","old":"https://github.com/submit"},
+            {"row":38,"name":"Indie Page","home":"https://indiepa.ge","old":"https://indiepa.ge/submit"},
+            {"row":40,"name":"Launch Space","home":"https://launchspace.io","old":"https://launchspace.io/submit"},
+            {"row":43,"name":"Makerlog (Projects section)","home":"https://getmakerlog.com","old":"https://ambitiousfounder.com/submit"},
+            {"row":46,"name":"No Code List","home":"https://nocodelist.co","old":"https://nocodelist.co/submit"},
+            {"row":50,"name":"SaaS Discovery","home":"https://saasdiscovery.com","old":"https://saasdiscovery.com/submit-startup"},
+            {"row":53,"name":"Side Project Ideas","home":"https://sideprojectideas.com","old":"https://sideprojectideas.com/submit"},
+            {"row":59,"name":"Tiny Alternatives","home":"https://tinyalternatives.com","old":"https://tinyalternatives.com/submit"},
+            {"row":66,"name":"Active Search Results","home":"https://www.activesearchresults.com","old":"https://www.activesearchresults.com/submit"},
+            {"row":71,"name":"AIFindr","home":"https://aifindr.com","old":"https://aifindr.com/submit"},
+            {"row":77,"name":"AppVault","home":"https://appvault.io","old":"https://appvault.io/submit"},
+            {"row":80,"name":"Ben's Bites","home":"https://news.bensbites.com","old":"https://www.bensbites.com/submit"},
+            {"row":82,"name":"BestofAI","home":"https://bestofai.com","old":"https://bestofai.com/submit"},
+            {"row":84,"name":"Brownbook","home":"https://www.brownbook.net","old":"https://www.brownbook.net/submit"},
+            {"row":87,"name":"BuiltWithTools","home":"https://builtwithtools.com","old":"https://builtwithtools.com/submit"},
+            {"row":88,"name":"BusinessHunt","home":"https://businesshunt.co","old":"https://businesshunt.co/submit"},
+            {"row":95,"name":"DR Checker","home":"https://drchecker.org","old":"https://drchecker.org/submit"},
+            {"row":105,"name":"IndieLaunch","home":"https://indielaunch.co","old":"https://indielaunch.ai/submit"},
+            {"row":111,"name":"kj123.cn","home":"https://www.kj123.cn","old":"https://goodpics.net/submit"},
+            {"row":124,"name":"LaunchTab","home":"https://launchtab.com","old":"https://www.atom.com/submit"},
+            {"row":131,"name":"Makerlist.io","home":"https://makerlist.io","old":"https://makerlist.io/submit-startup"},
+            {"row":139,"name":"NextGen Tools","home":"https://www.nxgntools.com","old":"https://www.nxgntools.com/submit"},
+            {"row":148,"name":"ProductBurst","home":"https://productburst.com","old":"https://bubble.io/submit"},
+            {"row":149,"name":"ProductCatalog","home":"https://productcatalog.io","old":"https://productcatalog.io/submit"},
+            {"row":155,"name":"ProjectHunt","home":"https://projecthunt.me","old":"https://projecthunt.me/submit"},
+            {"row":157,"name":"Ramen.Tools","home":"https://ramen.tools","old":"https://ramen.tools/submit"},
+            {"row":158,"name":"SaaS Arena","home":"https://saasarena.com","old":"https://championleadership.com/submit"},
+            {"row":164,"name":"SaaS Launch","home":"https://saaslaunch.io","old":"https://saaslaunch.io/submit"},
+            {"row":166,"name":"SaaS Pages","home":"https://saaspages.xyz","old":"https://saaspages.xyz/submit"},
+            {"row":172,"name":"SaaSFrame","home":"https://saasframe.io","old":"https://www.saasframe.io/submit"},
+            {"row":176,"name":"SaaSPick","home":"https://saaspick.com","old":"https://saaspick.com/submit"},
+            {"row":184,"name":"Sitelike.org","home":"https://www.sitelike.org","old":"https://www.sitelike.org/submit"},
+            {"row":200,"name":"StartupLister","home":"https://startuplister.com","old":"https://bubble.io/submit"},
+            {"row":201,"name":"StartupNow","home":"https://startupnow.co","old":"https://startupnow.co/submit"},
+            {"row":216,"name":"TinyLaunch","home":"https://www.tinylaunch.com","old":"https://www.tinylaunch.com/submit"},
+            {"row":229,"name":"Tools For Makers","home":"https://toolsformakers.com","old":"https://globalpande.ru.com/submit"},
+            {"row":232,"name":"ToolScout","home":"https://toolscout.app","old":"https://toolscout.app/submit"},
+            {"row":239,"name":"VerifiedDR","home":"https://verifieddr.com","old":"https://verifieddr.com/submit"}
+          ]
+          JSON
+          cat > /tmp/worker.py <<'PY'
+          import json,re,sys,time
+          from urllib.parse import urljoin,urlparse
+          from pathlib import Path
+          from cloakbrowser import launch
+
+          targets=json.loads(Path('/tmp/targets.json').read_text())
+          wid=int(sys.argv[1]); workers=int(sys.argv[2]); mine=[x for i,x in enumerate(targets) if i%workers==wid]
+          STRONG=re.compile(r'(submit(\s+(a|your))?\s*(tool|product|startup|project|site|software|app)?|add\s+(your\s+)?(tool|product|startup|project|listing|software|app)|get\s+listed|list\s+(your\s+)?(product|startup|tool|software|app)|suggest\s+new\s+(application|app|tool)|vendor\s+portal|claim\s+(your\s+)?(business|profile|listing)|launch\s+(your\s+)?(product|project)|create\s+(a\s+)?(product|company|listing|profile))',re.I)
+          LOGIN=re.compile(r'(log[ -]?in|sign[ -]?in|sign[ -]?up|create (an |your )?account|continue with (google|github|apple)|authentication required)',re.I)
+          NEG=re.compile(r'(share|news|blog|article|advertis|affiliate|facebook|twitter|linkedin|reddit|press|contact us|newsletter)',re.I)
+          CHALLENGES=('just a moment','attention required','verify you are human','verifying connection','checking your browser','access denied','security verification','prove your humanity','blocked by network security')
+          COMMON=['/submit','/submit/','/submit-tool','/submit-a-tool','/submit-product','/submit-startup','/add-listing','/add-your-product','/add-product','/get-listed','/suggest','/launch','/launchpad','/vendor','/vendors','/dashboard']
+
+          def root_host(u):
+            h=urlparse(u).netloc.lower().split(':')[0]
+            return h[4:] if h.startswith('www.') else h
+          def same_host(a,b):
+            ha,hb=root_host(a),root_host(b)
+            return ha==hb or ha.endswith('.'+hb) or hb.endswith('.'+ha)
+
+          browser=launch(browser_version='146.0.7680.177.5',headless=False,humanize=True)
+          def visit(url,settle=850,extract=False):
+            p=browser.new_page(viewport={'width':1365,'height':768}); rec={'url':url}
+            try:
+              resp=p.goto(url,wait_until='domcontentloaded',timeout=15000); p.wait_for_timeout(settle)
+              text=p.locator('body').inner_text(timeout=5000); title=p.title(); status=resp.status if resp else 0; final=p.url
+              low=(title+' '+text[:9000]).lower(); ch=next((x for x in CHALLENGES if x in low),None)
+              forms=p.locator('form').count() if p.locator('form') else 0
+              links=[]
+              if extract:
+                try:
+                  for a in p.locator('a').all():
+                    href=a.get_attribute('href') or ''; label=(a.inner_text(timeout=500) or '').strip(); blob=label+' '+href
+                    if href and STRONG.search(blob) and not NEG.search(blob):
+                      links.append({'url':urljoin(final,href).split('#')[0],'text':label[:120]})
+                except Exception: pass
+              rec.update({'http':status,'final':final,'title':title[:180],'chars':len(text),'ok':bool(status and 200<=status<400 and not ch and len(text)>80),'challenge':ch,'forms':forms,'login_signal':bool(LOGIN.search(low)),'strong_signal':bool(STRONG.search(title+' '+text[:7000])),'sample':' '.join(text.split())[:500],'links':links[:20],'error':''})
+            except Exception as e:
+              rec.update({'http':0,'final':'','title':'','chars':0,'ok':False,'challenge':None,'forms':0,'login_signal':False,'strong_signal':False,'sample':'','links':[],'error':type(e).__name__+': '+str(e)[:240]})
+            finally:
+              try:p.close()
+              except:pass
+            return rec
+
+          out=[]
+          try:
+            for t in mine:
+              home=visit(t['home'],extract=True); old=visit(t['old'])
+              cands=[]; seen=set()
+              for x in home.get('links',[]):
+                if same_host(x['url'],t['home']) and x['url'] not in seen:
+                  seen.add(x['url']); cands.append(x)
+              # Add conservative same-host conventional paths only when homepage is alive.
+              if home.get('ok'):
+                base=f"{urlparse(home['final']).scheme}://{urlparse(home['final']).netloc}"
+                for path in COMMON:
+                  u=base+path
+                  if u not in seen:
+                    seen.add(u); cands.append({'url':u,'text':'generated '+path})
+              def rank(x):
+                q=(x['text']+' '+x['url']).lower(); s=0
+                for k,w in [('submit',10),('get-listed',9),('add-your',9),('add-',7),('suggest',7),('vendor',6),('launchpad',6),('launch',5),('claim',5),('dashboard',2)]:
+                  if k in q:s+=w
+                return -s
+              probes=[]
+              for x in sorted(cands,key=rank)[:7]:
+                v=visit(x['url']); v['anchor_text']=x['text']; probes.append(v)
+              viable=[]
+              for v in probes:
+                if not v.get('ok'): continue
+                if not same_host(v.get('final') or v['url'],t['home']): continue
+                # Require a strong route/page signal, a form, or an auth redirect from a strong candidate.
+                blob=(v.get('anchor_text','')+' '+v.get('final','')+' '+v.get('title','')+' '+v.get('sample',''))
+                if STRONG.search(blob) or v.get('forms',0)>0:
+                  viable.append(v)
+              # old route can be valid only if same-host and strong/form/auth-gated.
+              old_valid=old.get('ok') and same_host(old.get('final') or t['old'],t['home']) and (old.get('strong_signal') or old.get('forms',0)>0 or old.get('login_signal'))
+              if old_valid:
+                best=old; cls='AUTH_REQUIRED' if old.get('login_signal') and not old.get('forms') else 'OPEN'
+              elif viable:
+                best=viable[0]
+                # Login/sign-up pages and auth redirects are not OPEN submission forms.
+                authish=best.get('login_signal') and (re.search(r'(login|signin|signup|auth|account)',best.get('final',''),re.I) or not best.get('strong_signal'))
+                cls='AUTH_REQUIRED' if authish else 'OPEN'
+              elif home.get('challenge') or old.get('challenge'):
+                best=None; cls='BLOCKED'
+              elif not home.get('ok'):
+                best=None; cls='DEAD_OR_UNREACHABLE'
+              else:
+                best=None; cls='STALE'
+              out.append({'row':t['row'],'name':t['name'],'home':t['home'],'old':t['old'],'classification':cls,'best_route':(best or {}).get('final',''),'homepage_probe':home,'old_route_probe':old,'candidate_probes':probes})
+          finally:
+            browser.close()
+          Path(f'/tmp/out-{wid}.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+          for w in 0 1 2 3; do xvfb-run -a python3 /tmp/worker.py "$w" 4 & done
+          wait
+          python3 - <<'PY'
+          import json,pathlib,datetime,collections
+          rows=[]
+          for w in range(4): rows.extend(json.loads(pathlib.Path(f'/tmp/out-{w}.json').read_text()))
+          rows.sort(key=lambda x:x['row'])
+          counts=collections.Counter(x['classification'] for x in rows)
+          obj={'verified_at':datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC'),'total':len(rows),'counts':dict(counts),'results':rows}
+          pathlib.Path('results/full-sheet-audit/full-stale-cloak-refresh.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2))
+          pathlib.Path('results/full-sheet-audit/full-stale-cloak-summary.json').write_text(json.dumps({'verified_at':obj['verified_at'],'total':obj['total'],'counts':obj['counts'],'results':[{'row':x['row'],'name':x['name'],'classification':x['classification'],'best_route':x['best_route'],'home_http':x['homepage_probe']['http'],'old_http':x['old_route_probe']['http']} for x in rows]},ensure_ascii=False,indent=2))
+          print(json.dumps({'total':obj['total'],'counts':obj['counts'],'verified_at':obj['verified_at']},ensure_ascii=False))
+          PY
+      - name: Persist
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/full-sheet-audit/full-stale-cloak-refresh.json results/full-sheet-audit/full-stale-cloak-summary.json
+          git commit -m 'Store full stale Cloak refresh [skip ci]' || true
+          git pull --rebase origin main || true
+          git push || true
